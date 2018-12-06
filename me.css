@@ -4,7 +4,7 @@ body {
     color: white;
     font-style: normal;
     font-family: 'Droid Sans', 'Droid Arabic Naskh', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 a {
@@ -12,7 +12,7 @@ a {
 }
 
 #publications {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 li {
