@@ -1,0 +1,20 @@
+body {
+    background: #0b2b0b;
+    margin: 1.1em;
+    color: white;
+    font-style: normal;
+    font-family: 'Droid Sans', 'Droid Arabic Naskh', sans-serif;
+    font-size: 17px;
+}
+
+a {
+    color: rgba(187, 242, 50, 0.98);
+}
+
+#publications {
+    font-size: 14px;
+}
+
+li {
+    margin-bottom: 0.6em;
+}
