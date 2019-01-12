@@ -1,6 +1,6 @@
 body {
     background: #0b2b0b;
-    margin: 2em;
+    margin: 3em;
     color: white;
     font-style: normal;
     font-family: sans-serif;
@@ -18,3 +18,27 @@ a {
 li {
     margin-bottom: 0.6em;
 }
+
+.square {
+    height: 20px;
+    width: 20px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+
+
