@@ -164,11 +164,11 @@
 <h2>Publications:</h2>
 <table>
     <tr>
-        <td><div class="square GTA">GTA</div></td><td>Graph Theory Application</td>
-        <td><div class="square DAV">DAV</div></td><td>Data Analysis and Visualization</td>
-        <td><div class="square CSC">CSC</div></td><td>Combinatorial Scientific Computing</td>
-        <td><div class="square EDU">EDU</div></td><td>Educational Themes</td>
-        <td><div class="square PAC">PAC</td><td></div>Parallel Computing</td>
+        <td><div class="square GTA" onclick="clickCategory('GTA')">GTA</div></td><td>Graph Theory Application</td>
+        <td><div class="square DAV" onclick="clickCategory('DAV')">DAV</div></td><td>Data Analysis and Visualization</td>
+        <td><div class="square CSC" onclick="clickCategory('CSC')">CSC</div></td><td>Combinatorial Scientific Computing</td>
+        <td><div class="square EDU" onclick="clickCategory('EDU')">EDU</div></td><td>Educational Themes</td>
+        <td><div class="square PAC" onclick="clickCategory('PAC')">PAC</td><td></div>Parallel Computing</td>
         <td></td>
     </tr>
 </table>
@@ -200,6 +200,10 @@
 
         pub_div.appendChild(li_node);
     });
+
+    function clickCategory(cat) {
+        console.log(cat);
+    }
 </script>
 
 </body></html>
