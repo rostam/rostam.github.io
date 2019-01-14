@@ -202,7 +202,12 @@
     });
 
     function clickCategory(cat) {
-        console.log(cat);
+        let all = document.getElementsByClassName("publication");
+        for(let i = 0;i < all.length;i++) {
+            // console.log(all[i]);
+            let txt = all[i].childNodes[3].innerHTML;
+            if(txt.indexOf(cat) == -1) all[i].hidden = true;
+        }
     }
 </script>
 
