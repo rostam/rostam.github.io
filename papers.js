@@ -1,8 +1,8 @@
 pubs = [
   {
-    "authors": "M. Ali Rostami, Martin Buecker",
+    "authors": "M. Ali Rostami, Martin Bücker",
     "title" : "Redesigning Interactive Educational Modules for Combinatorial Scientific Computing.",
-    "proceedings" : "in preparation",
+    "proceedings" : "submitted for publication at ICCS 2019",
     "year" : 2019,
     "keywords" : "CSC, GTA, EDU"
   },
