@@ -36,7 +36,8 @@ li {
     font-size: 13px;
     text-align:center;
     font-weight: bold;
-    margin-left: 1px;
+    margin-left: 10px;
+    border: 1px;
 }
 
 .CSC {

@@ -1,5 +1,6 @@
 let pub_div = document.getElementById("publications");
 let props = ['authors', 'title', 'proceedings'];
+let cats = ["GTA", "CSC", "DAV", "EDU", "PAC"]
 pubs.forEach(function (pub) {
     let li_node = document.createElement("li");
     li_node.classList.add("publication");
@@ -16,7 +17,7 @@ pubs.forEach(function (pub) {
     let kws = kw.split(',');
     let str = "<table><tr>";
     kws.forEach(function (k) {
-        str +="<td><div class= 'square "+ k.trim() + "'>";
+        str += "<td><div class= 'square " + k.trim() + "'>";
         str += k.trim() + "</div></td>";
     });
     span_node.innerHTML = str;
@@ -27,9 +28,19 @@ pubs.forEach(function (pub) {
 
 function clickCategory(cat) {
     let all = document.getElementsByClassName("publication");
-    for(let i = 0;i < all.length;i++) {
-        // console.log(all[i]);
-        let txt = all[i].childNodes[3].innerHTML;
-        if(txt.indexOf(cat) == -1) all[i].hidden = true;
+    let fontWeight = document.getElementById(cat + "-cat").style.fontWeight;
+    if (fontWeight == "normal") document.getElementById(cat + "-cat").style.fontWeight = "bold";
+    else document.getElementById(cat + "-cat").style.fontWeight = "normal";
+    for (let i = 0; i < all.length; i++) {
+        all[i].hidden = false;
     }
+
+    cats.forEach(function (c) {
+        if (document.getElementById(c + "-cat").style.fontWeight == "bold") {
+            for (let i = 0; i < all.length; i++) {
+                let txt = all[i].childNodes[3].innerHTML;
+                if (txt.indexOf(c) == -1) all[i].hidden = true;
+            }
+        }
+    });
 }
