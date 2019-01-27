@@ -9,14 +9,14 @@ pubs = [
   {
     "authors": "M. Ali Rostami, Moritz Wilke, Eric Peukert, Erhard Rahm",
     "title" : "Big graph analysis by visually created workflows.",
-    "proceedings" : "BTW 2019, submitted for publication, 2019",
+    "proceedings" : "BTW 2019, accepted for publication, 2019",
     "year" : 2019,
     "keywords" : "DAV, GTA"
   },
   {
     "authors": "M. Ali Rostami, Matthias Kricke, Eric Peukert, Stefan Kuehne, Steffen Dienst,Erhard Rahm",
     "title" : "BIGGR: Bringing Gradoop to Applications.",
-    "proceedings" : "Datenbank-Spektrum, submitted for publication, 2019",
+    "proceedings" : "Datenbank-Spektrum, accepted for publication, 2019",
     "year" : 2019,
     "keywords" : "DAV, GTA"
   },
