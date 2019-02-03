@@ -1,4 +1,4 @@
 # rostam.github.io
 My personal website:
 - Projects
-- Publications
+- Publications: They can be filtered based on their topic.
