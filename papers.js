@@ -74,7 +74,7 @@ pubs = [
     "title" : "An online scripting language for teaching combinatorial scientific computing.",
     "proceedings" : "In W. Amme and T. S. Heinze, editors, Programmiersprachen und Grundlagen der Programmierung, 19. Kolloquium, KPS 2017, Weimar, 25.-27. September, 2015, Tagungsband, Jenaer Schriften zur Mathematik und Informatik Math/Inf/02/2017, pages 83-84, Jena, 2017. Friedrich-Schiller-Universität Jena. Extended abstract.",
     "year" : 2017,
-    "keywords" : "CSC, GT, DAV"
+    "keywords" : "CSC, GTA, DAV"
   },
   {
     "authors": " H. M. Bücker, M. Lülfesmann, M. A. Rostami",
