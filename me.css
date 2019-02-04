@@ -5,8 +5,10 @@ body {
     margin-top: 1em;
     /*color: white;*/
     font-style: normal;
-    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-family: Baskerville;
+/*, "Lato", "Helvetica Neue", sans-serif;*/
     font-size: 20px;
+    line-height: 1.5;
 }
 
 /*a {*/
@@ -36,8 +38,11 @@ li {
     font-size: 13px;
     text-align:center;
     font-weight: bold;
-    margin-left: 10px;
+    margin: 5px;
     border: 1px;
+    border-radius: 8px;
+    padding: 5px;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
 }
 
 .CSC {
