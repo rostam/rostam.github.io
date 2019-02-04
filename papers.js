@@ -32,7 +32,7 @@ pubs = [
     "title" : "Interactive Visualization of Large Similarity Graphs and Entity Resolution Clusters.",
     "proceedings" : "in EDBT, 2018",
     "year" : 2018,
-    "keywords" : "DAV, GTA"
+    "keywords" : "DAV, GTA, PAC"
   },
   {
     "authors": "S. Elumalai, S. M. Hosamani,T. Mansour,M. A. Rostami",
