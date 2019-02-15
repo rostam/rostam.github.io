@@ -16,9 +16,10 @@ pubs = [
   {
     "authors": "M. Ali Rostami, Matthias Kricke, Eric Peukert, Stefan Kuehne, Steffen Dienst,Erhard Rahm",
     "title" : "BIGGR: Bringing Gradoop to Applications.",
-    "proceedings" : "Datenbank-Spektrum, accepted for publication, 2019",
+    "proceedings" : "Datenbank Spektrum, 2019",
     "year" : 2019,
-    "keywords" : "DAV, GTA"
+    "keywords" : "DAV, GTA",
+    "DOI" : "https://doi.org/10.1007/s13222-019-00306-x"
   },
   {
     "authors": "T. Mansour, M. A. Rostami, S. Elumalai, G. B. A. Xavier",
