@@ -185,7 +185,8 @@ pubs = [
     "title" : "A distributed-memory parallelization of a shared-memory parallel ensemble Kalman filter.",
     "proceedings" : "In F. Winkler, V. Negru, T. Ida, T. Jebelean, D. Petcu, S. Watt, and D. Zaharie, editors, Proceedings of the 16th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2014), September 22-25, 2014, Timisoara, Romania, pages 455-462, Los Alamitos, CA, USA, 2014. IEEE Computer Society.",
     "year" : 2014,
-    "keywords" : "CSC, GTA"
+    "keywords" : "CSC, GTA",
+    "doi"  : "https://ieeexplore.ieee.org/document/7034717"
   },
   {
     "authors": "R. Seidler, H. M. Bücker, M. A. Rostami, D. Neuhäuser.",
