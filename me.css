@@ -24,6 +24,14 @@ body {
     margin: 5px;
 }
 
+.title {
+    /*font-weight: bold;*/
+}
+
+.link {
+    font-weight: bold;
+}
+
 .proceedings {
     margin: 5px;
 }
