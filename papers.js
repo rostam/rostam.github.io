@@ -1,15 +1,22 @@
 pubs = [
   {
     "authors": "M. Ali Rostami, Martin Bücker. ",
+    "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries",
+    "proceedings" : "submitted for publication at IWOCA 2019",
+    "year" : 2019,
+    "keywords" : "CSC, GTA"
+  },
+  {
+    "authors": "M. Ali Rostami, Martin Bücker. ",
     "title" : "Redesigning Interactive Educational Modules for Combinatorial Scientific Computing.",
-    "proceedings" : "submitted for publication at ICCS 2019",
+    "proceedings" : "accepted for publication at ICCS 2019",
     "year" : 2019,
     "keywords" : "CSC, GTA, EDU"
   },
   {
     "authors": "M. Ali Rostami, Moritz Wilke, Eric Peukert, Erhard Rahm.",
     "title" : "Big graph analysis by visually created workflows.",
-    "proceedings" : "BTW 2019, accepted for publication, 2019",
+    "proceedings" : "BTW 2019, 2019",
     "year" : 2019,
     "keywords" : "DAV, GTA"
   },
