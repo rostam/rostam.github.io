@@ -31,18 +31,18 @@ pubs.forEach(function (pub) {
 
 function clickCategory(cat) {
     let all = document.getElementsByClassName("publication");
-    let fontWeight = document.getElementById(cat + "-cat").style.fontWeight;
-    if (fontWeight == "normal") document.getElementById(cat + "-cat").style.fontWeight = "bold";
-    else document.getElementById(cat + "-cat").style.fontWeight = "normal";
+    cats.forEach(function (c) {
+        document.getElementById(c + "-cat").style.fontWeight = "normal";
+    });
+    document.getElementById(cat + "-cat").style.fontWeight = "bold";
     for (let i = 0; i < all.length; i++) {
         all[i].hidden = false;
     }
-
     cats.forEach(function (c) {
         if (document.getElementById(c + "-cat").style.fontWeight == "bold") {
             for (let i = 0; i < all.length; i++) {
-                let txt = all[i].childNodes[3].innerHTML;
-                if (txt.indexOf(c) == -1) all[i].hidden = true;
+                let txt = all[i].innerHTML;
+                if (txt.indexOf("square "+c) == -1) all[i].hidden = true;
             }
         }
     });
