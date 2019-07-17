@@ -9,16 +9,18 @@ pubs = [
   {
     "authors": "M. Ali Rostami, Martin Bücker. ",
     "title" : "Redesigning Interactive Educational Modules for Combinatorial Scientific Computing.",
-    "proceedings" : "accepted for publication at ICCS 2019",
+    "proceedings" : "Computational Science -- ICCS 2019, Springer, 2019",
     "year" : 2019,
-    "keywords" : "CSC, GTA, EDU"
+    "keywords" : "CSC, GTA, EDU",
+    "doi" : "https://doi.org/10.1007/978-3-030-22750-0_29"
   },
   {
     "authors": "M. Ali Rostami, Moritz Wilke, Eric Peukert, Erhard Rahm.",
     "title" : "Big graph analysis by visually created workflows.",
     "proceedings" : "BTW 2019, 2019",
     "year" : 2019,
-    "keywords" : "DAV, GTA"
+    "keywords" : "DAV, GTA",
+    "doi": "https://doi.org/10.18420/btw2019-45"
   },
   {
     "authors": "M. Ali Rostami, Matthias Kricke, Eric Peukert, Stefan Kuehne, Steffen Dienst,Erhard Rahm.",
