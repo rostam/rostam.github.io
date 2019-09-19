@@ -2,27 +2,101 @@
 <head>
 <title>Mathedemo</title>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
-<h2>Math in TeX notation</h2>
+<h2>Nested Dissection Ordering</h2>
 
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-$$ \begin{array}{rcll}
-y & = & x^{2}+bx+c\\
-  & = & x^{2}+2\times\dfrac{b}{2}x+c\\
-  & = & \underbrace{x^{2}+2\times\dfrac{b}{2}x+\left(\frac{b}{2}\right)^{2}}-
-      {\left(\dfrac{b}{2}\right)^{2}+c}\\
-  &  & \qquad\left(x+{\dfrac{b}{2}}\right)^{2}\\
-  & = & \left(x+\dfrac{b}{2}\right)^{2}-\left(\dfrac{b}{2}\right)^{2}+c 
-  & \left|+\left({\dfrac{b}{2}}\right)^{2}-c\right.\\
-    y+\left(\dfrac{b}{2}\right)^{2}-c & = & \left(x+
-    \dfrac{b}{2}\right)^{2} & \left|\strut(\textrm{vertex form})\right.\\
-y-y_{S} & = & (x-x_{S})^{2}\\
-S(x_{S};y_{S}) & \,\textrm{or}\, 
-    & S\left(-\dfrac{b}{2};\,\left(\dfrac{b}{2}\right)^{2}-c\right)
-\end{array} $$
+Given a sparse positive definite system of linear equations, find a way to increase the
+level of parallelism when using the Cholesky factorization. In this numerical technique, the
+coefficient matrix $A$ is decomposed into the product of the form
+$$
+A=L L^T ,
+$$
+where the matrix $L$ is lower triangular. The factorization is typically carried out ``in-place,''
+meaning that the same storage is used for the input~$A$ and the output $L$. That is, values of~$A$
+are overwritten by values of~$L$. It is known for a long time \cite{graphgauss1961} that, for
+sparse matrices $A$, there are matrix positions $(i,j)$ where the factorization process generates
+nonzero values in $L$ where there were zeros in $A$. These additional nonzero elements in~$L$ are
+called fill-in elements. An example of a matrix~$A$ of order 12 and its Cholesky factor is depicted
+in \figref{f.no_bisection}. Here, a nonzero is indicated by the symbol $\times$ and a zero is
+represented by the empty space. The fill-in elements in $L$ are marked by red bullets.
+
+Now consider a reordering of the rows and columns of the matrix $A$ into a matrix $A^{\prime}$. In
+formulae, this reordering is nothing but a symmetric permutation $A^{\prime}  = P A P^T$ of the
+matrix $A$ where $P$ is a permutation matrix. Since symmetric permutations preserve the symmetry
+and positive definiteness, the Cholesky factorization can also be applied to the reordered matrix,
+i.e,
+$$
+A^{\prime} = L^{\prime} (L^{\prime})^T.
+$$
+
+It is well known \cite{ros:gra} that the reordering has an effect on the number and positions of
+the fill-in elements. Therefore, one is interested in finding a permutation $P$ that is
+advantageous in some sense. In the following, we try to find a reordering of the form
+\begin{equation}
+\label{e.A}
+A^{\prime} =
+\begin{bmatrix}
+A_1 & 0   & B_1^T \\[0.2em]
+0   & A_2 & B_2^T \\[0.2em]
+B_1 & B_2 & C
+\end{bmatrix} ,
+\end{equation}
+whose nonzero blocks are schematically depicted by color in the left of \figref{f.bisection}. We
+will now describe why this reordering allows to execute two tasks in parallel.
+
+It is known that, independent from the nonzero pattern within the colored parts of $A^{\prime}$,
+fill-in elements in $L^{\prime}$ will not be generated in the zero block. In other words, we have
+the following block form of a Cholesky decomposition:
+\begin{equation*}
+%\label{e.chol}
+\begin{bmatrix}
+A_1 & 0   & B_1^T \\[0.2em]
+0   & A_2 & B_2^T \\[0.2em]
+B_1 & B_2 & C
+\end{bmatrix}
+=
+\begin{bmatrix}
+L_1 & 0   & 0 \\[0.2em]
+0   & L_2 & 0 \\[0.2em]
+E_1 & E_2 & D
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+L_1^T & 0   & E_1^T \\[0.2em]
+0   & L_2^T & E_2^T \\[0.2em]
+0   & 0     & D^T
+\end{bmatrix} .
+\end{equation*}
+Thus, given the blocks $A_1$, $A_2$, $B_1$, $B_2$ and $C$ in the matrix~$A^{\prime}$, we
+immediately find the blocks $L_1$, $L_2$, $E_1$, $E_2$ and $D$ in its Cholesky factor $L^{\prime}$
+as follows:
+\begin{align}
+  A_1        &= L_1 L_1^T,  \label{e.a1}\\[0.2em]
+  A_2        &= L_2 L_2^T,  \label{e.a2}\\[0.2em]
+  L_1 E_1^T  &= B_1^T,      \label{e.e1}\\[0.2em]
+  L_2 E_2^T  &= B_2^T,      \label{e.e2}\\[0.2em]
+  C          &= E_1 E_1^T + E_2 E_2^T + D D^T . \label{e.d}
+\end{align}
+That is, from \eqref{e.a1} and \eqref{e.a2}, the blocks $L_1$ and $L_2$ are given by Cholesky
+factorizations of the blocks $A_1$ and $A_2$, respectively. Once these partial results are
+available, the next task is to solve the two linear systems with multiple right-hand sides
+\eqref{e.e1} and \eqref{e.e2} for the blocks $E_1$ and $E_2$, respectively. Finally, by rearranging
+\eqref{e.d} into
+\begin{equation}
+\label{e.serial}
+C  - E_1 E_1^T - E_2 E_2^T =  D D^T ,
+\end{equation}
+the block $D$ is given by another Cholesky factorization of the block $C  - E_1 E_1^T - E_2 E_2^T$.
+
 </body>
 </html>
