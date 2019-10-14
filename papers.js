@@ -1,5 +1,13 @@
 pubs = [
   {
+    "authors": "Kevin Gomez and Matthias Täschner and M. Ali Rostami and Christopher Rost and Erhard Rahm",
+    "title" : "Graph Sampling with Distributed In-Memory Dataflow Systems.",
+    "proceedings" : "submitted for publication at SIAM Workshop on CSC 2019",
+    "year" : 2019,
+    "keywords" : "DAV, GTA",
+    "doi" : "https://arxiv.org/abs/1910.04493"
+  },
+  {
     "authors": "M. Ali Rostami, Martin Bücker. ",
     "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
     "proceedings" : "submitted for publication at SIAM Workshop on CSC 2019",
