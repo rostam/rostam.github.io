@@ -1,5 +1,13 @@
 pubs = [
   {
+    "authors": "A. Ali, S. Elumalai, T. Mansour, M. A. Rostami",
+    "title": "On the Complementary Equienergetic Graphs",
+    "proceedings": "match - communication in mathematical and computer chemistry, volume 83, number 3",
+    "year": 2020,
+    "keywords": "GTA",
+    "doi": "http://match.pmf.kg.ac.rs/content83n3.htm"
+  },
+  {
     "authors": "Kevin Gomez and Matthias Täschner and M. Ali Rostami and Christopher Rost and Erhard Rahm",
     "title" : "Graph Sampling with Distributed In-Memory Dataflow Systems.",
     "proceedings" : "submitted for publication at SIAM Workshop on CSC 2019",
