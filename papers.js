@@ -1,6 +1,6 @@
 pubs = [
   {
-    "authors": "A. Ali, S. Elumalai, T. Mansour, M. A. Rostami",
+    "authors": "A. Ali, S. Elumalai, T. Mansour, M. A. Rostami.",
     "title": "On the Complementary Equienergetic Graphs",
     "proceedings": "match - communication in mathematical and computer chemistry, volume 83, number 3",
     "year": 2020,
@@ -8,7 +8,7 @@ pubs = [
     "doi": "http://match.pmf.kg.ac.rs/content83n3.htm"
   },
   {
-    "authors": "Kevin Gomez and Matthias Täschner and M. Ali Rostami and Christopher Rost and Erhard Rahm",
+    "authors": "Kevin Gomez and Matthias Täschner and M. Ali Rostami and Christopher Rost and Erhard Rahm.",
     "title" : "Graph Sampling with Distributed In-Memory Dataflow Systems.",
     "proceedings" : "submitted for publication at SIAM Workshop on CSC 2019",
     "year" : 2019,
@@ -16,14 +16,14 @@ pubs = [
     "doi" : "https://arxiv.org/abs/1910.04493"
   },
   {
-    "authors": "M. Ali Rostami, Martin Bücker. ",
+    "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
     "proceedings" : "submitted for publication at SIAM Workshop on CSC 2019",
     "year" : 2019,
     "keywords" : "CSC, GTA"
   },
   {
-    "authors": "M. Ali Rostami, Martin Bücker. ",
+    "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "Redesigning Interactive Educational Modules for Combinatorial Scientific Computing.",
     "proceedings" : "Computational Science -- ICCS 2019, Springer, 2019",
     "year" : 2019,
