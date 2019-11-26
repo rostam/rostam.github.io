@@ -1,6 +1,6 @@
 pubs = [
   {
-    "authors": "A. Ali, S. Elumalai, T. Mansour, M. A. Rostami.",
+    "authors": "A. Ali, S. Elumalai, T. Mansour, M. Ali Rostami.",
     "title": "On the Complementary Equienergetic Graphs",
     "proceedings": "match - communication in mathematical and computer chemistry, volume 83, number 3",
     "year": 2020,
@@ -47,7 +47,7 @@ pubs = [
     "doi" : "https://doi.org/10.1007/s13222-019-00306-x"
   },
   {
-    "authors": "T. Mansour, M. A. Rostami, S. Elumalai, G. B. A. Xavier.",
+    "authors": "T. Mansour, M. Ali Rostami, S. Elumalai, G. B. A. Xavier.",
     "title" : "A short note on hyper Zagreb index.",
     "proceedings" : "Boletim da Sociedade Paranaense de Matematica, 37(2):51-58, 2019",
     "year" : 2019,
@@ -63,7 +63,7 @@ pubs = [
     "doi"  : "https://dbs.uni-leipzig.de/en/publication/title/interactive_visualization_of_large_similarity_graphs_and_entity_resolution_clusters"
   },
   {
-    "authors": "S. Elumalai, S. M. Hosamani, T. Mansour, M. A. Rostami.",
+    "authors": "S. Elumalai, S. M. Hosamani, T. Mansour, M. Ali Rostami.",
     "title" : "More on inverse degree and topological indices of graphs.",
     "proceedings" : "Filomat, 32(1):165-178, 2018",
     "year" : 2018,
@@ -71,7 +71,7 @@ pubs = [
     "doi"  :  "http://journal.pmf.ni.ac.rs/filomat/index.php/filomat/article/view/5339/2573"
   },
   {
-    "authors": "S. Elumalai, M. A. Rostami.",
+    "authors": "S. Elumalai, M. Ali Rostami.",
     "title" : "Correcting the number of L-borderenergetic graphs of order 9 and 10.",
     "proceedings" : "MATCH Communications in Mathematical and in Computer Chemistry, 79(2):311-319, 2018",
     "year" : 2018,
@@ -79,7 +79,7 @@ pubs = [
     "doi"  : "http://match.pmf.kg.ac.rs/electronic_versions/Match79/n2/match79n2_311-319.pdf"
   },
   {
-    "authors": "S. Elumalai, T. Mansour, M. A. Rostami.",
+    "authors": "S. Elumalai, T. Mansour, M. Ali Rostami.",
     "title" : "On the bounds of forgotten topological index.",
     "proceedings" : "Turkish Journal of Mathematics, 41(6):1687-1702, 2017.",
     "year" : 2017,
@@ -87,7 +87,7 @@ pubs = [
     "doi"  : "http://journals.tubitak.gov.tr/math/issues/mat-17-41-6/mat-41-6-25-1610-127.pdf"
   },
   {
-    "authors": " T. Mansour, M. A. Rostami, S. Elumalai, B. A. Xavier.",
+    "authors": " T. Mansour, M. Ali Rostami, S. Elumalai, B. A. Xavier.",
     "title" : "Correcting a paper on Randic and geometric-arithmetic index.",
     "proceedings" : "Turkish Journal of Mathematics, 41(1):27-32, 2017.",
     "year" : 2017,
@@ -95,7 +95,7 @@ pubs = [
     "doi"  : "http://journals.tubitak.gov.tr/math/issues/mat-17-41-1/mat-41-1-4-1510-115.pdf"
   },
   {
-    "authors": "M. A. Rostami.",
+    "authors": "M. Ali Rostami.",
     "title" : "Combining partial Jacobian computation and preconditioning: New heuristics, educational modules, and applications.",
     "proceedings" : "Dissertation, Department of Mathematics and Computer Science, Friedrich Schiller University Jena, Jena, 2017. Also published by Cuvillier Verlag, Göttingen.",
     "year" : 2017,
@@ -103,7 +103,7 @@ pubs = [
     "doi"  : "https://cuvillier.de/en/shop/publications/7637-combining-partial-jacobian-computation-and-preconditioning-new-heuristics-educational-modules-and-applications"
   },
   {
-    "authors": "M. A. Rostami, H. M. Bücker.",
+    "authors": "M. Ali Rostami, H. M. Bücker.",
     "title" : "An online scripting language for teaching combinatorial scientific computing.",
     "proceedings" : "In W. Amme and T. S. Heinze, editors, Programmiersprachen und Grundlagen der Programmierung, 19. Kolloquium, KPS 2017, Weimar, 25.-27. September, 2015, Tagungsband, Jenaer Schriften zur Mathematik und Informatik Math/Inf/02/2017, pages 83-84, Jena, 2017. Friedrich-Schiller-Universität Jena. Extended abstract.",
     "year" : 2017,
@@ -111,7 +111,7 @@ pubs = [
     "doi"  : "http://www.kps2017.uni-jena.de/proceedings/kps2017_submission_12.pdf"
   },
   {
-    "authors": " H. M. Bücker, M. Lülfesmann, M. A. Rostami.",
+    "authors": " H. M. Bücker, M. Lülfesmann, M. Ali Rostami.",
     "title" : "Enabling implicit time integration for compressible flows by partial coloring: A case study of a semi-matrix-free preconditioning technique.",
     "proceedings" : "In A. H. Gebremedhin, E. G. Boman, and B. Ucar, editors, 2016 Proceedings of the Seventh SIAM \nWorkshop on Combinatorial Scientific Computing, Albuquerque, New Mexico, USA, October 10-12, pages 23-32, Philadelphia, PA, USA, 2016. SIAM.",
     "year" : 2016,
@@ -119,7 +119,7 @@ pubs = [
     "doi"  :  "https://epubs.siam.org/doi/10.1137/1.9781611974690.ch3"
   },
   {
-    "authors": " T. Mansour, M. A. Rostami, E. Suresh, G. B. A. Xavier.",
+    "authors": " T. Mansour, M. Ali Rostami, E. Suresh, G. B. A. Xavier.",
     "title" : "New sharp lower bounds for the first Zagreb index.",
     "proceedings" : "Scientific Publications of the State University of Novi Pazar, 8(1):11-19, 2016.",
     "year" : 2016,
@@ -127,7 +127,7 @@ pubs = [
     "doi" : "http://www.np.ac.rs/downloads/publications/vol8_br_1/rad2v3.pdf"
   },
   {
-    "authors": "T. Mansour, M. A. Rostami, E. Suresh, G. B. A. Xavier.",
+    "authors": "T. Mansour, M. Ali Rostami, E. Suresh, G. B. A. Xavier.",
     "title" : "On the bounds of the first reformulated Zagreb index.",
     "proceedings" : "Turkish Journal of Analysis and Number Theory, 4(1):8-15, 2016.",
     "year" : 2016,
@@ -135,7 +135,7 @@ pubs = [
     "doi"  : "https://pdfs.semanticscholar.org/5d7e/59d53bf91e5527a1c3df215e675b5211269d.pdf"
   },
   {
-    "authors": "H. M. Bücker, M. A. Rostami.",
+    "authors": "H. M. Bücker, M. Ali Rostami.",
     "title" : "Interactively exploring the connection between bidirectional compression and star bicoloring.",
     "proceedings" : "In S. Koziel, L. Leifsson, M. Lees, V. V. Krzhizhanovskaya, J. Dongarra, and P. M. A. Sloot, editors, International Conference on Computational Science, ICCS 2015 - Computational Science at the Gates of Nature, Reykjavik, Iceland, June 1-3, 2015, volume 51 of Procedia Computer Science, pages 1917-1926. Elsevier, 2015.",
     "year" : 2015,
@@ -151,7 +151,7 @@ pubs = [
     "doi"  :  "https://link.springer.com/chapter/10.1007/978-3-319-27308-2_12"
   },
   {
-    "authors": "H. M. Bücker, M. A. Rostami.",
+    "authors": "H. M. Bücker, M. Ali Rostami.",
     "title" : "Interactively exploring the connection between nested dissection orderings for parallel Cholesky factorization and vertex separators.",
     "proceedings" : "In IEEE 28th International Parallel and Distributed Processing Symposium, IPDPS 2014 Workshops, Phoenix, Arizona, USA, May 19-23, 2014, pages 1122-1129, Los Alamitos, CA, USA, 2014. IEEE Computer Society.",
     "year" : 2014,
@@ -159,7 +159,7 @@ pubs = [
     "doi"  : "https://dl.acm.org/citation.cfm?id=2672959"
   },
   {
-    "authors": "H. M. Bücker, M. A. Rostami, R. Seidler.",
+    "authors": "H. M. Bücker, M. Ali Rostami, R. Seidler.",
     "title" : "Turning a serial forward code into a parallel inverse code: A case study from geothermal engineering.",
     "proceedings" : "In K. Psarris, P. Borne, I. Rudas, and Y. S. Shmaliy, editors, Computers, Automatic Control, Signal Processing and Systems Science, Proceedings of the 2014 International Conference on System, Control, Signal Processing and Informatics II (SCSI'14), Prague, Czech Republic, April 2-4, 2014, volume 33 of Recent Advances in Electrical Engineering Series, pages 22-25. EUROPMENT, 2014.",
     "year" : 2014,
@@ -167,7 +167,7 @@ pubs = [
     "doi"  :  "http://inase.org/library/2014/prague/bypaper/SCSI/SCSI-02.pdf"
   },
   {
-    "authors": "M. A. Rostami, A. Azadi, M. Seydi.",
+    "authors": "M. Ali Rostami, A. Azadi, M. Seydi.",
     "title" : "Graphtea: Interactive graph self-teaching tool.",
     "proceedings" : "In P. Dondon, B. K. Bose, D. S. Naidu, I. Rudas, and S. Kartalopoulos, editors, Communications, Circuits and Educational Technologies, Proceedings of the 2014 International Conference on Education and Educational Technologies II (EET'14), Prague, Czech Republic, April 2-4, 2014, pages 48-51. EUROPMENT, 2014.",
     "year" : 2014,
@@ -183,14 +183,14 @@ pubs = [
     "doi"  :  ""
   },
   {
-    "authors": "M. A. Rostami, H. M. Bücker.",
+    "authors": "M. Ali Rostami, H. M. Bücker.",
     "title" : "Preservation of non-uniform memory architecture characteristics when going from a nested OpenMP to a hybrid MPI/OpenMP approach.",
     "proceedings" : "In M. S. Obaidat, J. Kacprzyk, and T. Ören, editors, SIMULTECH 2014, Proceedings of the 4th International Conference on Simulation and Modeling Methodologies, Technologies and Applications, Vienna, Austria, August 28-30, 2014, pages 286-291. SCITEPRESS, 2014.",
     "year" : 2014,
     "keywords" : "PAC"
   },
   {
-    "authors": "M. A. Rostami, H. M. Bücker, A. Azadi.",
+    "authors": "M. Ali Rostami, H. M. Bücker, A. Azadi.",
     "title" : "Illustrating a graph coloring algorithm based on the principle of inclusion and exclusion using GraphTea.",
     "proceedings" : "In C. Rensing, S. de Freitas, T. Ley, and P. J. Mu noz Merino, editors, Open Learning and Teaching in Educational Communities, Proceedings of 9th European Conference on Technology Enhanced Learning, EC-TEL 2014, Graz, Austria, September 16-19, 2014, volume 8719 of Lecture Notes in Computer Science, pages 514-517, Cham, Switzerland, 2014. Springer.",
     "year" : 2014,
@@ -198,7 +198,7 @@ pubs = [
     "doi"  : "https://link.springer.com/chapter/10.1007/978-3-319-11200-8_54"
   },
   {
-    "authors": "M. A. Rostami, H. M. Bücker, A. Azadi.",
+    "authors": "M. Ali Rostami, H. M. Bücker, A. Azadi.",
     "title" : "A new approach to visualizing general trees using thickness-adjustable quadratic curves.",
     "proceedings" : "In C. Duncan and A. Symvonis, editors, Graph Drawing, Proceedings of 22nd International Symposium on Graph Drawing, GD 2014, Würzburg, Germany, September 24-26, 2014, volume 8871 of Lecture Notes in Computer Science, pages 525-526, Berlin, Germany, 2014. Springer. Extended abstract for poster.",
     "year" : 2014,
@@ -206,7 +206,7 @@ pubs = [
     "doi"  : "https://link.springer.com/book/10.1007%2F978-3-662-45803-7"
   },
   {
-    "authors": "M. A. Rostami, H. M. Bücker, C. Vogt, R. Seidler, D. Neuhäuser, V. Rath.",
+    "authors": "M. Ali Rostami, H. M. Bücker, C. Vogt, R. Seidler, D. Neuhäuser, V. Rath.",
     "title" : "A distributed-memory parallelization of a shared-memory parallel ensemble Kalman filter.",
     "proceedings" : "In F. Winkler, V. Negru, T. Ida, T. Jebelean, D. Petcu, S. Watt, and D. Zaharie, editors, Proceedings of the 16th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2014), September 22-25, 2014, Timisoara, Romania, pages 455-462, Los Alamitos, CA, USA, 2014. IEEE Computer Society.",
     "year" : 2014,
@@ -214,7 +214,7 @@ pubs = [
     "doi"  : "https://ieeexplore.ieee.org/document/7034717"
   },
   {
-    "authors": "R. Seidler, H. M. Bücker, M. A. Rostami, D. Neuhäuser.",
+    "authors": "R. Seidler, H. M. Bücker, M. Ali Rostami, D. Neuhäuser.",
     "title" : "On the design of the EFCOSS software architecture when using parallel and distributed computing.",
     "proceedings" : "In A. Holzinger, T. Libourel, L. A. Maciaszek, and S. J. Mellor, editors, Proceedings of 9th International Conference on Software Engineering and Applications, ICSOFT-EA, Vienna, Austria, August 29-31, 2014, pages 445-454. SCITEPRESS, 2014.",
     "year" : 2014,
@@ -222,7 +222,7 @@ pubs = [
     "doi"  : "https://ieeexplore.ieee.org/document/7293900"
   },
   {
-    "authors": "H. M. Bücker, M. A. Rostami, M. Lülfesmann.",
+    "authors": "H. M. Bücker, M. Ali Rostami, M. Lülfesmann.",
     "title" : "An interactive educational module illustrating sparse matrix compression via graph coloring.",
     "proceedings" : "In 2013 International Conference on Interactive Collaborative Learning (ICL), Proceedings of the 16th International Conference on Interactive Collaborative Learning, Kazan, Russia, September 25-27, 2013, pages 330-335, Piscataway, NJ, 2013. IEEE.",
     "year" : 2013,
