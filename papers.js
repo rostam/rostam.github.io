@@ -18,7 +18,7 @@ pubs = [
   {
     "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
-    "proceedings" : "submitted for publication at SIAM Workshop on CSC 2019",
+    "proceedings" : "accepted for the publication at SIAM Workshop on CSC 2020",
     "year" : 2019,
     "keywords" : "CSC, GTA"
   },
