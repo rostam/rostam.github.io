@@ -1,5 +1,12 @@
 pubs = [
   {
+    "authors": "M. Ali Rostami, Martin Bücker.",
+    "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
+    "proceedings" : "accepted for the publication at SIAM Workshop on CSC 2020",
+    "year" : 2020,
+    "keywords" : "CSC, GTA"
+  },
+  {
     "authors": "A. Ali, S. Elumalai, T. Mansour, M. Ali Rostami.",
     "title": "On the Complementary Equienergetic Graphs",
     "proceedings": "match - communication in mathematical and computer chemistry, volume 83, number 3",
@@ -14,13 +21,6 @@ pubs = [
     "year" : 2019,
     "keywords" : "DAV, GTA",
     "doi" : "https://arxiv.org/abs/1910.04493"
-  },
-  {
-    "authors": "M. Ali Rostami, Martin Bücker.",
-    "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
-    "proceedings" : "accepted for the publication at SIAM Workshop on CSC 2020",
-    "year" : 2019,
-    "keywords" : "CSC, GTA"
   },
   {
     "authors": "M. Ali Rostami, Martin Bücker.",
