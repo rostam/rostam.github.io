@@ -1,4 +1,2 @@
 # rostam.github.io
-My personal website:
-- Projects
-- Publications: They can be filtered based on their topic.
+This repository contains HTML/JS of my personal website. In this page, I talk about my background, my projects, and my publications.
