@@ -1,0 +1,91 @@
+<html>
+<meta charset="utf-8">
+<head><title>EXPLAIN - Menu</title>
+    <script src="lib/jquery.js"></script>
+    <script src="modules/column_compression.js"></script>
+    <script src="modules/cholesky_factorization.js"></script>
+    <script src="modules/column_compression_bip.js"></script>
+    <script src="modules/row_compression_bip.js"></script>
+    <script src="modules/bidirectional_compression.js"></script>
+    <script src="modules/nested_dissection.js"></script>
+    <script>
+        function customModule() {
+            localStorage.setItem("name", "Custom Module");
+            window.open("custom_module.html","_self");
+        }
+
+        function loadModule(name) {
+            localStorage.clear();
+            localStorage.setItem("name",name);
+            var func_parts = name.toLowerCase().split(' ');
+            var func  = func_parts.join('_');
+            var global_name = "global_";
+            var ref_name = "reference_";
+            var postp_name = "post_processing_";
+            func_parts.forEach(function(str) {
+                global_name += str[0];
+                ref_name += str[0];
+                postp_name += str[0];
+            });
+            localStorage.setItem("func",eval(func).toString());
+            localStorage.setItem("global",eval(global_name).toString());
+            localStorage.setItem("reference",eval(ref_name).toString());
+            localStorage.setItem("postprocessing",eval(postp_name).toString());
+            window.open("load_module.html","_self");
+        }
+    </script>
+    <script></script>
+</head>
+<body>
+<div style="width:900px">
+    <div style="background: rgb(0,103,166);">
+        <table>
+            <tr>
+                <td style="vertical-align: middle;">
+                    <img src="../pics/explain.png" width=300 alt="Logo">
+                </td>
+                <td style="vertical-align: middle; color: white">
+      <span style="font-family:Arial,sans-serif; font-size:25pt">
+        EXPLoring Algorithms INteractively
+      </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <form name=Form method="post">
+        <h2>Modules:</h2>
+        <ul>
+            <li><a style="font-size:1.5em" href='javascript:loadModule("Nested Dissection","nested_dissection")'>Nested Dissection Ordering</a></li>
+            <li><a style="font-size:1.5em" href='javascript:loadModule("Column Compression")'>Column Compression (Column Intersection Graph)</a></li>
+            <!--<li><a style="font-size:1.5em" href='javascript:simplePart()'>Parallel Matrix-Vector Product</a></li>-->
+            <li><a style="font-size:1.5em" href='javascript:loadModule("Cholesky Factorization")'>Cholesky Factorization</a></li>
+            <li><a style="font-size:1.5em" href='javascript:loadModule("Row Compression Bip")'>Row Compression (Bipartite Graph)</a></li>
+            <li><a style="font-size:1.5em" href='javascript:loadModule("Column Compression Bip")'>Column Compression (Bipartite Graph)</a></li>
+            <li><a style="font-size:1.5em" href='javascript:loadModule("Bidirectional Compression")'>Bidirectional Compression</a></li>
+            <li><a style="font-size:1.5em" href='javascript:customModule()'>New Custom Module</a></li>
+        </ul>
+    </form>
+    <p>
+    <h3>Current Developer:</h3>
+    M. Ali Rostami <a href="mailto:a.rostami@uni-jena.de" style="color: rgb(0,90,144)">a.rostami[at]uni-jena.de</a><br>
+    <p>
+    <h3>Supervisor:</h3>
+    Prof. H. Martin B&uuml;cker <a href="mailto:martin.buecker@uni-jena.de" style="color: rgb(0,90,144)">martin.buecker[at]uni-jena.de</a>
+    <br/>
+    <p>
+    <h3>Previous Developers:</h3>
+    Simon Le&szlig;enich<br>
+    Michael L&uuml;lfesmann<br>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85610913-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

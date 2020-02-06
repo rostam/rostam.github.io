@@ -1,0 +1,237 @@
+var selected = [];
+var firstSubMatrixClicked = false;
+var secondSubMatrixClicked = false;
+var subMatrix = false;
+var partitions = {};
+var selectedArchive = [];
+var seenArchive = [];
+var notSeenArchive = [];
+var orderArchive = [];
+var gArchive = undefined;
+var rounds = [];
+var parts = [];
+var orange_alpha = "rgba(255,165,0,0.5)";
+var blue_alpha = "rgba(0,0,255,0.5)";
+var red_alpha = "rgba(255,0,0,0.5)";
+var green_alpha = "rgba(0,255,0,0.5)";
+var magenta_alpha = "rgba(255,0,255,0.5)";
+var stop = false;
+function nested_dissection() {
+    g=currentg;
+    i=current;
+    if (gArchive == undefined) gArchive = jQuery.extend(true, {}, g);
+    if (stop) return;
+    var n = numOfVertices(g);
+    if (selected.indexOf(i) == -1) {
+        selected.push(i);
+        document.getElementById("orderSelect").innerHTML =
+            document.getElementById("orderSelect").innerHTML +
+            makeInputTag(i);
+    } else return;
+
+    if (subMatrix == true) {
+        if (selected.length == selectedArchive.length + 1) {
+            drawSubMat(0, seenArchive.length - 1, 0, seenArchive.length - 1, "white");
+            drawSubMat(seenArchive.length, seenArchive.length + notSeenArchive.length - 1,
+                seenArchive.length, seenArchive.length + notSeenArchive.length - 1, "white");
+
+            d3.select("#svg_matrix").append("rect").attr("x", margin).attr("y", margin)
+                .attr("width", seenArchive.length * ratio).attr("height", seenArchive.length * ratio)
+                .style("stroke", "black").style("stroke-width", 2)
+                .style("fill", "none");
+
+            d3.select("#svg_matrix").append("rect")
+                .attr("x", margin + seenArchive.length * ratio)
+                .attr("y", margin + seenArchive.length * ratio)
+                .attr("width", notSeenArchive.length * ratio)
+                .attr("height", notSeenArchive.length * ratio)
+                .style("stroke", "black").style("stroke-width", 2)
+                .style("fill", "none");
+
+        }
+
+        partitions.order = [];
+        var ns1 = [], ns2 = [];
+        var tmp = [];
+        for (i = 0; i < partitions.seen.length; i++) {
+            if (selected.indexOf(partitions.seen[i]) == -1) {
+                partitions.order.push(partitions.seen[i]);
+                ns1.push(partitions.seen[i]);
+            } else {
+                tmp.push(partitions.seen[i]);
+            }
+        }
+
+        partitions.order = partitions.order.concat(tmp);
+        var tmp2 = [];
+        for (i = 0; i < partitions.notSeen.length; i++) {
+            if (selected.indexOf(partitions.notSeen[i]) == -1) {
+                partitions.order.push(partitions.notSeen[i]);
+                ns2.push(partitions.notSeen[i]);
+            } else {
+                tmp2.push(partitions.notSeen[i]);
+            }
+
+        }
+        partitions.order = partitions.order.concat(tmp2);
+        partitions.order = partitions.order.concat(selectedArchive);
+
+        g = removeVertices(g, selected);
+
+        drawGraphHierarchichal(g, selectedArchive, seenArchive, notSeenArchive);
+        //drawGraph(g, orderArchive);
+        colorVertices(seenArchive, blue_alpha);
+        colorVertices(notSeenArchive, red_alpha);
+        colorVertices(selected, orange_alpha);
+
+        g = bfs(g, ns1[0]);
+        parts = allVSeen(g, selected);
+        var first_seen = parts.seen;
+
+        g = bfs(g, ns2[0]);
+        parts = allVSeen(g, selected);
+        var second_seen = parts.seen;
+
+        var notSeen1 = [], notSeen2 = [];
+        ns1.forEach(function (n) {
+            if (first_seen.indexOf(n) == -1 &&
+                tmp.indexOf(n) == -1) notSeen1.push(n);
+        });
+        ns2.forEach(function (n) {
+            if (second_seen.indexOf(n) == -1 &&
+                tmp2.indexOf(n) == -1) notSeen2.push(n);
+        });
+        partitions.order = first_seen.concat(notSeen1).concat(tmp)
+            .concat(second_seen).concat(notSeen2).concat(tmp2).concat(selectedArchive);
+
+        updateMatrix(n, partitions.order);
+
+        if (tmp.length >= 1) {
+            drawSubMat(partitions.seen.length - tmp.length,
+                partitions.seen.length - tmp.length,
+                0, partitions.seen.length - 1, orange_alpha);
+
+            drawSubMat(0, partitions.seen.length - 1,
+                partitions.seen.length - tmp.length,
+                partitions.seen.length - tmp.length, orange_alpha);
+        }
+        if (tmp2.length >= 1) {
+            drawSubMat(partitions.seen.length + partitions.notSeen.length - tmp2.length,
+                partitions.seen.length + partitions.notSeen.length - tmp2.length,
+                partitions.seen.length, partitions.seen.length + partitions.notSeen.length - 1, orange_alpha);
+            drawSubMat(
+                partitions.seen.length,
+                partitions.seen.length + partitions.notSeen.length - 1,
+                partitions.seen.length + partitions.notSeen.length - tmp2.length,
+                partitions.seen.length + partitions.notSeen.length - tmp2.length, orange_alpha);
+        }
+
+        // drawGraph(g, orderArchive);
+        drawGraphHierarchichal(g, selectedArchive, seenArchive, notSeenArchive);
+        colorVertices(selected, orange_alpha);
+        if (first_seen.length != ns1.length && second_seen.length != ns2.length) {
+            rounds[rounds.length - 1] =
+                ([selected.length, first_seen.length, notSeen1.length, second_seen.length, notSeen2.length]);
+            chartFromRounds(rounds);
+
+            document.getElementById("round").innerHTML =
+                "Nested Dissection Ordering  - Round " + rounds.length + " completed!";
+
+            subMatrix = false;
+            stop = true;
+
+            // d3.select("#svg_graph").selectAll("*").remove();
+            drawGraphHierarchichal(g, selectedArchive, seenArchive, notSeenArchive);
+            // colorEdge(gArchive, selected, orange_alpha, orderArchive);
+            // drawGraph(g, orderArchive, "norepaint");
+            colorVertices(selected, orange_alpha);
+            // drawGraphWithoutRepainting(g);
+        }
+
+        if (first_seen.length != ns1.length) {
+            colorVertices(first_seen, blue_alpha);
+            colorVertices(notSeen1, red_alpha);
+
+            drawSubMat(0, first_seen.length - 1, 0, first_seen.length - 1, blue_alpha)
+            drawSubMat(first_seen.length, first_seen.length + notSeen1.length - 1,
+                first_seen.length, first_seen.length + notSeen1.length - 1, red_alpha);
+        }
+
+        if (second_seen.length != ns2.length) {
+            colorVertices(second_seen, green_alpha);
+            colorVertices(notSeen2, magenta_alpha);
+
+            var offset = first_seen.concat(notSeen1).concat(tmp).length;
+            drawSubMat(offset, offset + second_seen.length - 1, offset, offset + second_seen.length - 1, green_alpha);
+            drawSubMat(offset + second_seen.length,
+                offset + second_seen.length + ns2.length - second_seen.length - 1,
+                offset + second_seen.length,
+                offset + second_seen.length + ns2.length - second_seen.length - 1, magenta_alpha);
+        }
+
+        drawNonzeros(g, partitions.order);
+        return;
+    }
+
+    var nonSelected;
+    for (var t = 0; t < n; t++) {
+        if (selected.indexOf(t) == -1) {
+            nonSelected = t;
+            break;
+        }
+    }
+    g = removeVertices(g, selected);
+    drawGraph(g);
+    g = bfs(g, nonSelected);
+    partitions = allVSeen(g, selected);
+    colorVertices(selected, orange_alpha);
+    updateMatrix(n, partitions.order);
+    drawSubMat(n - selected.length, n - selected.length, 0, n - 1, orange_alpha);
+    drawSubMat(0, n - 1, n - selected.length, n - selected.length, orange_alpha);
+    drawNonzeros(g, partitions.order);
+    if (partitions.notSeen.length >= 2 &&
+        partitions.seen.length >= 2 &&
+        firstSubMatrixClicked == false &&
+        secondSubMatrixClicked == false) {
+        drawGraphHierarchichal(g, selected, partitions.seen, partitions.notSeen);
+        colorVertices(partitions.seen, blue_alpha);
+        colorVertices(partitions.notSeen, red_alpha);
+        colorVertices(selected, orange_alpha);
+        drawSubMat(0, partitions.seen.length - 1, 0, partitions.seen.length - 1, blue_alpha);
+        drawSubMat(partitions.seen.length, partitions.seen.length + partitions.notSeen.length - 1,
+            partitions.seen.length, partitions.seen.length + partitions.notSeen.length - 1, red_alpha);
+
+        subMatrix = true;
+        selectedArchive = selected.slice();
+        seenArchive = partitions.seen.slice();
+        notSeenArchive = partitions.notSeen.slice();
+        orderArchive = partitions.order.slice();
+        rounds.push([selected.length, partitions.seen.length, partitions.notSeen.length, 0, 0]);
+        chartFromRounds(rounds);
+        document.getElementById("next_round").disabled = false;
+        document.getElementById("show_edge").disabled  = false;
+    }
+}
+
+function init_mouse_event() {
+    selected = [];
+    firstSubMatrixClicked = false;
+    secondSubMatrixClicked = false;
+    subMatrix = false;
+    partitions = {};
+    selectedArchive = [];
+    seenArchive = [];
+    notSeenArchive = [];
+    orderArchive = [];
+    parts = [];
+    //rounds=[];
+    chartFromRounds(rounds);
+    d3.select("#name").html(localStorage.getItem("name"));
+    d3.select("#round").html("1");
+    document.getElementById("orderSelect").innerHTML = "";
+}
+
+function makeInputTag(i) {
+    return '<input type=button id="' + (i + 1) + '" value="' + (i + 1) + '" style="font-size: 1.2em;" ' +
+        'onclick="order_select(' + i + ');">';
+}

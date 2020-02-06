@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title id="tit">EXPLAIN - Nested Dissection Ordering</title>
+    <script src="graph.js"></script>
+    <script src="graphic.js"></script>
+    <script src="mouse_event.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/highcharts.js"></script>
+    <script src="make_chart.js"></script>
+    <script src="lib/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="lib/explain.css">
+</head>
+<body>
+<div style="background: rgb(0,103,166); width: 1000px">
+    <table>
+        <tr>
+            <td style="vertical-align: middle;">
+                <a href=".">
+                    <img src="pics/explain_small.png" width=200 alt="Logo" border="0">
+                </a>
+            </td>
+            <td style="vertical-align: middle; color: white">
+                <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt">
+                <span id="name"> Nested Dissection Ordering</span> - Round
+                    <span id="round" style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt">1</span></span>
+            </td>
+        </tr>
+    </table>
+</div>
+<br/>
+<div style="background: rgb(0,103,166); width: 1000px">
+    <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt"></span>
+</div>
+<table border="0">
+    <tr>
+        <td id="graph" style="width: 500px;">
+            <svg id="svg_graph" width="500" height="500" style="border:1px solid #d3d3d3;"></svg>
+        </td>
+        <td id="matrix" style="width: 500px;">
+            <svg id="svg_matrix" width="500" height="500" style="border:1px solid #d3d3d3;"></svg>
+        </td>
+    </tr>
+    <tr></tr>
+</table>
+<script src="file_handle.js"></script>
+<table>
+    <tr>
+        <td style="width: 500px;">
+            <input id="next_round" type="button" onclick="init(loadedMatrix);"  value="Go to next round" disabled>
+            <input id="show_edge" type="button" onclick="showEdges();"  value="Show edges" disabled>
+            <br/><br/>
+            Order of selections:
+            <div id="orderSelect">&nbsp;&nbsp;&nbsp;</div>
+            <br/>
+            Select a matrix:
+            <select name=mat onChange="selectMatrix()" style='width:300px;font-size:1.0em;' id="selectMat">
+                <option selected=yes value='nestedDissection1.mtx'>nestedDissection1.mtx</option>
+                <option value='nestedDissection2.mtx'>nestedDissection2.mtx</option>
+                <option value='nestedDissection3.mtx'>nestedDissection3.mtx</option>
+                <option value='nestedDissection4.mtx'>nestedDissection4.mtx</option>
+            </select>
+            <br/><br/>
+            Upload your matrix:
+            <input type='file' onchange='openFile(event)'><br/><br/>
+        </td>
+        <td style="width: 500px;">
+            <div id="container" style="margin:0"></div>
+        </td>
+    </tr>
+</table>
+<script>
+    document.title="EXPLAIN - " + localStorage.getItem("name");
+    eval(localStorage.getItem("func"));
+//    d3.select("#round").html("1");
+    getText("matrices/nestedDissection4.mtx");
+</script>
+</body>
+</html>
