@@ -8,7 +8,6 @@
     <script src="modules/row_compression_bip.js"></script>
     <script src="modules/bidirectional_compression.js"></script>
     <script src="modules/nested_dissection.js"></script>
-    <script src="big/modules/nested_dissection_big.js"></script>
     <script>
         function customModule() {
             localStorage.setItem("name", "Custom Module");
@@ -34,26 +33,6 @@
             localStorage.setItem("postprocessing",eval(postp_name).toString());
             window.open("load_module.html","_self");
         }
-
-        function loadModuleBigGraphs(name) {
-            localStorage.clear();
-            localStorage.setItem("name",name);
-            var func_parts = name.toLowerCase().split(' ');
-            var func  = func_parts.join('_');
-            var global_name = "global_";
-            var ref_name = "reference_";
-            var postp_name = "post_processing_";
-            func_parts.forEach(function(str) {
-                global_name += str[0];
-                ref_name += str[0];
-                postp_name += str[0];
-            });
-            localStorage.setItem("func",eval(func).toString());
-            localStorage.setItem("global",eval(global_name).toString());
-            localStorage.setItem("reference",eval(ref_name).toString());
-            localStorage.setItem("postprocessing",eval(postp_name).toString());
-            window.open("big/load_module.html","_self");
-        }
     </script>
     <script></script>
 </head>
@@ -63,7 +42,7 @@
         <table>
             <tr>
                 <td style="vertical-align: middle;">
-                    <img src="pics/explain.png" width=300 alt="Logo">
+                    <img src="../pics/explain.png" width=300 alt="Logo">
                 </td>
                 <td style="vertical-align: middle; color: white">
       <span style="font-family:Arial,sans-serif; font-size:25pt">
@@ -77,7 +56,6 @@
         <h2>Modules:</h2>
         <ul>
             <li><a style="font-size:1.5em" href='javascript:loadModule("Nested Dissection","nested_dissection")'>Nested Dissection Ordering</a></li>
-            <li><a style="font-size:1.5em" href='javascript:loadModuleBigGraphs("Nested Dissection Big","nested_dissection")'>Nested Dissection Ordering for Big Graphs</a></li>
             <li><a style="font-size:1.5em" href='javascript:loadModule("Column Compression")'>Column Compression (Column Intersection Graph)</a></li>
             <!--<li><a style="font-size:1.5em" href='javascript:simplePart()'>Parallel Matrix-Vector Product</a></li>-->
             <li><a style="font-size:1.5em" href='javascript:loadModule("Cholesky Factorization")'>Cholesky Factorization</a></li>

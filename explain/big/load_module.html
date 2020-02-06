@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title id="tit">EXPLAIN</title>
+    <script src="distinguished_color.js"></script>
+    <script src="graph.js"></script>
+    <script src="bipgraph.js"></script>
+    <script src="graphic.js"></script>
+    <script src="mouse_event.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/highcharts.js"></script>
+    <script src="make_chart.js"></script>
+    <script src="lib/d3.v3.min.js"></script>
+    <script src="codemirror-compressed.js"></script>
+    <link rel="stylesheet" href="lib/explain.css">
+    <link rel="stylesheet" href="codemirror.css">
+    <style>
+        .highlight {font-weight: bold;background-color:lightgrey;}
+    </style>
+</head>
+<body>
+<div style="background: rgb(0,103,166); width: 1010px">
+    <table>
+        <tr>
+            <td style="vertical-align: middle;">
+                <a href="../.">
+                    <img src="pics/explain_small.png" width=200 alt="Logo" border="0">
+                </a>
+            </td>
+            <td style="vertical-align: middle; color: white">
+                <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt" id="Title"></span>
+                -
+                <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt">
+                Round <span id="round" style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt">1</span></span>
+            </td>
+        </tr>
+    </table>
+</div>
+<br/>
+<div style="background: rgb(0,103,166); width: 1000px">
+    <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt"></span>
+</div>
+<table border="0">
+    <tr>
+        <td id="graph" style="width: 500px;">
+            <div id="canvas" style="width: 500px;height: 500px;border:1px solid #d3d3d3;"></div>
+            <!--<svg id="svg_graph" width="500" height="500" style="border:1px solid #d3d3d3;"></svg>-->
+        </td>
+        <td id="matrix" style="width: 500px;">
+            <svg id="svg_matrix" width="500" height="500" style="border:1px solid #d3d3d3;"></svg>
+        </td>
+        <td id="code_column" style="visibility:hidden;">
+            <span>Name of Module: </span><input id="newname" value=""><br/>
+            <span style="line-height: 1.5;font-size:18;">Click on the vertex <b>current</b>
+                of the graph <b>currentg</b>.</span><br/>
+            Order (custom order can be added to Globals by order=[...]):
+            <select name="Preordering" id="myselect">
+                <option value="nat">Natural</option>
+                <option value="lfo">LFO</option>
+                <option value="slo">SLO</option>
+                <option value="ido">IDO</option>
+                <option value="metis">Metis</option>
+            </select>
+            <input type="button" onclick="selectOrder();"  value="Change Order"><br/>
+            <span style="font-size:15;">Globals:</span>
+            <div style="border:1px solid black;" id="global"></div>
+            <span style="font-size:15;">Code:</span>
+            <div style="border:1px solid black;" id="code"></div>
+            <input id="eval" type="button" onclick="start_test();"  value="Restart">
+            <input id="save" type="button" onclick="given_order();"  value="Animate">
+            <select name="speed" id="f">
+                <option value="veryslow">Very Slow</option>
+                <option value="slow">Slow</option>
+                <option value="norm">Normal</option>
+                <option value="fast">Fast</option>
+            </select>
+            <input id="stop" type="button" onclick="stop_anim();" value="Stop">
+                <!--<input id="save" type="button" onclick="save();"  value="Use given order">-->
+            <!--<input id="save" type="button" onclick="save();"  value="Save">-->
+            <!--<input type='file' onchange='open_js_file(event)' value="Load"><br/><br/>-->
+        </td>
+    </tr>
+</table>
+<script src="cytoscape.js"></script>
+<script src="cytoscape-cose-bilkent.js"></script>
+<script src="file_handle.js"></script>
+<table>
+    <tr style="width: 500px;">
+        <td style="width: 500px;">
+            <input id="next_round" type="button" onclick="init(loadedMatrix);"  value="Go to next round" disabled>
+            <input id="show_edge" type="button" onclick="function showEdges() {
+                eval('var func = ' + localStorage.getItem('postprocessing'));
+                eval('func()');
+            }
+            showEdges();"  value="Postprocssing" disabled>
+            <input id="edit_code" type="button" onclick="toggle_column_code_vis();" value="Edit Algorithm!">
+            <br/><br/>
+            Order of selections:
+            <div id="orderSelect">&nbsp;</div>
+            <br/>
+            Select a matrix:
+            <select name=mat onChange="selectMatrix()" style='width:300px;font-size:1.0em;' id="selectMat">
+                s
+            </select>
+            <br/><br/>
+            Upload your matrix:
+            <input type='file' onchange='openFile(event)'><br/><br/>
+            Reference: <a id="ref"></a>
+        </td>
+        <td style="width: 500px;">
+            <div id="container" style="margin:0;"></div>
+        </td>
+    </tr>
+</table>
+<div id="custom" hidden>custom</div>
+<script src="matrix_selection.js"></script>
+<script src="load_module.js"></script>
+</body>
+</html>

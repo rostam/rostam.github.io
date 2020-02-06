@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title id="tit">EXPLAIN - Custom Module</title>
+    <script src="graph.js"></script>
+    <script src="graphic.js"></script>
+    <script src="mouse_event.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/highcharts.js"></script>
+    <script src="make_chart.js"></script>
+    <script src="lib/d3.v3.min.js"></script>
+    <script src="codemirror-compressed.js"></script>
+    <script src="distinguished_color.js"></script>
+    <script src="bipgraph.js"></script>
+    <link rel="stylesheet" href="lib/explain.css">
+    <link rel="stylesheet" href="codemirror.css">
+</head>
+<body>
+<div style="background: rgb(0,103,166); width: 1000px">
+    <table>
+        <tr>
+            <td style="vertical-align: middle;">
+                <a href="">
+                    <img src="pics/explain_small.png" width=200 alt="Logo" border="0">
+                </a>
+            </td>
+            <td style="vertical-align: middle; color: white">
+                <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt">
+                <span id="name"> Custom Module</span> - Round
+                    <span id="round" style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt">1</span></span>
+            </td>
+        </tr>
+    </table>
+</div>
+<br/>
+<div style="background: rgb(0,103,166); width: 1000px">
+    <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt"></span>
+</div>
+<table border="0">
+    <tr>
+        <td id="graph" style="width: 500px;">
+            <div id="canvas"></div>
+            <!--<svg id="svg_graph" width="500" height="500" style="border:1px solid #d3d3d3;"></svg>-->
+        </td>
+        <td id="matrix" style="width: 500px;">
+            <svg id="svg_matrix" width="500" height="500" style="border:1px solid #d3d3d3;"></svg>
+        </td>
+        <td>
+            <span>Name of Module: </span><input id="newname" value=""><br/>
+            <span style="line-height: 1.5;font-size:18;">Click on the vertex <b>current</b>
+                of the graph <b>currentg</b>:</span><br/>
+            <span style="font-size:15;">Global Variables:</span>
+            <div style="border:1px solid black;" width="300" id="global"></div>
+            <span style="font-size:15;">Code:</span>
+            <div style="border:1px solid black;" width="300" id="code"></div>
+            <input id="eval" type="button" onclick="start_test();"  value="Start testing">
+            <input id="save" type="button" onclick="save();"  value="Save">
+            <input type='file' onchange='open_js_file(event)' value="Load"><br/><br/>
+        </td>
+    </tr>
+</table>
+<script src="cytoscape.js"></script>
+<script src="file_handle.js"></script>
+<table>
+    <tr>
+        <td style="width: 500px;">
+            <input id="next_round" type="button" onclick="init(loadedMatrix);"  value="Go to next round" disabled>
+            <input id="show_edge" type="button" onclick="showEdges();"  value="Show edges" disabled>
+            <br/><br/>
+            Order of selections:
+            <div id="orderSelect">&nbsp;&nbsp;&nbsp;</div>
+            <br/>
+            Select a matrix:
+            <select name=mat onChange="selectMatrix()" style='width:300px;font-size:1.0em;' id="selectMat">
+                <option selected=yes value='nestedDissection1.mtx'>nestedDissection1.mtx</option>
+                <option value='nestedDissection2.mtx'>nestedDissection2.mtx</option>
+                <option value='nestedDissection3.mtx'>nestedDissection3.mtx</option>
+                <option value='nestedDissection4.mtx'>nestedDissection4.mtx</option>
+            </select>
+            <br/><br/>
+            Upload your matrix:
+            <input type='file' onchange='openFile(event)'><br/><br/>
+        </td>
+        <td style="width: 500px;">
+            <div id="container" style="margin:0"></div>
+        </td>
+    </tr>
+</table>
+<div id="custom" hidden>custom</div>
+<script>
+    document.title="EXPLAIN - " + localStorage.getItem("name");
+    myCodeMirrorGlobal = CodeMirror(document.getElementById("global"), {
+        value: 'graph_format="simple";',
+        mode:  "javascript",
+        lineNumbers : true,
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+    });
+    myCodeMirrorGlobal.setSize(400,50);
+
+    myCodeMirror = CodeMirror(document.getElementById("code"), {
+        value: "function () {\ncolor_vertex(3,1);\n}",
+        mode:  "javascript",
+        lineNumbers : true,
+        extraKeys: {"Ctrl-Space": "autocomplete"}
+    });
+    myCodeMirror.setSize(400,300);
+    function start_test() {
+        eval(myCodeMirrorGlobal.getValue());
+        getText("matrices/nestedDissection4.mtx");
+    }
+
+    function download(filename, text) {
+        var pom = document.createElement('a');
+        pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        pom.setAttribute('download', filename);
+
+        if (document.createEvent) {
+            var event = document.createEvent('MouseEvents');
+            event.initEvent('click', true, true);
+            pom.dispatchEvent(event);
+        }
+        else {
+            pom.click();
+        }
+    }
+
+    function save() {
+        var out  = "//---START GLOBAL---\n";
+        out += myCodeMirrorGlobal.getValue();
+        out += "\n//---END GLOBAL---\n";
+        out += myCodeMirror.getValue();
+        download(document.getElementById("newname").value +".js",out);
+    }
+
+    function open_js_file(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function () {
+            var res = reader.result;
+            var global_str = "";
+            var code = "";
+            var start_global = false;
+            res.split('\n').forEach(function (line) {
+                if (line.indexOf("START GLOBAL") !== -1) {
+                    start_global = true;
+                }
+                if (line.indexOf("END GLOBAL") !== -1) {
+                    start_global = false;
+                }
+                if (start_global
+                        && line.indexOf("START GLOBAL") == -1
+                        && line.indexOf("END GLOBAL") == -1) {
+                    global_str += line + "\n";
+                }
+                if (!start_global && line.indexOf("END GLOBAL") == -1)
+                    code += line + "\n";
+            });
+            myCodeMirror.setValue(code);
+            myCodeMirrorGlobal.setValue(global_str);
+        };
+        reader.readAsText(input.files[0]);
+    }
+</script>
+</body>
+</html>
