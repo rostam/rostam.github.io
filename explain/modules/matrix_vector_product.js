@@ -9,6 +9,7 @@ var global_mvp = function () {
     colors = range(0,22);
     chart_yaxis1_text = "Number of colors";
     chart_group5_text = 'Number of colors';
+    start_matrix = "nestedDissection3.mtx";
     animation = false;
     post_processing_name = "";
 };
