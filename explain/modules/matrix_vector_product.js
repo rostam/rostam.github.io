@@ -8,7 +8,10 @@ var global_mvp = function () {
     graph_format="simple";
     colors = range(0,22);
     chart_yaxis1_text = "Deviation bound";
-    chart_group5_text = 'Number of colors';
+    chart_yaxis2_text = "Communication volume";
+    chart_group1_text = 'Communication volume';
+    //chart_group2_text = 'Communication volume';
+    chart_group5_text = 'Deviation bound';
     start_matrix = "nestedDissection3.mtx";
     animation = false;
     post_processing_name = "";
@@ -21,6 +24,7 @@ var matrix_vector_product = function() {
     color_vertex(current, selected_color);
     if(get_colored_vertices().length == currentg.vertices.length) {
         console.log(deviationBound(currentg));
+        console.log(communicationVolume(currentg));
         gather_round_data(deviationBound(currentg), communicationVolume(currentg), 0, 0, 0);
         round_completed();
     }

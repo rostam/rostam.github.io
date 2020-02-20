@@ -154,10 +154,8 @@ function deviationBound(G) {
 
 function communicationVolume(G) {
         commVolume = 0;
-        for (i = 0; i < G.vertices.length; i += 1) {
-                for(j=0;j<G.vertices[i].edges.length;j++) {
-                        if(G.vertices[i].color != G.vertices[G.vertices[i].edges[j]].color) commVolume++;
-                }
-        }
+        G.init_edges.forEach(function(e){
+                        if(G.vertices[e.src].color != G.vertices[e.tgt].color) commVolume++;
+        });
         return commVolume;
 }
