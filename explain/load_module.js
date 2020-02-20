@@ -32,6 +32,7 @@ tmp = tmp.substring(0,tmp.length-2);
 eval(tmp);
 document.getElementById("next_round").disabled = false;
 start_test();
+selected_color = "blue";
 function start_test() {
     eval(myCodeMirrorGlobal.getValue());
     var ppname = eval("post_processing_name").toString();
@@ -109,7 +110,7 @@ function toggle_column_code_vis() {
     }
 }
 
-function color_verteices(i,color,func) {
+function color_vertices(i,color,func) {
     var col = get_color(color);
     var col_alpha = add_alpha_to_color(d3.rgb(col));
     d3.select("#back" + i).style("fill","white");
@@ -133,4 +134,20 @@ function selectOrder() {
         });
         vec.forEach(function (v) {order.push(v['key']);});
     }
+}
+
+if(localStorage.getItem("name") == "Matrix Vector Product") {
+        color_arrs = ['blue','green','red','yellow'];
+        for(var i=0;i < color_arrs.length;i++) { 
+                var col = get_color(i);
+                var col_alpha = add_alpha_to_color(d3.rgb(col));
+                c=color_arrs[i];
+                if(i == 0) {
+                $("#extra_buttons").append('<input name="colors" type="radio" id="' + c + '" value="' + i +'" checked>'+ 
+                        '<label for="' + c + '" style="background-color:' + col_alpha +'" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>');
+                } else {
+                        $("#extra_buttons").append('<input name="colors" type="radio" id="' + c + '" value="' + i +'">'+ 
+                        '<label for="' + c + '" style="background-color:' + col_alpha +'" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>');
+                }
+        }
 }

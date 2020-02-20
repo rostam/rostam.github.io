@@ -140,3 +140,24 @@ function isEdge(G, u, v) {
     return G.vertices[u].edges.indexOf(v) != -1;
 
 }
+
+// G should be colored.
+function deviationBound(G) {
+        arr = [0,0,0,0];
+        for (i = 0; i < G.vertices.length; i += 1) {
+                arr[G.vertices[i].color]++;
+        }
+        num_of_used_colors = 0;
+        arr.forEach(function(a){if(a != 0) num_of_used_colors++;});
+        return (num_of_used_colors*max(arr)/G.vertices.length) - 1;
+}
+
+function communicationVolume(G) {
+        commVolume = 0;
+        for (i = 0; i < G.vertices.length; i += 1) {
+                for(j=0;j<G.vertices[i].edges.length;j++) {
+                        if(G.vertices[i].color != G.vertices[G.vertices[i].edges[j]].color) commVolume++;
+                }
+        }
+        return commVolume;
+}

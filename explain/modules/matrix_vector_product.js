@@ -7,23 +7,23 @@ var reference_mvp = function () {
 var global_mvp = function () {
     graph_format="simple";
     colors = range(0,22);
-    chart_yaxis1_text = "Number of colors";
+    chart_yaxis1_text = "Deviation bound";
     chart_group5_text = 'Number of colors';
     start_matrix = "nestedDissection3.mtx";
     animation = false;
     post_processing_name = "";
+    selected_color = 0;
+    $('input:radio').click(function() {selected_color = this.value;});
 };
 
 var matrix_vector_product = function() {
-var ns = neighbors(current);
-var col_ns = get_colors(ns);
-var new_col = min(diff(colors, col_ns));
-color_column(current, new_col);
-color_vertex(current, new_col);
-if(get_colored_vertices().length == currentg.vertices.length) {
-    gather_round_data(min(diff(colors,get_colors(get_colored_vertices()))), 0, 0, 0, 0);
-    round_completed();
-}
+    color_row_notriangle(current, selected_color);
+    color_vertex(current, selected_color);
+    if(get_colored_vertices().length == currentg.vertices.length) {
+        console.log(deviationBound(currentg));
+        gather_round_data(deviationBound(currentg), communicationVolume(currentg), 0, 0, 0);
+        round_completed();
+    }
 };
 
 var post_processing_mvp = function () {

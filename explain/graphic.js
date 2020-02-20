@@ -397,6 +397,18 @@ function color_row(i,color) {
     }
 }
 
+function color_row_notriangle(i,color) {
+    var col = get_color(color);
+    //drawSubMat(0,currentg.vertices.length,i,i,add_alpha_to_color(d3.rgb(col)));
+    for (var cnt1 = 0; cnt1 <= currentg.vertices.length; cnt1++) {
+        for (var cnt2 = i; cnt2 <= i; cnt2++) {
+            if(colored_cols.indexOf(cnt1) == -1) {
+                d3.select("#cell" + cnt1 + "-" + cnt2).style("fill", add_alpha_to_color(d3.rgb(col)));
+            } 
+        }
+    }
+}
+
 function neighbors(i) {
     return currentg.vertices[i].edges;
 }
