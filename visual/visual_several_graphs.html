@@ -56,7 +56,7 @@
       if(tmp.indexOf(",") != -1)
         strings = document.getElementById("strings").value.split(",");
       else strings = document.getElementById("strings").value.match(/\S+/g);//value.split(" ");
-      console.log(strings);
+
         // var dd = JSON.stringify({
         //     "type": "report",
         //     "name": $('#reports').find('option:selected').text(),
@@ -71,9 +71,10 @@
         //     data: dd,
         //     dataType: 'json'
         // }).done(function (data) {
-            // $('#mytable').empty();
+            //
 
             var mytable =$('#mytable');
+            $('#mytable').empty();
             var str = "";
             var cnt = 0;
             var cys = [];
@@ -95,7 +96,8 @@
                                 'text-valign': 'center',
                                 'background-opacity': 0.7,
                                 'border-width': 1,
-                                'border-color': 'black'
+                                'border-color': 'black',
+                                'label': 'data(la)'
                             }
                         },
                         {

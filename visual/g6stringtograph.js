@@ -44,7 +44,7 @@
     function stringToGraphModel(g6) {
         var n = graphsize(g6);
         var elements = [];
-        for(var i=0;i<n;i++) elements.push({group: 'nodes', data: { id: 'n'+i }});
+        for(var i=0;i<n;i++) elements.push({group: 'nodes', data: { id: 'n'+i, la: ''+i }});
         var p = g6;
         if (g6.charAt(0).charCodeAt(0) == ':' || g6.charAt(0).charCodeAt(0) == '&')
             p = g6.substring(1);
