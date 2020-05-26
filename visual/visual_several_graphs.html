@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GraphTea</title>
+    <link rel="stylesheet" href="css/jquery.qtip.min.css">
+    <script src="cytoscape321.js"></script>
+    <script src="cytoscape-canvas.js"></script>
+    <script src="cytoscape_related_functions.js"></script>
+    <script src="globals.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery.qtip.min.js"></script>
+    <script src="g6stringtograph.js"></script>
+    <style>
+        html, body {
+            font-family: Times New Roman, Times, serif;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            /*background-color: DodgerBlue;*/
+        }
+
+        .flex-container > div {
+            /*background-col!**!or: #f1f1f1;*/
+            width: 400px;
+            height: 400px;
+            border: solid 1px;
+            /*margin: 10px;*/
+            /*text-align: center;*/
+            /*line-height: 75px;*/
+            /*font-size: 30px;*/
+        }
+    </style>
+</head>
+<body>
+<h2>GraphTea</h2>
+<div>
+    <label for="strings">Enter a list of g6 string:</label>
+    <input id="strings" value="M???????????}?p~_,M?????????O?}?p}_,M?????????O?}?X}_,M?????????O?}?`~_,M?????????O?}?P~_,M?????????O?^?{}?,M?????????O?^?w~?,M?????????O?^?w}_,M?????????O?^?o~_,M?????????O?{@r}?,M?????????O?{@Z}?,M?????????O?{@b~?,M?????????O?{@b}_,M?????????O?{@R}_">
+    <button onclick="send();">Go</button>
+    <br/>
+</div>
+<div class="flex-container" id="mytable">
+</div>
+<script>
+    var uuid = guid();
+    var type = $('#graphType').find('option:selected').text();
+
+    function send() {
+        var strings = document.getElementById("strings").value.split(",");
+        // var dd = JSON.stringify({
+        //     "type": "report",
+        //     "name": $('#reports').find('option:selected').text(),
+        //     "graph": strings,
+        //     "uuid": uuid,
+        //     "propsKeys": $('#reportPropsKeys').html(),
+        //     "propsVals": $('#reportPropsVals').val(),
+        //     "directed": type
+        // });
+        // jQuery.ajax({
+        //     url: serverAddr + 'several', type: 'POST', contentType: 'application/json',
+        //     data: dd,
+        //     dataType: 'json'
+        // }).done(function (data) {
+            // $('#mytable').empty();
+
+            var mytable =$('#mytable');
+            var str = "";
+            var cnt = 0;
+            var cys = [];
+            strings.forEach(function(d) {
+                str+="<div id='g" + cnt + "'></div>";
+                cnt++;
+            });
+            mytable.append(str);
+            cnt = 0;
+            strings.forEach(function(d){
+                var tmpcy = cytoscape({
+                    container: document.getElementById("g" + cnt),
+                    style: [ // the stylesheet for the graph
+                        {
+                            selector: 'node',
+                            style: {
+                                'background-color': 'lightgray',
+                                'label': 'data(label)',
+                                'text-valign': 'center',
+                                'background-opacity': 0.7,
+                                'border-width': 1,
+                                'border-color': 'black'
+                            }
+                        },
+                        {
+                            selector: '.selected',
+                            style: {
+                                'background-color': 'rgba(150, 211, 255,0.6)',
+                                'label': 'data(label)',
+                                'text-valign': 'center'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'curve-style': 'bezier'
+                                // 'target-arrow-shape': arrow
+                            }
+                        }]
+                });
+                cys.push(tmpcy);
+                // var nodes = d.nodes;
+                // var edges = d.edges;
+                tmpcy.elements().remove();
+                tmpcy.add(stringToGraphModel(d));
+                // tmpcy.add(nodes);
+                // tmpcy.add(edges);
+                cnt = cnt + 1;
+            });
+
+            cys.forEach(function (c) {
+                c.layout({name:"cose"}).run();
+                c.layout({name:"cose"}).run();
+            });
+        }
+      // );
+    // }
+</script>
+</body>
+</html>
