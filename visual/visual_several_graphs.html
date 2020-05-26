@@ -51,7 +51,12 @@
     var type = $('#graphType').find('option:selected').text();
 
     function send() {
-        var strings = document.getElementById("strings").value.split(",");
+      var tmp = document.getElementById("strings").value;
+      var strings = [];
+      if(tmp.indexOf(",") != -1)
+        strings = document.getElementById("strings").value.split(",");
+      else strings = document.getElementById("strings").value.match(/\S+/g);//value.split(" ");
+      console.log(strings);
         // var dd = JSON.stringify({
         //     "type": "report",
         //     "name": $('#reports').find('option:selected').text(),
@@ -113,7 +118,7 @@
                 // var nodes = d.nodes;
                 // var edges = d.edges;
                 tmpcy.elements().remove();
-                tmpcy.add(stringToGraphModel(d));
+                tmpcy.add(stringToGraphModel(d.trim()));
                 // tmpcy.add(nodes);
                 // tmpcy.add(edges);
                 cnt = cnt + 1;
