@@ -86,10 +86,10 @@ PreCol</div></div>
 <li><a href="#the-best-source-for-citing-this-work">HowToCite</a></li>
 <li><a href="#repo">Reposity Structure</a> &#160;</li>
 </ol>
-<h2>Partial Coloring and Preconditioning</h2>
+<h2>Partial Coloring</h2>
 <p>PreCol is developed to implement the proposed coloring heuristics in <a href="#1">[1]</a> and <a href="#2">[2]</a>.</p>
 <h2>Coloring Algorithms</h2>
-<p>The list of our implemented algorithms are as follows. The only non-bipartite graph model is Algorithm~CIG} one so far. Except Algorithms~MaxGain} and ~MaxDiscovered} all of algorithms are explained in L{"u}lfesmann's thesis~<b>[phd:luelfesmann]</b>} and Rostami's thesis~<b>[phd_rostami]</b>}. {enumerate}</p>
+<p>Here, we list our implemented coloring algorithms based on four different graph models the simple graph model, the bipartite model graph, the column-intersection graph, and the rho-column intersection graph. These graph models are explained in <a href="#1">[1]</a> and <a href="#2">[2]</a>.</p>
 <ol type="1">
 <li>CIG: column-intersection graph coloring.</li>
 <li>D2Columns: distance-2 coloring for columns (Algorithm 3.1 from <a href="#1">[1]</a>)</li>
@@ -108,7 +108,7 @@ PreCol</div></div>
 </ol>
 <p>Other required parameters can be listed as follows,</p><ul>
 <li>The input matrix can be given in the format of Mtx.</li>
-<li>All of the mentioned algorithms can be executed with three given pre-orderings NAT (natural ordering), <a class="el" href="class_l_f_o.html">LFO</a>, SAT. Moreover, another pre-ordering called AGO is additionally available only for MaxGain} and MaxDiscovered}.</li>
+<li>All of the mentioned algorithms can be executed with three given pre-orderings NAT (natural ordering), <a class="el" href="class_l_f_o.html" title="Least First Ordering. ">LFO</a>, SAT. Moreover, another pre-ordering called AGO is additionally available only for MaxGain and MaxDiscovered.</li>
 <li>Extra parameters can be given which are algorithm-specific.</li>
 </ul>
 <p>A categorization of these algorithms is given in the following Table:</p>
@@ -119,21 +119,49 @@ PreCol</div></div>
 <td>One-sided </td><td>1, 2, 3, 13, 14 </td><td>4, 5, 6, 7, 8 </td></tr>
 </table>
 <p>Two-sided | 9, 10, 11, 12 |</p>
+<p>Coloring(Graph, GraphModel, OneSided/TwoSided, Full/Partial, Algorithm, ordering, RequiredElements, ExtraParameters, Coloring)</p>
+<table class="doxtable">
+<tr>
+<th>Parameter </th><th>Possible values </th><th>Default value </th><th>Mandatory  </th></tr>
+<tr>
+<td>Graph </td><td>A MTX file format, Adjacency list format </td><td>MTX format </td><td>Yes </td></tr>
+<tr>
+<td>GraphModel </td><td>Bipartite, Column-intersection Graph, Column Gain Graph </td><td>Bipartite </td><td>No </td></tr>
+<tr>
+<td>OneSided/TwoSided </td><td>OneSided, TwoSided </td><td>OneSided </td><td>No </td></tr>
+<tr>
+<td>Full/Partial </td><td>Full, Partial </td><td>Full </td><td>No </td></tr>
+<tr>
+<td>Algorithm </td><td>As in previous table </td><td>D2Columns </td><td>No </td></tr>
+<tr>
+<td><a class="el" href="class_ordering.html" title="Different ordering on the vertices of graph can be defined. ">Ordering</a> </td><td>NAT, <a class="el" href="class_l_f_o.html" title="Least First Ordering. ">LFO</a>, SAT, AGO </td><td>NAT </td><td>No </td></tr>
+<tr>
+<td>RequiredElements </td><td>A list of edges, Matrix nonzeros </td><td>No default value </td><td>No </td></tr>
+<tr>
+<td>ExtraParameters </td><td>Algorithm-specific parameters, in a JSON format file </td><td>No default value </td><td>No </td></tr>
+<tr>
+<td>Coloring </td><td>Coloring results, Array format </td><td>... </td><td>... </td></tr>
+</table>
 <h2>Implementation</h2>
 <p>Specifically, the software is designed employing concepts from object-oriented programming such that it can be extended further with new coloring heuristics as well as preconditioning algorithms. The developers can implement new extensions without going into the details of the core implementation. Two main ingredients, coloring and orderings, can be implemented only by deriving an interface. For example, a new coloring and ordering can be added as easy as the following code. </p><div class="fragment"><div class="line">class New_Ordering : public Ordering {</div><div class="line">  void order(const Graph &amp;G, vector&lt;unsigned int&gt; &amp;ord, bool restricted) {...}</div><div class="line">};</div><div class="line"></div><div class="line">class New_Coloring : public ColAlg {</div><div class="line">   vector&lt;int&gt; color() {...}</div><div class="line">};</div></div><!-- fragment --><p>Here, the computed ordering is saved in the array {ord} and the coloring is the output of the color function.</p>
-<p>The developer needs to implement these new classes in an only-header fashion~<b>[headeronly]</b>} since the goal is to write an extension with little effort. So, the developer should move the new header file to the corresponding directory which is the {ordering} directory for this new ordering and the {algs} directory for coloring algorithms. Now, building the software will bring this new ordering into the software execution.</p>
-<p>The input matrix is in the format of the matrix market~<b>[matrix-market]</b>}. After reading this matrix, we convert it to the different graph models like a column intersection graph or a bipartite graph. Any resulting matrix like the sparsified matrix will also be saved in this file format.</p>
+<p>The developer needs to implement these new classes in an only-header fashion since the goal is to write an extension with little effort. So, the developer should move the new header file to the corresponding directory which is the Orderings directory for this new ordering and the Algorithms directory for coloring algorithms. Now, building the software will bring this new ordering into the software execution.</p>
+<p>The input matrix is in the format of the matrix market After reading this matrix, we convert it to the different graph models like a column intersection graph or a bipartite graph. Any resulting matrix like the sparsified matrix will also be saved in this file format.</p>
 <p>PreCol is developed in C++ using STL (the standard library) and the Boost library. Using concepts of functional programming in the new C++ release (C++11 and C++14), we provide different functions which can be used by a developer to work on graphs. For example, the iteration on vertices or edges can be as easy as follows. </p><div class="fragment"><div class="line">for_each_v(G, f);</div><div class="line">for_each_v(G, [&amp;](Ver v) {...});</div><div class="line">for_each_e(G, f);</div><div class="line">for_each_e(G, [&amp;](Edge e) {...});</div><div class="line">for_each_n(G, [&amp;](Ver n) {...});</div></div><!-- fragment --><p> in which the variable $f$ is a function which gets an input parameter of a vertex or an edge. Also, the other syntax is the lambda function from the new C++ functional programming to implement an unnamed function.</p>
 <p>Following a unique solution, we implement all parts of our heuristics with the use of the standard library of C++ which also improves the readability. This strategy reduces the code length dramatically. Also, the algorithms of the C++ standard library will automatically be parallel in C++20.</p>
 <p>To use PreCol, the user needs to specify different options for coloring algorithms, orderings, the block size, and so on. These options can be entered directly in the terminal.</p>
-<p>Needed Libraries: Boost library and </p><div class="fragment"><div class="line">$ sudo apt-get install build-essentials libboost-all-dev libmetis-dev metis</div></div><!-- fragment --><p> To use the software, the user can use a shell command. So, the user needs to specify different options for coloring algorithms, orderings, the block size, and so on. These options can be entered directly in the terminal. An example is as follows. </p><div class="fragment"><div class="line">precol PartialD2RestrictedColumns LFO_Nat BlockDiagonal 30 2 ex33.mtx</div></div><!-- fragment --><p> in which the {PartialD2RestrictedColumns} is the coloring algorithm, the string {LFO_Nat} containing two strings {<a class="el" href="class_l_f_o.html">LFO</a>} and {<a class="el" href="class_nat.html">Nat</a>} are for the coloring and ILU orderings. The next parameter {BlockDiagonal} specifies the sparsification method which is followed by the size of the block. Here, the block size is $30$. The next number $2$ specifies the level parameter of ILU. The matrix name is the last parameter.</p>
-<p>We develop two user interfaces for PreCol. So that it can be called from within MATLAB and GraphTea~<b>[2014:07]</b>,2014:15}. These user interfaces help to evaluate our proposed heuristics. Both interfaces execute the binaries of PreCol and process the output files generated by PreCol. The corresponding commands in both interfaces can be executed by the following parameters, </p><div class="fragment"><div class="line">function (Ri,R_p,R_a,Phi) = precol(coloring,</div><div class="line">  coloring_ordering,ilu_ordering,block_size,</div><div class="line">  ILU_level_parameter,matrix_name,alpha)</div></div><!-- fragment --><p> in which the input parameters are passed directly to PreCol.</p>
+<p>Needed Libraries: Boost library and </p><div class="fragment"><div class="line">$ sudo apt-get install build-essentials libboost-all-dev libmetis-dev metis</div></div><!-- fragment --><p> To use the software, the user can use a shell command. So, the user needs to specify different options for coloring algorithms, orderings, the block size, and so on. These options can be entered directly in the terminal. An example is as follows. </p><div class="fragment"><div class="line">precol PartialD2RestrictedColumns LFO_Nat BlockDiagonal 30 2 ex33.mtx</div></div><!-- fragment --><p> in which the PartialD2RestrictedColumns is the coloring algorithm, the string LFO_Nat containing two strings <a class="el" href="class_l_f_o.html" title="Least First Ordering. ">LFO</a> and <a class="el" href="class_nat.html" title="The natural ordering of the given matrix. ">Nat</a> are for the coloring and ILU orderings. The next parameter BlockDiagonal specifies the sparsification method which is followed by the size of the block. Here, the block size is $30$. The next number $2$ specifies the level parameter of ILU. The matrix name is the last parameter.</p>
+<p>We develop two user interfaces for PreCol. So that it can be called from within MATLAB and <a href="http://www.graphtheorysoftware.com/">GraphTea</a>. These user interfaces help to evaluate our proposed heuristics. Both interfaces execute the binaries of PreCol and process the output files generated by PreCol. The corresponding commands in both interfaces can be executed by the following parameters, </p><div class="fragment"><div class="line">function (Ri,R_p,R_a,Phi) = precol(coloring,</div><div class="line">  coloring_ordering,ilu_ordering,block_size,</div><div class="line">  ILU_level_parameter,matrix_name,alpha)</div></div><!-- fragment --><p> in which the input parameters are passed directly to PreCol.</p>
 <ul>
-<li>doc: The doxygen config file can be found in this directory. The generated html files are available under <a href="https://rostam.github.io/precol/index.html">Documentation</a></li>
-<li>stats: Python and Matlab scripts to compute the diagrams in Rostami's dissertation</li>
-<li>src: The preorderings for colorings, the symbolic ILU factorization, some helper functions</li>
-<li>mats: The sample matrices</li>
+<li>Algorithms: The implementation of different coloring algorithms</li>
+<li>Graph: The implementation of Graph basic data structures</li>
+<li>Documentation: The doxygen config file can be found in this directory. The generated html files are available under <a href="https://rostam.github.io/precol/index.html">Documentation</a></li>
+<li>Statistics: Python and Matlab scripts to compute the diagrams in Rostami's dissertation</li>
+<li>Orderings: The preorderings for colorings</li>
+<li>Main: The directory which contians the main function</li>
+<li>Examples: The sample matrices and its colorings <a class="el" href="_example_matrices_2readme_8md.html">More...</a></li>
 <li>CMakeLists.txt: The cmake file for the project</li>
+<li>Application: An application in the automatic differentation</li>
+<li>OtherSources: Other experiments in this direction</li>
 </ul>
 <h2>References</h2>
 <p>[1] M. Ali Rostami. Combining partial Jacobian computation and preconditioning: New heuristics, educational modules, and applications.Dissertation, Department of Mathematics and Computer Science, Friedrich Schiller University Jena, Jena, 2017. Also published by Cuvillier Verlag, Göttingen. <a href="https://cuvillier.de/en/shop/publications/7637-combining-partial-jacobian-computation-and-preconditioning-new-heuristics-educational-modules-and-applications">Online</a></p>
@@ -148,7 +176,7 @@ PreCol</div></div>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 8 2020 11:27:07 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 8 2020 18:34:51 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

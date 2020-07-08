@@ -74,7 +74,7 @@ var searchData=
   ['mm_5fwrite_5fmtx_5fcrd',['mm_write_mtx_crd',['../mmio_8h.html#a68d9871d7292ea09a915e05a3588ad4c',1,'mmio.h']]],
   ['mm_5fwrite_5fmtx_5fcrd_5fsize',['mm_write_mtx_crd_size',['../mmio_8h.html#ad6f7429821e10fc084d1d7da481029f3',1,'mmio.h']]],
   ['mmio_2eh',['mmio.h',['../mmio_8h.html',1,'']]],
-  ['mode',['mode',['../class_ind_set.html#a936e713532496387d7cd149813ec2644',1,'IndSet']]],
+  ['mode',['mode',['../class_independent_set.html#aaba4422e41b320545e9133e3e6fcd1be',1,'IndependentSet']]],
   ['mtx2graph_2ehpp',['Mtx2Graph.hpp',['../_mtx2_graph_8hpp.html',1,'']]],
   ['mtxtobipgraph',['MtxToBipGraph',['../structmatrix__market.html#a2773df7d81e5445d4cc8de3b5beb06b1',1,'matrix_market']]],
   ['mtxtocolumnintersectiongraph',['MtxToColumnIntersectionGraph',['../structmatrix__market.html#ab176afc0b1e138aa64fede7554b93d80',1,'matrix_market']]],

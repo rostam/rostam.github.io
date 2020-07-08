@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph',['Graph',['../namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232',1,'precol']]]
+  ['graph',['Graph',['../namespaceprecol.html#acc115bcd3df826e2276f01ff636f4d9b',1,'precol']]]
 ];
