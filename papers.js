@@ -1,6 +1,14 @@
 pubs = [
   {
     "authors": "M. Ali Rostami, Martin Bücker.",
+    "title" : "Preconditioning Jacobian Systems by Superimposing Diagonal Blocks.",
+    "proceedings" : "Proceedings of the 20th International Conference on Computational Science, Amsterdam, The Netherlands",
+    "year" : 2020,
+    "keywords" : "CSC, GTA",
+    "doi":"https://doi.org/10.1007/978-3-030-50417-5_8"
+  },
+  {
+    "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
     "proceedings" : "2020 Proceedings of the SIAM Workshop on Combinatorial Scientific Computing",
     "year" : 2020,
