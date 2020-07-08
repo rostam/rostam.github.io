@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Sentence Learning</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,16 +12,19 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>My First Bootstrap Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <h1>Learning language by frequent word used in sentences </h1>
+    <p>Your new sentences for today!</p>
   </div>
   <div class="row">
     <div class="col-sm-4">
-      <h3>Column 1</h3>
+      <h3>Sentence</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p><button type="button" name="previous" class="btn btn-success" onclick="nextSentence()">Previous</button>
+        <button type="button" name="next" class="btn btn-success" onclick="previousSentence()">Next</button>
+        <button type="button" name="keep" class="btn btn-success" onclick="keepSentence()">Keep</button>
     </div>
-    <div class="col-sm-4">
+    <!-- <div class="col-sm-4">
       <h3>Column 2</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
@@ -30,9 +33,25 @@
       <h3>Column 3</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+    </div> -->
   </div>
 </div>
+<<script type="text/javascript">
+  $.get('data.csv', function(data) {
+    console.log(data);
+  }, 'text');
 
+  function nextSentence() {
+    console.log(nextSentence);
+  }
+
+  function previousSentence() {
+
+  }
+
+  function keepSentence() {
+
+  }
+</script>
 </body>
 </html>
