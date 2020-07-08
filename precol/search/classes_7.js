@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ordering',['Ordering',['../class_ordering.html',1,'']]]
+  ['nat',['Nat',['../class_nat.html',1,'']]]
 ];

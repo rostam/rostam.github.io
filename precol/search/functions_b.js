@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['partiald2coloringrestrictedomp2',['PartialD2ColoringRestrictedOMP2',['../d2__color__omp_8cpp.html#aac8b15fcf740dcc33b9645581f147772',1,'d2_color_omp.cpp']]],
-  ['potentialrequirednonzerosd2',['potentialRequiredNonzerosD2',['../pot_8cpp.html#a6e60b157136e6cf41adb8db96ddb20d4',1,'potentialRequiredNonzerosD2(Graph &amp;G_b, const vector&lt; graph_traits&lt; Graph &gt;::edge_descriptor &gt; &amp;edge_ordering):&#160;pot.cpp'],['../pot_8hpp.html#a7c04b87d67a864346ec6d14f46eadec5',1,'potentialRequiredNonzerosD2(Graph &amp;G_b, const vector&lt; Edge &gt; &amp;edge_ordering):&#160;pot.hpp']]],
-  ['potentialrequirednonzerossb',['potentialRequiredNonzerosSB',['../pot_8cpp.html#a088ddd8e3c763229ed8adf4cbfa1311b',1,'potentialRequiredNonzerosSB(Graph &amp;G_b, const vector&lt; graph_traits&lt; Graph &gt;::edge_descriptor &gt; &amp;edge_ordering):&#160;pot.cpp'],['../pot_8hpp.html#a3b01664a925e531495067957c9ed88b6',1,'potentialRequiredNonzerosSB(Graph &amp;G_b, const vector&lt; Edge &gt; &amp;edge_ordering):&#160;pot.hpp']]]
+  ['ncols',['ncols',['../structmatrix__market.html#af1c0f2d42f7c9749770da2f4cbfb3af6',1,'matrix_market']]],
+  ['nnz',['nnz',['../structmatrix__market.html#a2e779f0d8afbc33b57e3a8f46d8f5e87',1,'matrix_market']]],
+  ['nrows',['nrows',['../structmatrix__market.html#a7e0f173d8183746b3aad72b9f1b4da75',1,'matrix_market']]],
+  ['num_5fcolors',['num_colors',['../class_col_alg.html#a4381c13eb2c9fcab83749fbf8a21ae47',1,'ColAlg']]],
+  ['num_5fcolors_5fbipartite',['num_colors_bipartite',['../class_col_alg.html#a2cbed9ef5f01a2de423aa6dc74fd81ca',1,'ColAlg']]]
 ];

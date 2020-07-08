@@ -77,7 +77,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;star_bicoloring_vertex_cover_nreq.h&gt;</code></p>
+<p>Compute a star bicoloring of a bipartite graph G_b (this version was implemented for Alexandru Calotoiu's diploma thesis)  
+ <a href="class_star_bicoloring_vertex_cover_non_req.html#details">More...</a></p>
+
+<p><code>#include &lt;StarBicoloringVertexCoverNonReq.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for StarBicoloringVertexCoverNonReq:</div>
 <div class="dyncontent">
@@ -90,26 +93,37 @@ Inheritance diagram for StarBicoloringVertexCoverNonReq:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a657f595e944583eb5dc2d3d311951cf4"><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_star_bicoloring_vertex_cover_non_req.html#a657f595e944583eb5dc2d3d311951cf4">color</a> ()</td></tr>
-<tr class="separator:a657f595e944583eb5dc2d3d311951cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c5e04f3f66d4553ccfdc649b3a65ca6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_star_bicoloring_vertex_cover_non_req.html#a7c5e04f3f66d4553ccfdc649b3a65ca6">color</a> ()</td></tr>
+<tr class="separator:a7c5e04f3f66d4553ccfdc649b3a65ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5dfec3f9dd60615e38cc48aec4fb031"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_star_bicoloring_vertex_cover_non_req.html#af5dfec3f9dd60615e38cc48aec4fb031">color_restricted</a> ()</td></tr>
 <tr class="separator:af5dfec3f9dd60615e38cc48aec4fb031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_col_alg"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_col_alg')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_col_alg.html">ColAlg</a></td></tr>
-<tr class="memitem:a4452e5e30ca8e253fb348d502c690721 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a4452e5e30ca8e253fb348d502c690721">ColAlg</a> (<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>, vector&lt; unsigned int &gt; &amp;V, bool <a class="el" href="class_col_alg.html#a45df217424376ebb2aa0c56f0395471f">restricted</a>, map&lt; string, any &gt; <a class="el" href="class_col_alg.html#a8d9a313c7839fe16d4d004f9d24808ad">pars</a>={})</td></tr>
+<tr class="memitem:a6064e92f0fe0af3c6d67c8dc9abaf139 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a6064e92f0fe0af3c6d67c8dc9abaf139">ColAlg</a> (<a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>)</td></tr>
+<tr class="separator:a6064e92f0fe0af3c6d67c8dc9abaf139 inherit pub_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4452e5e30ca8e253fb348d502c690721 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a4452e5e30ca8e253fb348d502c690721">ColAlg</a> (<a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>, vector&lt; unsigned int &gt; &amp;V, bool <a class="el" href="class_col_alg.html#a45df217424376ebb2aa0c56f0395471f">restricted</a>, map&lt; string, any &gt; <a class="el" href="class_col_alg.html#a8d9a313c7839fe16d4d004f9d24808ad">pars</a>={})</td></tr>
 <tr class="separator:a4452e5e30ca8e253fb348d502c690721 inherit pub_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab731858114c03f435c51f545050bfd66 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#ab731858114c03f435c51f545050bfd66">ColAlg</a> (<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>, vector&lt; unsigned int &gt; &amp;<a class="el" href="class_col_alg.html#ac8ee7d5758c9fbe692eed2dffa69809a">V_r</a>, vector&lt; unsigned int &gt; &amp;<a class="el" href="class_col_alg.html#a696ba629e74323d90dda02bb284aae75">V_c</a>, bool <a class="el" href="class_col_alg.html#a45df217424376ebb2aa0c56f0395471f">restricted</a>, map&lt; string, any &gt; <a class="el" href="class_col_alg.html#a8d9a313c7839fe16d4d004f9d24808ad">pars</a>={})</td></tr>
+<tr class="memitem:ab731858114c03f435c51f545050bfd66 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#ab731858114c03f435c51f545050bfd66">ColAlg</a> (<a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>, vector&lt; unsigned int &gt; &amp;<a class="el" href="class_col_alg.html#ac8ee7d5758c9fbe692eed2dffa69809a">V_r</a>, vector&lt; unsigned int &gt; &amp;<a class="el" href="class_col_alg.html#a696ba629e74323d90dda02bb284aae75">V_c</a>, bool <a class="el" href="class_col_alg.html#a45df217424376ebb2aa0c56f0395471f">restricted</a>, map&lt; string, any &gt; <a class="el" href="class_col_alg.html#a8d9a313c7839fe16d4d004f9d24808ad">pars</a>={})</td></tr>
 <tr class="separator:ab731858114c03f435c51f545050bfd66 inherit pub_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea4fc87c1d6478c071c3c9c746be760 inherit pub_methods_class_col_alg"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a6ea4fc87c1d6478c071c3c9c746be760 inherit pub_methods_class_col_alg"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a6ea4fc87c1d6478c071c3c9c746be760">get_par</a> (string name)</td></tr>
 <tr class="separator:a6ea4fc87c1d6478c071c3c9c746be760 inherit pub_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4381c13eb2c9fcab83749fbf8a21ae47 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a4381c13eb2c9fcab83749fbf8a21ae47">num_colors</a> ()</td></tr>
+<tr class="separator:a4381c13eb2c9fcab83749fbf8a21ae47 inherit pub_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f66820d0c20a71fd9201817cb6920f0 inherit pub_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a4f66820d0c20a71fd9201817cb6920f0">set_all_colors_to</a> (int value)</td></tr>
+<tr class="memdesc:a4f66820d0c20a71fd9201817cb6920f0 inherit pub_methods_class_col_alg"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the colors of all vertices to the given value  <a href="class_col_alg.html#a4f66820d0c20a71fd9201817cb6920f0">More...</a><br /></td></tr>
+<tr class="separator:a4f66820d0c20a71fd9201817cb6920f0 inherit pub_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_types_class_col_alg"><td colspan="2" onclick="javascript:toggleInherit('pro_types_class_col_alg')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="class_col_alg.html">ColAlg</a></td></tr>
+<tr class="memitem:a18b68a3bf371e29cc1ca8f66e7a90910 inherit pro_types_class_col_alg"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910">BipartiteGraphColoringType</a> { <a class="el" href="class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910a99e12e8eb04f696fe2e500adb41e3a27">RowColoring</a>, 
+<a class="el" href="class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910a949bc54f1046316a6cc748845e14c16a">ColumnColoring</a>, 
+<a class="el" href="class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910a782e685316834ec2c845efad9980b0fc">TwoSidedColoring</a>
+ }</td></tr>
+<tr class="separator:a18b68a3bf371e29cc1ca8f66e7a90910 inherit pro_types_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_col_alg"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_col_alg')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_col_alg.html">ColAlg</a></td></tr>
-<tr class="memitem:aee26bfee284072d3483068f0144bb455 inherit pro_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#aee26bfee284072d3483068f0144bb455">num_colors_d2</a> (<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>)</td></tr>
-<tr class="separator:aee26bfee284072d3483068f0144bb455 inherit pro_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8578ed9139f87395d7354f1149eb7f7 inherit pro_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#ac8578ed9139f87395d7354f1149eb7f7">num_colors_sb</a> (<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;<a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a>)</td></tr>
-<tr class="separator:ac8578ed9139f87395d7354f1149eb7f7 inherit pro_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbed9ef5f01a2de423aa6dc74fd81ca inherit pro_methods_class_col_alg"><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a2cbed9ef5f01a2de423aa6dc74fd81ca">num_colors_bipartite</a> (<a class="el" href="class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910">BipartiteGraphColoringType</a> type)</td></tr>
+<tr class="separator:a2cbed9ef5f01a2de423aa6dc74fd81ca inherit pro_methods_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_col_alg"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_col_alg')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_col_alg.html">ColAlg</a></td></tr>
 <tr class="memitem:a696ba629e74323d90dda02bb284aae75 inherit pro_attribs_class_col_alg"><td class="memItemLeft" align="right" valign="top">vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a696ba629e74323d90dda02bb284aae75">V_c</a></td></tr>
 <tr class="memdesc:a696ba629e74323d90dda02bb284aae75 inherit pro_attribs_class_col_alg"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of column vertices.  <a href="class_col_alg.html#a696ba629e74323d90dda02bb284aae75">More...</a><br /></td></tr>
@@ -117,7 +131,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ac8ee7d5758c9fbe692eed2dffa69809a inherit pro_attribs_class_col_alg"><td class="memItemLeft" align="right" valign="top">vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#ac8ee7d5758c9fbe692eed2dffa69809a">V_r</a></td></tr>
 <tr class="memdesc:ac8ee7d5758c9fbe692eed2dffa69809a inherit pro_attribs_class_col_alg"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of row vertices.  <a href="class_col_alg.html#ac8ee7d5758c9fbe692eed2dffa69809a">More...</a><br /></td></tr>
 <tr class="separator:ac8ee7d5758c9fbe692eed2dffa69809a inherit pro_attribs_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78596827142010cfbffbe21e5011ac51 inherit pro_attribs_class_col_alg"><td class="memItemLeft" align="right" valign="top"><a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a></td></tr>
+<tr class="memitem:a78596827142010cfbffbe21e5011ac51 inherit pro_attribs_class_col_alg"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a78596827142010cfbffbe21e5011ac51">G_b</a></td></tr>
 <tr class="separator:a78596827142010cfbffbe21e5011ac51 inherit pro_attribs_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a350b4f8ac9ce9104c2e83b4e5ce54542 inherit pro_attribs_class_col_alg"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="class_ind_set.html">IndSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a350b4f8ac9ce9104c2e83b4e5ce54542">ind_set</a></td></tr>
 <tr class="separator:a350b4f8ac9ce9104c2e83b4e5ce54542 inherit pro_attribs_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +140,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a8d9a313c7839fe16d4d004f9d24808ad inherit pro_attribs_class_col_alg"><td class="memItemLeft" align="right" valign="top">map&lt; string, boost::any &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_col_alg.html#a8d9a313c7839fe16d4d004f9d24808ad">pars</a></td></tr>
 <tr class="separator:a8d9a313c7839fe16d4d004f9d24808ad inherit pro_attribs_class_col_alg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a657f595e944583eb5dc2d3d311951cf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a657f595e944583eb5dc2d3d311951cf4">&#9670;&nbsp;</a></span>color()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Compute a star bicoloring of a bipartite graph G_b (this version was implemented for Alexandru Calotoiu's diploma thesis) </p>
+<p>Combined means that a vertex is directly colored after its selection</p>
+<p>Input:</p><ul>
+<li>G_b bipartite graph</li>
+<li>V_r contained row vertices are colored in the given ordering $v_1, ..., v_n$</li>
+<li>V_c contained column vertices are colored in the given ordering $v_1, ..., v_n$</li>
+<li>Mode parameter $$ ($=Mode/2$)</li>
+<li>Mode2 parameter $$ if using independent set algorithm of Coleman ($Mode==1$)</li>
+</ul>
+<p>Output:</p><ul>
+<li>G_b bipartite graph with colors given as weights vertex_color </li>
+</ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7c5e04f3f66d4553ccfdc649b3a65ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c5e04f3f66d4553ccfdc649b3a65ca6">&#9670;&nbsp;</a></span>color()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +164,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">pair&lt; int, int &gt; StarBicoloringVertexCoverNonReq::color </td>
+          <td class="memname">int StarBicoloringVertexCoverNonReq::color </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -145,7 +172,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -162,7 +189,7 @@ Additional Inherited Members</h2></td></tr>
 <li>G_b bipartite graph with colors given as weights vertex_color </li>
 </ul>
 
-<p>Implements <a class="el" href="class_col_alg.html#a54ed46e50697785618d4c2fd4c0f64f9">ColAlg</a>.</p>
+<p>Implements <a class="el" href="class_col_alg.html#a9315a35341c23c0d96c56bb6c2a4f061">ColAlg</a>.</p>
 
 </div>
 </div>
@@ -171,6 +198,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int StarBicoloringVertexCoverNonReq::color_restricted </td>
@@ -179,13 +209,17 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/rostam/Desktop/projs/precol/src/algs/<a class="el" href="star__bicoloring__vertex__cover__nreq_8h.html">star_bicoloring_vertex_cover_nreq.h</a></li>
-<li>/home/rostam/Desktop/projs/precol/src/algs/<a class="el" href="star__bicoloring__vertex__cover__nreq_8cpp.html">star_bicoloring_vertex_cover_nreq.cpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/rostam/Desktop/projs/precol/Algs/<a class="el" href="_star_bicoloring_vertex_cover_non_req_8h.html">StarBicoloringVertexCoverNonReq.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
@@ -196,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2020 12:53:27 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 8 2020 11:27:08 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

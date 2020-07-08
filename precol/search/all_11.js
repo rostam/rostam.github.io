@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['tic',['tic',['../d2__color__omp_8cpp.html#a5ba73899fe15846cc99820005d978e24',1,'d2_color_omp.cpp']]],
-  ['toc',['toc',['../d2__color__omp_8cpp.html#a38664cf3d259198ae1e644736aa5e70e',1,'d2_color_omp.cpp']]]
+  ['sat',['sat',['../namespacevis3d.html#a08c74abfdd17748edfa038e78c5cb998',1,'vis3d']]],
+  ['set_5fall_5fcolors_5fto',['set_all_colors_to',['../class_col_alg.html#a4f66820d0c20a71fd9201817cb6920f0',1,'ColAlg']]],
+  ['silu',['SILU',['../class_s_i_l_u.html',1,'SILU'],['../class_s_i_l_u.html#a343ca53a46349da300ad2ac2b9ed615f',1,'SILU::SILU()']]],
+  ['silu_2ecpp',['SILU.cpp',['../_s_i_l_u_8cpp.html',1,'']]],
+  ['silu_2eh',['SILU.h',['../_s_i_l_u_8h.html',1,'']]],
+  ['slo',['SLO',['../class_s_l_o.html',1,'']]],
+  ['slo_2eh',['SLO.h',['../_s_l_o_8h.html',1,'']]],
+  ['sparsify_2eh',['sparsify.h',['../sparsify_8h.html',1,'']]],
+  ['starbicoloringvertexcover',['StarBicoloringVertexCover',['../class_star_bicoloring_vertex_cover.html',1,'']]],
+  ['starbicoloringvertexcover_2eh',['StarBicoloringVertexCover.h',['../_star_bicoloring_vertex_cover_8h.html',1,'']]],
+  ['starbicoloringvertexcovernonreq',['StarBicoloringVertexCoverNonReq',['../class_star_bicoloring_vertex_cover_non_req.html',1,'']]],
+  ['starbicoloringvertexcovernonreq_2eh',['StarBicoloringVertexCoverNonReq.h',['../_star_bicoloring_vertex_cover_non_req_8h.html',1,'']]],
+  ['stats',['stats',['../namespacestats.html',1,'']]],
+  ['stats_2epy',['stats.py',['../stats_8py.html',1,'']]],
+  ['step',['step',['../k_clique_8hpp.html#a6aa0859d04be4ace832f9239610583bf',1,'kClique.hpp']]],
+  ['stringify',['STRINGIFY',['../build_2_c_make_files_23_810_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../build_2_c_make_files_23_810_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringify_5fhelper',['STRINGIFY_HELPER',['../build_2_c_make_files_23_810_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../build_2_c_make_files_23_810_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp']]]
 ];

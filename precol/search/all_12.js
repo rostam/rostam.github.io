@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['v_5fc',['V_c',['../class_col_alg.html#a696ba629e74323d90dda02bb284aae75',1,'ColAlg::V_c()'],['../class_ind_set.html#a106d341247eb5d0dc38d374c5efb1e26',1,'IndSet::V_c()']]],
-  ['v_5fiter',['V_iter',['../datatypes_8hpp.html#abc9f98f1e6b0876db98906ccdfc12935',1,'datatypes.hpp']]],
-  ['v_5fr',['V_r',['../class_col_alg.html#ac8ee7d5758c9fbe692eed2dffa69809a',1,'ColAlg::V_r()'],['../class_ind_set.html#a0e44fca3b46334ff474649db768d49b8',1,'IndSet::V_r()']]],
-  ['ver',['Ver',['../datatypes_8hpp.html#a2f27a2c18afd82b8da663eadc29af210',1,'datatypes.hpp']]]
+  ['test_20matrices',['Test matrices',['../md__home_rostam__desktop_projs_precol_mats_readme.html',1,'']]],
+  ['threedee',['threedee',['../namespacevis3d.html#aafdeb6cecd944975d7cec7d09300b92c',1,'vis3d.threedee()'],['../namespacevis3d__bck.html#a60401623d22f9b90abc179639ca21164',1,'vis3d_bck.threedee()']]],
+  ['tic',['tic',['../class_d2_color_o_m_p.html#acf971a1d77ab6a5004d5a8458e9decf0',1,'D2ColorOMP']]],
+  ['toc',['toc',['../class_d2_color_o_m_p.html#a7914e4e4d383777fbd958d632d08ba87',1,'D2ColorOMP']]],
+  ['todo_20list',['Todo List',['../todo.html',1,'']]],
+  ['twosidedcoloring',['TwoSidedColoring',['../class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910a782e685316834ec2c845efad9980b0fc',1,'ColAlg']]]
 ];

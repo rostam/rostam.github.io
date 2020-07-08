@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['silu',['SILU',['../class_s_i_l_u.html',1,'']]],
-  ['slo',['SLO',['../class_s_l_o.html',1,'']]],
-  ['starbicoloringvertexcover',['StarBicoloringVertexCover',['../class_star_bicoloring_vertex_cover.html',1,'']]],
-  ['starbicoloringvertexcovernonreq',['StarBicoloringVertexCoverNonReq',['../class_star_bicoloring_vertex_cover_non_req.html',1,'']]]
+  ['onesidedd2coloring',['OneSidedD2Coloring',['../class_one_sided_d2_coloring.html',1,'']]],
+  ['onesidedd2coloringnonreq',['OneSidedD2ColoringNonReq',['../class_one_sided_d2_coloring_non_req.html',1,'']]],
+  ['onesidedd2coloringnonreqbalanced',['OneSidedD2ColoringNonReqBalanced',['../class_one_sided_d2_coloring_non_req_balanced.html',1,'']]],
+  ['onesidedd2colornonreqdiag',['OneSidedD2ColorNonReqDiag',['../class_one_sided_d2_color_non_req_diag.html',1,'']]],
+  ['ordering',['Ordering',['../class_ordering.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nat',['Nat',['../class_nat.html',1,'']]]
+  ['matrix_5fmarket',['matrix_market',['../structmatrix__market.html',1,'']]]
 ];

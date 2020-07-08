@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kclique_2ecpp',['kClique.cpp',['../k_clique_8cpp.html',1,'']]],
-  ['kclique_2ehpp',['kClique.hpp',['../k_clique_8hpp.html',1,'']]]
+  ['handle_5finput_2eh',['handle_input.h',['../handle__input_8h.html',1,'']]]
 ];

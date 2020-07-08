@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['silu',['SILU',['../class_s_i_l_u.html#a343ca53a46349da300ad2ac2b9ed615f',1,'SILU']]],
-  ['step',['step',['../k_clique_8cpp.html#a6aa0859d04be4ace832f9239610583bf',1,'step(const Graph &amp;G_c, const unsigned int &amp;k, unsigned int Vertex, vector&lt; unsigned int &gt; &amp;prev_vertices, int level):&#160;kClique.cpp'],['../k_clique_8hpp.html#a6aa0859d04be4ace832f9239610583bf',1,'step(const Graph &amp;G_c, const unsigned int &amp;k, unsigned int Vertex, vector&lt; unsigned int &gt; &amp;prev_vertices, int level):&#160;kClique.cpp']]]
+  ['partiald2coloringrestrictedomp2',['PartialD2ColoringRestrictedOMP2',['../class_d2_color_o_m_p.html#a240dedf263e06d704030c2363d8e7433',1,'D2ColorOMP']]],
+  ['potentialrequirednonzerosd2',['potentialRequiredNonzerosD2',['../pot_8cpp.html#a6e60b157136e6cf41adb8db96ddb20d4',1,'potentialRequiredNonzerosD2(Graph &amp;G_b, const vector&lt; graph_traits&lt; Graph &gt;::edge_descriptor &gt; &amp;edge_ordering):&#160;pot.cpp'],['../pot_8hpp.html#a7c04b87d67a864346ec6d14f46eadec5',1,'potentialRequiredNonzerosD2(Graph &amp;G_b, const vector&lt; Edge &gt; &amp;edge_ordering):&#160;pot.hpp']]],
+  ['potentialrequirednonzerossb',['potentialRequiredNonzerosSB',['../pot_8cpp.html#a088ddd8e3c763229ed8adf4cbfa1311b',1,'potentialRequiredNonzerosSB(Graph &amp;G_b, const vector&lt; graph_traits&lt; Graph &gt;::edge_descriptor &gt; &amp;edge_ordering):&#160;pot.cpp'],['../pot_8hpp.html#a3b01664a925e531495067957c9ed88b6',1,'potentialRequiredNonzerosSB(Graph &amp;G_b, const vector&lt; Edge &gt; &amp;edge_ordering):&#160;pot.hpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['w',['w',['../structhas__weight__equal__to.html#af589160d800a2e1171476ce31b4e0c17',1,'has_weight_equal_to']]]
+  ['pars',['pars',['../class_col_alg.html#a8d9a313c7839fe16d4d004f9d24808ad',1,'ColAlg']]]
 ];

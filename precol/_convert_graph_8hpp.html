@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>PreCol: /home/rostam/Desktop/projs/precol/src/ConvertGraph.hpp File Reference</title>
+        <title>PreCol: /home/rostam/Desktop/projs/precol/Graph/ConvertGraph.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -69,172 +69,20 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_45814856f36e01cbe959f35071d50d5a.html">Graph</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ConvertGraph.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;boost/config.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;boost/config.hpp&gt;</code><br />
 <code>#include &quot;boost/graph/adjacency_list.hpp&quot;</code><br />
 <code>#include &quot;boost/graph/graph_utility.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="datatypes_8hpp.html">datatypes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="neighbors_8hpp.html">neighbors.hpp</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ac85e28607280691e628db7f8e3c9a8cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_graph_8hpp.html#ac85e28607280691e628db7f8e3c9a8cb">G_bToG_c</a> (const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_b, const vector&lt; unsigned int &gt; &amp;V_c, <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_c)</td></tr>
-<tr class="separator:ac85e28607280691e628db7f8e3c9a8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04951fbea56c68cf11e7ba114d440ba8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_graph_8hpp.html#a04951fbea56c68cf11e7ba114d440ba8">G_bToG_cRestricted</a> (const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_b, const vector&lt; unsigned int &gt; &amp;V_c, <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_c)</td></tr>
-<tr class="separator:a04951fbea56c68cf11e7ba114d440ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d432eb361577d0c692e6d6d5b96c948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_graph_8hpp.html#a3d432eb361577d0c692e6d6d5b96c948">G_bToG_r</a> (const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_b, const vector&lt; unsigned int &gt; &amp;V_r, <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_r)</td></tr>
-<tr class="separator:a3d432eb361577d0c692e6d6d5b96c948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aaa9313426b0178e15bd3d83cd743b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_convert_graph_8hpp.html#a0aaa9313426b0178e15bd3d83cd743b1">G_bToG_rRestricted</a> (const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_b, const vector&lt; unsigned int &gt; &amp;V_r, <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;G_r)</td></tr>
-<tr class="separator:a0aaa9313426b0178e15bd3d83cd743b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ac85e28607280691e628db7f8e3c9a8cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac85e28607280691e628db7f8e3c9a8cb">&#9670;&nbsp;</a></span>G_bToG_c()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool G_bToG_c </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; unsigned int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a04951fbea56c68cf11e7ba114d440ba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04951fbea56c68cf11e7ba114d440ba8">&#9670;&nbsp;</a></span>G_bToG_cRestricted()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool G_bToG_cRestricted </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; unsigned int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3d432eb361577d0c692e6d6d5b96c948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d432eb361577d0c692e6d6d5b96c948">&#9670;&nbsp;</a></span>G_bToG_r()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool G_bToG_r </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; unsigned int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_r</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0aaa9313426b0178e15bd3d83cd743b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0aaa9313426b0178e15bd3d83cd743b1">&#9670;&nbsp;</a></span>G_bToG_rRestricted()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool G_bToG_rRestricted </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; unsigned int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_r</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &amp;&#160;</td>
-          <td class="paramname"><em>G_r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
@@ -243,7 +91,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2020 12:53:27 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 8 2020 11:27:07 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

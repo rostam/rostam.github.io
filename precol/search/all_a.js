@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['le_5fcols',['le_cols',['../structle__cols.html',1,'le_cols'],['../structle__cols.html#a2d8b8767b51f0eda134b0450bb9d375c',1,'le_cols::le_cols()']]],
-  ['le_5fdist_5fdiag',['le_dist_diag',['../structle__dist__diag.html',1,'le_dist_diag'],['../structle__dist__diag.html#a5f4b888520ba160981a268af90d20ae9',1,'le_dist_diag::le_dist_diag()']]],
-  ['le_5frows',['le_rows',['../structle__rows.html',1,'le_rows'],['../structle__rows.html#ad6328649d448f1bd01187209b17f0516',1,'le_rows::le_rows()']]],
-  ['lfo',['LFO',['../class_l_f_o.html',1,'']]],
-  ['lfo_2eh',['LFO.h',['../_l_f_o_8h.html',1,'']]]
+  ['kclique',['kClique',['../k_clique_8hpp.html#aa218e0c9a7dd57bdca7a3775f1c1c4a3',1,'kClique.hpp']]],
+  ['kclique_2ehpp',['kClique.hpp',['../k_clique_8hpp.html',1,'']]],
+  ['kindofsparsify',['KindOfSparsify',['../sparsify_8h.html#a32ad78a46777a78e074b51a3f0b4025a',1,'sparsify.h']]]
 ];

@@ -1,17 +1,18 @@
 var searchData=
 [
-  ['d2_5fcolor_2eh',['d2_color.h',['../d2__color_8h.html',1,'']]],
-  ['d2_5fcolor_5fdiag_2eh',['d2_color_diag.h',['../d2__color__diag_8h.html',1,'']]],
-  ['d2_5fcolor_5fnreq_2eh',['d2_color_nreq.h',['../d2__color__nreq_8h.html',1,'']]],
-  ['d2_5fcolor_5fnreq_5fmodified_2eh',['d2_color_nreq_modified.h',['../d2__color__nreq__modified_8h.html',1,'']]],
-  ['d2_5fcolor_5fomp_2ecpp',['d2_color_omp.cpp',['../d2__color__omp_8cpp.html',1,'']]],
-  ['d2_5fcolor_5fomp_2ehpp',['d2_color_omp.hpp',['../d2__color__omp_8hpp.html',1,'']]],
-  ['d2color',['D2Color',['../class_d2_color.html',1,'']]],
-  ['d2colornonreq',['D2ColorNonReq',['../class_d2_color_non_req.html',1,'']]],
-  ['d2colornonreqbalanced',['D2ColorNonReqBalanced',['../class_d2_color_non_req_balanced.html',1,'']]],
-  ['d2colornonreqdiag',['D2ColorNonReqDiag',['../class_d2_color_non_req_diag.html',1,'']]],
-  ['d2coloromp',['D2ColorOMP',['../class_d2_color_o_m_p.html',1,'']]],
-  ['d2colorrestrictedomp',['D2ColorRestrictedOMP',['../d2__color__omp_8cpp.html#a855dc459ec3ffe993a7db86d3e59e8a3',1,'d2_color_omp.cpp']]],
-  ['datatypes_2ehpp',['datatypes.hpp',['../datatypes_8hpp.html',1,'']]],
-  ['dynbit',['dynbit',['../datatypes_8hpp.html#a736f4baf37fb0db4fd12ae506def3f87',1,'datatypes.hpp']]]
+  ['c_5fdialect',['C_DIALECT',['../build_2_c_make_files_23_810_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a07f8e5783674099cd7f5110e22a78cdb',1,'C_DIALECT():&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a07f8e5783674099cd7f5110e22a78cdb',1,'C_DIALECT():&#160;CMakeCCompilerId.c']]],
+  ['cmakeccompilerid_2ec',['CMakeCCompilerId.c',['../build_2_c_make_files_23_810_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html',1,'(Global Namespace)'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html',1,'(Global Namespace)']]],
+  ['cmakecxxcompilerid_2ecpp',['CMakeCXXCompilerId.cpp',['../build_2_c_make_files_23_810_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html',1,'(Global Namespace)'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html',1,'(Global Namespace)']]],
+  ['colalg',['ColAlg',['../class_col_alg.html',1,'ColAlg'],['../class_col_alg.html#a6064e92f0fe0af3c6d67c8dc9abaf139',1,'ColAlg::ColAlg(Graph &amp;G_b)'],['../class_col_alg.html#a4452e5e30ca8e253fb348d502c690721',1,'ColAlg::ColAlg(Graph &amp;G_b, vector&lt; unsigned int &gt; &amp;V, bool restricted, map&lt; string, any &gt; pars={})'],['../class_col_alg.html#ab731858114c03f435c51f545050bfd66',1,'ColAlg::ColAlg(Graph &amp;G_b, vector&lt; unsigned int &gt; &amp;V_r, vector&lt; unsigned int &gt; &amp;V_c, bool restricted, map&lt; string, any &gt; pars={})']]],
+  ['colalg_2eh',['ColAlg.h',['../_col_alg_8h.html',1,'']]],
+  ['color',['color',['../class_col_alg.html#a9315a35341c23c0d96c56bb6c2a4f061',1,'ColAlg::color()'],['../class_d2_color_o_m_p.html#a8e98274f7176f84aca0a54ffb9fa22ef',1,'D2ColorOMP::color()'],['../class_greedy_coloring_simple_graph.html#a75100383061fb3ce6f81ac8bfcf37701',1,'GreedyColoringSimpleGraph::color()'],['../class_one_sided_d2_coloring.html#aff63d49c9e06d49bef4b18a5df038e7d',1,'OneSidedD2Coloring::color()'],['../class_one_sided_d2_coloring_non_req.html#a626c68ff2898ffbcf5fb01b8e3330cdc',1,'OneSidedD2ColoringNonReq::color()'],['../class_one_sided_d2_coloring_non_req_balanced.html#a6067179b3d09d1acabbfee2a4baac085',1,'OneSidedD2ColoringNonReqBalanced::color()'],['../class_one_sided_d2_color_non_req_diag.html#aaf6d8ee9faa974610cb153dc24e2db06',1,'OneSidedD2ColorNonReqDiag::color()'],['../class_star_bicoloring_vertex_cover.html#ac34fd415fde281f60928f1e7e5191128',1,'StarBicoloringVertexCover::color()'],['../class_star_bicoloring_vertex_cover_non_req.html#a7c5e04f3f66d4553ccfdc649b3a65ca6',1,'StarBicoloringVertexCoverNonReq::color()'],['../namespacevis3d.html#af6c13df9f1d722abbea09d29d209f796',1,'vis3d.color()']]],
+  ['color_5frestricted',['color_restricted',['../class_star_bicoloring_vertex_cover_non_req.html#af5dfec3f9dd60615e38cc48aec4fb031',1,'StarBicoloringVertexCoverNonReq']]],
+  ['coloring_2ecpp',['Coloring.cpp',['../_coloring_8cpp.html',1,'']]],
+  ['columncoloring',['ColumnColoring',['../class_col_alg.html#a18b68a3bf371e29cc1ca8f66e7a90910a949bc54f1046316a6cc748845e14c16a',1,'ColAlg']]],
+  ['compiler_5fid',['COMPILER_ID',['../build_2_c_make_files_23_810_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../build_2_c_make_files_23_810_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['compute',['compute',['../class_ind_set.html#ae6d5f78e8f7b553047882a98f454efac',1,'IndSet::compute()'],['../class_i_set.html#ae17b8afa785fdbdd1aa4bc1135721091',1,'ISet::compute()'],['../class_i_set_coleman.html#a8ff104a9864d94c8c03c7f876ec9599d',1,'ISetColeman::compute()'],['../class_i_set_restricted.html#a755ca0e84c5d1f7f45d165ec1dab77e3',1,'ISetRestricted::compute()'],['../class_i_set_variant.html#a4355835a8c56c2493d54ab90eeec872e',1,'ISetVariant::compute()'],['../class_i_set_variant_restricted.html#a96c785c78d2c1b563c9064de41441a5c',1,'ISetVariantRestricted::compute()']]],
+  ['convertgraph_2ecpp',['ConvertGraph.cpp',['../_convert_graph_8cpp.html',1,'']]],
+  ['convertgraph_2ehpp',['ConvertGraph.hpp',['../_convert_graph_8hpp.html',1,'']]],
+  ['custom',['Custom',['../sparsify_8h.html#a32ad78a46777a78e074b51a3f0b4025aa26b367bcdd210f7345b551b921c5551f',1,'sparsify.h']]],
+  ['cxx_5fstd',['CXX_STD',['../build_2_c_make_files_23_810_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CXX_STD():&#160;CMakeCXXCompilerId.cpp'],['../cmake-build-release_2_c_make_files_23_816_85_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CXX_STD():&#160;CMakeCXXCompilerId.cpp']]]
 ];

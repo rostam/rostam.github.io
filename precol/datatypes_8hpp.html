@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>PreCol: /home/rostam/Desktop/projs/precol/src/datatypes.hpp File Reference</title>
+        <title>PreCol: /home/rostam/Desktop/projs/precol/Graph/datatypes.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -69,12 +69,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_45814856f36e01cbe959f35071d50d5a.html">Graph</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">datatypes.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -87,122 +89,49 @@ $(function() {
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;boost/dynamic_bitset.hpp&gt;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceprecol"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html">precol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9521fd7231dc22854e251d9892516d7c"><td class="memItemLeft" align="right" valign="top">typedef boost::adjacency_list&lt; boost::vecS, boost::vecS, boost::undirectedS, property&lt; boost::vertex_color_t, int &gt;, property&lt; boost::edge_weight_t, int, property&lt; boost::edge_name_t, string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a></td></tr>
-<tr class="separator:a9521fd7231dc22854e251d9892516d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc9f98f1e6b0876db98906ccdfc12935"><td class="memItemLeft" align="right" valign="top">typedef boost::graph_traits&lt; <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &gt;::vertex_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#abc9f98f1e6b0876db98906ccdfc12935">V_iter</a></td></tr>
-<tr class="separator:abc9f98f1e6b0876db98906ccdfc12935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd278803c9e6d433d49d021c2d96d459"><td class="memItemLeft" align="right" valign="top">typedef boost::graph_traits&lt; <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a> &gt;::edge_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#abd278803c9e6d433d49d021c2d96d459">E_iter</a></td></tr>
-<tr class="separator:abd278803c9e6d433d49d021c2d96d459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f27a2c18afd82b8da663eadc29af210"><td class="memItemLeft" align="right" valign="top">typedef Graph::vertex_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#a2f27a2c18afd82b8da663eadc29af210">Ver</a></td></tr>
-<tr class="separator:a2f27a2c18afd82b8da663eadc29af210"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a168917a91b51cc5af102712d32c4df26"><td class="memItemLeft" align="right" valign="top">typedef Graph::edge_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#a168917a91b51cc5af102712d32c4df26">Edge</a></td></tr>
-<tr class="separator:a168917a91b51cc5af102712d32c4df26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1ec71ed1b3de874d7e6ceb6ac057ba"><td class="memItemLeft" align="right" valign="top">typedef boost::property_map&lt; <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a>, boost::edge_weight_t &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#aff1ec71ed1b3de874d7e6ceb6ac057ba">edge_weight_type</a></td></tr>
-<tr class="separator:aff1ec71ed1b3de874d7e6ceb6ac057ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a736f4baf37fb0db4fd12ae506def3f87"><td class="memItemLeft" align="right" valign="top">typedef boost::dynamic_bitset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="datatypes_8hpp.html#a736f4baf37fb0db4fd12ae506def3f87">dynbit</a></td></tr>
-<tr class="separator:a736f4baf37fb0db4fd12ae506def3f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609c81fcde542bc4bc70832ad825b232"><td class="memItemLeft" align="right" valign="top">typedef boost::adjacency_list&lt; boost::setS, boost::vecS, boost::undirectedS, property&lt; boost::vertex_color_t, int &gt;, property&lt; boost::edge_weight_t, int, property&lt; boost::edge_name_t, string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">precol::Graph</a></td></tr>
+<tr class="separator:a609c81fcde542bc4bc70832ad825b232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3290aca84bf1f13a5227b1f65ba3e53"><td class="memItemLeft" align="right" valign="top">typedef boost::graph_traits&lt; <a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &gt;::vertex_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#af3290aca84bf1f13a5227b1f65ba3e53">precol::V_iter</a></td></tr>
+<tr class="separator:af3290aca84bf1f13a5227b1f65ba3e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f534567819dd5af17de576c9a7b9a41"><td class="memItemLeft" align="right" valign="top">typedef boost::graph_traits&lt; <a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &gt;::edge_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a4f534567819dd5af17de576c9a7b9a41">precol::E_iter</a></td></tr>
+<tr class="separator:a4f534567819dd5af17de576c9a7b9a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7878c5a864e6000eddd1441652e309"><td class="memItemLeft" align="right" valign="top">typedef Graph::vertex_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#afc7878c5a864e6000eddd1441652e309">precol::Ver</a></td></tr>
+<tr class="separator:afc7878c5a864e6000eddd1441652e309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc01cd3e5c3c1c495bcdfa5e3ed7ae8"><td class="memItemLeft" align="right" valign="top">typedef Graph::edge_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a6fc01cd3e5c3c1c495bcdfa5e3ed7ae8">precol::Edge</a></td></tr>
+<tr class="separator:a6fc01cd3e5c3c1c495bcdfa5e3ed7ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90151c171cca96480169a8aed32c5dfc"><td class="memItemLeft" align="right" valign="top">typedef boost::property_map&lt; <a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a>, boost::edge_weight_t &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a90151c171cca96480169a8aed32c5dfc">precol::edge_weight_type</a></td></tr>
+<tr class="separator:a90151c171cca96480169a8aed32c5dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd3e3e436c370c0d2d5cac567e52699"><td class="memItemLeft" align="right" valign="top">typedef boost::dynamic_bitset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a9fd3e3e436c370c0d2d5cac567e52699">precol::dynbit</a></td></tr>
+<tr class="separator:a9fd3e3e436c370c0d2d5cac567e52699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7578001ed41e4dbf7503dc9219702e7"><td class="memItemLeft" align="right" valign="top">typedef boost::property_map&lt; <a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a>, boost::vertex_index_t &gt;::const_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#af7578001ed41e4dbf7503dc9219702e7">precol::vertex_index_map</a></td></tr>
+<tr class="separator:af7578001ed41e4dbf7503dc9219702e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a27e1e3097b9ddb064e799b2d53f696ef"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:a27e1e3097b9ddb064e799b2d53f696ef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a27e1e3097b9ddb064e799b2d53f696ef">precol::for_each_v</a> (<a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;g, Lambda func)</td></tr>
+<tr class="memdesc:a27e1e3097b9ddb064e799b2d53f696ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate on the vertices of graph  <a href="namespaceprecol.html#a27e1e3097b9ddb064e799b2d53f696ef">More...</a><br /></td></tr>
+<tr class="separator:a27e1e3097b9ddb064e799b2d53f696ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f368e78d8c36f4cde218f3a984bb098"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:a0f368e78d8c36f4cde218f3a984bb098"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#a0f368e78d8c36f4cde218f3a984bb098">precol::for_each_e</a> (<a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;g, Lambda func)</td></tr>
+<tr class="memdesc:a0f368e78d8c36f4cde218f3a984bb098"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate on the edges of graph  <a href="namespaceprecol.html#a0f368e78d8c36f4cde218f3a984bb098">More...</a><br /></td></tr>
+<tr class="separator:a0f368e78d8c36f4cde218f3a984bb098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85fbf50385e9e78e916b91586c68b6b"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:ac85fbf50385e9e78e916b91586c68b6b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#ac85fbf50385e9e78e916b91586c68b6b">precol::for_each_n</a> (<a class="el" href="namespaceprecol.html#a609c81fcde542bc4bc70832ad825b232">Graph</a> &amp;g, const <a class="el" href="namespaceprecol.html#afc7878c5a864e6000eddd1441652e309">Ver</a> &amp;v, Lambda func)</td></tr>
+<tr class="memdesc:ac85fbf50385e9e78e916b91586c68b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate on the neighbors of v  <a href="namespaceprecol.html#ac85fbf50385e9e78e916b91586c68b6b">More...</a><br /></td></tr>
+<tr class="separator:ac85fbf50385e9e78e916b91586c68b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4bd1bc7426dd1bfe95a84bbe57ada20"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:ae4bd1bc7426dd1bfe95a84bbe57ada20"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceprecol.html#ae4bd1bc7426dd1bfe95a84bbe57ada20">precol::for_each_2n</a> (int v, Lambda func)</td></tr>
+<tr class="memdesc:ae4bd1bc7426dd1bfe95a84bbe57ada20"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate on the distance-2 neighbors of v  <a href="namespaceprecol.html#ae4bd1bc7426dd1bfe95a84bbe57ada20">More...</a><br /></td></tr>
+<tr class="separator:ae4bd1bc7426dd1bfe95a84bbe57ada20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a736f4baf37fb0db4fd12ae506def3f87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a736f4baf37fb0db4fd12ae506def3f87">&#9670;&nbsp;</a></span>dynbit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef boost::dynamic_bitset <a class="el" href="datatypes_8hpp.html#a736f4baf37fb0db4fd12ae506def3f87">dynbit</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abd278803c9e6d433d49d021c2d96d459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd278803c9e6d433d49d021c2d96d459">&#9670;&nbsp;</a></span>E_iter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef boost::graph_traits&lt;<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a>&gt;::edge_iterator <a class="el" href="datatypes_8hpp.html#abd278803c9e6d433d49d021c2d96d459">E_iter</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a168917a91b51cc5af102712d32c4df26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a168917a91b51cc5af102712d32c4df26">&#9670;&nbsp;</a></span>Edge</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Graph::edge_descriptor <a class="el" href="datatypes_8hpp.html#a168917a91b51cc5af102712d32c4df26">Edge</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aff1ec71ed1b3de874d7e6ceb6ac057ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff1ec71ed1b3de874d7e6ceb6ac057ba">&#9670;&nbsp;</a></span>edge_weight_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef boost::property_map&lt;<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a>, boost::edge_weight_t&gt;::type <a class="el" href="datatypes_8hpp.html#aff1ec71ed1b3de874d7e6ceb6ac057ba">edge_weight_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9521fd7231dc22854e251d9892516d7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9521fd7231dc22854e251d9892516d7c">&#9670;&nbsp;</a></span>Graph</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef boost::adjacency_list&lt;boost::vecS, boost::vecS, boost::undirectedS, property&lt;boost::vertex_color_t, int&gt;, property&lt;boost::edge_weight_t, int, property&lt;boost::edge_name_t, string&gt; &gt; &gt; <a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abc9f98f1e6b0876db98906ccdfc12935"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc9f98f1e6b0876db98906ccdfc12935">&#9670;&nbsp;</a></span>V_iter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef boost::graph_traits&lt;<a class="el" href="datatypes_8hpp.html#a9521fd7231dc22854e251d9892516d7c">Graph</a>&gt;::vertex_iterator <a class="el" href="datatypes_8hpp.html#abc9f98f1e6b0876db98906ccdfc12935">V_iter</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2f27a2c18afd82b8da663eadc29af210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f27a2c18afd82b8da663eadc29af210">&#9670;&nbsp;</a></span>Ver</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Graph::vertex_descriptor <a class="el" href="datatypes_8hpp.html#a2f27a2c18afd82b8da663eadc29af210">Ver</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -212,7 +141,7 @@ Typedefs</h2></td></tr>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2020 12:53:27 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 8 2020 11:27:07 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
