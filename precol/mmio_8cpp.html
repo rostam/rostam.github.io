@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.13"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>PreCol: /home/rostam/Desktop/projs/precol/src/mmio.cpp File Reference</title>
+        <title>PreCol: /home/rostam/Desktop/projs/precol/Graph/mmio.cpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_45814856f36e01cbe959f35071d50d5a.html">Graph</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,7 +81,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;malloc.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="mmio_8h.html">mmio.h</a>&quot;</code><br />
 </div><table class="memberdecls">
@@ -101,8 +101,8 @@ Functions</h2></td></tr>
 <tr class="separator:a77d0cc326838831814294614d1010ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d0fe7a313521b054e1eaa7b38c6e514"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#a4d0fe7a313521b054e1eaa7b38c6e514">mm_write_mtx_array_size</a> (FILE *f, int M, int N)</td></tr>
 <tr class="separator:a4d0fe7a313521b054e1eaa7b38c6e514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d65e604c5098c4b4ddd99c184eb308"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#a81d65e604c5098c4b4ddd99c184eb308">mm_read_mtx_crd_data</a> (FILE *f, int nz, int I[], int J[], double val[], <a class="el" href="mmio_8h.html#a27c4a0610b9f2ecb5edb6430e79ae9ee">MM_typecode</a> matcode)</td></tr>
-<tr class="separator:a81d65e604c5098c4b4ddd99c184eb308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865459b4a6c07939c06e3fe9365fc2a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#a865459b4a6c07939c06e3fe9365fc2a2">mm_read_mtx_crd_data</a> (FILE *f, int M, int N, int nz, int I[], int J[], double val[], <a class="el" href="mmio_8h.html#a27c4a0610b9f2ecb5edb6430e79ae9ee">MM_typecode</a> matcode)</td></tr>
+<tr class="separator:a865459b4a6c07939c06e3fe9365fc2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b35386bc4a8284ece9185e6a314e6fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#a9b35386bc4a8284ece9185e6a314e6fb">mm_read_mtx_crd_entry</a> (FILE *f, int *I, int *J, double *real, double *imag, <a class="el" href="mmio_8h.html#a27c4a0610b9f2ecb5edb6430e79ae9ee">MM_typecode</a> matcode)</td></tr>
 <tr class="separator:a9b35386bc4a8284ece9185e6a314e6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20f55cb677aa71256a6c27311d164ee7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#a20f55cb677aa71256a6c27311d164ee7">mm_read_mtx_crd</a> (char *fname, int *M, int *N, int *nz, int **I, int **J, double **val, <a class="el" href="mmio_8h.html#a27c4a0610b9f2ecb5edb6430e79ae9ee">MM_typecode</a> *matcode)</td></tr>
@@ -111,6 +111,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1ae61f76394b37d9c41a0a1b63e5a3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68d9871d7292ea09a915e05a3588ad4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#a68d9871d7292ea09a915e05a3588ad4c">mm_write_mtx_crd</a> (char fname[], int M, int N, int nz, int I[], int J[], double val[], <a class="el" href="mmio_8h.html#a27c4a0610b9f2ecb5edb6430e79ae9ee">MM_typecode</a> matcode)</td></tr>
 <tr class="separator:a68d9871d7292ea09a915e05a3588ad4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37b950ca2d922353bb1d33dcb9762e4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#ac37b950ca2d922353bb1d33dcb9762e4">mm_strdup</a> (const char *s)</td></tr>
+<tr class="separator:ac37b950ca2d922353bb1d33dcb9762e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae59430e91ee3c56cbe666976066f0a56"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmio_8cpp.html#ae59430e91ee3c56cbe666976066f0a56">mm_typecode_to_str</a> (<a class="el" href="mmio_8h.html#a27c4a0610b9f2ecb5edb6430e79ae9ee">MM_typecode</a> matcode)</td></tr>
 <tr class="separator:ae59430e91ee3c56cbe666976066f0a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -259,8 +261,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a81d65e604c5098c4b4ddd99c184eb308"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81d65e604c5098c4b4ddd99c184eb308">&#9670;&nbsp;</a></span>mm_read_mtx_crd_data()</h2>
+<a id="a865459b4a6c07939c06e3fe9365fc2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865459b4a6c07939c06e3fe9365fc2a2">&#9670;&nbsp;</a></span>mm_read_mtx_crd_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,6 +272,18 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">FILE *&#160;</td>
           <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -461,6 +475,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac37b950ca2d922353bb1d33dcb9762e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37b950ca2d922353bb1d33dcb9762e4">&#9670;&nbsp;</a></span>mm_strdup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* mm_strdup </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new copy of a string s. <a class="el" href="mmio_8cpp.html#ac37b950ca2d922353bb1d33dcb9762e4">mm_strdup()</a> is a common routine, but not part of ANSI C, so it is included here. Used by <a class="el" href="mmio_8cpp.html#ae59430e91ee3c56cbe666976066f0a56">mm_typecode_to_str()</a>. </p>
+
+</div>
+</div>
 <a id="ae59430e91ee3c56cbe666976066f0a56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae59430e91ee3c56cbe666976066f0a56">&#9670;&nbsp;</a></span>mm_typecode_to_str()</h2>
 
@@ -476,7 +509,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a new copy of a string s. strdup() is a common routine, but not part of ANSI C, so it is included here. Used by <a class="el" href="mmio_8cpp.html#ae59430e91ee3c56cbe666976066f0a56">mm_typecode_to_str()</a>. </p>
 
 </div>
 </div>
@@ -655,7 +687,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 5 2020 12:53:27 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 10 2020 11:31:47 for PreCol by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
