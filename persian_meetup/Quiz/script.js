@@ -12,6 +12,9 @@ document.querySelector(".quiz").style.display="none";
 document.querySelector(".final-result").style.display="none";
 
 
+if(localStorage.getItem("countQues") != null){
+    countQues = parseInt(localStorage.getItem("countQues"));
+}
 document.querySelector(".choose-lang").addEventListener("click",function(){
 
     lang=document.getElementById("language").value+"Questions";
@@ -56,6 +59,7 @@ document.querySelector(".submit-answer").addEventListener("click",function(){
     
     if (countQues<window[lang].length-1){
         countQues++;
+        localStorage.setItem("countQues",countQues);
     }else{
         document.querySelector(".submit-answer").style.display="none";
         // document.querySelector(".view-results").style.display="unset";
