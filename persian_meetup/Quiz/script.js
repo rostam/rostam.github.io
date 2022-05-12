@@ -41,10 +41,7 @@ document.querySelector(".view-results").style.display="unset";
 
 
 document.querySelector(".submit-answer").addEventListener("click",function(){
-//     alert(window[lang][countQues].choices[window[lang][countQues].answer-1]);
-//     alert(document.querySelector('input[name="options"]:checked').value);
-
-    if(document.querySelector('input[name="options"]:checked').value===window[lang][countQues].choices[window[lang][countQues].answer-1]){
+    if(document.querySelector('input[name="options"]:checked').value===window[lang][countQues].choices[window[lang][countQues].answer]){
            
         score+=10;
         document.getElementById("score").textContent="Score : "+score;
