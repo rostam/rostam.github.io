@@ -1,13802 +1,24555 @@
-var WordsQuestions = [
-    {
-      "question": "brother",
-      "choices": [
-        "برادر",
-        "پاپ",
-        "باقی",
-        "متال"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "talented",
-      "choices": [
-        "مقدس",
-        "دین",
-        "بن",
-        "هنرمند"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "that",
-      "choices": [
-        "که",
-        "ویژه",
-        "ایرانیان",
-        "انسانی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مصر",
-      "choices": [
-        "thriving",
-        "Egypt",
-        "table",
-        "Mohammed"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "struggle",
-      "choices": [
-        "تلاش",
-        "هفتم",
-        "می‌گیرد",
-        "جایزه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "service",
-      "choices": [
-        "انقلاب",
-        "همیشه",
-        "خدمت",
-        "شاه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پرديز",
-      "choices": [
-        "park",
-        "sign",
-        "north",
-        "Nur"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "presence",
-      "choices": [
-        "ایستگاه",
-        "انتشارات",
-        "عدد",
-        "وجود"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مفروض",
-      "choices": [
-        "given",
-        "model",
-        "verdict",
-        "third"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حد",
-      "choices": [
-        "read",
-        "father",
-        "Mahmud",
-        "limit"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "lack",
-      "choices": [
-        "شدند",
-        "وزارت",
-        "اسرائیل",
-        "عدم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Nur",
-      "choices": [
-        "طول",
-        "مرتبط",
-        "دانشگاه",
-        "نور"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "June",
-      "choices": [
-        "ژوئن",
-        "علاوه",
-        "شهریور",
-        "موفق"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مسعود",
-      "choices": [
-        "limit",
-        "contemporary",
-        "known",
-        "Masood"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "friend",
-      "choices": [
-        "شهریور",
-        "دوست",
-        "ق",
-        "افزایش"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "order",
-      "choices": [
-        "مه",
-        "زمان",
-        "دستور",
-        "حاج"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "time",
-      "choices": [
-        "تلویزیونی",
-        "وقت",
-        "گرفتن",
-        "مقاومت"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "race",
-      "choices": [
-        "کامل",
-        "تک",
-        "نژاد",
-        "مطالعه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "جنس بشر",
-      "choices": [
-        "left",
-        "mankind",
-        "role",
-        "past"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "unique",
-      "choices": [
-        "همسر",
-        "آهنگ",
-        "میان",
-        "تک"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ساله",
-      "choices": [
-        "year old",
-        "February",
-        "training",
-        "presence"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "May",
-      "choices": [
-        "بن",
-        "برج",
-        "دیگر",
-        "مه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "شتاب",
-      "choices": [
-        "Pope",
-        "unconditional",
-        "speed",
-        "thousand"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "احاطه",
-      "choices": [
-        "surrounding",
-        "necessary",
-        "manner",
-        "star"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "زمان",
-      "choices": [
-        "statistics",
-        "operation",
-        "small",
-        "time"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بيرون",
-      "choices": [
-        "Shah",
-        "because",
-        "outside of",
-        "Abbas"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "هيچ",
-      "choices": [
-        "no",
-        "verdict",
-        "man",
-        "union"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "source",
-      "choices": [
-        "راه",
-        "محل",
-        "ستاره",
-        "استقلال"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "چوبخط",
-      "choices": [
-        "we",
-        "length",
-        "score",
-        "simple"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نور",
-      "choices": [
-        "famous",
-        "Nur",
-        "Islam",
-        "october"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "area",
-      "choices": [
-        "گروهی",
-        "مناسب",
-        "مساحت",
-        "استفاده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "various",
-      "choices": [
-        "گوناگون",
-        "آن",
-        "مثال",
-        "سابق"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مصالح",
-      "choices": [
-        "Shah",
-        "affairs",
-        "role",
-        "warm"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "rukh",
-      "choices": [
-        "وجود",
-        "ایرانیان",
-        "رخ",
-        "پاپ"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اوليه",
-      "choices": [
-        "spread",
-        "providing",
-        "row",
-        "primary"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "موسسه",
-      "choices": [
-        "family",
-        "institution",
-        "side",
-        "Dollar"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ناحيه دسته بندي",
-      "choices": [
-        "materials",
-        "province",
-        "zone",
-        "remaining"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "temper",
-      "choices": [
-        "خلق",
-        "مهندسی",
-        "حاصل",
-        "اجتماعی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "immigration",
-      "choices": [
-        "امروزه",
-        "برخی",
-        "بودند",
-        "مهاجرت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "که",
-      "choices": [
-        "that",
-        "foundation",
-        "Esfehan",
-        "before"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سنت",
-      "choices": [
-        "Fars",
-        "if",
-        "tradition",
-        "united"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "relations",
-      "choices": [
-        "مرکز",
-        "روابط",
-        "می‌توان",
-        "جستارهای"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ceremony",
-      "choices": [
-        "عرب",
-        "جشن",
-        "شکل",
-        "نگهداری"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "فريس",
-      "choices": [
-        "murdered",
-        "to",
-        "month",
-        "like"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "they",
-      "choices": [
-        "منظور",
-        "آنان",
-        "پایه",
-        "ترتیب"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "احمد",
-      "choices": [
-        "sentence",
-        "score",
-        "significant",
-        "Ahmed"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اداره",
-      "choices": [
-        "outside of",
-        "dependent",
-        "office",
-        "former"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "side",
-      "choices": [
-        "طرف",
-        "آنان",
-        "شده‌است",
-        "کنار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "spread",
-      "choices": [
-        "نفت",
-        "ی",
-        "باز",
-        "توزیع"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "جنبش",
-      "choices": [
-        "second",
-        "inspection",
-        "Germany",
-        "movement"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ساکن",
-      "choices": [
-        "that",
-        "brother",
-        "read",
-        "resident"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "sentence",
-      "choices": [
-        "فوریه",
-        "قدیمی",
-        "دختر",
-        "جمله"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "dependent",
-      "choices": [
-        "نشان",
-        "جامعه",
-        "تهیه",
-        "متعلق"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "phantom",
-      "choices": [
-        "استقلال",
-        "صاحب",
-        "روابط",
-        "شبه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "covering",
-      "choices": [
-        "هاي",
-        "دریای",
-        "بنابر",
-        "پوشش"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "performer",
-      "choices": [
-        "کننده",
-        "اصلی",
-        "برگزار",
-        "براي"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "انجمن",
-      "choices": [
-        "ancient.",
-        "gauze",
-        "little",
-        "society"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "زيردست",
-      "choices": [
-        "study",
-        "subordinate",
-        "centers",
-        "science"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "have",
-      "choices": [
-        "آنها",
-        "داشتن",
-        "گروه‌های",
-        "نشر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "winning",
-      "choices": [
-        "برد",
-        "حق",
-        "آزادی",
-        "برگزار"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ترانه",
-      "choices": [
-        "ministry",
-        "government",
-        "operation",
-        "Taraneh"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "معروف",
-      "choices": [
-        "famous",
-        "percentage",
-        "suburbs",
-        "yet"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "spreading",
-      "choices": [
-        "ایستگاه",
-        "نسبت",
-        "نشر",
-        "واحد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "small",
-      "choices": [
-        "سعید",
-        "نامه",
-        "کوچک",
-        "کره"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "متولد",
-      "choices": [
-        "born",
-        "surely",
-        "protection",
-        "iron"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "network",
-      "choices": [
-        "بودند",
-        "نبرد",
-        "مشاهیر",
-        "شبکه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ارايه",
-      "choices": [
-        "son",
-        "providing",
-        "suburbs",
-        "contrary"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "museum",
-      "choices": [
-        "موزه",
-        "حفظ",
-        "مقدار",
-        "تاریخ"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "decade",
-      "choices": [
-        "چهارم",
-        "فضایی",
-        "دهه",
-        "است"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پايه",
-      "choices": [
-        "factors",
-        "reason",
-        "manner",
-        "foundation"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "دستورالعمل",
-      "choices": [
-        "table",
-        "increase",
-        "publisher",
-        "prescription"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "table",
-      "choices": [
-        "جدول",
-        "نبرد",
-        "شیخ",
-        "سه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سترگ",
-      "choices": [
-        "war",
-        "reply",
-        "god",
-        "large"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "unconditional",
-      "choices": [
-        "مطلق",
-        "اکتبر",
-        "وزارت",
-        "خوانده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Khorasan",
-      "choices": [
-        "خراسان",
-        "آن‌ها",
-        "سر",
-        "مهدی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نقاط",
-      "choices": [
-        "temper",
-        "turkish",
-        "Mahmud",
-        "spots"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سبک",
-      "choices": [
-        "style",
-        "Qom",
-        "England",
-        "start"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Qoran",
-      "choices": [
-        "دارد",
-        "مقدار",
-        "قرآن",
-        "انواع"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "elections",
-      "choices": [
-        "چه",
-        "شاعران",
-        "انتخابات",
-        "خارجی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "problems",
-      "choices": [
-        "نظریه",
-        "فوریه",
-        "کردند",
-        "مسائل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سلطان",
-      "choices": [
-        "upon",
-        "sediment",
-        "king",
-        "size"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "براي چه",
-      "choices": [
-        "leader",
-        "why",
-        "article",
-        "philosophy"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "type",
-      "choices": [
-        "ژوئن",
-        "سرانجام",
-        "زادگان",
-        "نوع"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "گل آلود کردن",
-      "choices": [
-        "mud",
-        "area",
-        "counted",
-        "united"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سپتامبر",
-      "choices": [
-        "start",
-        "September",
-        "February",
-        "position"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "utilization",
-      "choices": [
-        "استفاده",
-        "مرکزی",
-        "نیروی",
-        "دید"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "dam",
-      "choices": [
-        "سد",
-        "گرم",
-        "مبارزه",
-        "چندین"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سيما",
-      "choices": [
-        "appearance",
-        "race",
-        "Reza",
-        "length"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "valley",
-      "choices": [
-        "بعد",
-        "دره",
-        "بوده",
-        "حل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "intensity",
-      "choices": [
-        "دادگاه",
-        "بیان",
-        "شدت",
-        "مرحله"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "night",
-      "choices": [
-        "حل",
-        "کتاب‌های",
-        "شب",
-        "بین‌المللی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "written",
-      "choices": [
-        "موارد",
-        "نوشته",
-        "خلق",
-        "مرگ"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "read",
-      "choices": [
-        "توضیح",
-        "فی",
-        "نماینده",
-        "خوانده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "فروش",
-      "choices": [
-        "Azar",
-        "topic",
-        "uderstood",
-        "sale"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "gone",
-      "choices": [
-        "بالای",
-        "رفته",
-        "نو",
-        "طریق"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "corps",
-      "choices": [
-        "صاحب",
-        "نقطه",
-        "موزه",
-        "سپاه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "حقوق",
-      "choices": [
-        "hand",
-        "law",
-        "why",
-        "verdict"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "word",
-      "choices": [
-        "دریا",
-        "مرتبط",
-        "واژه",
-        "بهترین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "family",
-      "choices": [
-        "جوایز",
-        "اختیار",
-        "نژاد",
-        "خانوار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "يگانه",
-      "choices": [
-        "human",
-        "winning",
-        "only",
-        "your"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مشهد",
-      "choices": [
-        "spouse",
-        "hand",
-        "utilization",
-        "Meshed"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "often",
-      "choices": [
-        "خرداد",
-        "اغلب",
-        "اکثر",
-        "کسی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بر بالاي",
-      "choices": [
-        "country",
-        "over",
-        "they",
-        "military"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "doctor",
-      "choices": [
-        "زن",
-        "سری",
-        "دکتر",
-        "نوعی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ورنام",
-      "choices": [
-        "read",
-        "world",
-        "united",
-        "surname"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "my",
-      "choices": [
-        "اتحاد",
-        "تاریخی",
-        "دهستان",
-        "من"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "عمر",
-      "choices": [
-        "size",
-        "Omar",
-        "presence",
-        "seriously"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "end",
-      "choices": [
-        "تعیین",
-        "اواخر",
-        "حرکت",
-        "تأسیس"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "درعين حال",
-      "choices": [
-        "yet",
-        "complete",
-        "release",
-        "domain"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Abdullah",
-      "choices": [
-        "عبدالله",
-        "تصمیم",
-        "عهده",
-        "خواننده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "government",
-      "choices": [
-        "استرالیا",
-        "دولت",
-        "زمین",
-        "هشت"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "دست",
-      "choices": [
-        "hand",
-        "park",
-        "spring",
-        "successful"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "thereafter",
-      "choices": [
-        "بعدها",
-        "غیر",
-        "کامل",
-        "محصول"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اکبر",
-      "choices": [
-        "table",
-        "doctor",
-        "time",
-        "Akbar"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "bank",
-      "choices": [
-        "بانک",
-        "تلاش",
-        "دریافت",
-        "قم"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "wet",
-      "choices": [
-        "نزدیکی",
-        "تر",
-        "می‌دهند",
-        "انتشارات"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "حمل و نقل",
-      "choices": [
-        "transportation",
-        "side",
-        "movement",
-        "trip"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Tehran",
-      "choices": [
-        "ایشان",
-        "تهران",
-        "ه",
-        "گروه‌های"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "درخشش",
-      "choices": [
-        "Canada",
-        "well-known",
-        "shine",
-        "motor"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "counted",
-      "choices": [
-        "ترجمه",
-        "خانواده",
-        "بررسی",
-        "محسوب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ثامن",
-      "choices": [
-        "service",
-        "eight",
-        "different",
-        "Iran"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ندرتا",
-      "choices": [
-        "man",
-        "rarely",
-        "thrust",
-        "person"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "برج",
-      "choices": [
-        "such as",
-        "turkish",
-        "month",
-        "interior"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "release",
-      "choices": [
-        "رضوی",
-        "حاصل",
-        "انتشار",
-        "دسامبر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "we",
-      "choices": [
-        "عمومی",
-        "ما",
-        "ابن",
-        "پارک"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "جام شراب",
-      "choices": [
-        "grail",
-        "dependent",
-        "cases",
-        "time"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "before",
-      "choices": [
-        "شماره",
-        "پرواز",
-        "قبل",
-        "ساده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "row",
-      "choices": [
-        "رده",
-        "نوامبر",
-        "می‌گردد",
-        "البته"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "time",
-      "choices": [
-        "هفتم",
-        "مدت",
-        "شما",
-        "م"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ساز",
-      "choices": [
-        "musical instrument",
-        "field of study",
-        "Saudi Arabia",
-        "table"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "court",
-      "choices": [
-        "آهن",
-        "ورودی",
-        "دادگاه",
-        "نقش"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "whoever",
-      "choices": [
-        "لحاظ",
-        "توجه",
-        "شامل",
-        "آنکه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "everybody",
-      "choices": [
-        "شوروی",
-        "شرح",
-        "همه",
-        "چندین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Germany",
-      "choices": [
-        "آلمان",
-        "خمینی",
-        "پوشش",
-        "مربع"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سد",
-      "choices": [
-        "short",
-        "through",
-        "dam",
-        "they"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "فارس",
-      "choices": [
-        "training",
-        "Fars",
-        "distance",
-        "face"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "like",
-      "choices": [
-        "علت",
-        "ارائه",
-        "کیلومتر",
-        "همچون"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "sign",
-      "choices": [
-        "مطلق",
-        "نشان",
-        "عصر",
-        "چاپ"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "death",
-      "choices": [
-        "مرگ",
-        "معاصر",
-        "بصورت",
-        "ادبیات"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "لشکري",
-      "choices": [
-        "military",
-        "sale",
-        "newspaper",
-        "based on"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "معاينه",
-      "choices": [
-        "red",
-        "inspection",
-        "organ",
-        "read"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اعمال",
-      "choices": [
-        "occupied",
-        "daytime",
-        "functions",
-        "country"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "title",
-      "choices": [
-        "کامل",
-        "رفت",
-        "نام",
-        "هزار"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "bring up",
-      "choices": [
-        "پیشنهاد",
-        "مطرح",
-        "ریشه",
-        "واحد"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "way",
-      "choices": [
-        "جنسی",
-        "محلی",
-        "مستقل",
-        "شکل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "زعيم",
-      "choices": [
-        "Afghanistan",
-        "result",
-        "work",
-        "leader"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بخدمت",
-      "choices": [
-        "that",
-        "relation",
-        "to",
-        "Taraneh"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "hundred",
-      "choices": [
-        "دومین",
-        "صد",
-        "رشته",
-        "خانوار"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "متعدد",
-      "choices": [
-        "domain",
-        "length",
-        "Taraneh",
-        "various"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "آذر",
-      "choices": [
-        "publisher",
-        "what",
-        "Azar",
-        "Azar"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بدانوسيله",
-      "choices": [
-        "thereafter",
-        "structure",
-        "famous",
-        "Aban"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "spring",
-      "choices": [
-        "سر",
-        "چشمه",
-        "کنید",
-        "شوند"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کوک زدن",
-      "choices": [
-        "primary",
-        "reply",
-        "tune",
-        "view"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "they",
-      "choices": [
-        "بودند",
-        "آنها",
-        "شهری",
-        "کرد"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "reply",
-      "choices": [
-        "اولیه",
-        "داشتند",
-        "پاسخ",
-        "اولین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "رخ",
-      "choices": [
-        "Pope",
-        "college",
-        "report",
-        "face"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "blood",
-      "choices": [
-        "ش",
-        "ابن",
-        "جعبه",
-        "خون"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "agreement",
-      "choices": [
-        "انجام",
-        "دیده",
-        "تبدیل",
-        "قرار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "domain",
-      "choices": [
-        "هنگامی",
-        "خلق",
-        "شهرداری",
-        "حوزه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ranks",
-      "choices": [
-        "بسته",
-        "پایان",
-        "خانه",
-        "مناسب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ابوي",
-      "choices": [
-        "title",
-        "India",
-        "rank",
-        "father"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "specific",
-      "choices": [
-        "مشخص",
-        "مرکز",
-        "انرژی",
-        "اعمال"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ده",
-      "choices": [
-        "ten",
-        "counted",
-        "prominent",
-        "post"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "تالي",
-      "choices": [
-        "true",
-        "ancient.",
-        "similar",
-        "leader"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پرونده",
-      "choices": [
-        "order",
-        "movement",
-        "eye",
-        "case"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سپوختن",
-      "choices": [
-        "utilization",
-        "Akbar",
-        "thrust",
-        "style"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "project",
-      "choices": [
-        "روش",
-        "پروژه",
-        "متحد",
-        "احمد"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "خاک",
-      "choices": [
-        "flight",
-        "Japan",
-        "France",
-        "soil"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "probability",
-      "choices": [
-        "مربع",
-        "تأسیس",
-        "امکان",
-        "کارهای"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "بش",
-      "choices": [
-        "your",
-        "five",
-        "read",
-        "relation"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "manner",
-      "choices": [
-        "بطور",
-        "خوانده",
-        "استاندارد",
-        "می"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "rose garden",
-      "choices": [
-        "شمار",
-        "دهد",
-        "نقل",
-        "گلستان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "رها ساختن",
-      "choices": [
-        "Mohammad Reza",
-        "most",
-        "release",
-        "neigborhood"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نزست",
-      "choices": [
-        "hand",
-        "trace",
-        "first",
-        "under"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "school",
-      "choices": [
-        "مدرسه",
-        "مورد",
-        "مدل",
-        "سنگ"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "style",
-      "choices": [
-        "لحاظ",
-        "ها",
-        "فشار",
-        "سبک"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "علم",
-      "choices": [
-        "Meshed",
-        "science",
-        "blood",
-        "number"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "نزست",
-      "choices": [
-        "primary",
-        "Farhang",
-        "first",
-        "went"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "قبل ازاينکه",
-      "choices": [
-        "before",
-        "dam",
-        "week",
-        "surface"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "شمال",
-      "choices": [
-        "necessary",
-        "Mohsen",
-        "Masood",
-        "north"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "موتلف",
-      "choices": [
-        "united",
-        "professor",
-        "correct",
-        "agreement"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "expansion",
-      "choices": [
-        "گسترش",
-        "رفت",
-        "رهبری",
-        "حاصل"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "including",
-      "choices": [
-        "دانشگاه‌های",
-        "موسوی",
-        "شامل",
-        "زنان"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پرونده",
-      "choices": [
-        "stomach",
-        "school",
-        "collection",
-        "records"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "than",
-      "choices": [
-        "گیتار",
-        "از",
-        "شیعه",
-        "باستانی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "south",
-      "choices": [
-        "جنوب",
-        "شرکت",
-        "سبک",
-        "شرقی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "معمولا",
-      "choices": [
-        "rukh",
-        "structure",
-        "usually",
-        "winning"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ارقام",
-      "choices": [
-        "statistics",
-        "strength",
-        "no",
-        "Europe"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "دسته",
-      "choices": [
-        "relations",
-        "strength",
-        "Arab",
-        "group"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اسلام",
-      "choices": [
-        "Ahmed",
-        "eight",
-        "Islam",
-        "stroke"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "week",
-      "choices": [
-        "هفته",
-        "ايران",
-        "ستاره",
-        "فناوری"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "stating",
-      "choices": [
-        "اشعار",
-        "دادن",
-        "محله",
-        "پرواز"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "trust",
-      "choices": [
-        "جنوب",
-        "عهده",
-        "منبع",
-        "ترین"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کتابخانه",
-      "choices": [
-        "library",
-        "side",
-        "known",
-        "style"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "letter",
-      "choices": [
-        "نامه",
-        "بطور",
-        "ابهام‌زدایی",
-        "بیشتر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "green",
-      "choices": [
-        "سبز",
-        "آسیا",
-        "جامع",
-        "مرحله"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حرز",
-      "choices": [
-        "warm",
-        "December",
-        "phantom",
-        "protection"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Aban",
-      "choices": [
-        "کشوری",
-        "آبان",
-        "کلی",
-        "شدید"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اولاد",
-      "choices": [
-        "Akbar",
-        "written",
-        "flat",
-        "children"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "motor",
-      "choices": [
-        "بسیاری",
-        "موسسه",
-        "موتور",
-        "حضور"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "باريتعالي",
-      "choices": [
-        "river",
-        "group",
-        "God",
-        "past"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سلطان",
-      "choices": [
-        "sultan",
-        "every",
-        "wealthy",
-        "energetic"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بنت",
-      "choices": [
-        "state",
-        "we",
-        "girl",
-        "method"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نيک فرجام",
-      "choices": [
-        "mountain",
-        "spots",
-        "tree",
-        "successful"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "resident",
-      "choices": [
-        "ساکن",
-        "داده",
-        "فارسی",
-        "توانست"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "interior",
-      "choices": [
-        "درون",
-        "طبیعی",
-        "مطرح",
-        "مسجد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "no",
-      "choices": [
-        "نه",
-        "ابهام‌زدایی",
-        "اروپا",
-        "مالی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "intention",
-      "choices": [
-        "کتاب‌های",
-        "حمل",
-        "رنگ",
-        "منظور"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "چه",
-      "choices": [
-        "surely",
-        "Kerman",
-        "what",
-        "war"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "individuals",
-      "choices": [
-        "خدا",
-        "علمی",
-        "وضعیت",
-        "افراد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "امر",
-      "choices": [
-        "conflict",
-        "protection",
-        "person",
-        "order"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "number",
-      "choices": [
-        "شماره",
-        "دوم",
-        "سینما",
-        "خورشیدی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مدد کردن",
-      "choices": [
-        "discovery",
-        "Esfehan",
-        "help",
-        "cause"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ancient.",
-      "choices": [
-        "توابع",
-        "باستان",
-        "معرفی",
-        "لازم"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "eye",
-      "choices": [
-        "چشم",
-        "نیست",
-        "برج",
-        "قاجار"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "به روي",
-      "choices": [
-        "on",
-        "left",
-        "school",
-        "gloomy"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "طرح",
-      "choices": [
-        "murder",
-        "yet",
-        "project",
-        "same"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "most",
-      "choices": [
-        "قدیم",
-        "کوتاه",
-        "ای",
-        "اکثر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مشخص",
-      "choices": [
-        "widespread",
-        "published",
-        "six",
-        "specific"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "season",
-      "choices": [
-        "برادر",
-        "فصل",
-        "آثار",
-        "ویکی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ceremony",
-      "choices": [
-        "اجازه",
-        "تهران",
-        "پایین",
-        "مراسم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "eight",
-      "choices": [
-        "انتشارات",
-        "اگر",
-        "هشت",
-        "تاریخچه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اکتشاف",
-      "choices": [
-        "discovery",
-        "market",
-        "month",
-        "Nur"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "شبکهايي",
-      "choices": [
-        "network",
-        "story",
-        "united",
-        "south"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مشترک",
-      "choices": [
-        "subscriber",
-        "year",
-        "stratum",
-        "covering"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "structure",
-      "choices": [
-        "شخصی",
-        "ساخت",
-        "نمایندگان",
-        "همین"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "قضايا",
-      "choices": [
-        "related",
-        "inequality",
-        "cases",
-        "temper"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "style",
-      "choices": [
-        "مه",
-        "ساله",
-        "عبارت",
-        "فناوری"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "حاوي بودن",
-      "choices": [
-        "system",
-        "stage manager",
-        "correct",
-        "include"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "صلابه",
-      "choices": [
-        "ten",
-        "gallows",
-        "frontier",
-        "seven"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Iran",
-      "choices": [
-        "افغانستان",
-        "نمایش",
-        "زیرا",
-        "ايران"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "mountain",
-      "choices": [
-        "نگهداری",
-        "آمریکا",
-        "کوه",
-        "المپیک"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "independence",
-      "choices": [
-        "استقلال",
-        "توضیح",
-        "مصر",
-        "میزان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "mankind",
-      "choices": [
-        "آموزشی",
-        "ادامه",
-        "بشر",
-        "به‌"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "بااستعداد",
-      "choices": [
-        "race",
-        "interior",
-        "talented",
-        "way"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "قرآن",
-      "choices": [
-        "industry",
-        "Qoran",
-        "resulting",
-        "tree"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "برابر",
-      "choices": [
-        "times more",
-        "brother",
-        "letter",
-        "end"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Canada",
-      "choices": [
-        "مساحت",
-        "المللی",
-        "کانادا",
-        "ریاضی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مسطور",
-      "choices": [
-        "struggle",
-        "announcement",
-        "written",
-        "result"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "star",
-      "choices": [
-        "ستاره",
-        "نیمه",
-        "اساس",
-        "مسلمانان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "yet",
-      "choices": [
-        "هنوز",
-        "ترتیب",
-        "نظریه",
-        "درمان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "height",
-      "choices": [
-        "ارتفاع",
-        "دانشگاه‌های",
-        "اش",
-        "زمان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "sultan",
-      "choices": [
-        "سلطان",
-        "شاه",
-        "مناسبت‌ها",
-        "خمینی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "seizure",
-      "choices": [
-        "جدا",
-        "گرفت",
-        "حساب",
-        "تلویزیونی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بالابود",
-      "choices": [
-        "flat",
-        "excess",
-        "Kerman",
-        "nominee"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "area",
-      "choices": [
-        "کرمان",
-        "گفت",
-        "سطح",
-        "تاکنون"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "March",
-      "choices": [
-        "چیزی",
-        "مارس",
-        "میدان",
-        "تاریخ"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "mold",
-      "choices": [
-        "قالب",
-        "شیر",
-        "مسجد",
-        "شیعه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Taraneh",
-      "choices": [
-        "توسط",
-        "تولید",
-        "ترانه",
-        "مدل"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "همه جاگير",
-      "choices": [
-        "person",
-        "stating",
-        "thriving",
-        "widespread"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "برنامه",
-      "choices": [
-        "she",
-        "plan",
-        "structure",
-        "England"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عيال",
-      "choices": [
-        "network",
-        "training",
-        "winning",
-        "family"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Europe",
-      "choices": [
-        "راست",
-        "دادند",
-        "اروپا",
-        "حکومت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "امضا کردن",
-      "choices": [
-        "shine",
-        "remaining",
-        "sign",
-        "thousand"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "درس خواندن",
-      "choices": [
-        "study",
-        "festival",
-        "god",
-        "person"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "park",
-      "choices": [
-        "پارک",
-        "مشغول",
-        "نام",
-        "طراحی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "excess",
-      "choices": [
-        "علاوه",
-        "جوایز",
-        "رابطه",
-        "اصلی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اخبار",
-      "choices": [
-        "saying",
-        "use",
-        "suburbs",
-        "news"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "جامع",
-      "choices": [
-        "Taraneh",
-        "universal",
-        "expansion",
-        "subordinate"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "چه",
-      "choices": [
-        "before",
-        "then",
-        "what",
-        "fulfillment"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ساخته شده",
-      "choices": [
-        "tree",
-        "made",
-        "after",
-        "office"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "science",
-      "choices": [
-        "سیارک",
-        "انتشارات",
-        "که",
-        "علم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "services",
-      "choices": [
-        "موزه",
-        "دقیقه",
-        "درون",
-        "خدمات"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ثانيه",
-      "choices": [
-        "creature",
-        "second",
-        "result",
-        "topic"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "متولد",
-      "choices": [
-        "children",
-        "daytime",
-        "style",
-        "born"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "list",
-      "choices": [
-        "تحت",
-        "کمونیست",
-        "قبل",
-        "فهرست"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "or",
-      "choices": [
-        "ایرانیان",
-        "يا",
-        "رادیو",
-        "تهیه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اذن",
-      "choices": [
-        "permission",
-        "this",
-        "order",
-        "but also"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "موتلف",
-      "choices": [
-        "only",
-        "united",
-        "warm",
-        "news"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "by",
-      "choices": [
-        "افراد",
-        "بدست",
-        "نمود",
-        "مثال"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آنکه",
-      "choices": [
-        "perception",
-        "whoever",
-        "winner",
-        "without"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آلمان",
-      "choices": [
-        "immigration",
-        "operation",
-        "eight",
-        "Germany"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "همچنين",
-      "choices": [
-        "types",
-        "grail",
-        "we",
-        "too"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "lack",
-      "choices": [
-        "کانادا",
-        "نبود",
-        "فرهنگی",
-        "شب"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "cause",
-      "choices": [
-        "عدم",
-        "بنام",
-        "علت",
-        "صاحب"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "امروزه",
-      "choices": [
-        "nowadays",
-        "transfer",
-        "festival",
-        "three"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "united",
-      "choices": [
-        "متحد",
-        "پایان",
-        "ویکی",
-        "عملیات"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نژاد",
-      "choices": [
-        "number",
-        "race",
-        "handle",
-        "based on"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "روم",
-      "choices": [
-        "soft",
-        "Rome",
-        "cause",
-        "statistics"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "well-known",
-      "choices": [
-        "مطالعه",
-        "مشهور",
-        "قهرمانی",
-        "هستند"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "performance",
-      "choices": [
-        "شهرت",
-        "مي",
-        "اجرا",
-        "محسن"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "man",
-      "choices": [
-        "انگلستان",
-        "مرد",
-        "سیاست",
-        "برابر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "principles",
-      "choices": [
-        "مهاجرت",
-        "کشوری",
-        "ارومیه",
-        "اصول"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "structure",
-      "choices": [
-        "ساختمان",
-        "فی",
-        "پست",
-        "پیش"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "age",
-      "choices": [
-        "اسماعیل",
-        "مانده",
-        "عصر",
-        "سی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سکستگي",
-      "choices": [
-        "family",
-        "fracture",
-        "ministry",
-        "century"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "won",
-      "choices": [
-        "شعر",
-        "سلطنت",
-        "برده",
-        "بعضی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "training",
-      "choices": [
-        "با",
-        "بنا",
-        "پرورش",
-        "موسسه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "منظر",
-      "choices": [
-        "look",
-        "Imam",
-        "significant",
-        "bank"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حاج",
-      "choices": [
-        "group",
-        "Japan",
-        "hajji",
-        "Mordad"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "become",
-      "choices": [
-        "شدن",
-        "ارومیه",
-        "باستانی",
-        "می‌شود"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "road",
-      "choices": [
-        "جاده",
-        "رودخانه",
-        "باشگاه",
-        "عوامل"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بهار",
-      "choices": [
-        "training",
-        "on",
-        "spring",
-        "rear"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Mosque",
-      "choices": [
-        "محسن",
-        "مسجد",
-        "وضعیت",
-        "سرعت"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "worth",
-      "choices": [
-        "برتر",
-        "شده‌اند",
-        "مقدار",
-        "استاد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مشکل",
-      "choices": [
-        "services",
-        "soil",
-        "service",
-        "hard"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "utilization",
-      "choices": [
-        "یافته",
-        "براي",
-        "جمله",
-        "کاربرد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "جانبي",
-      "choices": [
-        "announcement",
-        "petroleum",
-        "first",
-        "side"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ايالت",
-      "choices": [
-        "side",
-        "state",
-        "river",
-        "contemporary"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "خلف",
-      "choices": [
-        "moon",
-        "their",
-        "before",
-        "son"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "winning",
-      "choices": [
-        "سینما",
-        "مصر",
-        "برنده",
-        "حقوق"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "گلزار",
-      "choices": [
-        "spots",
-        "structure",
-        "solution",
-        "rose garden"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "translation",
-      "choices": [
-        "آلبوم",
-        "ترجمه",
-        "دورهٔ",
-        "شیر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "society",
-      "choices": [
-        "انجمن",
-        "برجسته",
-        "روی",
-        "ایران"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "برده",
-      "choices": [
-        "won",
-        "father",
-        "inhabitant",
-        "ranks"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "hour",
-      "choices": [
-        "ایشان",
-        "ساعت",
-        "طبیعی",
-        "خون"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کاهش",
-      "choices": [
-        "resumption",
-        "reduction",
-        "have",
-        "start"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "state",
-      "choices": [
-        "بهره",
-        "حالت",
-        "می‌دهد",
-        "تهیه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "امضا کردن",
-      "choices": [
-        "warm",
-        "shine",
-        "London",
-        "sign"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مرحله",
-      "choices": [
-        "several",
-        "star",
-        "stage",
-        "suburbs"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "حکم",
-      "choices": [
-        "verdict",
-        "they",
-        "London",
-        "past"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "solution",
-      "choices": [
-        "مفهوم",
-        "کشوری",
-        "حل",
-        "تحت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "عدد صد",
-      "choices": [
-        "dill",
-        "free",
-        "group",
-        "hundred"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "album",
-      "choices": [
-        "بوده",
-        "آلبوم",
-        "افزایش",
-        "ترتیب"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "truth",
-      "choices": [
-        "اصل",
-        "دورهٔ",
-        "گونه",
-        "روستای"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Akbar",
-      "choices": [
-        "واژه",
-        "اکبر",
-        "درصد",
-        "د"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عاشق",
-      "choices": [
-        "love",
-        "help",
-        "inside",
-        "petroleum"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "length",
-      "choices": [
-        "چشمه",
-        "اجرام",
-        "طول",
-        "بودند"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "وقف شده",
-      "choices": [
-        "increase",
-        "distance",
-        "significant",
-        "sacred"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "based on",
-      "choices": [
-        "بنابر",
-        "اوت",
-        "وسیله",
-        "باشد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "آذرماه",
-      "choices": [
-        "December",
-        "mud",
-        "Saltanat",
-        "Mosque"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "side",
-      "choices": [
-        "فشار",
-        "طرف",
-        "یک",
-        "خواهد"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "علامت",
-      "choices": [
-        "fulfillment",
-        "row",
-        "standard",
-        "place"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "رودخانه اي",
-      "choices": [
-        "river",
-        "participation",
-        "winning",
-        "operation"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سراينده",
-      "choices": [
-        "frontier",
-        "soul",
-        "singer",
-        "union"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دربار",
-      "choices": [
-        "thousand",
-        "utilization",
-        "court",
-        "structure"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "من",
-      "choices": [
-        "on",
-        "man",
-        "Japan",
-        "resident"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "project",
-      "choices": [
-        "آغاز",
-        "طرح",
-        "ریاست",
-        "میانه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "club",
-      "choices": [
-        "باشگاه",
-        "عرضه",
-        "اهل",
-        "شیراز"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "گرفت",
-      "choices": [
-        "total",
-        "seriously",
-        "seizure",
-        "time"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "rarely",
-      "choices": [
-        "نظام",
-        "کمتر",
-        "حال",
-        "محله"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Fars",
-      "choices": [
-        "لندن",
-        "درون",
-        "فارس",
-        "مدیریت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "spouse",
-      "choices": [
-        "شدن",
-        "تاریخ",
-        "همسر",
-        "انواع"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "stone",
-      "choices": [
-        "مدتی",
-        "سنگ",
-        "درمان",
-        "دی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "سلطنت",
-      "choices": [
-        "necessary",
-        "Saltanat",
-        "hundred",
-        "same"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آنگه",
-      "choices": [
-        "increase",
-        "like",
-        "then",
-        "lack"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "فعلا",
-      "choices": [
-        "Mosque",
-        "currently",
-        "without",
-        "network"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "وعده دار",
-      "choices": [
-        "limited",
-        "but also",
-        "fight",
-        "list"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "with",
-      "choices": [
-        "بازدید",
-        "همراه",
-        "خارج",
-        "همراه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "شهرستان",
-      "choices": [
-        "utilization",
-        "ranks",
-        "province",
-        "year old"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Kerman",
-      "choices": [
-        "گردید",
-        "مسجد",
-        "يا",
-        "کرمان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "published",
-      "choices": [
-        "اعضای",
-        "پی",
-        "تبریز",
-        "منتشر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "significant",
-      "choices": [
-        "سنتی",
-        "مهم",
-        "می‌کنند",
-        "مسیر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آفريده",
-      "choices": [
-        "valley",
-        "subscriber",
-        "inhabitant",
-        "creature"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "subordinate",
-      "choices": [
-        "صنعتی",
-        "می‌شد",
-        "شخصیت",
-        "تابع"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "همخواب",
-      "choices": [
-        "small",
-        "stratum",
-        "spouse",
-        "no"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "تهيه کردن",
-      "choices": [
-        "Khorasan",
-        "with",
-        "June",
-        "supply"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "آنگه",
-      "choices": [
-        "then",
-        "leader",
-        "tremor",
-        "reduction"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "هندستان",
-      "choices": [
-        "fulfillment",
-        "speech",
-        "India",
-        "money"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "علت",
-      "choices": [
-        "number",
-        "presence",
-        "cause",
-        "winning"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "universal",
-      "choices": [
-        "پرورش",
-        "زندان",
-        "جامع",
-        "و"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "start",
-      "choices": [
-        "پل",
-        "متفاوت",
-        "شروع",
-        "رتبه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نشر",
-      "choices": [
-        "publisher",
-        "without",
-        "spreading",
-        "group"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "red",
-      "choices": [
-        "آخر",
-        "قرمز",
-        "محمدرضا",
-        "شهری"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "report",
-      "choices": [
-        "او",
-        "گزارش",
-        "لیگ",
-        "منتشر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "power",
-      "choices": [
-        "بهار",
-        "نژاد",
-        "کرد",
-        "قدرت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پايه",
-      "choices": [
-        "soul",
-        "source",
-        "foundation",
-        "foot"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "child",
-      "choices": [
-        "فرزند",
-        "اقتصادی",
-        "کرده‌اند",
-        "ندارد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "post",
-      "choices": [
-        "محصولات",
-        "کنار",
-        "پست",
-        "درباره"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "inspection",
-      "choices": [
-        "صد",
-        "کنترل",
-        "جایزه",
-        "محل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "هلفدان",
-      "choices": [
-        "style",
-        "prison",
-        "market",
-        "fortress"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "دکتر",
-      "choices": [
-        "today",
-        "doctor",
-        "defense",
-        "green"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "تو",
-      "choices": [
-        "only",
-        "philosophy",
-        "include",
-        "your"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "شرق",
-      "choices": [
-        "limited",
-        "orient",
-        "Esfehan",
-        "result"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "جلد",
-      "choices": [
-        "creature",
-        "number",
-        "slow",
-        "volume"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "soil",
-      "choices": [
-        "ترکیه",
-        "خاک",
-        "مذهبی",
-        "بازیابی‌شده"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شش",
-      "choices": [
-        "India",
-        "standard",
-        "six",
-        "murder"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مسکوک",
-      "choices": [
-        "likeness",
-        "mankind",
-        "thousand",
-        "money"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "look",
-      "choices": [
-        "نگاه",
-        "محلی",
-        "سیاست",
-        "متحده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "قمر",
-      "choices": [
-        "science",
-        "with",
-        "moon",
-        "Iran"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "first",
-      "choices": [
-        "باب",
-        "نشده",
-        "جهت",
-        "نخست"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "رفته",
-      "choices": [
-        "bank",
-        "prescription",
-        "gone",
-        "Esfand"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "new",
-      "choices": [
-        "گذشته",
-        "است",
-        "کردند",
-        "نو"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "يگانه",
-      "choices": [
-        "only",
-        "mountain",
-        "inside",
-        "daytime"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اصفهان",
-      "choices": [
-        "hill",
-        "organization",
-        "Esfehan",
-        "resident"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "plant",
-      "choices": [
-        "دستگاه",
-        "قرار",
-        "فهرست",
-        "ازدواج"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بدست",
-      "choices": [
-        "that",
-        "training",
-        "by",
-        "worth"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "subscriber",
-      "choices": [
-        "آنچه",
-        "اسماعیل",
-        "مشترک",
-        "پیشین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "relation",
-      "choices": [
-        "دولتی",
-        "بهمن",
-        "رابطه",
-        "کنید"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "شايستگي",
-      "choices": [
-        "worthiness",
-        "step",
-        "known",
-        "power"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "flight",
-      "choices": [
-        "بعضی",
-        "پرواز",
-        "مثال",
-        "گرم"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عيد",
-      "choices": [
-        "festival",
-        "rear",
-        "product",
-        "various"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "primary",
-      "choices": [
-        "مهم‌ترین",
-        "دومین",
-        "عمده",
-        "نامه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "هم",
-      "choices": [
-        "society",
-        "with",
-        "because",
-        "and"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "today",
-      "choices": [
-        "حمل",
-        "شدت",
-        "چون",
-        "امروز"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "suburbs",
-      "choices": [
-        "معرفی",
-        "رادیو",
-        "توابع",
-        "وب"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "superior",
-      "choices": [
-        "گیری",
-        "علاوه",
-        "ارشد",
-        "تاریخچه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سال نجومي",
-      "choices": [
-        "mountain",
-        "article",
-        "fracture",
-        "year"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "thrust",
-      "choices": [
-        "یادکرد",
-        "گردد",
-        "ملی",
-        "فشار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "moon",
-      "choices": [
-        "ماه",
-        "موجود",
-        "سیارک",
-        "یکی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "presence",
-      "choices": [
-        "مسائل",
-        "طراحی",
-        "دیده",
-        "حضور"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "stage",
-      "choices": [
-        "راست",
-        "آلمانی",
-        "طبق",
-        "مرحله"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Masood",
-      "choices": [
-        "مسعود",
-        "خاص",
-        "دستگاه",
-        "دو"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "art",
-      "choices": [
-        "هایی",
-        "هنر",
-        "گفته",
-        "شده‌اند"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "return",
-      "choices": [
-        "بازگشت",
-        "متحد",
-        "پر",
-        "نبرد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "گسترش",
-      "choices": [
-        "expansion",
-        "defense",
-        "what",
-        "fortress"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نحوه",
-      "choices": [
-        "counted",
-        "neigborhood",
-        "method",
-        "orchard"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نطق",
-      "choices": [
-        "nowadays",
-        "subscriber",
-        "spreading",
-        "speech"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "نشر",
-      "choices": [
-        "person",
-        "young",
-        "likeness",
-        "spreading"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سراي",
-      "choices": [
-        "power",
-        "world",
-        "village",
-        "topic"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "زد و خورد",
-      "choices": [
-        "fight",
-        "Mosque",
-        "simple",
-        "night"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حکم فرما",
-      "choices": [
-        "Tehran",
-        "universal",
-        "so far",
-        "ruling"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مرابحه",
-      "choices": [
-        "then",
-        "weight",
-        "percentage",
-        "strength"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "society",
-      "choices": [
-        "جامعه",
-        "اسکار",
-        "انواع",
-        "بهمن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "هورا کشيدن",
-      "choices": [
-        "relations",
-        "list",
-        "leader",
-        "shout"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "human",
-      "choices": [
-        "دختر",
-        "انسان",
-        "کد",
-        "دانشگاه‌های"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "قدرت",
-      "choices": [
-        "spouse",
-        "power",
-        "thriving",
-        "report"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کوچک",
-      "choices": [
-        "Europe",
-        "rural district",
-        "small",
-        "prescription"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مدت",
-      "choices": [
-        "tremor",
-        "period",
-        "hajji",
-        "agreement"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "حرارتسنج",
-      "choices": [
-        "November",
-        "son",
-        "thermometer",
-        "up"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "turkish",
-      "choices": [
-        "کانادا",
-        "ترک",
-        "هشت",
-        "فیلم"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "همانند",
-      "choices": [
-        "probability",
-        "like",
-        "whoever",
-        "up"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "skilled",
-      "choices": [
-        "بودن",
-        "پادشاهی",
-        "امنیت",
-        "عامل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "born",
-      "choices": [
-        "باید",
-        "زاده",
-        "تدریس",
-        "رهبر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "discovery",
-      "choices": [
-        "اجرا",
-        "متحد",
-        "استاندارد",
-        "کشف"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "center",
-      "choices": [
-        "شیخ",
-        "محمدرضا",
-        "مرکز",
-        "جمعیت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "province",
-      "choices": [
-        "اثر",
-        "استان",
-        "توزیع",
-        "ترکیه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Ahmed",
-      "choices": [
-        "پنج",
-        "بودن",
-        "احمد",
-        "راه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "خدمتگاري",
-      "choices": [
-        "service",
-        "Mahmud",
-        "four",
-        "service"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "چپ",
-      "choices": [
-        "orchard",
-        "left",
-        "six",
-        "surface"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "درون",
-      "choices": [
-        "interior",
-        "nations",
-        "Azar",
-        "periodical"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مهمره",
-      "choices": [
-        "Paul",
-        "red",
-        "movement",
-        "united"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "works",
-      "choices": [
-        "راه",
-        "تأسیس",
-        "آثار",
-        "داد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "داستان گفتن",
-      "choices": [
-        "step",
-        "ruling",
-        "story",
-        "organization"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "protection",
-      "choices": [
-        "حفظ",
-        "آنها",
-        "خودش",
-        "مدل"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "resumption",
-      "choices": [
-        "ادامه",
-        "ادبیات",
-        "باب",
-        "ساکن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "آبادي",
-      "choices": [
-        "person",
-        "village",
-        "seriously",
-        "target"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "those",
-      "choices": [
-        "آن",
-        "سال‌های",
-        "شمار",
-        "رفت"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "India",
-      "choices": [
-        "هند",
-        "داشتن",
-        "بار",
-        "هشت"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ژاپن",
-      "choices": [
-        "dependent",
-        "work",
-        "inside",
-        "Japan"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "limit",
-      "choices": [
-        "شدید",
-        "نماید",
-        "شخصی",
-        "حد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "water",
-      "choices": [
-        "داشتند",
-        "آب",
-        "هنری",
-        "پیشنهاد"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "گفتار مشهور",
-      "choices": [
-        "seriously",
-        "revolution",
-        "saying",
-        "october"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مال شما",
-      "choices": [
-        "yours",
-        "prominent",
-        "son",
-        "people"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "گازپانسمان",
-      "choices": [
-        "knowledge",
-        "Mohsen",
-        "science",
-        "gauze"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پايان يافته",
-      "choices": [
-        "institution",
-        "presence",
-        "term",
-        "finished"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "regarding",
-      "choices": [
-        "اینترنت",
-        "آمد",
-        "محل",
-        "در"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "منجر",
-      "choices": [
-        "weather",
-        "resulting",
-        "time",
-        "first"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اندازه",
-      "choices": [
-        "she",
-        "winning",
-        "power",
-        "size"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "افغانستان",
-      "choices": [
-        "start",
-        "Afghanistan",
-        "ranks",
-        "born"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "up",
-      "choices": [
-        "بالا",
-        "ترین",
-        "واژه",
-        "بیش"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "winner",
-      "choices": [
-        "برنامه‌های",
-        "حرکت",
-        "قهرمان",
-        "نتایج"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "فضايي",
-      "choices": [
-        "various",
-        "portion",
-        "space",
-        "source"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "paying attention",
-      "choices": [
-        "گذاری",
-        "همچنین",
-        "توجه",
-        "باعث"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "on",
-      "choices": [
-        "زمانی",
-        "تاریخی",
-        "روشن",
-        "کاربرد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "similar",
-      "choices": [
-        "انواع",
-        "مهم",
-        "سالهای",
-        "همانند"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "limits",
-      "choices": [
-        "خورشیدی",
-        "دریاچه",
-        "بهار",
-        "حدود"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "nations",
-      "choices": [
-        "زیادی",
-        "لازم",
-        "مدرسه",
-        "ملل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "centers",
-      "choices": [
-        "عراق",
-        "مراکز",
-        "سپس",
-        "مثل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "treatment",
-      "choices": [
-        "دادن",
-        "درمان",
-        "محلی",
-        "عراق"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "voice",
-      "choices": [
-        "صدا",
-        "علیه",
-        "توابع",
-        "قالب"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "mason",
-      "choices": [
-        "بنا",
-        "آقای",
-        "الدین",
-        "دهد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "جدول",
-      "choices": [
-        "table",
-        "surely",
-        "race",
-        "sentence"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "کوتاهمدت",
-      "choices": [
-        "include",
-        "grail",
-        "organ",
-        "short"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "special",
-      "choices": [
-        "خاص",
-        "ندارد",
-        "دادند",
-        "مهر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "united",
-      "choices": [
-        "مطلق",
-        "ماشین",
-        "مفهوم",
-        "متحده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "daytime",
-      "choices": [
-        "ستاره",
-        "پانویس",
-        "دور",
-        "روز"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "handle",
-      "choices": [
-        "حدود",
-        "گفته",
-        "شیخ",
-        "دسته"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "فاتح",
-      "choices": [
-        "start",
-        "winner",
-        "seven",
-        "under"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Afghanistan",
-      "choices": [
-        "افغانستان",
-        "چهار",
-        "می",
-        "هفته"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "entered",
-      "choices": [
-        "پیام",
-        "وارد",
-        "مهر",
-        "هنگامی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شاگردي",
-      "choices": [
-        "market",
-        "training",
-        "sale",
-        "reason"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "محسن",
-      "choices": [
-        "Mohsen",
-        "nowadays",
-        "remembering",
-        "nations"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "outside of",
-      "choices": [
-        "نویسندگان",
-        "خارج",
-        "سعید",
-        "بدست"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "person",
-      "choices": [
-        "چهارم",
-        "دوره",
-        "نفر",
-        "فیلم‌های"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "داراي انرژي",
-      "choices": [
-        "under",
-        "energetic",
-        "novel",
-        "subordinate"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عدد",
-      "choices": [
-        "century",
-        "speed",
-        "correlated",
-        "piece"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "محمد",
-      "choices": [
-        "contemporary",
-        "limit",
-        "Khorasan",
-        "Mohammed"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ايران",
-      "choices": [
-        "remembering",
-        "without",
-        "five",
-        "Iran"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "tradition",
-      "choices": [
-        "البته",
-        "امروزه",
-        "نو",
-        "سنت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "red",
-      "choices": [
-        "ورود",
-        "سرخ",
-        "کشاورزی",
-        "جلوگیری"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "fresh",
-      "choices": [
-        "ش",
-        "سرعت",
-        "زنده",
-        "سیارک"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "رابطه",
-      "choices": [
-        "without",
-        "take",
-        "relation",
-        "relation"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دستگيره",
-      "choices": [
-        "agreement",
-        "handle",
-        "functions",
-        "Iraq"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "finally",
-      "choices": [
-        "سرانجام",
-        "وسیله",
-        "حدود",
-        "خبرگزاری"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "publisher",
-      "choices": [
-        "ناشر",
-        "دختر",
-        "آنجا",
-        "تاسیس"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "گون",
-      "choices": [
-        "look",
-        "fracture",
-        "Azar",
-        "type"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "providing",
-      "choices": [
-        "توسعه",
-        "فیلم‌های",
-        "روش",
-        "ارائه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "برحسب",
-      "choices": [
-        "made",
-        "training",
-        "based on",
-        "salary"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "schedule",
-      "choices": [
-        "برنامه",
-        "بسیار",
-        "جعبه",
-        "زیر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "واگذارکردن",
-      "choices": [
-        "transfer",
-        "album",
-        "this",
-        "presence"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "برهان آوردن",
-      "choices": [
-        "source",
-        "February",
-        "relevant",
-        "reason"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "second",
-      "choices": [
-        "نموده",
-        "دوباره",
-        "دنبال",
-        "ما"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "باز گشتن",
-      "choices": [
-        "return",
-        "Imam",
-        "won",
-        "Dollar"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "union",
-      "choices": [
-        "اتحاد",
-        "عرب",
-        "صدا",
-        "می"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "seven",
-      "choices": [
-        "هفت",
-        "جایزه",
-        "هنری",
-        "همانند"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "through",
-      "choices": [
-        "صدا",
-        "نیویورک",
-        "نظامی",
-        "توسط"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "چارديواري",
-      "choices": [
-        "house",
-        "person",
-        "cases",
-        "government"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مرتبط",
-      "choices": [
-        "struggle",
-        "Reza",
-        "take",
-        "correlated"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "explanation",
-      "choices": [
-        "شرح",
-        "کاخ",
-        "مدل",
-        "جاده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "فتوا",
-      "choices": [
-        "source",
-        "subject",
-        "sentence",
-        "poet"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آنها",
-      "choices": [
-        "man",
-        "share",
-        "perception",
-        "they"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "صنفي",
-      "choices": [
-        "union",
-        "inside",
-        "thermometer",
-        "hand"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "so far",
-      "choices": [
-        "روزنامه",
-        "تاکنون",
-        "ایالات",
-        "کل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "person",
-      "choices": [
-        "همچنین",
-        "ان",
-        "دارند",
-        "شخص"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بيعوض",
-      "choices": [
-        "free",
-        "same",
-        "November",
-        "occupied"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "source",
-      "choices": [
-        "پی",
-        "مقابل",
-        "منبع",
-        "مدرسه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "حادث",
-      "choices": [
-        "plant",
-        "new",
-        "utilization",
-        "standard"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "unit",
-      "choices": [
-        "بنابر",
-        "واحد",
-        "مشغول",
-        "مقدس"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "complete",
-      "choices": [
-        "نشان",
-        "پادشاهی",
-        "بیرون",
-        "کامل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "mother",
-      "choices": [
-        "احمد",
-        "گرفتن",
-        "ام",
-        "آثار"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "reason",
-      "choices": [
-        "خدمات",
-        "کسب",
-        "موجب",
-        "سبب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بميان آوردن",
-      "choices": [
-        "fortress",
-        "west",
-        "eight",
-        "bring up"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Seine",
-      "choices": [
-        "بطور",
-        "اینترنتی",
-        "سن",
-        "می‌گوید"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "چرخ سکان",
-      "choices": [
-        "steering wheel",
-        "road",
-        "Canada",
-        "stomach"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Mehr",
-      "choices": [
-        "اردیبهشت",
-        "ساعت",
-        "مهر",
-        "همانند"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "زمان",
-      "choices": [
-        "Mordad",
-        "unique",
-        "time",
-        "loaded"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "معروف",
-      "choices": [
-        "operation",
-        "utilization",
-        "types",
-        "famous"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "energetic",
-      "choices": [
-        "فعال",
-        "بعضی",
-        "بستک",
-        "خوانندگان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "share",
-      "choices": [
-        "بی",
-        "قسمت",
-        "امروزه",
-        "اسماعیل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "به همراه",
-      "choices": [
-        "yours",
-        "five",
-        "surname",
-        "with"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ministry",
-      "choices": [
-        "تولد",
-        "کشف",
-        "دنیا",
-        "وزارت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مشهور",
-      "choices": [
-        "Taraneh",
-        "exist",
-        "salary",
-        "well-known"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "غير از",
-      "choices": [
-        "than",
-        "winning",
-        "seriously",
-        "matter"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "story",
-      "choices": [
-        "پی",
-        "کره",
-        "ریاست",
-        "داستان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "village",
-      "choices": [
-        "علوم",
-        "روستا",
-        "استاد",
-        "سری"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "but",
-      "choices": [
-        "اقتصادی",
-        "اما",
-        "سبز",
-        "پارک"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "محکم",
-      "choices": [
-        "steady",
-        "November",
-        "Mahmud",
-        "week"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "عرب",
-      "choices": [
-        "registeration",
-        "Arab",
-        "reply",
-        "help"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "profession",
-      "choices": [
-        "جان",
-        "ساختمان",
-        "مهم",
-        "کسب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "NASA",
-      "choices": [
-        "ناسا",
-        "شکل",
-        "سالهای",
-        "فیزیک"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "standard",
-      "choices": [
-        "تو",
-        "شده‌است",
-        "سبک",
-        "استاندارد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "جان",
-      "choices": [
-        "soul",
-        "Ahmed",
-        "article",
-        "table"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اهل",
-      "choices": [
-        "inhabitant",
-        "they",
-        "London",
-        "famous"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "types",
-      "choices": [
-        "کلی",
-        "محل",
-        "انواع",
-        "فیزیک"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "تيار",
-      "choices": [
-        "Paul",
-        "start",
-        "talented",
-        "ready"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سطح",
-      "choices": [
-        "area",
-        "lack",
-        "year",
-        "primary"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بالا",
-      "choices": [
-        "Mehr",
-        "up",
-        "step",
-        "Qom"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "size",
-      "choices": [
-        "ساختار",
-        "تقسیم",
-        "اندازه",
-        "پاپ"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آب و هوا",
-      "choices": [
-        "weather",
-        "schedule",
-        "plant",
-        "nations"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "باغ",
-      "choices": [
-        "with",
-        "orchard",
-        "sentence",
-        "area"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "به کارگيري",
-      "choices": [
-        "utilization",
-        "green",
-        "cases",
-        "spots"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اشارهکردن",
-      "choices": [
-        "occupied",
-        "ceremony",
-        "period",
-        "point"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مربوط",
-      "choices": [
-        "product",
-        "road",
-        "famous",
-        "relevant"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "under",
-      "choices": [
-        "خبرگزاری",
-        "نیروهای",
-        "کنترل",
-        "مورد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پشت",
-      "choices": [
-        "such as",
-        "network",
-        "album",
-        "rear"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "spreading",
-      "choices": [
-        "خدمات",
-        "عضو",
-        "توسعه",
-        "نخستین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نامزد",
-      "choices": [
-        "organization",
-        "nominee",
-        "birth",
-        "probability"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "four",
-      "choices": [
-        "طرف",
-        "چهار",
-        "نام",
-        "دی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "frontier",
-      "choices": [
-        "انتقال",
-        "شمار",
-        "طور",
-        "مرز"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سيستم",
-      "choices": [
-        "hanging",
-        "materials",
-        "system",
-        "seven"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نوازش کردن",
-      "choices": [
-        "human",
-        "tongue",
-        "stroke",
-        "published"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "زمان",
-      "choices": [
-        "end",
-        "March",
-        "Egypt",
-        "time"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "tremor",
-      "choices": [
-        "جنبش",
-        "دریا",
-        "درمان",
-        "ادبی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ايفاء",
-      "choices": [
-        "order",
-        "under",
-        "red",
-        "fulfillment"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "جلاي وطن",
-      "choices": [
-        "office",
-        "immigration",
-        "trip",
-        "Mohsen"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "جشن",
-      "choices": [
-        "month",
-        "source",
-        "ceremony",
-        "shout"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "fulfillment",
-      "choices": [
-        "انجام",
-        "میلاد",
-        "مصر",
-        "نوعی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ولي",
-      "choices": [
-        "interior",
-        "but",
-        "complete",
-        "lack"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ساختمان",
-      "choices": [
-        "nominee",
-        "structure",
-        "records",
-        "type"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عزيمت کردن",
-      "choices": [
-        "college",
-        "death",
-        "sale",
-        "start"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "relevant",
-      "choices": [
-        "مربوط",
-        "دیگر",
-        "سه",
-        "دریایی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "use",
-      "choices": [
-        "نامزد",
-        "مارس",
-        "ترجمه",
-        "مصرف"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "September",
-      "choices": [
-        "سبز",
-        "سپتامبر",
-        "انتقال",
-        "ترجمه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "distance",
-      "choices": [
-        "رئیس",
-        "پروژه",
-        "موسیقی",
-        "فاصله"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مطلق",
-      "choices": [
-        "sake",
-        "museum",
-        "independent",
-        "often"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "رابطه",
-      "choices": [
-        "regarding",
-        "relation",
-        "different",
-        "subject"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "until",
-      "choices": [
-        "کننده",
-        "تا",
-        "شرقی",
-        "انتقال"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "and",
-      "choices": [
-        "ارتش",
-        "اختلاف",
-        "کیلومتری",
-        "و"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "sources",
-      "choices": [
-        "منابع",
-        "ویکی‌پدیای",
-        "نرم",
-        "پاپ"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "کردستان",
-      "choices": [
-        "possible",
-        "country",
-        "Kurdistan",
-        "prison"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مرطوب",
-      "choices": [
-        "album",
-        "wet",
-        "revolution",
-        "several"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "young",
-      "choices": [
-        "دارد",
-        "مرداد",
-        "جوان",
-        "قوانین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دانش",
-      "choices": [
-        "or",
-        "centers",
-        "Masood",
-        "knowledge"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "زمان بندي کردن",
-      "choices": [
-        "tradition",
-        "given",
-        "schedule",
-        "friend"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اندازه کم",
-      "choices": [
-        "gone",
-        "reduction",
-        "foundation",
-        "little"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "استوار",
-      "choices": [
-        "tall",
-        "musical instrument",
-        "Qom",
-        "two"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "حزبي",
-      "choices": [
-        "end",
-        "remaining",
-        "political party",
-        "time"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "انگليس",
-      "choices": [
-        "famous",
-        "bank",
-        "rule",
-        "England"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "صاحب",
-      "choices": [
-        "sediment",
-        "Omar",
-        "Saheb",
-        "strength"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "کانادا",
-      "choices": [
-        "society",
-        "incoming",
-        "dependent",
-        "Canada"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اوت",
-      "choices": [
-        "work",
-        "August",
-        "that",
-        "works"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مام",
-      "choices": [
-        "and",
-        "mother",
-        "yet",
-        "soccer"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "reduction",
-      "choices": [
-        "کاهش",
-        "دریا",
-        "اینکه",
-        "زبان‌های"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "capable",
-      "choices": [
-        "قابل",
-        "عدم",
-        "شخصی",
-        "ششم"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "war",
-      "choices": [
-        "کمک",
-        "جنگ",
-        "بدین",
-        "رویدادها"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "leader",
-      "choices": [
-        "بازیگران",
-        "گل",
-        "گذاری",
-        "رهبر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "poet",
-      "choices": [
-        "مستقیم",
-        "شاعر",
-        "اجرام",
-        "توزیع"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ماهور",
-      "choices": [
-        "time",
-        "hill",
-        "style",
-        "hour"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "with",
-      "choices": [
-        "با",
-        "معروف",
-        "سفر",
-        "مشغول"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "related",
-      "choices": [
-        "فرانسوی",
-        "مصرف",
-        "وابسته",
-        "زندگینامه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "correlated",
-      "choices": [
-        "مدل",
-        "مرتبط",
-        "نژاد",
-        "کتاب"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "نفت خام",
-      "choices": [
-        "start",
-        "manner",
-        "limit",
-        "petroleum"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "روابط",
-      "choices": [
-        "surname",
-        "market",
-        "relations",
-        "body"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "بمجرد",
-      "choices": [
-        "upon",
-        "society",
-        "subscriber",
-        "size"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سبک",
-      "choices": [
-        "Mohsen",
-        "manner",
-        "water",
-        "poetry"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "correct",
-      "choices": [
-        "همان",
-        "خود",
-        "حزب",
-        "درست"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "امروز",
-      "choices": [
-        "Japan",
-        "stratum",
-        "in order to",
-        "today"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "incoming",
-      "choices": [
-        "گروه",
-        "کلیسای",
-        "هدف",
-        "آمده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "توجه",
-      "choices": [
-        "paying attention",
-        "fresh",
-        "theater",
-        "newspaper"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حدود",
-      "choices": [
-        "related",
-        "training",
-        "limits",
-        "short"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "remembering",
-      "choices": [
-        "سوی",
-        "ذکر",
-        "ژوئن",
-        "ترک"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ادامه",
-      "choices": [
-        "sediment",
-        "resumption",
-        "murder",
-        "album"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "برهان آوردن",
-      "choices": [
-        "fire",
-        "Khorasan",
-        "reason",
-        "uderstood"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "برجسته",
-      "choices": [
-        "registeration",
-        "only",
-        "prominent",
-        "brother"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سطح",
-      "choices": [
-        "military",
-        "turkish",
-        "area",
-        "united"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "successful",
-      "choices": [
-        "موفق",
-        "معمولاً",
-        "نبرد",
-        "رده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مصالح",
-      "choices": [
-        "green",
-        "Iran",
-        "materials",
-        "six"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آتش",
-      "choices": [
-        "country",
-        "percentage",
-        "fire",
-        "year"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Esfand",
-      "choices": [
-        "اسفند",
-        "نقاط",
-        "خوانندگان",
-        "می‌شد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "دانشگاه",
-      "choices": [
-        "without",
-        "University",
-        "utilization",
-        "point"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "باستان",
-      "choices": [
-        "ancient.",
-        "little",
-        "children",
-        "stroke"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "time",
-      "choices": [
-        "اسلامی",
-        "زمان",
-        "باید",
-        "بخش"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شاه",
-      "choices": [
-        "worth",
-        "Shah",
-        "up",
-        "various"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "صنعت",
-      "choices": [
-        "different",
-        "universal",
-        "nowadays",
-        "industry"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "total",
-      "choices": [
-        "بیشتر",
-        "اروپا",
-        "طور",
-        "جمع"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "steering wheel",
-      "choices": [
-        "فرمان",
-        "نقش",
-        "نمایش",
-        "برگزار"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "group",
-      "choices": [
-        "چهار",
-        "درگذشت",
-        "گروه",
-        "تپه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "surface",
-      "choices": [
-        "صفحه",
-        "دولتی",
-        "بن",
-        "فرانسه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "nominee",
-      "choices": [
-        "معمولا",
-        "میدان",
-        "نسخه",
-        "نامزد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "publishing",
-      "choices": [
-        "آذربایجان",
-        "شرقی",
-        "آهن",
-        "چاپ"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "خان",
-      "choices": [
-        "town",
-        "Khan",
-        "star",
-        "type"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "fight",
-      "choices": [
-        "تو",
-        "دارد",
-        "مبارزه",
-        "شهرهای"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "weather",
-      "choices": [
-        "بهره",
-        "نیروهای",
-        "هوا",
-        "کارشناسی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "creature",
-      "choices": [
-        "موجود",
-        "رتبه",
-        "مهم‌ترین",
-        "غربی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "واژه",
-      "choices": [
-        "result",
-        "word",
-        "small",
-        "word"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "word",
-      "choices": [
-        "حمل",
-        "کلمه",
-        "محمد",
-        "اطلاعات"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مجمع",
-      "choices": [
-        "space",
-        "manner",
-        "young",
-        "club"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Abbas",
-      "choices": [
-        "توضیح",
-        "عباس",
-        "امر",
-        "المپیک"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "every",
-      "choices": [
-        "دلار",
-        "مسعود",
-        "می‌باشد",
-        "هر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "دادن",
-      "choices": [
-        "season",
-        "in order to",
-        "superior",
-        "give"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "از توي",
-      "choices": [
-        "six",
-        "thrust",
-        "center",
-        "through"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "respect",
-      "choices": [
-        "عصر",
-        "عربستان",
-        "لحاظ",
-        "جوایز"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Saheb",
-      "choices": [
-        "حاج",
-        "فوریه",
-        "صاحب",
-        "ریاضی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "همه",
-      "choices": [
-        "revolution",
-        "trace",
-        "everybody",
-        "last"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Imam",
-      "choices": [
-        "تبدیل",
-        "خاک",
-        "امام",
-        "بعضی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اخ",
-      "choices": [
-        "demise",
-        "person",
-        "providing",
-        "brother"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اشعار",
-      "choices": [
-        "saying",
-        "organ",
-        "poetry",
-        "then"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "selection",
-      "choices": [
-        "انتخاب",
-        "برادر",
-        "سازمان",
-        "دادن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Japan",
-      "choices": [
-        "مسعود",
-        "وضعیت",
-        "ژاپن",
-        "مفهوم"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "جديد",
-      "choices": [
-        "relation",
-        "motive",
-        "novel",
-        "passing"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "موکول به",
-      "choices": [
-        "subject",
-        "person",
-        "those",
-        "newspaper"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "باستثناي",
-      "choices": [
-        "except",
-        "release",
-        "limit",
-        "Korea"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حاصل ضرب",
-      "choices": [
-        "report",
-        "foundation",
-        "intention",
-        "product"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Saltanat",
-      "choices": [
-        "جنسی",
-        "تقسیم",
-        "سلطنت",
-        "صاحب"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "past",
-      "choices": [
-        "قسمت",
-        "گذشته",
-        "سن",
-        "همه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ايالت",
-      "choices": [
-        "elections",
-        "that",
-        "time",
-        "state"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "کسري دار",
-      "choices": [
-        "turkish",
-        "profession",
-        "under",
-        "blood"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پا",
-      "choices": [
-        "India",
-        "expansion",
-        "yours",
-        "foot"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Omar",
-      "choices": [
-        "پنج",
-        "عمر",
-        "اقدام",
-        "پس"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "فرنگ",
-      "choices": [
-        "itself",
-        "Europe",
-        "time",
-        "network"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "score",
-      "choices": [
-        "آبی",
-        "می‌کردند",
-        "بهترین",
-        "حساب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Arab",
-      "choices": [
-        "کردن",
-        "تلویزیونی",
-        "رضوی",
-        "عرب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ذکر",
-      "choices": [
-        "dependent",
-        "park",
-        "remembering",
-        "title"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "several",
-      "choices": [
-        "بوده‌است",
-        "اوت",
-        "چند",
-        "شرقی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "take",
-      "choices": [
-        "امپراتوری",
-        "حق",
-        "زندگی",
-        "گرفتن"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "tower",
-      "choices": [
-        "تا",
-        "نه",
-        "برج",
-        "دیده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اولو",
-      "choices": [
-        "stone",
-        "thrust",
-        "professor",
-        "nations"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "people",
-      "choices": [
-        "کمتر",
-        "امپراتوری",
-        "محلی",
-        "مردم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "report",
-      "choices": [
-        "می‌گیرد",
-        "خبر",
-        "ژاپن",
-        "بعدها"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "records",
-      "choices": [
-        "بازیابی‌شده",
-        "خاص",
-        "پرونده",
-        "حل"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اعدام",
-      "choices": [
-        "red",
-        "step",
-        "club",
-        "hanging"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Farhang",
-      "choices": [
-        "فرهنگ",
-        "هفته",
-        "امپراتوری",
-        "شاعر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "فايده",
-      "choices": [
-        "relevant",
-        "by",
-        "profit",
-        "services"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "عنوان",
-      "choices": [
-        "Japan",
-        "seven",
-        "subscriber",
-        "title"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ايشان",
-      "choices": [
-        "profit",
-        "she",
-        "tune",
-        "sacred"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کسري دار",
-      "choices": [
-        "Japan",
-        "under",
-        "limited",
-        "relation"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بطي",
-      "choices": [
-        "short",
-        "foundation",
-        "slow",
-        "rose garden"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "حصن",
-      "choices": [
-        "fortress",
-        "total",
-        "yet",
-        "united"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "resulting",
-      "choices": [
-        "خصوصی",
-        "سالهای",
-        "موضوع",
-        "منجر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "way",
-      "choices": [
-        "راه",
-        "رضوی",
-        "نشده",
-        "ایرانی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "free",
-      "choices": [
-        "شماره",
-        "آزاد",
-        "برجسته",
-        "نمونه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "cause",
-      "choices": [
-        "شکست",
-        "باعث",
-        "تمام",
-        "ارائه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "meter",
-      "choices": [
-        "متر",
-        "روستا",
-        "یونان",
-        "جزیره"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "انقطاع يافتن",
-      "choices": [
-        "news",
-        "end",
-        "ready",
-        "agreement"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "fortress",
-      "choices": [
-        "قلعه",
-        "پارک",
-        "می‌گیرد",
-        "ارتفاع"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "shout",
-      "choices": [
-        "داد",
-        "نژاد",
-        "آبی",
-        "ساخته"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "rural district",
-      "choices": [
-        "ترکیه",
-        "رتبه",
-        "درمان",
-        "دهستان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "کره",
-      "choices": [
-        "too",
-        "possible",
-        "she",
-        "Korea"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "left",
-      "choices": [
-        "چپ",
-        "کتابخانه",
-        "گاهی",
-        "اسلام"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ترک",
-      "choices": [
-        "conflict",
-        "struggle",
-        "hard",
-        "turkish"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "برملا",
-      "choices": [
-        "expansion",
-        "spots",
-        "known",
-        "poetry"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مدت",
-      "choices": [
-        "power",
-        "shout",
-        "tongue",
-        "period"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "حول و حوش",
-      "choices": [
-        "valley",
-        "suburbs",
-        "winning",
-        "method"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "petroleum",
-      "choices": [
-        "دی",
-        "طراحی",
-        "کالیفرنیا",
-        "نفت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "palace",
-      "choices": [
-        "دومین",
-        "موقعیت",
-        "خاطر",
-        "کاخ"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "volume",
-      "choices": [
-        "میدان",
-        "خیلی",
-        "جلد",
-        "چین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "relation",
-      "choices": [
-        "پل",
-        "مصرف",
-        "ارتباط",
-        "براي"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "thousand",
-      "choices": [
-        "فیزیک",
-        "هزار",
-        "خبر",
-        "می‌شد"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "opposite",
-      "choices": [
-        "عبور",
-        "مقابل",
-        "جعبه",
-        "می‌تواند"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Mohammad Reza",
-      "choices": [
-        "پادشاه",
-        "حسین",
-        "اقتصادی",
-        "محمدرضا"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "obstruction",
-      "choices": [
-        "فارس",
-        "قاجار",
-        "فرزندان",
-        "سده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "statistics",
-      "choices": [
-        "آمار",
-        "زبان",
-        "کالیفرنیا",
-        "آلمان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اسفند",
-      "choices": [
-        "Esfand",
-        "what",
-        "publishing",
-        "presence"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "title",
-      "choices": [
-        "تجاری",
-        "عنوان",
-        "اجازه",
-        "مطرح"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "rule",
-      "choices": [
-        "ترین",
-        "عملیات",
-        "گاه",
-        "حکومت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "نشان ستاره",
-      "choices": [
-        "period",
-        "shine",
-        "star",
-        "sediment"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "فلسفه",
-      "choices": [
-        "office",
-        "philosophy",
-        "Mahmud",
-        "side"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کار",
-      "choices": [
-        "family",
-        "nominee",
-        "fresh",
-        "work"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "براي آن که",
-      "choices": [
-        "government",
-        "uderstood",
-        "in order to",
-        "like"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "order",
-      "choices": [
-        "امر",
-        "فارس",
-        "جز",
-        "بود"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "because",
-      "choices": [
-        "مقدار",
-        "بلکه",
-        "چون",
-        "عصر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "گرفته",
-      "choices": [
-        "what",
-        "England",
-        "gloomy",
-        "stratum"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سبک",
-      "choices": [
-        "style",
-        "rank",
-        "relevant",
-        "do"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "organization",
-      "choices": [
-        "‌",
-        "صدا",
-        "سازمان",
-        "نویسنده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "August",
-      "choices": [
-        "باستان",
-        "اوت",
-        "اين",
-        "حفظ"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ما",
-      "choices": [
-        "we",
-        "lack",
-        "Fars",
-        "Omar"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "stratum",
-      "choices": [
-        "سطح",
-        "طبقه",
-        "سابق",
-        "تن"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "gauze",
-      "choices": [
-        "توسط",
-        "جزیره",
-        "گاز",
-        "بعدها"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "برد",
-      "choices": [
-        "winning",
-        "night",
-        "system",
-        "brother"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نمره",
-      "choices": [
-        "number",
-        "specific",
-        "right",
-        "interior"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مافوق",
-      "choices": [
-        "superior",
-        "field of study",
-        "phantom",
-        "stating"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Saudi Arabia",
-      "choices": [
-        "بزرگ‌ترین",
-        "اکتبر",
-        "که",
-        "عربستان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "contemporary",
-      "choices": [
-        "قم",
-        "شهید",
-        "مردم",
-        "معاصر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "عموم",
-      "choices": [
-        "public",
-        "turkish",
-        "March",
-        "large"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "برج",
-      "choices": [
-        "widespread",
-        "passing",
-        "tower",
-        "utilization"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "انتخابات",
-      "choices": [
-        "service",
-        "hanging",
-        "elections",
-        "spouse"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "went",
-      "choices": [
-        "قهرمان",
-        "رفت",
-        "چنین",
-        "شامل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "with",
-      "choices": [
-        "میلادی",
-        "نزد",
-        "دیگر",
-        "اتحادیه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "collection",
-      "choices": [
-        "ایرانی",
-        "حدود",
-        "مجموعه",
-        "مقدس"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "what",
-      "choices": [
-        "مي",
-        "آنچه",
-        "عرب",
-        "آفریقا"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "سرحد",
-      "choices": [
-        "subordinate",
-        "end",
-        "frontier",
-        "market"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "revolution",
-      "choices": [
-        "انقلاب",
-        "تعدادی",
-        "المللی",
-        "بازدید"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "simple",
-      "choices": [
-        "فعالیت",
-        "شود",
-        "روزنامه",
-        "ساده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "رفت",
-      "choices": [
-        "year old",
-        "went",
-        "remembering",
-        "dam"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "طور",
-      "choices": [
-        "museum",
-        "become",
-        "Sinai Mountain",
-        "income"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "خاطر",
-      "choices": [
-        "economy",
-        "sake",
-        "wealthy",
-        "last"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "دلار",
-      "choices": [
-        "Dollar",
-        "what",
-        "we",
-        "currently"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "speed",
-      "choices": [
-        "سپاه",
-        "ها",
-        "اشاره",
-        "سرعت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "novel",
-      "choices": [
-        "لندن",
-        "فوق",
-        "رمان",
-        "شرکت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اداره",
-      "choices": [
-        "office",
-        "providing",
-        "salary",
-        "Imam"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "عکس",
-      "choices": [
-        "Esfehan",
-        "study",
-        "remaining",
-        "contrary"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "هرکدام",
-      "choices": [
-        "contrary",
-        "services",
-        "province",
-        "every"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "rank",
-      "choices": [
-        "مدیر",
-        "اقدام",
-        "گفت",
-        "رتبه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "عنوان",
-      "choices": [
-        "stage manager",
-        "title",
-        "relation",
-        "palace"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "prison",
-      "choices": [
-        "زندان",
-        "قوانین",
-        "پس",
-        "نزدیکی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "رل",
-      "choices": [
-        "role",
-        "way",
-        "seriously",
-        "ton"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "study",
-      "choices": [
-        "خارج",
-        "مطالعه",
-        "نیز",
-        "کتاب‌های"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "رشيد",
-      "choices": [
-        "translation",
-        "times more",
-        "tall",
-        "inequality"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "تخت",
-      "choices": [
-        "they",
-        "independent",
-        "flat",
-        "utilization"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "الله",
-      "choices": [
-        "various",
-        "god",
-        "face",
-        "verdict"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "tongue",
-      "choices": [
-        "خارج",
-        "زبان",
-        "تحقیقات",
-        "حفظ"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مسافت",
-      "choices": [
-        "subordinate",
-        "distance",
-        "Canada",
-        "known"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "نوامبر",
-      "choices": [
-        "handle",
-        "inequality",
-        "November",
-        "soil"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "numbers",
-      "choices": [
-        "کمی",
-        "شبکه",
-        "فقط",
-        "اعداد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مال آنها",
-      "choices": [
-        "outside of",
-        "center",
-        "human",
-        "their"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "remaining",
-      "choices": [
-        "موارد",
-        "موسیقی",
-        "مانده",
-        "تئاتر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "روز",
-      "choices": [
-        "son",
-        "demise",
-        "talented",
-        "daytime"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "gloomy",
-      "choices": [
-        "گرفته",
-        "گرفت",
-        "دانشگاه‌های",
-        "می‌دهد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "do",
-      "choices": [
-        "کردن",
-        "دستگاه",
-        "قرار",
-        "پاپ"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "woman",
-      "choices": [
-        "هزار",
-        "تأسیس",
-        "زن",
-        "عوامل"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "امر",
-      "choices": [
-        "order",
-        "period",
-        "intention",
-        "hundred"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ناسا",
-      "choices": [
-        "grail",
-        "NASA",
-        "village",
-        "presence"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "لندن",
-      "choices": [
-        "opposite",
-        "London",
-        "given",
-        "reduction"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Qom",
-      "choices": [
-        "انجمن",
-        "خوانندگان",
-        "کامپیوتر",
-        "قم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "known",
-      "choices": [
-        "نژاد",
-        "مختلف",
-        "شناخته",
-        "امکان"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "حسن",
-      "choices": [
-        "primary",
-        "way",
-        "Hasan",
-        "thriving"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "like",
-      "choices": [
-        "خیابان",
-        "در",
-        "بصورت",
-        "بخش"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "گشودگي",
-      "choices": [
-        "total",
-        "score",
-        "solution",
-        "Mohammad Reza"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "only",
-      "choices": [
-        "رهبری",
-        "فقط",
-        "ناسا",
-        "یکدیگر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "تئاتر",
-      "choices": [
-        "theater",
-        "post",
-        "Kurdish",
-        "with"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "field of study",
-      "choices": [
-        "خاص",
-        "رشته",
-        "هفته",
-        "اصلی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "possible",
-      "choices": [
-        "ممکن",
-        "قهرمانی",
-        "اوت",
-        "طی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "term",
-      "choices": [
-        "زیاد",
-        "دور",
-        "نماینده",
-        "نه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "حضر",
-      "choices": [
-        "Tehran",
-        "presence",
-        "presence",
-        "explanation"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "grail",
-      "choices": [
-        "مناسب",
-        "کرد",
-        "خلیج",
-        "جام"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "يکه",
-      "choices": [
-        "unit",
-        "red",
-        "truth",
-        "Paul"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ورزيده",
-      "choices": [
-        "skilled",
-        "England",
-        "incoming",
-        "to"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "استحکام",
-      "choices": [
-        "slow",
-        "limit",
-        "mankind",
-        "resistance"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "appearance",
-      "choices": [
-        "می‌توان",
-        "نمود",
-        "جهانی",
-        "جز"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "role",
-      "choices": [
-        "حاضر",
-        "متال",
-        "بیشتری",
-        "نقش"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "different",
-      "choices": [
-        "دریا",
-        "متفاوت",
-        "جنبش",
-        "برخوردار"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "درسته",
-      "choices": [
-        "publisher",
-        "woman",
-        "number",
-        "complete"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Rome",
-      "choices": [
-        "شخصی",
-        "الکتریکی",
-        "روم",
-        "برنامه‌های"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Reza",
-      "choices": [
-        "درآمد",
-        "رضا",
-        "جنوب",
-        "انقلاب"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آبان",
-      "choices": [
-        "Aban",
-        "schedule",
-        "petroleum",
-        "rear"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "خون",
-      "choices": [
-        "blood",
-        "corps",
-        "flat",
-        "sacred"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اعلام",
-      "choices": [
-        "start",
-        "Masood",
-        "political party",
-        "announcement"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "تهران",
-      "choices": [
-        "Tehran",
-        "rear",
-        "loaded",
-        "Omar"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نابرابري",
-      "choices": [
-        "area",
-        "inequality",
-        "willing",
-        "ceremony"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مقدار",
-      "choices": [
-        "most",
-        "give",
-        "theater",
-        "worth"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "affairs",
-      "choices": [
-        "ثبت",
-        "امور",
-        "آنجا",
-        "متفاوت"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "قتل",
-      "choices": [
-        "album",
-        "handle",
-        "title",
-        "murder"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "موزه",
-      "choices": [
-        "strength",
-        "model",
-        "museum",
-        "same"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "تابحال",
-      "choices": [
-        "so far",
-        "face",
-        "read",
-        "like"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "likeness",
-      "choices": [
-        "مثال",
-        "صد",
-        "باشد",
-        "آمار"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "خواندن",
-      "choices": [
-        "true",
-        "read",
-        "gallows",
-        "son"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "دانشسرا",
-      "choices": [
-        "publisher",
-        "spreading",
-        "college",
-        "piece"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "hand",
-      "choices": [
-        "کشورهای",
-        "شده‌است",
-        "دست",
-        "دار"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "محل",
-      "choices": [
-        "girl",
-        "source",
-        "cause",
-        "friend"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "saying",
-      "choices": [
-        "داده",
-        "گفته",
-        "زیرا",
-        "برنامه‌های"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "منتشر شده",
-      "choices": [
-        "project",
-        "news",
-        "most",
-        "published"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "چونکه",
-      "choices": [
-        "power",
-        "war",
-        "because",
-        "mountain"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "foundation",
-      "choices": [
-        "بن",
-        "بازی‌های",
-        "فیلم",
-        "سرانجام"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "شدت",
-      "choices": [
-        "friend",
-        "word",
-        "intensity",
-        "operation"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "widespread",
-      "choices": [
-        "دکتر",
-        "گسترده",
-        "ملل",
-        "ماه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "sake",
-      "choices": [
-        "آن",
-        "خاطر",
-        "محدود",
-        "شش"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "wealthy",
-      "choices": [
-        "شوروی",
-        "مسلمانان",
-        "اعلام",
-        "برخوردار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "five",
-      "choices": [
-        "اختیار",
-        "پنج",
-        "گیتار",
-        "بطور"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "November",
-      "choices": [
-        "بوده‌است",
-        "نوامبر",
-        "زیاد",
-        "انتشار"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اکتبر",
-      "choices": [
-        "october",
-        "structure",
-        "method",
-        "office"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اثر",
-      "choices": [
-        "Qom",
-        "we",
-        "trace",
-        "five"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مفهوم",
-      "choices": [
-        "intensity",
-        "mother",
-        "similar",
-        "uderstood"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Kurdistan",
-      "choices": [
-        "معماری",
-        "گونه",
-        "کردستان",
-        "سایت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پايستن",
-      "choices": [
-        "prominent",
-        "valley",
-        "last",
-        "seizure"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "روزنامه",
-      "choices": [
-        "field of study",
-        "born",
-        "water",
-        "newspaper"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "if",
-      "choices": [
-        "ارتباط",
-        "نقاشی",
-        "اگر",
-        "مصر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آباد",
-      "choices": [
-        "year old",
-        "exist",
-        "thriving",
-        "source"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "foundation",
-      "choices": [
-        "تحت",
-        "آخرین",
-        "زیاد",
-        "اساس"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "نامستقل",
-      "choices": [
-        "registeration",
-        "Hasan",
-        "dependent",
-        "numbers"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آنجل",
-      "choices": [
-        "there",
-        "library",
-        "probability",
-        "style"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "thriving",
-      "choices": [
-        "راه",
-        "ویژه",
-        "اعداد",
-        "آباد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "hanging",
-      "choices": [
-        "آثار",
-        "اعدام",
-        "مستقیم",
-        "انتقال"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ولادت",
-      "choices": [
-        "birth",
-        "post",
-        "knowledge",
-        "state"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نبرد",
-      "choices": [
-        "science",
-        "body",
-        "protection",
-        "conflict"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Islam",
-      "choices": [
-        "یاد",
-        "دادگاه",
-        "اسلام",
-        "پارک"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "توان",
-      "choices": [
-        "publishing",
-        "strength",
-        "relevant",
-        "factors"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "law",
-      "choices": [
-        "طرح",
-        "گردد",
-        "قانون",
-        "مصر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "military",
-      "choices": [
-        "هنگامی",
-        "سابق",
-        "ارتش",
-        "رضا"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "tied",
-      "choices": [
-        "یافته",
-        "مرد",
-        "نو",
-        "بسته"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "uderstood",
-      "choices": [
-        "دارای",
-        "مفهوم",
-        "وبگاه",
-        "عامل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "passing",
-      "choices": [
-        "عبور",
-        "رسیدن",
-        "گروهی",
-        "مقدس"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "your",
-      "choices": [
-        "سیاسی",
-        "تو",
-        "همانند",
-        "دهه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "speech",
-      "choices": [
-        "رشته",
-        "سخن",
-        "میلاد",
-        "اش"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "پست",
-      "choices": [
-        "model",
-        "post",
-        "works",
-        "third"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اشعار",
-      "choices": [
-        "born",
-        "god",
-        "stating",
-        "age"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "movement",
-      "choices": [
-        "حرکت",
-        "ساختار",
-        "آن",
-        "اندازه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "paint",
-      "choices": [
-        "تن",
-        "اسفند",
-        "تأثیر",
-        "رنگ"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ترجمه و اقتباس",
-      "choices": [
-        "translation",
-        "like",
-        "trust",
-        "month"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "محمدرضا",
-      "choices": [
-        "law",
-        "group",
-        "Mohammad Reza",
-        "square"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "طبع",
-      "choices": [
-        "ten",
-        "publishing",
-        "yours",
-        "rose garden"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مانند",
-      "choices": [
-        "necessary",
-        "spring",
-        "covering",
-        "such as"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "fire",
-      "choices": [
-        "مناسبت‌ها",
-        "موجب",
-        "آتش",
-        "فوتبال"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "musical instrument",
-      "choices": [
-        "خاطر",
-        "حل",
-        "ساز",
-        "عبارتند"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "necessary",
-      "choices": [
-        "لازم",
-        "همانند",
-        "مقدار",
-        "را"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "جشن",
-      "choices": [
-        "state",
-        "military",
-        "then",
-        "ceremony"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "why",
-      "choices": [
-        "حمله",
-        "چرا",
-        "پیام",
-        "شاعر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "پرادويه کردن",
-      "choices": [
-        "return",
-        "season",
-        "time",
-        "project"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "given",
-      "choices": [
-        "متر",
-        "توزیع",
-        "رشد",
-        "داده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "باعرزه",
-      "choices": [
-        "town",
-        "capable",
-        "sign",
-        "currently"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عدد چهار",
-      "choices": [
-        "surely",
-        "four",
-        "spots",
-        "occupied"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "واردشونده",
-      "choices": [
-        "Arab",
-        "temper",
-        "incoming",
-        "different"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "بهار",
-      "choices": [
-        "France",
-        "thrust",
-        "spring",
-        "factors"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ready",
-      "choices": [
-        "گروه‌های",
-        "جای",
-        "فراهم",
-        "اطلاعات"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "کنگره",
-      "choices": [
-        "human",
-        "Mohammad Reza",
-        "parliament",
-        "factors"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "الزامي",
-      "choices": [
-        "necessary",
-        "verdict",
-        "museum",
-        "probability"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Hasan",
-      "choices": [
-        "انتشار",
-        "حسن",
-        "اروپا",
-        "شرقی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "piece",
-      "choices": [
-        "نقاشی",
-        "عدد",
-        "دریای",
-        "عربستان"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کالاي وارده",
-      "choices": [
-        "god",
-        "import",
-        "wealthy",
-        "relations"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "طول",
-      "choices": [
-        "length",
-        "report",
-        "exist",
-        "power"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "demise",
-      "choices": [
-        "ش",
-        "عهده",
-        "درگذشت",
-        "مواد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "درگاه",
-      "choices": [
-        "until",
-        "list",
-        "percentage",
-        "threshold"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "توجيه",
-      "choices": [
-        "under",
-        "explanation",
-        "red",
-        "society"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "حجر",
-      "choices": [
-        "become",
-        "Egypt",
-        "thousand",
-        "stone"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "independent",
-      "choices": [
-        "روش",
-        "شیر",
-        "مستقل",
-        "مسابقات"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "spring",
-      "choices": [
-        "خاطر",
-        "آموزشی",
-        "مهاجرت",
-        "بهار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "احتمال",
-      "choices": [
-        "London",
-        "probability",
-        "hand",
-        "group"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ليله",
-      "choices": [
-        "source",
-        "night",
-        "sign",
-        "thermometer"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "گون",
-      "choices": [
-        "type",
-        "wet",
-        "intention",
-        "cause"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "فوتبال",
-      "choices": [
-        "ceremony",
-        "river",
-        "money",
-        "soccer"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ten",
-      "choices": [
-        "یکی",
-        "شورای",
-        "ده",
-        "مدت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "scattering",
-      "choices": [
-        "خراسان",
-        "پول",
-        "دوره",
-        "پخش"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "شجره",
-      "choices": [
-        "release",
-        "tree",
-        "to",
-        "hanging"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عيال",
-      "choices": [
-        "century",
-        "hour",
-        "mud",
-        "family"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ويژه",
-      "choices": [
-        "special",
-        "fracture",
-        "fortress",
-        "Korea"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "large",
-      "choices": [
-        "بزرگ",
-        "فقط",
-        "جوایز",
-        "فهرست"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "چشم",
-      "choices": [
-        "green",
-        "eye",
-        "with",
-        "large"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ماء",
-      "choices": [
-        "prominent",
-        "stage",
-        "functions",
-        "water"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "willing",
-      "choices": [
-        "مثل",
-        "پادشاه",
-        "حاضر",
-        "مناسب"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "شهر ساحلي",
-      "choices": [
-        "college",
-        "widespread",
-        "seaport",
-        "spouse"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "لرزه",
-      "choices": [
-        "tremor",
-        "organ",
-        "made",
-        "tremor"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "two",
-      "choices": [
-        "کیلومتر",
-        "گاه",
-        "عبور",
-        "دو"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "منظره",
-      "choices": [
-        "nowadays",
-        "various",
-        "conflict",
-        "view"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "به همراه",
-      "choices": [
-        "with",
-        "library",
-        "unit",
-        "correct"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مسجد",
-      "choices": [
-        "ruling",
-        "Mosque",
-        "simple",
-        "organ"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "همان جور",
-      "choices": [
-        "cause",
-        "same",
-        "often",
-        "until"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "برد",
-      "choices": [
-        "winning",
-        "itself",
-        "volume",
-        "Aban"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "system",
-      "choices": [
-        "براي",
-        "نظام",
-        "بطور",
-        "نسخه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بلا",
-      "choices": [
-        "winner",
-        "London",
-        "without",
-        "two"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "تهاجم کردن",
-      "choices": [
-        "foot",
-        "region",
-        "August",
-        "attack"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "به همراه",
-      "choices": [
-        "museum",
-        "willing",
-        "father",
-        "with"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "صرفه جويي",
-      "choices": [
-        "economy",
-        "return",
-        "source",
-        "obstruction"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "zone",
-      "choices": [
-        "مستقل",
-        "نه",
-        "کارهای",
-        "منطقه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "periodical",
-      "choices": [
-        "سپاه",
-        "طراحی",
-        "مجله",
-        "بیماری"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "رودخانه اي",
-      "choices": [
-        "river",
-        "like",
-        "statistics",
-        "May"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "limited",
-      "choices": [
-        "مقام",
-        "مشهد",
-        "محدود",
-        "قدرت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "February",
-      "choices": [
-        "سعید",
-        "بهمن",
-        "سیاست",
-        "تقویم"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "three",
-      "choices": [
-        "مالی",
-        "خود",
-        "آنکه",
-        "سه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ساعته",
-      "choices": [
-        "inequality",
-        "inhabitant",
-        "hour",
-        "five"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "inhabitant",
-      "choices": [
-        "اهل",
-        "اجرای",
-        "طبق",
-        "عشق"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "what",
-      "choices": [
-        "استقلال",
-        "نماید",
-        "دسترسی",
-        "ها"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "وزني",
-      "choices": [
-        "weight",
-        "group",
-        "time",
-        "correlated"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "only",
-      "choices": [
-        "ورود",
-        "دهستان‌های",
-        "تنها",
-        "آباد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ثمر",
-      "choices": [
-        "France",
-        "result",
-        "uderstood",
-        "square"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مصحف",
-      "choices": [
-        "Qom",
-        "book",
-        "Kerman",
-        "left"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "polishing",
-      "choices": [
-        "دریا",
-        "پرداخت",
-        "ماشین",
-        "فرهنگی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "reason",
-      "choices": [
-        "اغلب",
-        "جهت",
-        "دهستان‌های",
-        "خیابان"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "steady",
-      "choices": [
-        "یاد",
-        "نشان",
-        "ثابت",
-        "شدت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "article",
-      "choices": [
-        "حق",
-        "مقاله",
-        "دلار",
-        "تحقیقات"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "right",
-      "choices": [
-        "حق",
-        "آلمانی",
-        "عالی",
-        "متحده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "last",
-      "choices": [
-        "باعث",
-        "آخر",
-        "سیستم",
-        "دی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "انگيختار",
-      "choices": [
-        "motive",
-        "neigborhood",
-        "political party",
-        "mother"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "announcement",
-      "choices": [
-        "بندی",
-        "انتشار",
-        "مسعود",
-        "اعلام"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "sign",
-      "choices": [
-        "کشوری",
-        "اشاره",
-        "آثار",
-        "نتایج"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "متعلق بمن",
-      "choices": [
-        "my",
-        "distance",
-        "demise",
-        "large"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "import",
-      "choices": [
-        "شوروی",
-        "دریا",
-        "ورود",
-        "دهستان‌های"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "economy",
-      "choices": [
-        "هوای",
-        "می‌باشند",
-        "اقتصاد",
-        "رشد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "غير شرطي",
-      "choices": [
-        "primary",
-        "everybody",
-        "unconditional",
-        "four"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "functions",
-      "choices": [
-        "کتاب‌های",
-        "لندن",
-        "دوباره",
-        "اعمال"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مافوق",
-      "choices": [
-        "superior",
-        "motor",
-        "manner",
-        "public"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "strength",
-      "choices": [
-        "تحقیقات",
-        "می",
-        "توان",
-        "قابل"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "king",
-      "choices": [
-        "آنچه",
-        "پادشاه",
-        "می‌شد",
-        "بندر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ارقام",
-      "choices": [
-        "philosophy",
-        "sediment",
-        "numbers",
-        "small"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "prescription",
-      "choices": [
-        "خارجی",
-        "نوعی",
-        "نسخه",
-        "شمال"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Mohammed",
-      "choices": [
-        "کیلومتری",
-        "تنها",
-        "آبان",
-        "محمد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "وابسته",
-      "choices": [
-        "May",
-        "related",
-        "too",
-        "shout"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "river",
-      "choices": [
-        "یاد",
-        "بسته",
-        "رود",
-        "شبکه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مبح",
-      "choices": [
-        "topic",
-        "second",
-        "suburbs",
-        "festival"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نفر",
-      "choices": [
-        "person",
-        "bring up",
-        "Mehr",
-        "Abbas"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Esfehan",
-      "choices": [
-        "اصفهان",
-        "یک",
-        "استان",
-        "برنده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "subject",
-      "choices": [
-        "نوشته",
-        "علی",
-        "مستقیم",
-        "باب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "period",
-      "choices": [
-        "دوران",
-        "ازدواج",
-        "زن",
-        "جمع"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "يک هفتم",
-      "choices": [
-        "manner",
-        "but also",
-        "Germany",
-        "seven"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "square",
-      "choices": [
-        "همراه",
-        "مربع",
-        "جامع",
-        "نویسندگان"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "stroke",
-      "choices": [
-        "محمد",
-        "نژاد",
-        "طی",
-        "خط"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "include",
-      "choices": [
-        "چنین",
-        "آلبوم",
-        "داستان",
-        "عبارتند"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "industry",
-      "choices": [
-        "شبیه",
-        "صنعت",
-        "جنوب",
-        "و"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اغلب",
-      "choices": [
-        "known",
-        "most",
-        "project",
-        "five"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مقرون به حقيقت",
-      "choices": [
-        "portion",
-        "true",
-        "letter",
-        "novel"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "چه",
-      "choices": [
-        "what",
-        "special",
-        "resistance",
-        "famous"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "کارگردان",
-      "choices": [
-        "help",
-        "stage manager",
-        "Korea",
-        "without"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "weight",
-      "choices": [
-        "ق",
-        "وزن",
-        "وسیله",
-        "دسته"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "operation",
-      "choices": [
-        "بودن",
-        "تاریخچه",
-        "نقل",
-        "عمل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "tune",
-      "choices": [
-        "آهنگ",
-        "عرضه",
-        "گسترش",
-        "مرگ"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "شرکت",
-      "choices": [
-        "orchard",
-        "participation",
-        "your",
-        "report"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "stomach",
-      "choices": [
-        "شش",
-        "مشغول",
-        "دل",
-        "سرزمین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "انقلاب",
-      "choices": [
-        "eight",
-        "revolution",
-        "fulfillment",
-        "interior"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مايل",
-      "choices": [
-        "friend",
-        "yours",
-        "willing",
-        "past"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "book",
-      "choices": [
-        "تقسیمات",
-        "کتاب",
-        "بیماری",
-        "توضیح"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "لمس",
-      "choices": [
-        "my",
-        "sultan",
-        "cause",
-        "soft"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "office",
-      "choices": [
-        "اداره",
-        "بین",
-        "زادگان",
-        "سلطان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "attack",
-      "choices": [
-        "حمله",
-        "فضایی",
-        "ابهام‌زدایی",
-        "نزدیکی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "در آمدن",
-      "choices": [
-        "Sinai Mountain",
-        "after",
-        "tied",
-        "become"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "contrary",
-      "choices": [
-        "دوست",
-        "افغانستان",
-        "قالب",
-        "ضد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "without",
-      "choices": [
-        "بدون",
-        "سیارک‌ها",
-        "بین",
-        "رو"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "به کارگيري",
-      "choices": [
-        "state",
-        "utilization",
-        "Pope",
-        "newspaper"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "غلط گرفتن",
-      "choices": [
-        "sale",
-        "correct",
-        "role",
-        "moon"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "تن",
-      "choices": [
-        "little",
-        "ton",
-        "discovery",
-        "region"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شامل",
-      "choices": [
-        "read",
-        "stratum",
-        "foot",
-        "including"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "foot",
-      "choices": [
-        "روستاهای",
-        "نیست",
-        "پا",
-        "کرده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "various",
-      "choices": [
-        "مختلف",
-        "عهده",
-        "فرمان",
-        "می‌دهد"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "متنعم",
-      "choices": [
-        "province",
-        "sediment",
-        "Iraq",
-        "wealthy"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "point",
-      "choices": [
-        "نقطه",
-        "خانه",
-        "می‌کردند",
-        "آمریکایی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Paul",
-      "choices": [
-        "مهم",
-        "کمتر",
-        "سنتی",
-        "پل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اشغال شده",
-      "choices": [
-        "occupied",
-        "supply",
-        "correct",
-        "centers"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "orchard",
-      "choices": [
-        "کوه",
-        "ورود",
-        "باغ",
-        "سیستم"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "there",
-      "choices": [
-        "ابراهیم",
-        "دو",
-        "دریاچه",
-        "آنجا"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "God",
-      "choices": [
-        "شاعر",
-        "خدا",
-        "مناسبت‌ها",
-        "مذهبی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "surely",
-      "choices": [
-        "دنبال",
-        "البته",
-        "آذر",
-        "وضعیت"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "participation",
-      "choices": [
-        "موفق",
-        "کتابخانه",
-        "شرکت",
-        "تقسیم"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "کرد نشين",
-      "choices": [
-        "passing",
-        "short",
-        "publisher",
-        "Kurdish"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "short",
-      "choices": [
-        "سبب",
-        "پرورش",
-        "کوتاه",
-        "موسسه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "وسايل",
-      "choices": [
-        "start",
-        "published",
-        "way",
-        "revolution"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "راه",
-      "choices": [
-        "seriously",
-        "road",
-        "year",
-        "exist"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "رابطه",
-      "choices": [
-        "spouse",
-        "inspection",
-        "stage",
-        "relation"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "mud",
-      "choices": [
-        "جز",
-        "گل",
-        "تجاری",
-        "نقش"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "times more",
-      "choices": [
-        "ملل",
-        "سال",
-        "برابر",
-        "انتقال"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "first",
-      "choices": [
-        "اول",
-        "حد",
-        "حرکت",
-        "داده"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "view",
-      "choices": [
-        "حاصل",
-        "را",
-        "کوتاه",
-        "نظر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "income",
-      "choices": [
-        "صدای",
-        "برد",
-        "درآمد",
-        "جمهور"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "loaded",
-      "choices": [
-        "استاندارد",
-        "تغییر",
-        "پادشاهی",
-        "پر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "visage",
-      "choices": [
-        "رو",
-        "زبان",
-        "مصر",
-        "ارزش"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نساء",
-      "choices": [
-        "article",
-        "resistance",
-        "woman",
-        "finished"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "work",
-      "choices": [
-        "مناسبت‌ها",
-        "کشورهای",
-        "مقاله",
-        "کار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "spots",
-      "choices": [
-        "آنان",
-        "وزارت",
-        "قالب",
-        "نقاط"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مناسب",
-      "choices": [
-        "Paul",
-        "ranks",
-        "Dollar",
-        "sign"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "parliament",
-      "choices": [
-        "مجلس",
-        "می‌تواند",
-        "ویکی",
-        "ترانه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "give",
-      "choices": [
-        "دادن",
-        "توضیح",
-        "عمده",
-        "ژوئن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "stage manager",
-      "choices": [
-        "کارهای",
-        "پاریس",
-        "کارگردان",
-        "پیام"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "چينه",
-      "choices": [
-        "nowadays",
-        "India",
-        "stratum",
-        "left"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ساختمان",
-      "choices": [
-        "salary",
-        "structure",
-        "side",
-        "counted"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مه",
-      "choices": [
-        "rank",
-        "suburbs",
-        "May",
-        "excess"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "their",
-      "choices": [
-        "مشاهیر",
-        "فرزند",
-        "خود",
-        "رده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "rear",
-      "choices": [
-        "استان",
-        "حال",
-        "پشت",
-        "دره"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "واژه",
-      "choices": [
-        "opposite",
-        "word",
-        "speed",
-        "zone"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بهمن",
-      "choices": [
-        "foot",
-        "February",
-        "spring",
-        "valley"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "sale",
-      "choices": [
-        "آذربایجان",
-        "می‌گوید",
-        "موجود",
-        "فروش"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "number",
-      "choices": [
-        "شمار",
-        "انسان",
-        "مدیر",
-        "آثار"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "عملکرد",
-      "choices": [
-        "operation",
-        "stratum",
-        "famous",
-        "case"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بطور حتم",
-      "choices": [
-        "mountain",
-        "surely",
-        "superior",
-        "truth"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "خرم",
-      "choices": [
-        "operation",
-        "news",
-        "letter",
-        "green"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "صده",
-      "choices": [
-        "thereafter",
-        "probability",
-        "century",
-        "source"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "University",
-      "choices": [
-        "شهر",
-        "انتشارات",
-        "پول",
-        "دانشگاه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "درگذشت",
-      "choices": [
-        "demise",
-        "operation",
-        "registeration",
-        "god"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Egypt",
-      "choices": [
-        "سیاه",
-        "موتور",
-        "مصر",
-        "گرفت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دفاع",
-      "choices": [
-        "word",
-        "yet",
-        "length",
-        "defense"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "resistance",
-      "choices": [
-        "مقاومت",
-        "حل",
-        "مناطق",
-        "گیری"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "face",
-      "choices": [
-        "فوتبال",
-        "ورود",
-        "ورودی",
-        "صورت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ته نشين",
-      "choices": [
-        "person",
-        "probability",
-        "winning",
-        "sediment"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "body",
-      "choices": [
-        "جمهور",
-        "تأسیس",
-        "بدن",
-        "پیشنهاد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "love",
-      "choices": [
-        "پیام",
-        "عشق",
-        "باشد",
-        "م"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "hard",
-      "choices": [
-        "سخت",
-        "راک",
-        "سفید",
-        "عصر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "افراد",
-      "choices": [
-        "society",
-        "centers",
-        "performance",
-        "individuals"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "surrounding",
-      "choices": [
-        "خرداد",
-        "اطراف",
-        "امام",
-        "داخل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "هنر",
-      "choices": [
-        "art",
-        "what",
-        "mountain",
-        "England"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "festival",
-      "choices": [
-        "جشنواره",
-        "تشکیل",
-        "محیط",
-        "جنوبی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "عراق",
-      "choices": [
-        "model",
-        "lack",
-        "Iraq",
-        "Saltanat"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "seaport",
-      "choices": [
-        "تحقیقات",
-        "آتش",
-        "بندر",
-        "گرفته‌است"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "region",
-      "choices": [
-        "می‌رود",
-        "ویکی",
-        "مناطق",
-        "مذهبی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "کرمان",
-      "choices": [
-        "Kerman",
-        "went",
-        "counted",
-        "organ"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بانک",
-      "choices": [
-        "occupied",
-        "bank",
-        "reason",
-        "turkish"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "لسان",
-      "choices": [
-        "science",
-        "dependent",
-        "tongue",
-        "various"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "انتخاب",
-      "choices": [
-        "relations",
-        "selection",
-        "institution",
-        "before"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آنگه",
-      "choices": [
-        "type",
-        "blood",
-        "then",
-        "handle"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "محترم داشتن",
-      "choices": [
-        "death",
-        "Afghanistan",
-        "respect",
-        "selection"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "جاه",
-      "choices": [
-        "only",
-        "race",
-        "area",
-        "position"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "place",
-      "choices": [
-        "ه",
-        "بزرگ‌ترین",
-        "مکان",
-        "روسیه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دولت",
-      "choices": [
-        "last",
-        "government",
-        "singer",
-        "relation"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "finished",
-      "choices": [
-        "دریاچه",
-        "سفر",
-        "گاهی",
-        "تمام"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "دستگاه",
-      "choices": [
-        "Dollar",
-        "plant",
-        "neigborhood",
-        "transfer"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بعد از",
-      "choices": [
-        "order",
-        "after",
-        "correct",
-        "tremor"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "year old",
-      "choices": [
-        "ساله",
-        "مجلس",
-        "جلوگیری",
-        "دهستان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "threshold",
-      "choices": [
-        "درگاه",
-        "مواد",
-        "دادن",
-        "ایشان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "يکه",
-      "choices": [
-        "corps",
-        "unique",
-        "sediment",
-        "art"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "به داخل",
-      "choices": [
-        "period",
-        "dill",
-        "inside",
-        "warm"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مشاهده",
-      "choices": [
-        "human",
-        "resistance",
-        "perception",
-        "distance"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "north",
-      "choices": [
-        "شمالی",
-        "بی‌بی‌سی",
-        "شمال",
-        "مصرف"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ناقص بودن",
-      "choices": [
-        "special",
-        "growth",
-        "prescription",
-        "lack"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "marriage",
-      "choices": [
-        "خارجی",
-        "گردید",
-        "ازدواج",
-        "شکست"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آب ديدگي",
-      "choices": [
-        "way",
-        "number",
-        "temper",
-        "Mordad"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "period",
-      "choices": [
-        "فصل",
-        "دوره",
-        "دانش",
-        "کشوری"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "tall",
-      "choices": [
-        "اشعار",
-        "کنار",
-        "آبی",
-        "بلند"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "عباس",
-      "choices": [
-        "Abbas",
-        "place",
-        "dam",
-        "respect"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "slow",
-      "choices": [
-        "نویسنده",
-        "کند",
-        "مثال",
-        "لندن"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "person",
-      "choices": [
-        "فرد",
-        "حد",
-        "آوریل",
-        "حسن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نشريه دوره اي",
-      "choices": [
-        "incoming",
-        "periodical",
-        "truth",
-        "family"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آوا",
-      "choices": [
-        "London",
-        "voice",
-        "up",
-        "wet"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "هفت روز",
-      "choices": [
-        "week",
-        "story",
-        "my",
-        "world"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "کودک",
-      "choices": [
-        "child",
-        "translation",
-        "too",
-        "usually"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "matter",
-      "choices": [
-        "معنای",
-        "سخت",
-        "خانواده",
-        "ماده"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "متن",
-      "choices": [
-        "text",
-        "Seine",
-        "red",
-        "do"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "factors",
-      "choices": [
-        "همکاری",
-        "عوامل",
-        "سرخ",
-        "گسترده"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ton",
-      "choices": [
-        "بعد",
-        "شدند",
-        "تن",
-        "عمر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نمره",
-      "choices": [
-        "number",
-        "most",
-        "have",
-        "Saheb"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "رخ",
-      "choices": [
-        "former",
-        "rukh",
-        "friend",
-        "God"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "نقش کردن",
-      "choices": [
-        "museum",
-        "paint",
-        "return",
-        "small"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "رشته",
-      "choices": [
-        "sake",
-        "law",
-        "speech",
-        "field of study"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "registeration",
-      "choices": [
-        "قرمز",
-        "افغانستان",
-        "دکتر",
-        "ثبت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "دخل",
-      "choices": [
-        "income",
-        "green",
-        "period",
-        "age"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "پاگير",
-      "choices": [
-        "period",
-        "obstruction",
-        "size",
-        "musical instrument"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "سابق",
-      "choices": [
-        "only",
-        "center",
-        "former",
-        "foundation"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "چند تا",
-      "choices": [
-        "look",
-        "number",
-        "several",
-        "regarding"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "in order to",
-      "choices": [
-        "براي",
-        "کنند",
-        "حمایت",
-        "نرم"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "طرح",
-      "choices": [
-        "import",
-        "and",
-        "court",
-        "project"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "currently",
-      "choices": [
-        "اکنون",
-        "دوران",
-        "کتاب‌های",
-        "ژوئن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "model",
-      "choices": [
-        "مدل",
-        "اجرا",
-        "مربع",
-        "طبق"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "shine",
-      "choices": [
-        "سفید",
-        "را",
-        "برق",
-        "آیت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "girl",
-      "choices": [
-        "اما",
-        "پاریس",
-        "دختر",
-        "مهدی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "conflict",
-      "choices": [
-        "پرداخت",
-        "اقتصادی",
-        "صاحب",
-        "نبرد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Pope",
-      "choices": [
-        "تاریخ",
-        "پاپ",
-        "شدند",
-        "بی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "فروشگاه",
-      "choices": [
-        "family",
-        "intensity",
-        "end",
-        "market"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "رست",
-      "choices": [
-        "Kurdish",
-        "mason",
-        "distance",
-        "rank"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "دور",
-      "choices": [
-        "today",
-        "term",
-        "nations",
-        "sign"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "former",
-      "choices": [
-        "مطلق",
-        "اکتبر",
-        "باید",
-        "سابق"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "قالب",
-      "choices": [
-        "five",
-        "period",
-        "mold",
-        "iron"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "fracture",
-      "choices": [
-        "قدرت",
-        "شکست",
-        "نظامی",
-        "حال"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "معده",
-      "choices": [
-        "stomach",
-        "hour",
-        "time",
-        "length"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "امام",
-      "choices": [
-        "dependent",
-        "two",
-        "Imam",
-        "saying"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "plan",
-      "choices": [
-        "کشف",
-        "آمار",
-        "نقشه",
-        "موجود"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "west",
-      "choices": [
-        "کارگردان",
-        "منظور",
-        "غرب",
-        "اکتبر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "طرز عمل",
-      "choices": [
-        "speed",
-        "treatment",
-        "Abbas",
-        "source"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "سازمان",
-      "choices": [
-        "organization",
-        "start",
-        "Ahmed",
-        "Korea"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "itself",
-      "choices": [
-        "ارتفاع",
-        "تغییر",
-        "خودش",
-        "جمهوری"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "yours",
-      "choices": [
-        "شما",
-        "منطقه",
-        "انجام",
-        "گل"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "خبر دادن",
-      "choices": [
-        "September",
-        "organization",
-        "report",
-        "selection"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پاسخ",
-      "choices": [
-        "reply",
-        "registeration",
-        "share",
-        "Iraq"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مقرري",
-      "choices": [
-        "same",
-        "report",
-        "salary",
-        "why"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مسائل",
-      "choices": [
-        "problems",
-        "Mahmud",
-        "providing",
-        "time"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "الي",
-      "choices": [
-        "until",
-        "turkish",
-        "rear",
-        "increase"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "soccer",
-      "choices": [
-        "در",
-        "طبق",
-        "خویش",
-        "فوتبال"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "case",
-      "choices": [
-        "تعریف",
-        "مشهور",
-        "خمینی",
-        "جعبه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "قم",
-      "choices": [
-        "plan",
-        "Qom",
-        "interior",
-        "spouse"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اتو کردن",
-      "choices": [
-        "ten",
-        "iron",
-        "independence",
-        "relevant"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "number",
-      "choices": [
-        "تعداد",
-        "خراسان",
-        "شکست",
-        "شرکت"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "خودش",
-      "choices": [
-        "Mohammed",
-        "those",
-        "itself",
-        "group"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "true",
-      "choices": [
-        "استان‌های",
-        "هزار",
-        "راست",
-        "صد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آثار",
-      "choices": [
-        "presence",
-        "wealthy",
-        "economy",
-        "works"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Korea",
-      "choices": [
-        "کره",
-        "آلمانی",
-        "شما",
-        "وزیر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "seriously",
-      "choices": [
-        "تاریخ",
-        "کند",
-        "جدا",
-        "ساخت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "توافقنامه",
-      "choices": [
-        "seizure",
-        "agreement",
-        "child",
-        "unique"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "news",
-      "choices": [
-        "فوتبال",
-        "نبرد",
-        "باقی",
-        "اطلاعات"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "model",
-      "choices": [
-        "مثل",
-        "کلمه",
-        "زمین",
-        "داشته"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "made",
-      "choices": [
-        "امروز",
-        "نزدیکی",
-        "تاسیس",
-        "ساخته"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "December",
-      "choices": [
-        "ستاره",
-        "خدمات",
-        "دسامبر",
-        "کمی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "flat",
-      "choices": [
-        "تشکیل",
-        "دهستان",
-        "شده‌است",
-        "تخت"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پراکندگي",
-      "choices": [
-        "scattering",
-        "November",
-        "by",
-        "often"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "library",
-      "choices": [
-        "بهمن",
-        "فوق",
-        "کتابخانه",
-        "دین"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "کل",
-      "choices": [
-        "and",
-        "total",
-        "school",
-        "with"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "superior",
-      "choices": [
-        "از",
-        "برتر",
-        "چشم",
-        "ی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ازدواج",
-      "choices": [
-        "that",
-        "utilization",
-        "marriage",
-        "small"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دوست کردن",
-      "choices": [
-        "friend",
-        "market",
-        "Nur",
-        "province"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حوزه",
-      "choices": [
-        "domain",
-        "hanging",
-        "cause",
-        "source"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Shah",
-      "choices": [
-        "شاه",
-        "است",
-        "وابسته",
-        "خارجی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "space",
-      "choices": [
-        "دور",
-        "سرخ",
-        "عدد",
-        "جا"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "mother",
-      "choices": [
-        "به‌",
-        "یعنی",
-        "مادر",
-        "تهران"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "عوامل",
-      "choices": [
-        "factors",
-        "worth",
-        "soul",
-        "mankind"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "احتمال",
-      "choices": [
-        "probability",
-        "Fars",
-        "India",
-        "product"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "exist",
-      "choices": [
-        "اصول",
-        "عراق",
-        "بودن",
-        "سیاه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "عزيمت کردن",
-      "choices": [
-        "poet",
-        "why",
-        "economy",
-        "start"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مراکز",
-      "choices": [
-        "love",
-        "space",
-        "centers",
-        "Seine"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "materials",
-      "choices": [
-        "واژه",
-        "مواد",
-        "محصولات",
-        "سعید"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "office",
-      "choices": [
-        "اجتماعی",
-        "آمد",
-        "انتشارات",
-        "دفتر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مدل سازي",
-      "choices": [
-        "model",
-        "Shah",
-        "fracture",
-        "area"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "singer",
-      "choices": [
-        "کنونی",
-        "مدیریت",
-        "خواننده",
-        "جهت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "this",
-      "choices": [
-        "حساب",
-        "دانشکده",
-        "اين",
-        "پیام"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "آلت",
-      "choices": [
-        "doctor",
-        "organ",
-        "soccer",
-        "office"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "زمان",
-      "choices": [
-        "third",
-        "time",
-        "word",
-        "text"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "political party",
-      "choices": [
-        "حزب",
-        "استرالیا",
-        "ساخته",
-        "شورای"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "product",
-      "choices": [
-        "هنوز",
-        "بانک",
-        "اشاره",
-        "محصول"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "inequality",
-      "choices": [
-        "اختلاف",
-        "وبگاه",
-        "آهنگ",
-        "هدف"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ماسبق",
-      "choices": [
-        "manner",
-        "market",
-        "past",
-        "murdered"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "محمود",
-      "choices": [
-        "excess",
-        "space",
-        "Mahmud",
-        "view"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "فرهنگ",
-      "choices": [
-        "Farhang",
-        "fulfillment",
-        "statistics",
-        "energetic"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "time",
-      "choices": [
-        "هنگام",
-        "زندان",
-        "رسیدن",
-        "کوچک"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "motive",
-      "choices": [
-        "مجله",
-        "عمومی",
-        "پاپ",
-        "موجب"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سپاه",
-      "choices": [
-        "intention",
-        "network",
-        "exist",
-        "corps"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "thermometer",
-      "choices": [
-        "ابهام‌زدایی",
-        "درجه",
-        "خلیج",
-        "کردستان"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "children",
-      "choices": [
-        "کیلومتری",
-        "زادگان",
-        "اسلام",
-        "نیمه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "neigborhood",
-      "choices": [
-        "تاریخ",
-        "بلکه",
-        "صورت",
-        "محله"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پر",
-      "choices": [
-        "everybody",
-        "province",
-        "domain",
-        "loaded"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "world",
-      "choices": [
-        "ابن",
-        "مدیریت",
-        "جهان",
-        "جعبه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "وابسته بانسان",
-      "choices": [
-        "service",
-        "human",
-        "school",
-        "interior"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "وسايل",
-      "choices": [
-        "Meshed",
-        "list",
-        "way",
-        "hand"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "help",
-      "choices": [
-        "کننده",
-        "کمک",
-        "یافته",
-        "ترین"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "France",
-      "choices": [
-        "را",
-        "فرانسه",
-        "یکم",
-        "مرز"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "عبدالله",
-      "choices": [
-        "sultan",
-        "hill",
-        "given",
-        "Abdullah"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "salary",
-      "choices": [
-        "برتر",
-        "حقوق",
-        "محمدرضا",
-        "فوق"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Azar",
-      "choices": [
-        "عدد",
-        "آذر",
-        "تفسیر",
-        "میلادی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کل",
-      "choices": [
-        "seizure",
-        "total",
-        "University",
-        "currently"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "science",
-      "choices": [
-        "کمونیست",
-        "تاریخی",
-        "علوم",
-        "جنوب"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "knowledge",
-      "choices": [
-        "دانش",
-        "کشته",
-        "علمی",
-        "ایرانیان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ناس",
-      "choices": [
-        "space",
-        "people",
-        "report",
-        "ready"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "based on",
-      "choices": [
-        "دادن",
-        "اکنون",
-        "طبق",
-        "کیلومتری"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "برحسب",
-      "choices": [
-        "born",
-        "return",
-        "based on",
-        "town"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "محاذي",
-      "choices": [
-        "including",
-        "opposite",
-        "cases",
-        "young"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "such as",
-      "choices": [
-        "گرفته",
-        "مانند",
-        "آمد",
-        "برج"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کننده",
-      "choices": [
-        "performer",
-        "flat",
-        "rukh",
-        "time"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "معني دار",
-      "choices": [
-        "performer",
-        "significant",
-        "unconditional",
-        "trust"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "رويش",
-      "choices": [
-        "exist",
-        "growth",
-        "made",
-        "spring"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "هيکل",
-      "choices": [
-        "body",
-        "inhabitant",
-        "Farhang",
-        "tall"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "فهرست",
-      "choices": [
-        "list",
-        "matter",
-        "except",
-        "nowadays"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "warm",
-      "choices": [
-        "درآمد",
-        "عهده",
-        "هایی",
-        "گرم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Mahmud",
-      "choices": [
-        "محمود",
-        "سده",
-        "یکدیگر",
-        "دنبال"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مرداد",
-      "choices": [
-        "specific",
-        "correct",
-        "Mordad",
-        "works"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "position",
-      "choices": [
-        "داخل",
-        "فعال",
-        "مقام",
-        "ساخته"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "بسيط",
-      "choices": [
-        "last",
-        "source",
-        "start",
-        "simple"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "cases",
-      "choices": [
-        "قرار",
-        "موارد",
-        "اکنون",
-        "خوبی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "رويه",
-      "choices": [
-        "selection",
-        "seven",
-        "surface",
-        "Mehr"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "house",
-      "choices": [
-        "خانه",
-        "شاعر",
-        "منابع",
-        "کمک"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "newspaper",
-      "choices": [
-        "دسترسی",
-        "جلد",
-        "حاکم",
-        "روزنامه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "متمايز",
-      "choices": [
-        "center",
-        "result",
-        "family",
-        "different"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "iron",
-      "choices": [
-        "آهن",
-        "کشور",
-        "بخش",
-        "سید"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "birth",
-      "choices": [
-        "شرایط",
-        "دهستان‌های",
-        "تولد",
-        "بسته"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نصيب",
-      "choices": [
-        "order",
-        "share",
-        "time",
-        "December"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "خبر دادن",
-      "choices": [
-        "March",
-        "Khan",
-        "polishing",
-        "report"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "علم",
-      "choices": [
-        "stage",
-        "lack",
-        "market",
-        "science"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "state",
-      "choices": [
-        "موسسه",
-        "همچون",
-        "به",
-        "حال"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "worthiness",
-      "choices": [
-        "آلبوم",
-        "ملی",
-        "سرعت",
-        "ارزش"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "famous",
-      "choices": [
-        "مربع",
-        "روابط",
-        "عربستان",
-        "بنام"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "perception",
-      "choices": [
-        "دوران",
-        "پاپ",
-        "مشاهده",
-        "مساحت"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "پرواز",
-      "choices": [
-        "letter",
-        "winner",
-        "flight",
-        "publishing"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "country",
-      "choices": [
-        "می‌باشد",
-        "نیز",
-        "کشور",
-        "کامل"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "همزمان",
-      "choices": [
-        "start",
-        "under",
-        "contemporary",
-        "only"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "رخسار",
-      "choices": [
-        "visage",
-        "they",
-        "she",
-        "domain"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "philosophy",
-      "choices": [
-        "پشت",
-        "فلسفه",
-        "تاریخچه",
-        "باز"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "money",
-      "choices": [
-        "جشنواره",
-        "صنعت",
-        "بطور",
-        "پول"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "منظومه",
-      "choices": [
-        "motor",
-        "universal",
-        "collection",
-        "before"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "orient",
-      "choices": [
-        "شرق",
-        "امپراتوری",
-        "خواهد",
-        "کوه"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "چه چه",
-      "choices": [
-        "relevant",
-        "Europe",
-        "star",
-        "or"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "too",
-      "choices": [
-        "قرمز",
-        "دفتر",
-        "مارس",
-        "هم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "province",
-      "choices": [
-        "می‌کرد",
-        "انتشارات",
-        "حتی",
-        "شهرستان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "شهرستان",
-      "choices": [
-        "science",
-        "schedule",
-        "province",
-        "decade"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ولو شدن",
-      "choices": [
-        "spread",
-        "willing",
-        "wealthy",
-        "handle"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حضر",
-      "choices": [
-        "presence",
-        "threshold",
-        "specific",
-        "limits"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "method",
-      "choices": [
-        "سمت",
-        "درجه",
-        "شب",
-        "روش"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "what",
-      "choices": [
-        "چه",
-        "شده",
-        "راک",
-        "وابسته"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سفر",
-      "choices": [
-        "girl",
-        "works",
-        "Europe",
-        "trip"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "قصد",
-      "choices": [
-        "performer",
-        "intention",
-        "Saltanat",
-        "intention"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اصول رعيتي",
-      "choices": [
-        "principles",
-        "there",
-        "third",
-        "style"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "son",
-      "choices": [
-        "دریاچه",
-        "بررسی",
-        "کسب",
-        "پسر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "فرانسه",
-      "choices": [
-        "mud",
-        "utilization",
-        "France",
-        "house"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ناشر",
-      "choices": [
-        "view",
-        "publisher",
-        "letter",
-        "region"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "percentage",
-      "choices": [
-        "کند",
-        "مشاهیر",
-        "مرز",
-        "درصد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "باختر",
-      "choices": [
-        "end",
-        "west",
-        "November",
-        "Sinai Mountain"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "نفر",
-      "choices": [
-        "Mahmud",
-        "intention",
-        "person",
-        "gauze"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "topic",
-      "choices": [
-        "همکاری",
-        "سلطنت",
-        "احتمال",
-        "موضوع"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "third",
-      "choices": [
-        "متحده",
-        "سوم",
-        "براساس",
-        "نشده"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "increase",
-      "choices": [
-        "بازیکنان",
-        "اضافه",
-        "مهر",
-        "جدول"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "training",
-      "choices": [
-        "کشورهای",
-        "آموزش",
-        "رخ",
-        "جمهوری"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "born",
-      "choices": [
-        "متولد",
-        "باستانی",
-        "حد",
-        "قرن"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "علت",
-      "choices": [
-        "gauze",
-        "cause",
-        "stating",
-        "flight"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شاگردي",
-      "choices": [
-        "yet",
-        "king",
-        "Esfehan",
-        "training"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بسته",
-      "choices": [
-        "source",
-        "tied",
-        "office",
-        "fire"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "famous",
-      "choices": [
-        "مربوط",
-        "می‌توان",
-        "معروف",
-        "جعبه"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "انواع",
-      "choices": [
-        "surely",
-        "park",
-        "types",
-        "visage"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Iraq",
-      "choices": [
-        "گرفته‌است",
-        "گوناگون",
-        "عراق",
-        "گردد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ژوئن",
-      "choices": [
-        "presence",
-        "June",
-        "Reza",
-        "inside"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "امر",
-      "choices": [
-        "blood",
-        "rarely",
-        "handle",
-        "matter"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "حقيقت",
-      "choices": [
-        "saying",
-        "December",
-        "truth",
-        "murdered"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ملل",
-      "choices": [
-        "power",
-        "view",
-        "nations",
-        "public"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "except",
-      "choices": [
-        "جنوب",
-        "ارومیه",
-        "جز",
-        "می‌گردد"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سبقت",
-      "choices": [
-        "theater",
-        "rank",
-        "human",
-        "passing"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "hajji",
-      "choices": [
-        "بدون",
-        "گردد",
-        "حاج",
-        "محسن"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "خدمات",
-      "choices": [
-        "statistics",
-        "services",
-        "centers",
-        "four"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "اجرا",
-      "choices": [
-        "king",
-        "Khorasan",
-        "festival",
-        "performance"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "upon",
-      "choices": [
-        "دریا",
-        "سر",
-        "داستان",
-        "مجلس"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "زمان",
-      "choices": [
-        "reduction",
-        "Farhang",
-        "group",
-        "time"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "چنانچه",
-      "choices": [
-        "weight",
-        "winning",
-        "union",
-        "if"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "god",
-      "choices": [
-        "شهرداری",
-        "هنوز",
-        "آنجا",
-        "الله"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "time",
-      "choices": [
-        "هدایت",
-        "اعمال",
-        "بار",
-        "اهل"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مقاله",
-      "choices": [
-        "total",
-        "why",
-        "Khorasan",
-        "article"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "poetry",
-      "choices": [
-        "ملی",
-        "البته",
-        "شعر",
-        "قرآن"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "soft",
-      "choices": [
-        "نرم",
-        "رادیو",
-        "دینی",
-        "نمایش"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Meshed",
-      "choices": [
-        "مشهد",
-        "کشاورزی",
-        "بستک",
-        "کودکان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "defense",
-      "choices": [
-        "پارک",
-        "الله",
-        "بنام",
-        "دفاع"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "هزار",
-      "choices": [
-        "well-known",
-        "my",
-        "they",
-        "thousand"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "start",
-      "choices": [
-        "شمالی",
-        "ابتدا",
-        "خمینی",
-        "داشت"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "پل",
-      "choices": [
-        "Paul",
-        "daytime",
-        "what",
-        "green"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "six",
-      "choices": [
-        "رابطه",
-        "شش",
-        "کم",
-        "آمار"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "side",
-      "choices": [
-        "سمت",
-        "اساس",
-        "شهید",
-        "تمام"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "after",
-      "choices": [
-        "قوانین",
-        "دنبال",
-        "شرایط",
-        "استرالیا"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "inside",
-      "choices": [
-        "داخل",
-        "بندر",
-        "دوره",
-        "استان"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "رضا",
-      "choices": [
-        "singer",
-        "Reza",
-        "this",
-        "appearance"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "but also",
-      "choices": [
-        "بلکه",
-        "اسلامی",
-        "ایشان",
-        "من"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ترقي کردن",
-      "choices": [
-        "month",
-        "increase",
-        "universal",
-        "their"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "تقلا",
-      "choices": [
-        "river",
-        "publishing",
-        "right",
-        "struggle"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مام",
-      "choices": [
-        "friend",
-        "matter",
-        "letter",
-        "mother"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "result",
-      "choices": [
-        "او",
-        "طور",
-        "مرحله",
-        "حاصل"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "structure",
-      "choices": [
-        "ساختار",
-        "و",
-        "دل",
-        "اعمال"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سبک",
-      "choices": [
-        "manner",
-        "rose garden",
-        "take",
-        "then"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "sacred",
-      "choices": [
-        "المپیک",
-        "مقدس",
-        "تصویر",
-        "ق"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شمرده",
-      "choices": [
-        "various",
-        "counted",
-        "different",
-        "ministry"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "professor",
-      "choices": [
-        "کمونیست",
-        "زیرا",
-        "استاد",
-        "آفریقا"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "transportation",
-      "choices": [
-        "می‌دهد",
-        "دار",
-        "نقل",
-        "نوعی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مارس",
-      "choices": [
-        "remembering",
-        "March",
-        "gauze",
-        "spouse"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "کوه",
-      "choices": [
-        "river",
-        "free",
-        "mountain",
-        "time"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "جانبي",
-      "choices": [
-        "side",
-        "surely",
-        "thrust",
-        "they"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Dollar",
-      "choices": [
-        "های",
-        "اکنون",
-        "دلار",
-        "تصویر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "حرفه",
-      "choices": [
-        "profession",
-        "word",
-        "help",
-        "death"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سه لو",
-      "choices": [
-        "source",
-        "tied",
-        "Tehran",
-        "three"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "گرم کردن",
-      "choices": [
-        "soil",
-        "subject",
-        "capable",
-        "warm"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "verdict",
-      "choices": [
-        "فقط",
-        "محلی",
-        "بیش",
-        "حکم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "theater",
-      "choices": [
-        "دست",
-        "می‌رود",
-        "تئاتر",
-        "عمده"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "موتور",
-      "choices": [
-        "motor",
-        "famous",
-        "professor",
-        "novel"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "october",
-      "choices": [
-        "نامه",
-        "اکتبر",
-        "گردد",
-        "نقاط"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "موت",
-      "choices": [
-        "stage",
-        "death",
-        "subordinate",
-        "first"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بر ماليدن",
-      "choices": [
-        "fulfillment",
-        "take",
-        "help",
-        "source"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مربع",
-      "choices": [
-        "new",
-        "square",
-        "what",
-        "factors"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "جدا",
-      "choices": [
-        "soil",
-        "Hasan",
-        "Ahmed",
-        "seriously"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "England",
-      "choices": [
-        "اصفهان",
-        "هاي",
-        "سخت",
-        "انگلستان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "gallows",
-      "choices": [
-        "ابن",
-        "نژاد",
-        "کم",
-        "دار"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پاپ",
-      "choices": [
-        "blood",
-        "sale",
-        "Egypt",
-        "Pope"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "she",
-      "choices": [
-        "او",
-        "اجازه",
-        "باشند",
-        "دین"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "سن",
-      "choices": [
-        "Seine",
-        "birth",
-        "suburbs",
-        "rukh"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "عزيمت کردن",
-      "choices": [
-        "structure",
-        "over",
-        "start",
-        "cases"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "manner",
-      "choices": [
-        "سمت",
-        "نه",
-        "گونه",
-        "آسیا"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "نفر",
-      "choices": [
-        "suburbs",
-        "study",
-        "rose garden",
-        "person"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "برنا",
-      "choices": [
-        "young",
-        "Ahmed",
-        "order",
-        "Meshed"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "به انجام رساندن",
-      "choices": [
-        "love",
-        "whoever",
-        "power",
-        "do"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "transfer",
-      "choices": [
-        "می‌تواند",
-        "انتقال",
-        "عرضه",
-        "اش"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "پارکومتر",
-      "choices": [
-        "meter",
-        "intention",
-        "wealthy",
-        "opposite"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "آلبوم",
-      "choices": [
-        "style",
-        "complete",
-        "demise",
-        "album"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "متعدد",
-      "choices": [
-        "likeness",
-        "various",
-        "piece",
-        "start"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "دهه",
-      "choices": [
-        "decade",
-        "society",
-        "appearance",
-        "year old"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "growth",
-      "choices": [
-        "ذکر",
-        "رشد",
-        "راست",
-        "مهم‌ترین"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بوم",
-      "choices": [
-        "country",
-        "tree",
-        "have",
-        "girl"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "مابقي",
-      "choices": [
-        "remaining",
-        "currently",
-        "road",
-        "like"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "دهستان",
-      "choices": [
-        "statistics",
-        "rural district",
-        "various",
-        "written"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "تازه کردن",
-      "choices": [
-        "star",
-        "Germany",
-        "verdict",
-        "fresh"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "منته",
-      "choices": [
-        "trace",
-        "intention",
-        "finally",
-        "race"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "institution",
-      "choices": [
-        "موسسه",
-        "دهستان‌های",
-        "سطح",
-        "همچون"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "رده",
-      "choices": [
-        "ton",
-        "ceremony",
-        "lack",
-        "row"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "start",
-      "choices": [
-        "بعدی",
-        "آغاز",
-        "چند",
-        "هوا"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "total",
-      "choices": [
-        "انتخابات",
-        "کل",
-        "اسماعیل",
-        "کوتاه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مثال",
-      "choices": [
-        "resulting",
-        "likeness",
-        "regarding",
-        "ancient."
-      ],
-      "answer": 1
-    },
-    {
-      "question": "محل",
-      "choices": [
-        "individuals",
-        "source",
-        "post",
-        "area"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "انجمن",
-      "choices": [
-        "simple",
-        "free",
-        "science",
-        "society"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "little",
-      "choices": [
-        "شماره",
-        "کم",
-        "دریایی",
-        "متحده"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "جاي",
-      "choices": [
-        "institution",
-        "or",
-        "place",
-        "age"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مدل سازي",
-      "choices": [
-        "model",
-        "sacred",
-        "stating",
-        "there"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "under",
-      "choices": [
-        "مجله",
-        "تحت",
-        "قدرت",
-        "شامل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "to",
-      "choices": [
-        "دهد",
-        "اطلاعات",
-        "به",
-        "می‌کنند"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "year",
-      "choices": [
-        "مدتی",
-        "شوند",
-        "دورهٔ",
-        "سال"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "occupied",
-      "choices": [
-        "ابراهیم",
-        "شیر",
-        "میان",
-        "مشغول"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "usually",
-      "choices": [
-        "معمولا",
-        "سیاست",
-        "محدود",
-        "اجرام"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "prominent",
-      "choices": [
-        "جمهوری",
-        "برجسته",
-        "مدیر",
-        "اعلام"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شهر کوچک",
-      "choices": [
-        "union",
-        "year",
-        "share",
-        "town"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "امکان پذير",
-      "choices": [
-        "size",
-        "Masood",
-        "possible",
-        "presence"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "surname",
-      "choices": [
-        "نژاد",
-        "مراکز",
-        "شهرت",
-        "ایرانیان"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "murder",
-      "choices": [
-        "متحد",
-        "قتل",
-        "جرم",
-        "زندگینامه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آنها",
-      "choices": [
-        "they",
-        "use",
-        "side",
-        "by"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "then",
-      "choices": [
-        "ولایت",
-        "بازیگر",
-        "استاد",
-        "سپس"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "market",
-      "choices": [
-        "بازار",
-        "بزرگ‌ترین",
-        "گذاری",
-        "منظور"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "river",
-      "choices": [
-        "اخیر",
-        "زیاد",
-        "رودخانه",
-        "جنسی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "جنوب",
-      "choices": [
-        "south",
-        "uderstood",
-        "office",
-        "left"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "month",
-      "choices": [
-        "خرداد",
-        "بعدها",
-        "کامپیوتر",
-        "پوشش"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "step",
-      "choices": [
-        "آمریکایی",
-        "روسیه",
-        "هدایت",
-        "اقدام"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "Sinai Mountain",
-      "choices": [
-        "مرز",
-        "طور",
-        "هرمزگان",
-        "امیر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "بودن",
-      "choices": [
-        "Iran",
-        "unconditional",
-        "seaport",
-        "exist"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "تربيب کردن",
-      "choices": [
-        "province",
-        "school",
-        "various",
-        "my"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "يمين",
-      "choices": [
-        "right",
-        "grail",
-        "operation",
-        "space"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "nowadays",
-      "choices": [
-        "هند",
-        "مثال",
-        "بازی",
-        "امروزه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "probability",
-      "choices": [
-        "احتمال",
-        "پس",
-        "مثال",
-        "غرب"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "town",
-      "choices": [
-        "امیر",
-        "چنین",
-        "شهر",
-        "شهر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "tree",
-      "choices": [
-        "همین",
-        "مراسم",
-        "درخت",
-        "وابسته"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "خراسان",
-      "choices": [
-        "world",
-        "wet",
-        "Khorasan",
-        "Tehran"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "target",
-      "choices": [
-        "آذر",
-        "هدف",
-        "جنبش",
-        "آثار"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "مهر",
-      "choices": [
-        "Mehr",
-        "union",
-        "woman",
-        "topic"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Mohsen",
-      "choices": [
-        "محسن",
-        "خوانده",
-        "گروه‌های",
-        "هوا"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "جانبي",
-      "choices": [
-        "side",
-        "Ahmed",
-        "start",
-        "Mordad"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "دولت سرا",
-      "choices": [
-        "like",
-        "training",
-        "mother",
-        "palace"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "trip",
-      "choices": [
-        "تقسیم",
-        "سفر",
-        "سخت",
-        "تا"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "ساختمان",
-      "choices": [
-        "order",
-        "structure",
-        "statistics",
-        "two"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "relation",
-      "choices": [
-        "حاکم",
-        "ملی",
-        "نسبت",
-        "پنج"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "type",
-      "choices": [
-        "اما",
-        "می",
-        "نقل",
-        "نمونه"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "permission",
-      "choices": [
-        "نرم",
-        "اجازه",
-        "یاد",
-        "فی"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "over",
-      "choices": [
-        "بر",
-        "نوامبر",
-        "یاد",
-        "شوروی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "profit",
-      "choices": [
-        "بهره",
-        "نظیر",
-        "سن",
-        "تصویر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "برخوردار بودن",
-      "choices": [
-        "novel",
-        "have",
-        "limited",
-        "king"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "پازدن",
-      "choices": [
-        "through",
-        "profession",
-        "step",
-        "spreading"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "بلندي",
-      "choices": [
-        "height",
-        "Japan",
-        "spreading",
-        "wet"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "organ",
-      "choices": [
-        "موقعیت",
-        "عضو",
-        "ساختمان",
-        "فهرست"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "نمره",
-      "choices": [
-        "steady",
-        "training",
-        "number",
-        "under"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ظاهر فريبنده",
-      "choices": [
-        "NASA",
-        "records",
-        "periodical",
-        "phantom"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "کانون",
-      "choices": [
-        "village",
-        "center",
-        "death",
-        "century"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "then",
-      "choices": [
-        "هر",
-        "هوای",
-        "پس",
-        "سپتامبر"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "portion",
-      "choices": [
-        "بخش",
-        "اصلی",
-        "پزشکی",
-        "مدیریت"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "حجار",
-      "choices": [
-        "stage",
-        "mason",
-        "Qoran",
-        "Islam"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "برحسب",
-      "choices": [
-        "regarding",
-        "Paul",
-        "including",
-        "based on"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "حکمراني",
-      "choices": [
-        "text",
-        "factors",
-        "based on",
-        "rule"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "پرداخت",
-      "choices": [
-        "album",
-        "give",
-        "polishing",
-        "total"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "supply",
-      "choices": [
-        "انجام",
-        "عرضه",
-        "روستاهای",
-        "بازیگر"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "شود",
-      "choices": [
-        "news",
-        "by",
-        "dill",
-        "with"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "سن",
-      "choices": [
-        "fulfillment",
-        "age",
-        "night",
-        "contemporary"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "همانند",
-      "choices": [
-        "like",
-        "album",
-        "based on",
-        "order"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "Mordad",
-      "choices": [
-        "حاج",
-        "اشعار",
-        "فناوری",
-        "مرداد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "ناقص بودن",
-      "choices": [
-        "manner",
-        "resident",
-        "paint",
-        "lack"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "اعتماد",
-      "choices": [
-        "Kerman",
-        "trust",
-        "Abbas",
-        "center"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "dill",
-      "choices": [
-        "نشانی",
-        "خانوار",
-        "کارگردان",
-        "شود"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "based on",
-      "choices": [
-        "میلادی",
-        "بانک",
-        "بهار",
-        "براساس"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "سومين",
-      "choices": [
-        "third",
-        "occupied",
-        "specific",
-        "those"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "وزارت",
-      "choices": [
-        "skilled",
-        "gloomy",
-        "ministry",
-        "nations"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "Kurdish",
-      "choices": [
-        "دانشکده",
-        "امیر",
-        "ج",
-        "کرد"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "hill",
-      "choices": [
-        "مرکزی",
-        "کل",
-        "تپه",
-        "جریان"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "then",
-      "choices": [
-        "سینما",
-        "بعد",
-        "وب",
-        "ساده"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آماج",
-      "choices": [
-        "operation",
-        "portion",
-        "covering",
-        "target"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "murdered",
-      "choices": [
-        "موقعیت",
-        "ورود",
-        "زیاد",
-        "کشته"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "بوم",
-      "choices": [
-        "providing",
-        "hand",
-        "month",
-        "region"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "جزء",
-      "choices": [
-        "similar",
-        "December",
-        "portion",
-        "entered"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "وارد",
-      "choices": [
-        "announcement",
-        "row",
-        "entered",
-        "square"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "اين",
-      "choices": [
-        "significant",
-        "God",
-        "manner",
-        "this"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "century",
-      "choices": [
-        "دهستان‌های",
-        "قمری",
-        "زمین",
-        "قرن"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "same",
-      "choices": [
-        "سری",
-        "همان",
-        "می",
-        "دلیل"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "غشاوت",
-      "choices": [
-        "covering",
-        "type",
-        "unique",
-        "rukh"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "public",
-      "choices": [
-        "جمهور",
-        "دریای",
-        "حقوق",
-        "امر"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ناوابستگي",
-      "choices": [
-        "cause",
-        "independence",
-        "death",
-        "they"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "father",
-      "choices": [
-        "تلویزیون",
-        "پست",
-        "نمایش",
-        "پدر"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "soul",
-      "choices": [
-        "علوم",
-        "جان",
-        "شده‌اند",
-        "ترانه"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "Khan",
-      "choices": [
-        "اردیبهشت",
-        "غرب",
-        "محمد",
-        "خان"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "محله",
-      "choices": [
-        "superior",
-        "seven",
-        "neigborhood",
-        "sediment"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "منابع",
-      "choices": [
-        "Mahmud",
-        "only",
-        "sources",
-        "relation"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "مصرف",
-      "choices": [
-        "town",
-        "likeness",
-        "to",
-        "use"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "text",
-      "choices": [
-        "گردد",
-        "شیخ",
-        "بهترین",
-        "متن"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "college",
-      "choices": [
-        "قتل",
-        "برج",
-        "دانشکده",
-        "ان"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "عربستان",
-      "choices": [
-        "movement",
-        "valley",
-        "speed",
-        "Saudi Arabia"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "مهمره",
-      "choices": [
-        "red",
-        "office",
-        "museum",
-        "love"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "نامه",
-      "choices": [
-        "letter",
-        "Abdullah",
-        "poet",
-        "ceremony"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "trace",
-      "choices": [
-        "کشف",
-        "سالهای",
-        "اثر",
-        "طی"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "ruling",
-      "choices": [
-        "معنای",
-        "هنر",
-        "حاکم",
-        "شود"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "عطف به",
-      "choices": [
-        "eight",
-        "given",
-        "regarding",
-        "project"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "London",
-      "choices": [
-        "لندن",
-        "کمتر",
-        "شورای",
-        "خوبی"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "اکثر اوقات",
-      "choices": [
-        "often",
-        "soccer",
-        "Mohsen",
-        "usually"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "بلکه",
-      "choices": [
-        "nowadays",
-        "woman",
-        "but also",
-        "read"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "sediment",
-      "choices": [
-        "باغ",
-        "دوباره",
-        "ارشد",
-        "جرم"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "family",
-      "choices": [
-        "سیاست",
-        "خانواده",
-        "پزشکی",
-        "شیراز"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "آن",
-      "choices": [
-        "those",
-        "ceremony",
-        "love",
-        "report"
-      ],
-      "answer": 0
-    },
-    {
-      "question": "ثبت",
-      "choices": [
-        "Masood",
-        "tremor",
-        "registeration",
-        "hand"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "دشمني کردن",
-      "choices": [
-        "Abbas",
-        "war",
-        "profit",
-        "eye"
-      ],
-      "answer": 1
-    },
-    {
-      "question": "وادي",
-      "choices": [
-        "last",
-        "title",
-        "reduction",
-        "valley"
-      ],
-      "answer": 3
-    },
-    {
-      "question": "شاعر",
-      "choices": [
-        "winning",
-        "exist",
-        "Mosque",
-        "poet"
-      ],
-      "answer": 3
-    }
-  ]
+var WordsQuestions = 
+[
+  {
+    "question": "صاحب",
+    "choices": [
+      "knowledge",
+      "awak",
+      "Saheb",
+      "resistance"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سازمان",
+    "choices": [
+      "straight",
+      "former",
+      "Kurdish",
+      "organization"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آغاز",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "پایان",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "اعدام",
+    "choices": [
+      "hanging",
+      "sour",
+      "busy",
+      "upon"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تابستان",
+    "choices": [
+      "زمستان",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "numbers",
+    "choices": [
+      "اعداد",
+      "ریاضی",
+      "پنج",
+      "برج"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بااحتیاط",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "احتیاط"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "خنده",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "گریه"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "free",
+    "choices": [
+      "آزاد",
+      "درصد",
+      "مربوط",
+      "ارتش"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عطف به",
+    "choices": [
+      "regarding",
+      "river",
+      "point",
+      "side"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "احتمال",
+    "choices": [
+      "late",
+      "boy",
+      "probability",
+      "slow"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سفر",
+    "choices": [
+      "given",
+      "post",
+      "trip",
+      "perception"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مدل سازي",
+    "choices": [
+      "open",
+      "queen",
+      "model",
+      "nominee"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شايستگي",
+    "choices": [
+      "worthiness",
+      "works",
+      "happy",
+      "dry"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "power",
+      "Afghanistan",
+      "beginning",
+      "return"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متولد",
+    "choices": [
+      "illegal",
+      "fire",
+      "born",
+      "orchard"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مرطوب",
+    "choices": [
+      "lazy",
+      "we",
+      "view",
+      "wet"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حول و حوش",
+    "choices": [
+      "suburbs",
+      "last",
+      "over",
+      "contemporary"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رقت انگيز",
+    "choices": [
+      "sad",
+      "large",
+      "ugly",
+      "and"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهر ساحلي",
+    "choices": [
+      "soul",
+      "seaport",
+      "February",
+      "seriously"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تربيب کردن",
+    "choices": [
+      "speed",
+      "school",
+      "what",
+      "outside of"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سراينده",
+    "choices": [
+      "subscriber",
+      "without",
+      "singer",
+      "report"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دختر",
+    "choices": [
+      "انگلیسی",
+      "پسر",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "کوچیک",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "Sinai Mountain",
+    "choices": [
+      "تئاتر",
+      "طور",
+      "ساده",
+      "مراکز"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پرادويه کردن",
+    "choices": [
+      "Abbas",
+      "society",
+      "universal",
+      "season"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Mehr",
+    "choices": [
+      "اجرام",
+      "بازار",
+      "جمهور",
+      "مهر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بي زور",
+    "choices": [
+      "night",
+      "protection",
+      "top",
+      "weak"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مهربان",
+    "choices": [
+      "نامهربان",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "خرم",
+    "choices": [
+      "green",
+      "crooked",
+      "give",
+      "city"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قضايا",
+    "choices": [
+      "white",
+      "unit",
+      "ten",
+      "cases"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عاطل",
+    "choices": [
+      "currently",
+      "idle",
+      "right",
+      "visage"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ته",
+    "choices": [
+      "God",
+      "surname",
+      "bottom",
+      "illegal"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مرطوب",
+    "choices": [
+      "resident",
+      "wet",
+      "sour",
+      "Khan"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "closed",
+      "top",
+      "ugly",
+      "hand"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شروع",
+    "choices": [
+      "انگلیسی",
+      "پایان",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "تو",
+    "choices": [
+      "your",
+      "laugh",
+      "beneath",
+      "stratum"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عوامل",
+    "choices": [
+      "factors",
+      "entered",
+      "sign",
+      "free"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "result",
+    "choices": [
+      "آثار",
+      "حاصل",
+      "تر",
+      "نخست"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "public",
+      "sources",
+      "new",
+      "large"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "growth",
+    "choices": [
+      "فاصله",
+      "متعلق",
+      "شیراز",
+      "رشد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "temper",
+    "choices": [
+      "بازیکنان",
+      "شیعه",
+      "مانده",
+      "خلق"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "threshold",
+    "choices": [
+      "نقل",
+      "درگاه",
+      "عشق",
+      "عدد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشفق",
+    "choices": [
+      "mason",
+      "lawful",
+      "straight",
+      "kind"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موکول به",
+    "choices": [
+      "office",
+      "nominee",
+      "subject",
+      "attack"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کرد نشين",
+    "choices": [
+      "profit",
+      "idle",
+      "Kurdish",
+      "manner"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "over",
+    "choices": [
+      "بر",
+      "ج",
+      "شمالی",
+      "بکار"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دانش",
+    "choices": [
+      "winter",
+      "knowledge",
+      "knowledge",
+      "bring up"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "inspection",
+    "choices": [
+      "کنترل",
+      "هفت",
+      "پیوند",
+      "منظور"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "يمين",
+    "choices": [
+      "perception",
+      "right",
+      "awak",
+      "uncertain"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sources",
+    "choices": [
+      "مرکزی",
+      "هزار",
+      "منابع",
+      "سفید"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دوست کردن",
+    "choices": [
+      "fresh",
+      "friend",
+      "stone",
+      "laugh"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "افشا شده",
+    "choices": [
+      "poetry",
+      "out",
+      "text",
+      "total"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "movement",
+    "choices": [
+      "پرواز",
+      "حرکت",
+      "آنان",
+      "حضور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "paying attention",
+    "choices": [
+      "خانواده",
+      "توجه",
+      "قرار",
+      "می‌توان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آنگه",
+    "choices": [
+      "then",
+      "news",
+      "order",
+      "registeration"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دشمني کردن",
+    "choices": [
+      "appearance",
+      "cheap",
+      "title",
+      "war"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فلسفه",
+    "choices": [
+      "ugly",
+      "model",
+      "London",
+      "philosophy"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بروني",
+    "choices": [
+      "bitter",
+      "sad",
+      "outside",
+      "first"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بيرون",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "داخل",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "جامع",
+    "choices": [
+      "ugly",
+      "late",
+      "short",
+      "universal"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "type",
+    "choices": [
+      "بسته",
+      "شعر",
+      "نمونه",
+      "موزه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "فره",
+    "choices": [
+      "translation",
+      "good",
+      "subject",
+      "upon"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "tall",
+    "choices": [
+      "ثبت",
+      "نماید",
+      "بلند",
+      "اگر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "published",
+    "choices": [
+      "منتشر",
+      "کودکان",
+      "تأثیر",
+      "تئاتر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آغاز",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "پایان",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "supply",
+    "choices": [
+      "عرضه",
+      "هشت",
+      "تئاتر",
+      "می‌آید"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "inequality",
+    "choices": [
+      "زبان",
+      "اختلاف",
+      "یونان",
+      "ریاست"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "voice",
+    "choices": [
+      "مرداد",
+      "صدا",
+      "می‌شوند",
+      "تولید"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مستقیم",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "کج",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "خاموش",
+    "choices": [
+      "روشن",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "related",
+    "choices": [
+      "وابسته",
+      "شهرداری",
+      "جاده",
+      "نقاط"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Abbas",
+    "choices": [
+      "می‌شد",
+      "عباس",
+      "پل",
+      "بنیاد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نو",
+    "choices": [
+      "‌ها",
+      "قدیمی",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "region",
+    "choices": [
+      "خانه",
+      "عبدالله",
+      "شناسی",
+      "مناطق"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "explanation",
+    "choices": [
+      "مناسب",
+      "مرز",
+      "بعد",
+      "شرح"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گفتار مشهور",
+    "choices": [
+      "England",
+      "saying",
+      "size",
+      "sweet"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "death",
+    "choices": [
+      "مرگ",
+      "پاسخ",
+      "دادند",
+      "انتقال"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "‌ها",
+      "علم",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "meter",
+    "choices": [
+      "حاج",
+      "متر",
+      "اعلام",
+      "شرقی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آذر",
+    "choices": [
+      "surely",
+      "ugly",
+      "time",
+      "Azar"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "آغاز"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "presence",
+    "choices": [
+      "مرکز",
+      "حضور",
+      "رسید",
+      "اما"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حوزه",
+    "choices": [
+      "same",
+      "domain",
+      "thrust",
+      "kind"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اولی",
+    "choices": [
+      "هدف",
+      "آخری",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "دکتر",
+    "choices": [
+      "Korea",
+      "doctor",
+      "white",
+      "foot"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "project",
+    "choices": [
+      "روش",
+      "طرح",
+      "چهار",
+      "منبع"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "iron",
+    "choices": [
+      "حضور",
+      "تعریف",
+      "نیروی",
+      "آهن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "contemporary",
+    "choices": [
+      "فعالیت",
+      "نتیجه",
+      "داشته",
+      "معاصر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عنوان",
+    "choices": [
+      "title",
+      "stop",
+      "tied",
+      "movement"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نفر",
+    "choices": [
+      "person",
+      "resulting",
+      "bitter",
+      "Egypt"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تابستاني",
+    "choices": [
+      "structure",
+      "cold",
+      "summer",
+      "power"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "هدف",
+      "داخل",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "اشارهکردن",
+    "choices": [
+      "point",
+      "right",
+      "known",
+      "summer"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "خوشگل"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "year old",
+    "choices": [
+      "ساله",
+      "دور",
+      "شیخ",
+      "خدمت"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مقرون به حقيقت",
+    "choices": [
+      "market",
+      "true",
+      "imprison",
+      "certain"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "داخل",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "gallows",
+    "choices": [
+      "زیر",
+      "بازی",
+      "دار",
+      "آب"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Mohsen",
+    "choices": [
+      "برج",
+      "ویکی‌پدیای",
+      "کار",
+      "محسن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "on",
+    "choices": [
+      "انسانی",
+      "موجود",
+      "زیرا",
+      "روشن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "look",
+    "choices": [
+      "سده",
+      "نگاه",
+      "ژوئیه",
+      "تاریخ"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دوست کردن",
+    "choices": [
+      "friend",
+      "tongue",
+      "certain",
+      "Europe"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محمدرضا",
+    "choices": [
+      "country",
+      "young",
+      "fire",
+      "Mohammad Reza"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جانبي",
+    "choices": [
+      "side",
+      "after",
+      "mean",
+      "west"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هنر",
+    "choices": [
+      "fracture",
+      "art",
+      "careful",
+      "gauze"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برملا",
+    "choices": [
+      "known",
+      "race",
+      "domain",
+      "number"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برملا",
+    "choices": [
+      "known",
+      "start",
+      "simple",
+      ""
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "نزدیک",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "محروم",
+    "choices": [
+      "هدف",
+      "شامل",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "successful",
+    "choices": [
+      "مشاهیر",
+      "موفق",
+      "عدم",
+      "یافته"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "به داخل",
+    "choices": [
+      "inside",
+      "idle",
+      "cold",
+      "include"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متمايز",
+    "choices": [
+      "black",
+      "different",
+      "king",
+      "asleep"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "likeness",
+    "choices": [
+      "شدند",
+      "وابسته",
+      "استرالیا",
+      "مثال"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گرون",
+    "choices": [
+      "ارزون",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "tree",
+    "choices": [
+      "درخت",
+      "رفت",
+      "تقسیم",
+      "خصوصی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "club",
+    "choices": [
+      "باشگاه",
+      "انتشار",
+      "مشترک",
+      "باعث"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "book",
+      "old",
+      "reply",
+      "what"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "شور",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "گون",
+    "choices": [
+      "lawful",
+      "type",
+      "sacred",
+      "hard"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "از توي",
+    "choices": [
+      "through",
+      "motive",
+      "without",
+      "easy"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "neigborhood",
+    "choices": [
+      "اعمال",
+      "علم",
+      "دینی",
+      "محله"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جان",
+    "choices": [
+      "soul",
+      "verdict",
+      "stranger",
+      "saying"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عموم",
+    "choices": [
+      "ugly",
+      "public",
+      "philosophy",
+      "scared"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آماج",
+    "choices": [
+      "wet",
+      "target",
+      "import",
+      "human"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "wealthy",
+    "choices": [
+      "شامل",
+      "بار",
+      "برخوردار",
+      "دستور"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مفروض",
+    "choices": [
+      "given",
+      "currently",
+      "covering",
+      "right"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدترین",
+    "choices": [
+      "عالی",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "no",
+    "choices": [
+      "شناسی",
+      "نه",
+      "طبقه",
+      "پست"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اهل",
+    "choices": [
+      "hundred",
+      "inhabitant",
+      "best",
+      "source"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "spreading",
+      "except",
+      "beginning",
+      "laugh"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوشارو",
+    "choices": [
+      "yours",
+      "plant",
+      "tree",
+      "industrious"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مرخصي",
+    "choices": [
+      "total",
+      "province",
+      "off",
+      "five"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رشيد",
+    "choices": [
+      "mean",
+      "tall",
+      "itself",
+      "prominent"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داراي انرژي",
+    "choices": [
+      "energetic",
+      "shout",
+      "beginning",
+      "no"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "finally",
+    "choices": [
+      "سرانجام",
+      "وزیر",
+      "چون",
+      "مسائل"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "busy",
+      "late",
+      "Esfand",
+      "visage"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آفتاب",
+    "choices": [
+      "‌ها",
+      "مهتاب",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ساخته شده",
+    "choices": [
+      "made",
+      "face",
+      "time",
+      "protection"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "uderstood",
+    "choices": [
+      "شورای",
+      "مفهوم",
+      "بصورت",
+      "استرالیا"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قمر",
+    "choices": [
+      "defense",
+      "first",
+      "moon",
+      "off"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علم",
+    "choices": [
+      "هدف",
+      "جهل",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "درعين حال",
+    "choices": [
+      "real",
+      "military",
+      "yet",
+      "philosophy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نيرومند",
+    "choices": [
+      "beginning",
+      "industrious",
+      "tongue",
+      "strong"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زنداني کردن",
+    "choices": [
+      "beautiful",
+      "imprison",
+      "Khorasan",
+      "won"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "moon",
+    "choices": [
+      "ماه",
+      "زبان‌های",
+      "فوق",
+      "امروزه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "counted",
+    "choices": [
+      "راست",
+      "همکاری",
+      "محسوب",
+      "سرعت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ten",
+    "choices": [
+      "دسته",
+      "شدید",
+      "ده",
+      "استان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سهي",
+    "choices": [
+      "handle",
+      "straight",
+      "three",
+      "straight"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مال آنها",
+    "choices": [
+      "their",
+      "supply",
+      "spread",
+      "country"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فعلا",
+    "choices": [
+      "tremor",
+      "problems",
+      "careless",
+      "currently"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "short",
+    "choices": [
+      "کوتاه",
+      "مبارزه",
+      "تعیین",
+      "درصد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جوان",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "پیر"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بهار",
+    "choices": [
+      "",
+      "hard",
+      "spring",
+      "with"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سبک",
+    "choices": [
+      "beginning",
+      "manner",
+      "free",
+      "lack"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قصد",
+    "choices": [
+      "kind",
+      "intention",
+      "source",
+      "happy"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خفته",
+    "choices": [
+      "work",
+      "water",
+      "asleep",
+      "demise"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "real",
+      "ugly",
+      "art",
+      "counted"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "يک هفتم",
+    "choices": [
+      "trip",
+      "place",
+      "seven",
+      "mean"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "handle",
+    "choices": [
+      "هنری",
+      "اسپانیا",
+      "دسته",
+      "جعبه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نيرومند",
+    "choices": [
+      "times more",
+      "like",
+      "strong",
+      "Canada"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مر",
+    "choices": [
+      "stranger",
+      "Kurdish",
+      "transportation",
+      "bitter"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عيال",
+    "choices": [
+      "that",
+      "album",
+      "family",
+      "city"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مطمئن",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "نامطمئن",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "various",
+    "choices": [
+      "شدید",
+      "می‌دهند",
+      "گوناگون",
+      "روزنامه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "science",
+    "choices": [
+      "انرژی",
+      "مرداد",
+      "علوم",
+      "من"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رخ",
+    "choices": [
+      "rukh",
+      "trace",
+      "only",
+      "orchard"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "March",
+    "choices": [
+      "نویسندگان",
+      "سینما",
+      "اصول",
+      "مارس"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "shout",
+    "choices": [
+      "عملیات",
+      "داد",
+      "حکم",
+      "خاطر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ته نشين",
+    "choices": [
+      "mankind",
+      "sediment",
+      "cheap",
+      "conflict"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "order",
+    "choices": [
+      "بازیکنان",
+      "دانشکده",
+      "علمی",
+      "دستور"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ملکه",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "پادشاه"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "زمان",
+    "choices": [
+      "time",
+      "with",
+      "industry",
+      "tied"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "انگلیسی",
+      "کوچک",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "هدف",
+      "باز",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ندرتا",
+    "choices": [
+      "rarely",
+      "big",
+      "unconditional",
+      "known"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "war",
+    "choices": [
+      "قالب",
+      "شهرستان",
+      "جنگ",
+      "نموده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مهمره",
+    "choices": [
+      "beginning",
+      "novel",
+      "red",
+      "movement"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ماندن",
+    "choices": [
+      "رفتن",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "بیکار"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "Paul",
+    "choices": [
+      "سازمان",
+      "نمود",
+      "پل",
+      "تصویر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "نزدیک"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "مشهد",
+    "choices": [
+      "sad",
+      "Meshed",
+      "girl",
+      "season"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ماء",
+    "choices": [
+      "ugly",
+      "water",
+      "king",
+      "left"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "functions",
+    "choices": [
+      "گزارش",
+      "اعمال",
+      "ارتباط",
+      "هستند"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "توان",
+    "choices": [
+      "training",
+      "attack",
+      "mean",
+      "strength"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باختر",
+    "choices": [
+      "case",
+      "ugly",
+      "cry",
+      "west"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "order",
+    "choices": [
+      "اعدام",
+      "امر",
+      "نزد",
+      "جامع"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بااستعداد",
+    "choices": [
+      "museum",
+      "talented",
+      "include",
+      "old"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "case",
+    "choices": [
+      "زمان",
+      "جمعیت",
+      "جعبه",
+      "ابراهیم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دانش",
+    "choices": [
+      "soccer",
+      "revolution",
+      "knowledge",
+      "uncertain"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "روشن",
+    "choices": [
+      "خاموش",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "petroleum",
+    "choices": [
+      "شود",
+      "بیماری",
+      "دهستان‌های",
+      "نفت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "position",
+    "choices": [
+      "مقام",
+      "گردد",
+      "صدا",
+      "تلاش"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "University",
+    "choices": [
+      "مرحله",
+      "کشوری",
+      "آنجا",
+      "دانشگاه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شجاع",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "ترسو"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "عالی",
+    "choices": [
+      "انگلیسی",
+      "بدترین",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "because",
+    "choices": [
+      "ساختار",
+      "اکنون",
+      "نام‌های",
+      "چون"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "لرزه",
+    "choices": [
+      "dependent",
+      "total",
+      "tremor",
+      "motor"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "بالا",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "cases",
+    "choices": [
+      "منابع",
+      "موارد",
+      "شیر",
+      "اغلب"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مرطوب",
+    "choices": [
+      "scared",
+      "bottom",
+      "orient",
+      "wet"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "surface",
+    "choices": [
+      "کارهای",
+      "خوانندگان",
+      "الکتریکی",
+      "صفحه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "knowledge",
+      "Mehr",
+      "small",
+      "family"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آبان",
+    "choices": [
+      "Aban",
+      "small",
+      "hot",
+      "transfer"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Qom",
+    "choices": [
+      "رهبر",
+      "ترکیب",
+      "قم",
+      "بازی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شاد",
+    "choices": [
+      "scared",
+      "shine",
+      "happy",
+      "similar"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آنگه",
+    "choices": [
+      "then",
+      "mean",
+      "old",
+      "stone"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "man",
+      "stranger",
+      "bottom",
+      "beautiful"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دوست",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "بیگانه",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "human",
+    "choices": [
+      "مربوط",
+      "ایالت",
+      "انسان",
+      "اهالی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دیر",
+    "choices": [
+      "زود",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "بالابود",
+    "choices": [
+      "plan",
+      "excess",
+      "beautiful",
+      "types"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مصر",
+    "choices": [
+      "Egypt",
+      "Paul",
+      "philosophy",
+      "soccer"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برج",
+    "choices": [
+      "tower",
+      "weak",
+      "Qom",
+      "number"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوشحال",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "ناراحت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "table",
+    "choices": [
+      "‌",
+      "جدول",
+      "دی",
+      "جمع"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آغاز",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "پایان",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "دوست کردن",
+    "choices": [
+      "statistics",
+      "friend",
+      "careful",
+      "period"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وابسته",
+    "choices": [
+      "careless",
+      "finished",
+      "performance",
+      "related"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ارزون",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "گرون",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "under",
+    "choices": [
+      "طبیعی",
+      "این",
+      "منطقه",
+      "مورد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "وزني",
+    "choices": [
+      "their",
+      "utilization",
+      "sign",
+      "weight"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بيعوض",
+    "choices": [
+      "special",
+      "free",
+      "with",
+      "total"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "thereafter",
+    "choices": [
+      "بعدها",
+      "طرف",
+      "نشان",
+      "تدریس"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "structure",
+    "choices": [
+      "کنترل",
+      "خرداد",
+      "تدریس",
+      "ساختار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "prison",
+    "choices": [
+      "شد",
+      "زندان",
+      "نبرد",
+      "صنعت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "thriving",
+    "choices": [
+      "بهترین",
+      "یک",
+      "آباد",
+      "مرتبط"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "style",
+    "choices": [
+      "سبک",
+      "پنج",
+      "باقی",
+      "پس"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "prescription",
+    "choices": [
+      "نسخه",
+      "روی",
+      "ام",
+      "دیده"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "expansion",
+    "choices": [
+      "لیگ",
+      "گسترش",
+      "آب",
+      "المپیک"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ceremony",
+    "choices": [
+      "پیرامون",
+      "برابر",
+      "جشن",
+      "نفر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مستقیم",
+    "choices": [
+      "هدف",
+      "کج",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نيرومند",
+    "choices": [
+      "beneath",
+      "post",
+      "motor",
+      "strong"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پاپ",
+    "choices": [
+      "sentence",
+      "unconditional",
+      "system",
+      "Pope"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "last",
+    "choices": [
+      "م",
+      "آخر",
+      "فنی",
+      "برق"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "صرفه جويي",
+    "choices": [
+      "little",
+      "remaining",
+      "two",
+      "economy"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بيرون",
+    "choices": [
+      "هدف",
+      "داخل",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "جنس بشر",
+    "choices": [
+      "ugly",
+      "inspection",
+      "Khorasan",
+      "mankind"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "بزرگ",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "دستگاه",
+    "choices": [
+      "they",
+      "plant",
+      "ceremony",
+      "release"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معاينه",
+    "choices": [
+      "given",
+      "publishing",
+      "steering wheel",
+      "inspection"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دولت",
+    "choices": [
+      "slow",
+      "to",
+      "providing",
+      "government"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "قشنگ",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "way",
+    "choices": [
+      "خانواده",
+      "پرورش",
+      "سده",
+      "شکل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "dependent",
+    "choices": [
+      "رفت",
+      "متعلق",
+      "اقتصاد",
+      "تحصیلات"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "defense",
+    "choices": [
+      "خاصی",
+      "هنر",
+      "حدود",
+      "دفاع"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "right",
+      "go",
+      "Aban",
+      "big"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "if",
+    "choices": [
+      "قدر",
+      "آمریکا",
+      "اگر",
+      "انسان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "training",
+    "choices": [
+      "بطور",
+      "پرورش",
+      "الدین",
+      "وبگاه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "old",
+      "knowledge",
+      "University",
+      "poet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "strength",
+    "choices": [
+      "کامل",
+      "طور",
+      "ورود",
+      "توان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "soil",
+    "choices": [
+      "ش",
+      "شخصی",
+      "خاک",
+      "فرانسوی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "foundation",
+      "contemporary",
+      "old",
+      "discovery"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خبر دادن",
+    "choices": [
+      "transfer",
+      "explanation",
+      "century",
+      "report"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پست",
+    "choices": [
+      "time",
+      "imaginary",
+      "post",
+      "off"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ترسو",
+    "choices": [
+      "هدف",
+      "شجاع",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نزست",
+    "choices": [
+      "busy",
+      "first",
+      "training",
+      "center"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرد",
+    "choices": [
+      "گرم",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "فايده",
+    "choices": [
+      "profit",
+      "time",
+      "stage manager",
+      "young"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "itself",
+    "choices": [
+      "باستانی",
+      "دیگری",
+      "خان",
+      "خودش"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خدمتگاري",
+    "choices": [
+      "problems",
+      "service",
+      "people",
+      "immigration"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهري",
+    "choices": [
+      "cold",
+      "functions",
+      "Khan",
+      "city"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بیدار",
+    "choices": [
+      "هدف",
+      "خواب",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "London",
+    "choices": [
+      "بن",
+      "آموزشی",
+      "انگلستان",
+      "لندن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "orient",
+    "choices": [
+      "ارتش",
+      "ايران",
+      "شرق",
+      "درست"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "روشن",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "خاموش",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "early",
+      "entered",
+      "various",
+      "publishing"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داستان گفتن",
+    "choices": [
+      "stay",
+      "primary",
+      "industrious",
+      "story"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عزيمت کردن",
+    "choices": [
+      "limit",
+      "wealthy",
+      "winter",
+      "start"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رست",
+    "choices": [
+      "spreading",
+      "library",
+      "rank",
+      "right"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محسن",
+    "choices": [
+      "far",
+      "famous",
+      "free",
+      "Mohsen"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گشادن",
+    "choices": [
+      "counted",
+      "reason",
+      "do",
+      "open"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "spouse",
+    "choices": [
+      "بزرگ‌ترین",
+      "نوشته",
+      "همسر",
+      "استفاده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "انگلیسی",
+      "بيرون",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نامطمئن",
+    "choices": [
+      "انگلیسی",
+      "مطمئن",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بربستي",
+    "choices": [
+      "happy",
+      "sad",
+      "lawful",
+      "closed"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "past",
+      "new",
+      "children",
+      "new"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عنوان",
+    "choices": [
+      "title",
+      "Rome",
+      "interior",
+      "temper"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ضعیف",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "قوی",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "هراسانده",
+    "choices": [
+      "warm",
+      "dry",
+      "treatment",
+      "scared"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "هدف",
+      "بالا",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "آذرماه",
+    "choices": [
+      "December",
+      "decade",
+      "temper",
+      "transportation"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "ماندن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "حضر",
+    "choices": [
+      "presence",
+      "published",
+      "straight",
+      "rarely"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تخت",
+    "choices": [
+      "love",
+      "ancient.",
+      "flat",
+      "inside"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوشارو",
+    "choices": [
+      "industrious",
+      "iron",
+      "beautiful",
+      "inhabitant"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "piece",
+    "choices": [
+      "دریاچه",
+      "عدد",
+      "موسسه",
+      "قدیم"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "محکم",
+    "choices": [
+      "steady",
+      "society",
+      "good",
+      "above"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نا محرم",
+    "choices": [
+      "Aban",
+      "relation",
+      "because",
+      "stranger"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "term",
+    "choices": [
+      "مطرح",
+      "دور",
+      "کرد",
+      "سابق"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمان",
+    "choices": [
+      "often",
+      "under",
+      "time",
+      "go"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معني دار",
+    "choices": [
+      "child",
+      "god",
+      "significant",
+      "weak"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "mother",
+    "choices": [
+      "خمینی",
+      "مادر",
+      "طرف",
+      "های"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عاطل",
+    "choices": [
+      "idle",
+      "strong",
+      "source",
+      "wet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گازپانسمان",
+    "choices": [
+      "start",
+      "gauze",
+      "group",
+      "point"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Egypt",
+    "choices": [
+      "یافت",
+      "بیشتری",
+      "مصر",
+      "اخیر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "فروش",
+    "choices": [
+      "beginning",
+      "sale",
+      "time",
+      "eye"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "polishing",
+    "choices": [
+      "مثال",
+      "پرداخت",
+      "جدید",
+      "موسسه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "then",
+    "choices": [
+      "نشده",
+      "نمایندگان",
+      "رشد",
+      "بعد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ملکه",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "پادشاه",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "target",
+    "choices": [
+      "دومین",
+      "هنوز",
+      "هدف",
+      "بالای"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "انگلیسی",
+      "داخل",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "آنجل",
+    "choices": [
+      "there",
+      "trust",
+      "town",
+      "protection"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مجهول",
+    "choices": [
+      "free",
+      "limits",
+      "large",
+      "unknown"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مرداد",
+    "choices": [
+      "Mordad",
+      "unknown",
+      "out",
+      "sad"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "united",
+    "choices": [
+      "نگهداری",
+      "درون",
+      "متحده",
+      "پادشاه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "subordinate",
+    "choices": [
+      "ایران",
+      "رده",
+      "تابع",
+      "چپ"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "متنعم",
+    "choices": [
+      "easy",
+      "thriving",
+      "gallows",
+      "wealthy"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "today",
+    "choices": [
+      "سبک",
+      "امروز",
+      "شهر",
+      "حزب"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Tehran",
+    "choices": [
+      "وزارت",
+      "تهران",
+      "زنده",
+      "یعنی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمستاني",
+    "choices": [
+      "rose garden",
+      "winter",
+      "law",
+      "spots"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "خوب"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "center",
+      "Kerman",
+      "far",
+      "red"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ساختمان",
+    "choices": [
+      "explanation",
+      "summer",
+      "world",
+      "structure"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زمان",
+    "choices": [
+      "time",
+      "brave",
+      "itself",
+      "spread"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "registeration",
+    "choices": [
+      "اتحادیه",
+      "بازی‌های",
+      "نزد",
+      "ثبت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "stomach",
+    "choices": [
+      "دل",
+      "خوبی",
+      "شد",
+      "جدید"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمستان",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "تابستان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "often",
+      "careless",
+      "small",
+      "old"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "center",
+    "choices": [
+      "مرکز",
+      "می‌رود",
+      "مقدار",
+      "صاحب"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ارزان قيمت",
+    "choices": [
+      "cheap",
+      "go",
+      "Qoran",
+      "king"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سلطنت",
+    "choices": [
+      "rarely",
+      "Saltanat",
+      "increase",
+      "beautiful"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناسا",
+    "choices": [
+      "weak",
+      "NASA",
+      "beautiful",
+      "bad"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مال شما",
+    "choices": [
+      "saying",
+      "training",
+      "yours",
+      "go"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "امکان پذير",
+    "choices": [
+      "last",
+      "possible",
+      "off",
+      "Dollar"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بیکار",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "مشغول"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "درگاه",
+    "choices": [
+      "why",
+      "beautiful",
+      "threshold",
+      "first"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهر",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "دهات"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بدترین",
+    "choices": [
+      "عالی",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "زمستان",
+    "choices": [
+      "تابستان",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "بلندي",
+    "choices": [
+      "open",
+      "start",
+      "height",
+      "group"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گرفت",
+    "choices": [
+      "seizure",
+      "town",
+      "given",
+      "right"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "country",
+    "choices": [
+      "طور",
+      "جمعیت",
+      "بیش",
+      "کشور"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ناقص بودن",
+    "choices": [
+      "industry",
+      "lack",
+      "under",
+      "slow"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باريتعالي",
+    "choices": [
+      "Japan",
+      "petroleum",
+      "straight",
+      "God"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "simple",
+    "choices": [
+      "رادیو",
+      "تهران",
+      "ساده",
+      "تصمیم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ساعته",
+    "choices": [
+      "hour",
+      "May",
+      "girl",
+      "scared"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Arab",
+    "choices": [
+      "لازم",
+      "مارس",
+      "سی",
+      "عرب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بااحتیاط",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "احتیاط"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "حاوي بودن",
+    "choices": [
+      "announcement",
+      "right",
+      "include",
+      "happy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Mohammad Reza",
+    "choices": [
+      "گیاهان",
+      "میانه",
+      "احتمال",
+      "محمدرضا"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "bring up",
+    "choices": [
+      "مطرح",
+      "خورشید",
+      "می‌توانند",
+      "گروه‌های"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Esfehan",
+    "choices": [
+      "اصفهان",
+      "شمار",
+      "مرد",
+      "کودکان"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "beautiful",
+      "intensity",
+      "red",
+      "Mohsen"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واثق",
+    "choices": [
+      "careful",
+      "certain",
+      "resulting",
+      "release"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علم",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "جهل"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "winning",
+    "choices": [
+      "عبور",
+      "پنجم",
+      "ابن",
+      "برنده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "foot",
+    "choices": [
+      "پا",
+      "باشد",
+      "فارس",
+      "داخل"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "sweet",
+      "sacred",
+      "",
+      "Iran"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Meshed",
+    "choices": [
+      "بودند",
+      "فیلم‌های",
+      "اندازه",
+      "مشهد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "thousand",
+    "choices": [
+      "آبی",
+      "مالی",
+      "جوان",
+      "هزار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ناشناس",
+    "choices": [
+      "شناس",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "کانون",
+    "choices": [
+      "ugly",
+      "center",
+      "ceremony",
+      "west"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وعده دار",
+    "choices": [
+      "limited",
+      "government",
+      "stroke",
+      "industrious"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سفید",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "سیاه",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "تن",
+    "choices": [
+      "knowledge",
+      "ignorance",
+      "ton",
+      "end"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "plan",
+    "choices": [
+      "گاهی",
+      "استان‌های",
+      "نقشه",
+      "پرورش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمستاني",
+    "choices": [
+      "term",
+      "winter",
+      "report",
+      "winter"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خواب",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "بیدار",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "مناسب",
+    "choices": [
+      "knowledge",
+      "brave",
+      "five",
+      "ranks"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "red",
+    "choices": [
+      "تو",
+      "کسی",
+      "سرخ",
+      "عمومی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Seine",
+    "choices": [
+      "اش",
+      "سن",
+      "بخش",
+      "دستگاه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مراکز",
+    "choices": [
+      "ceremony",
+      "far",
+      "Abdullah",
+      "centers"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ضحک",
+    "choices": [
+      "small",
+      "order",
+      "inspection",
+      "laugh"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدست",
+    "choices": [
+      "busy",
+      "by",
+      "training",
+      "certain"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "become",
+    "choices": [
+      "سمت",
+      "حساب",
+      "شدن",
+      "‌"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هم",
+    "choices": [
+      "have",
+      "Paul",
+      "include",
+      "and"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سنت",
+    "choices": [
+      "free",
+      "inside",
+      "side",
+      "tradition"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دانشگاه",
+    "choices": [
+      "hard",
+      "University",
+      "volume",
+      "Esfand"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سترگ",
+    "choices": [
+      "help",
+      "Iran",
+      "or",
+      "large"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "work",
+    "choices": [
+      "مقاله",
+      "پایگاه",
+      "کار",
+      "قانون"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سپاه",
+    "choices": [
+      "ugly",
+      "corps",
+      "with",
+      "November"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "روشن",
+    "choices": [
+      "خاموش",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "manner",
+    "choices": [
+      "گونه",
+      "دسته",
+      "آخرین",
+      "بنا"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تيار",
+    "choices": [
+      "ready",
+      "beautiful",
+      "power",
+      "time"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پیر",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "جوان",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "قوی",
+    "choices": [
+      "ضعیف",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "بي زور",
+    "choices": [
+      "subject",
+      "dependent",
+      "weak",
+      "real"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "domain",
+    "choices": [
+      "ریاضی",
+      "طریق",
+      "رابطه",
+      "حوزه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عاطل",
+    "choices": [
+      "flat",
+      "height",
+      "idle",
+      "out"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "spreading",
+      "Imam",
+      "flat",
+      "go"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهر",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "دهات"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "عبدالله",
+    "choices": [
+      "performance",
+      "park",
+      "Abdullah",
+      "went"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "person",
+    "choices": [
+      "نفر",
+      "نه",
+      "اصول",
+      "جنسی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "ignorance",
+      "go",
+      "likeness",
+      "stating"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محمد",
+    "choices": [
+      "far",
+      "two",
+      "Mohammed",
+      "Saudi Arabia"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مستقیم",
+    "choices": [
+      "‌ها",
+      "کج",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "except",
+    "choices": [
+      "ساکن",
+      "کم",
+      "جز",
+      "وقتی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مهتاب",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "آفتاب"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "حاصل ضرب",
+    "choices": [
+      "including",
+      "product",
+      "relation",
+      "face"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "هدف",
+      "باز",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "آسان",
+    "choices": [
+      "سخت",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "economy",
+    "choices": [
+      "اقتصاد",
+      "کنار",
+      "فیزیک",
+      "شبکه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "غيرقانوني",
+    "choices": [
+      "palace",
+      "happy",
+      "word",
+      "illegal"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "بالا",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "مجهول",
+    "choices": [
+      "old",
+      "term",
+      "unknown",
+      "poet"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "family",
+    "choices": [
+      "دریافت",
+      "تلویزیونی",
+      "مهدی",
+      "خانواده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "فره",
+    "choices": [
+      "they",
+      "contemporary",
+      "good",
+      "text"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "mother",
+    "choices": [
+      "دینی",
+      "اولین",
+      "ام",
+      "چهارم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "period",
+    "choices": [
+      "دوره",
+      "خمینی",
+      "غرب",
+      "مرحله"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "open",
+      "beginning",
+      "probability",
+      "stop"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "structure",
+    "choices": [
+      "ساخت",
+      "بیان",
+      "چرا",
+      "نیاز"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "profession",
+    "choices": [
+      "کسب",
+      "هنوز",
+      "کوتاه",
+      "افراد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيضاء",
+    "choices": [
+      "participation",
+      "salary",
+      "old",
+      "white"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عاشق",
+    "choices": [
+      "love",
+      "sweet",
+      "bank",
+      "end"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "انگلیسی",
+      "داخل",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "سرما",
+    "choices": [
+      "cold",
+      "word",
+      "regarding",
+      "doctor"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Reza",
+    "choices": [
+      "موارد",
+      "نوع",
+      "رضا",
+      "تلاش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "معروف",
+    "choices": [
+      "scared",
+      "worst",
+      "famous",
+      "on"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ارقام",
+    "choices": [
+      "Sinai Mountain",
+      "bottom",
+      "numbers",
+      "mold"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهري",
+    "choices": [
+      "city",
+      "source",
+      "tune",
+      "report"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "انگلیسی",
+      "آغاز",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "interior",
+    "choices": [
+      "آنکه",
+      "ترکیب",
+      "عهده",
+      "درون"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "ماندن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "با ملاحظه",
+    "choices": [
+      "summer",
+      "careful",
+      "paint",
+      "sun"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "ugly",
+      "through",
+      "bottom",
+      "sweet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "and",
+    "choices": [
+      "اسفند",
+      "سلطنت",
+      "کتاب‌های",
+      "و"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ايالت",
+    "choices": [
+      "trust",
+      "revolution",
+      "Japan",
+      "state"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوشارو",
+    "choices": [
+      "why",
+      "stratum",
+      "far",
+      "industrious"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "من",
+    "choices": [
+      "red",
+      "true",
+      "side",
+      "man"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بنت",
+    "choices": [
+      "bottom",
+      "temper",
+      "girl",
+      "demise"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "درخشش",
+    "choices": [
+      "end",
+      "stop",
+      "shine",
+      "Tehran"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "after",
+    "choices": [
+      "واقع",
+      "آخرین",
+      "دنبال",
+      "رفت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "import",
+    "choices": [
+      "کمتر",
+      "قرآن",
+      "ورود",
+      "ایشان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حاج",
+    "choices": [
+      "period",
+      "hajji",
+      "correct",
+      "size"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بر روي",
+    "choices": [
+      "moon",
+      "above",
+      "busy",
+      "money"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "agreement",
+    "choices": [
+      "صنعت",
+      "اواخر",
+      "چرا",
+      "قرار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "province",
+    "choices": [
+      "حرکت",
+      "طول",
+      "رفته",
+      "استان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پا",
+    "choices": [
+      "top",
+      "foot",
+      "queen",
+      "like"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "راستين",
+    "choices": [
+      "real",
+      "entered",
+      "salary",
+      "sign"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خیالی",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "واقعی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "resident",
+    "choices": [
+      "بخشی",
+      "خانوار",
+      "ساکن",
+      "دفتر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "occupied",
+    "choices": [
+      "يا",
+      "معمولا",
+      "مشغول",
+      "تاریخچه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "صيحه زدن",
+    "choices": [
+      "thriving",
+      "family",
+      "cry",
+      "west"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ديروقت",
+    "choices": [
+      "late",
+      "new",
+      "god",
+      "ugly"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مصحف",
+    "choices": [
+      "book",
+      "domain",
+      "contemporary",
+      "read"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "resumption",
+    "choices": [
+      "ادامه",
+      "گل",
+      "خیلی",
+      "اش"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيعوض",
+    "choices": [
+      "Mohsen",
+      "announcement",
+      "free",
+      "unique"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سخت",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "آسان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "شهري",
+    "choices": [
+      "city",
+      "text",
+      "several",
+      "tradition"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "امر",
+    "choices": [
+      "order",
+      "sweet",
+      "new",
+      "rural district"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جوان",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "پیر",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "former",
+    "choices": [
+      "تپه",
+      "سابق",
+      "توضیح",
+      "میزان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رها ساختن",
+    "choices": [
+      "sweet",
+      "top",
+      "release",
+      "attack"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سست بودن",
+    "choices": [
+      "lazy",
+      "king",
+      "winter",
+      "Japan"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موتلف",
+    "choices": [
+      "careless",
+      "water",
+      "united",
+      "stop"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "fortress",
+    "choices": [
+      "ترتیب",
+      "قلعه",
+      "هنری",
+      "‌"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قانونی",
+    "choices": [
+      "انگلیسی",
+      "غیرقانونی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "بالا",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "فرنگ",
+    "choices": [
+      "bad",
+      "limit",
+      "Europe",
+      "gauze"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "give",
+    "choices": [
+      "وابسته",
+      "بازیابی‌شده",
+      "نخستین",
+      "دادن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "murdered",
+    "choices": [
+      "دینی",
+      "کشته",
+      "شهرداری",
+      "متولد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "source",
+    "choices": [
+      "منبع",
+      "مشاهده",
+      "آنچه",
+      "معنای"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بش",
+    "choices": [
+      "end",
+      "five",
+      "uncertain",
+      "free"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سلطان",
+    "choices": [
+      "stop",
+      "careless",
+      "sun",
+      "king"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ادهم",
+    "choices": [
+      "scattering",
+      "office",
+      "old",
+      "black"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "soft",
+    "choices": [
+      "دوست",
+      "مورد",
+      "تصویر",
+      "نرم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمان",
+    "choices": [
+      "right",
+      "mean",
+      "time",
+      "economy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "راستين",
+    "choices": [
+      "worst",
+      "treatment",
+      "real",
+      "doctor"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برج",
+    "choices": [
+      "records",
+      "month",
+      "spring",
+      "square"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "غیرقانونی",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "قانونی",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "gauze",
+      "go",
+      "science",
+      "cause"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بودن",
+    "choices": [
+      "kind",
+      "share",
+      "outside of",
+      "exist"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "hand",
+    "choices": [
+      "کلی",
+      "بن",
+      "روش",
+      "دست"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نامطمئن",
+    "choices": [
+      "هدف",
+      "مطمئن",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "best",
+      "ugly",
+      "beautiful",
+      "independent"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آفتاب",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "مهتاب"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "امام",
+    "choices": [
+      "Mohammed",
+      "surrounding",
+      "Imam",
+      "crooked"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "امضا کردن",
+    "choices": [
+      "idle",
+      "Shah",
+      "sign",
+      "possible"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قرآن",
+    "choices": [
+      "eye",
+      "road",
+      "straight",
+      "Qoran"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برنا",
+    "choices": [
+      "cold",
+      "Khan",
+      "young",
+      "small"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نصيب",
+    "choices": [
+      "subscriber",
+      "in",
+      "share",
+      "providing"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "power",
+    "choices": [
+      "قدرت",
+      "خورشیدی",
+      "دیگر",
+      "کارگردانی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "علم"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "unit",
+    "choices": [
+      "واحد",
+      "شما",
+      "قرآن",
+      "بهمن"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "هدف",
+      "کوچیک",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "شناس",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "ناشناس",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "inhabitant",
+    "choices": [
+      "آموزشی",
+      "اهل",
+      "مهاجرت",
+      "موقعیت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دختر",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "پسر",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "رقت انگيز",
+    "choices": [
+      "based on",
+      "possible",
+      "sad",
+      "brave"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "England",
+    "choices": [
+      "چرا",
+      "انگلستان",
+      "رو",
+      "پنجم"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "source",
+    "choices": [
+      "فرهنگی",
+      "مقابل",
+      "جدول",
+      "محل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "treatment",
+    "choices": [
+      "نماینده",
+      "فرمان",
+      "لحاظ",
+      "درمان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قمر",
+    "choices": [
+      "May",
+      "moon",
+      "period",
+      "soccer"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زمان بندي کردن",
+    "choices": [
+      "schedule",
+      "ignorance",
+      "she",
+      "winter"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نزست",
+    "choices": [
+      "first",
+      "left",
+      "careless",
+      "king"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "model",
+    "choices": [
+      "مثل",
+      "جاده",
+      "بعد",
+      "امام"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آخری",
+    "choices": [
+      "اولی",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "مستقیم",
+    "choices": [
+      "انگلیسی",
+      "کج",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نشر",
+    "choices": [
+      "sweet",
+      "rank",
+      "above",
+      "spreading"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خیالی",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "واقعی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "creature",
+    "choices": [
+      "پایتخت",
+      "درصد",
+      "موفق",
+      "موجود"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "زیبا",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "شدت",
+    "choices": [
+      "profession",
+      "small",
+      "intensity",
+      "strong"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جلاي وطن",
+    "choices": [
+      "published",
+      "style",
+      "France",
+      "immigration"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ملل",
+    "choices": [
+      "stage manager",
+      "expansion",
+      "nations",
+      "article"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گرم کردن",
+    "choices": [
+      "exclude",
+      "ministry",
+      "warm",
+      "space"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اتو کردن",
+    "choices": [
+      "Mahmud",
+      "philosophy",
+      "iron",
+      "respect"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جانبي",
+    "choices": [
+      "relation",
+      "trip",
+      "musical instrument",
+      "side"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پايستن",
+    "choices": [
+      "area",
+      "last",
+      "big",
+      "state"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انتخاب",
+    "choices": [
+      "everybody",
+      "house",
+      "selection",
+      "Akbar"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سن",
+    "choices": [
+      "interior",
+      "inside",
+      "gauze",
+      "Seine"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "structure",
+    "choices": [
+      "موقعیت",
+      "ساختمان",
+      "داشتن",
+      "ساخت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هرکدام",
+    "choices": [
+      "weak",
+      "place",
+      "every",
+      "matter"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بطور حتم",
+    "choices": [
+      "type",
+      "brave",
+      "June",
+      "surely"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "entered",
+    "choices": [
+      "فصل",
+      "رضوی",
+      "ترکی",
+      "وارد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حقيقت",
+    "choices": [
+      "growth",
+      "work",
+      "go",
+      "truth"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "do",
+    "choices": [
+      "عدم",
+      "روم",
+      "امنیت",
+      "کردن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اوت",
+    "choices": [
+      "turkish",
+      "knowledge",
+      "beginning",
+      "August"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مرابحه",
+    "choices": [
+      "cry",
+      "resulting",
+      "percentage",
+      "Aban"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "step",
+    "choices": [
+      "فهرست",
+      "لیگ",
+      "کارگردانی",
+      "اقدام"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شروع",
+    "choices": [
+      "‌ها",
+      "پایان",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "وسايل",
+    "choices": [
+      "summer",
+      "way",
+      "lawful",
+      "government"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دیر",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "زود"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "خاموش",
+    "choices": [
+      "هدف",
+      "روشن",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بر بالاي",
+    "choices": [
+      "flight",
+      "winning",
+      "over",
+      "flat"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ton",
+    "choices": [
+      "می‌دهد",
+      "تن",
+      "بازدید",
+      "اجرام"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "society",
+    "choices": [
+      "کردند",
+      "انجمن",
+      "عربی",
+      "شبکه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "beginning",
+      "ugly",
+      "in",
+      "September"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "small",
+      "small",
+      "total",
+      "in order to"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "gauze",
+      "old",
+      "center",
+      "NASA"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بهار",
+    "choices": [
+      "friend",
+      "spring",
+      "young",
+      "large"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامستقل",
+    "choices": [
+      "Aban",
+      "dependent",
+      "industrious",
+      "zone"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "هدف",
+      "خوشگل",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "مهتاب",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "آفتاب",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "time",
+    "choices": [
+      "ژاپن",
+      "وقت",
+      "شوند",
+      "فراهم"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ruling",
+    "choices": [
+      "حاکم",
+      "اهل",
+      "برد",
+      "عدد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مطمئن",
+    "choices": [
+      "نامطمئن",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "دفاع",
+    "choices": [
+      "probability",
+      "old",
+      "such as",
+      "defense"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "law",
+    "choices": [
+      "يا",
+      "مطالعات",
+      "همراه",
+      "قانون"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "غیرقانونی",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "قانونی",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بنت",
+    "choices": [
+      "word",
+      "ugly",
+      "first",
+      "girl"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "friend",
+    "choices": [
+      "سوی",
+      "دوست",
+      "اسپانیا",
+      "صدا"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زعيم",
+    "choices": [
+      "cry",
+      "early",
+      "give",
+      "leader"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تنبل",
+    "choices": [
+      "هدف",
+      "زرنگ",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Mosque",
+    "choices": [
+      "مسجد",
+      "پایان",
+      "جمعیت",
+      "پل"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گرفته",
+    "choices": [
+      "growth",
+      "uncertain",
+      "gloomy",
+      "Islam"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "پایین",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "political party",
+    "choices": [
+      "حقیقت",
+      "دادن",
+      "حزب",
+      "نقش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمستاني",
+    "choices": [
+      "different",
+      "winter",
+      "white",
+      "century"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "علم"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "eye",
+    "choices": [
+      "ساختار",
+      "درجه",
+      "جاده",
+      "چشم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دادن",
+    "choices": [
+      "give",
+      "stranger",
+      "ceremony",
+      "winner"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهر",
+    "choices": [
+      "دهات",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "times more",
+    "choices": [
+      "دیگر",
+      "برابر",
+      "این",
+      "تبدیل"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "incoming",
+    "choices": [
+      "باشند",
+      "داشتند",
+      "اکتبر",
+      "آمده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "بالا"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "remembering",
+    "choices": [
+      "بستک",
+      "تاریخ",
+      "توان",
+      "ذکر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "راستين",
+    "choices": [
+      "subject",
+      "hard",
+      "real",
+      "top"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "صده",
+    "choices": [
+      "sources",
+      "century",
+      "contrary",
+      "Paul"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "dill",
+    "choices": [
+      "یکم",
+      "متولد",
+      "زنده",
+      "شود"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "God",
+    "choices": [
+      "روی",
+      "اجرا",
+      "گزارش",
+      "خدا"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "income",
+    "choices": [
+      "شخص",
+      "جای",
+      "برای",
+      "درآمد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حجر",
+    "choices": [
+      "Iraq",
+      "wet",
+      "simple",
+      "stone"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "خوب",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "هدف",
+      "بزرگ",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "برملا",
+    "choices": [
+      "model",
+      "include",
+      "known",
+      "stay"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "title",
+    "choices": [
+      "منطقه",
+      "اهل",
+      "عنوان",
+      "اما"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "توجه",
+    "choices": [
+      "paying attention",
+      "mother",
+      "sour",
+      "source"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "correct",
+    "choices": [
+      "درست",
+      "معماری",
+      "شیعه",
+      "ارتفاع"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "lack",
+    "choices": [
+      "نبود",
+      "انتشارات",
+      "لحاظ",
+      "کارگردانی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "small",
+    "choices": [
+      "می‌آید",
+      "روستای",
+      "کوچک",
+      "خاص"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سبک",
+    "choices": [
+      "likeness",
+      "style",
+      "reason",
+      "steering wheel"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مثال",
+    "choices": [
+      "turkish",
+      "or",
+      "likeness",
+      "Mohammad Reza"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "contrary",
+    "choices": [
+      "ضد",
+      "پادشاه",
+      "او",
+      "گزارش"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "schedule",
+    "choices": [
+      "برنامه",
+      "داشته",
+      "برای",
+      "بعد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مقاله",
+    "choices": [
+      "widespread",
+      "right",
+      "article",
+      "new"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ضحک",
+    "choices": [
+      "without",
+      "weak",
+      "laugh",
+      "idle"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ماسبق",
+    "choices": [
+      "past",
+      "product",
+      "old",
+      "gauze"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "limited",
+    "choices": [
+      "حاج",
+      "خراسان",
+      "محدود",
+      "نقل"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "هدف",
+      "دیر",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Farhang",
+    "choices": [
+      "فرهنگ",
+      "روستایی",
+      "نژاد",
+      "هایی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مستثني کردن",
+    "choices": [
+      "cheap",
+      "on",
+      "early",
+      "exclude"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کج",
+    "choices": [
+      "هدف",
+      "مستقیم",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "problems",
+    "choices": [
+      "مسائل",
+      "دکتر",
+      "ولی",
+      "کانادا"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "third",
+    "choices": [
+      "بطور",
+      "سوم",
+      "محصولات",
+      "خارج"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اشغال شده",
+    "choices": [
+      "announcement",
+      "occupied",
+      "training",
+      "right"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Shah",
+    "choices": [
+      "معروف",
+      "شاه",
+      "زبان‌های",
+      "نیست"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "نو",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "phantom",
+    "choices": [
+      "او",
+      "مي",
+      "شبه",
+      "اصل"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پايه",
+    "choices": [
+      "mason",
+      "government",
+      "foundation",
+      "big"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به داخل",
+    "choices": [
+      "inside",
+      "dependent",
+      "wet",
+      "child"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جنبش",
+    "choices": [
+      "go",
+      "winter",
+      "movement",
+      "successful"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محروم",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "شامل",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "سخت",
+    "choices": [
+      "آسان",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "شناس",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "ناشناس"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "newspaper",
+    "choices": [
+      "تو",
+      "کلیسای",
+      "روزنامه",
+      "سیستم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمان",
+    "choices": [
+      "superior",
+      "time",
+      "",
+      "motor"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ساختمان",
+    "choices": [
+      "structure",
+      "unknown",
+      "sweet",
+      "inspection"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "up",
+    "choices": [
+      "دانشکده",
+      "می‌باشند",
+      "عمومی",
+      "بالا"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شجاع",
+    "choices": [
+      "ترسو",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "افشا شده",
+    "choices": [
+      "end",
+      "with",
+      "out",
+      "office"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Canada",
+    "choices": [
+      "کانادا",
+      "شما",
+      "ها",
+      "زیاد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مقرري",
+    "choices": [
+      "Kurdistan",
+      "trust",
+      "kind",
+      "salary"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "September",
+    "choices": [
+      "ساختمان",
+      "چین",
+      "سپتامبر",
+      "چون"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "side",
+    "choices": [
+      "کنار",
+      "قبلی",
+      "نام",
+      "دانشگاه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Kurdish",
+    "choices": [
+      "کاهش",
+      "بازیکنان",
+      "کرد",
+      "برخوردار"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Mordad",
+    "choices": [
+      "سری",
+      "افغانستان",
+      "انرژی",
+      "مرداد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "hour",
+    "choices": [
+      "معماری",
+      "ساعت",
+      "تعدادی",
+      "روز"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اولو",
+    "choices": [
+      "professor",
+      "through",
+      "old",
+      "cold"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دوست",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "بیگانه"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "limits",
+      "known",
+      "strong",
+      "sweet"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "they",
+    "choices": [
+      "ممکن",
+      "قرمز",
+      "آنان",
+      "گرفتن"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "spring",
+    "choices": [
+      "چشمه",
+      "شناخته",
+      "اجازه",
+      "سایت"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "society",
+    "choices": [
+      "دانشکده",
+      "فرزند",
+      "جامعه",
+      "دوره"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بميان آوردن",
+    "choices": [
+      "gone",
+      "former",
+      "bring up",
+      "stating"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "stage",
+    "choices": [
+      "جان",
+      "درمان",
+      "مرحله",
+      "طبقه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "غيرقانوني",
+    "choices": [
+      "illegal",
+      "soul",
+      "province",
+      "Kurdistan"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "يمين",
+    "choices": [
+      "lazy",
+      "Mohammed",
+      "right",
+      ""
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معني بخشيدن",
+    "choices": [
+      "united",
+      "based on",
+      "mean",
+      "number"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "parliament",
+    "choices": [
+      "زیاد",
+      "نمونه",
+      "مجلس",
+      "فارس"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "records",
+    "choices": [
+      "گل",
+      "پرونده",
+      "هیچ",
+      "برنامه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نشان ستاره",
+    "choices": [
+      "seizure",
+      "read",
+      "star",
+      "fortress"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "murder",
+    "choices": [
+      "قتل",
+      "راه",
+      "مطالعه",
+      "اوت"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "tongue",
+    "choices": [
+      "ازدواج",
+      "زبان",
+      "جنسی",
+      "حرکت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ثمين",
+    "choices": [
+      "result",
+      "talented",
+      "end",
+      "expensive"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رودخانه اي",
+    "choices": [
+      "thereafter",
+      "river",
+      "speech",
+      "dry"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گریه",
+    "choices": [
+      "هدف",
+      "خنده",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "هور",
+    "choices": [
+      "Esfehan",
+      "off",
+      "sun",
+      "idle"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گریه",
+    "choices": [
+      "خنده",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "their",
+      "ignorance",
+      "uncertain",
+      "woman"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "beginning",
+      "end",
+      "right",
+      "moon"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حدود",
+    "choices": [
+      "limits",
+      "target",
+      "military",
+      "stage manager"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "cause",
+    "choices": [
+      "تأثیر",
+      "علت",
+      "خوبی",
+      "دریا"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوک زدن",
+    "choices": [
+      "out",
+      "gone",
+      "tune",
+      "winning"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کاهش",
+    "choices": [
+      "inside",
+      "import",
+      "cheap",
+      "reduction"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نقاط",
+    "choices": [
+      "hard",
+      "volume",
+      "spots",
+      "friend"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وابسته بانسان",
+    "choices": [
+      "strong",
+      "human",
+      "cheap",
+      "take"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عدد صد",
+    "choices": [
+      "dry",
+      "happy",
+      "hundred",
+      "exclude"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گسترش",
+    "choices": [
+      "expansion",
+      "profession",
+      "sweet",
+      "after"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "قشنگ",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "girl",
+    "choices": [
+      "اسکار",
+      "بلند",
+      "برق",
+      "دختر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ورزيده",
+    "choices": [
+      "paint",
+      "skilled",
+      "awak",
+      "love"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معمولا",
+    "choices": [
+      "side",
+      "usually",
+      "prescription",
+      "top"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خیس",
+    "choices": [
+      "خشک",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "first",
+    "choices": [
+      "درگذشتگان",
+      "اول",
+      "سازمان",
+      "آمده"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "project",
+    "choices": [
+      "آباد",
+      "پروژه",
+      "چه",
+      "حمایت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "لندن",
+    "choices": [
+      "Mohammed",
+      "fight",
+      "corps",
+      "London"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "کوچک"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "primary",
+    "choices": [
+      "کشوری",
+      "عمده",
+      "آنکه",
+      "آتش"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "skilled",
+    "choices": [
+      "تن",
+      "اکتبر",
+      "نامه",
+      "عامل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "بیکار",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "ولي",
+    "choices": [
+      "scared",
+      "hot",
+      "but",
+      "start"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "الي",
+    "choices": [
+      "girl",
+      "model",
+      "old",
+      "until"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مابقي",
+    "choices": [
+      "small",
+      "laugh",
+      "remaining",
+      "number"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باز",
+    "choices": [
+      "انگلیسی",
+      "بسته",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "سد",
+    "choices": [
+      "first",
+      "laugh",
+      "dam",
+      "mold"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Hasan",
+    "choices": [
+      "صنایع",
+      "حوزه",
+      "حسن",
+      "تولید"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هندستان",
+    "choices": [
+      "black",
+      "like",
+      "India",
+      "four"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قوی",
+    "choices": [
+      "ضعیف",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "birth",
+    "choices": [
+      "زمینه",
+      "مستقیم",
+      "تولد",
+      "ازدواج"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مسکوک",
+    "choices": [
+      "structure",
+      "money",
+      "neigborhood",
+      "iron"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "spreading",
+    "choices": [
+      "ابتدا",
+      "کوه",
+      "پایتخت",
+      "نشر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "توي",
+    "choices": [
+      "known",
+      "problems",
+      "in",
+      "side"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "باز"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "relation",
+    "choices": [
+      "پس",
+      "کنیم",
+      "نسبت",
+      "بزرگ‌ترین"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خدمات",
+    "choices": [
+      "services",
+      "go",
+      "professor",
+      "Germany"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ساختمان",
+    "choices": [
+      "happy",
+      "structure",
+      "have",
+      "asleep"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سلطان",
+    "choices": [
+      "king",
+      "ignorance",
+      "paint",
+      "exclude"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شروع",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "پایان",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "space",
+    "choices": [
+      "آتش",
+      "خمینی",
+      "جا",
+      "است"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نشريه دوره اي",
+    "choices": [
+      "ceremony",
+      "periodical",
+      "stay",
+      "orient"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "materials",
+    "choices": [
+      "علمی",
+      "آنها",
+      "مواد",
+      "مرکزی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "go",
+      "end",
+      "cheap",
+      "crooked"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "closed",
+      "hundred",
+      "end",
+      "beginning"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "announcement",
+    "choices": [
+      "دورهٔ",
+      "توانست",
+      "نژاد",
+      "اعلام"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "valley",
+    "choices": [
+      "فعالیت",
+      "دره",
+      "سیستم",
+      "گوناگون"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دانش",
+    "choices": [
+      "knowledge",
+      "in",
+      "crooked",
+      "hot"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دهات",
+    "choices": [
+      "هدف",
+      "شهر",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "چب",
+    "choices": [
+      "انگلیسی",
+      "راست",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نزدیک",
+    "choices": [
+      "دور",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "مطمئن",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "نامطمئن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "کردستان",
+    "choices": [
+      "Kurdistan",
+      "surrounding",
+      "Iraq",
+      "old"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انقلاب",
+    "choices": [
+      "soul",
+      "unknown",
+      "stage",
+      "revolution"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پايستن",
+    "choices": [
+      "protection",
+      "go",
+      "last",
+      "knowledge"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ساله",
+    "choices": [
+      "seriously",
+      "year old",
+      "october",
+      "case"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "often",
+    "choices": [
+      "مکان",
+      "بسته",
+      "اغلب",
+      "کوه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "crooked",
+      "far",
+      "performer",
+      "Islam"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "centers",
+    "choices": [
+      "مالی",
+      "آفریقا",
+      "نبود",
+      "مراکز"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پر",
+    "choices": [
+      "Europe",
+      "ugly",
+      "structure",
+      "loaded"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "text",
+    "choices": [
+      "قبل",
+      "محمود",
+      "بررسی",
+      "متن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حاوي بودن",
+    "choices": [
+      "September",
+      "protection",
+      "include",
+      "murder"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرما",
+    "choices": [
+      "beginning",
+      "cold",
+      "province",
+      "known"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "large",
+      "sweet",
+      "spread",
+      "small"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "right",
+    "choices": [
+      "فرهنگ",
+      "تحصیلات",
+      "حق",
+      "مجلس"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "old",
+      "free",
+      "best",
+      "beginning"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "France",
+    "choices": [
+      "ترکی",
+      "فرانسه",
+      "البته",
+      "تقسیم"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بربستي",
+    "choices": [
+      "lawful",
+      "famous",
+      "uncertain",
+      "ugly"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "fire",
+    "choices": [
+      "شود",
+      "برده",
+      "آتش",
+      "گسترش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "based on",
+    "choices": [
+      "خارجی",
+      "ضد",
+      "بنابر",
+      "رمان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "dam",
+    "choices": [
+      "آلبوم",
+      "نشده",
+      "سد",
+      "انسان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "profit",
+    "choices": [
+      "بهره",
+      "به‌",
+      "نزدیک",
+      "متر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مهربان",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "نامهربان",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "spread",
+    "choices": [
+      "فرزندان",
+      "مارس",
+      "باز",
+      "هستند"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ارزون",
+    "choices": [
+      "گرون",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "دهات",
+    "choices": [
+      "‌ها",
+      "شهر",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "فريس",
+    "choices": [
+      "structure",
+      "certain",
+      "murdered",
+      "prominent"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "period",
+    "choices": [
+      "جلد",
+      "دوران",
+      "امور",
+      "جمع"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "eye",
+      "ignorance",
+      "sediment",
+      "brave"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چنانچه",
+    "choices": [
+      "night",
+      "if",
+      "good",
+      "Abbas"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "then",
+    "choices": [
+      "توان",
+      "آورد",
+      "خارجی",
+      "پس"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "early",
+      "Islam",
+      "moon",
+      "relevant"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "only",
+    "choices": [
+      "فشار",
+      "خواننده",
+      "خرداد",
+      "فقط"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "December",
+    "choices": [
+      "روز",
+      "دستور",
+      "درباره",
+      "دسامبر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "include",
+    "choices": [
+      "غیر",
+      "گاز",
+      "آذربایجان",
+      "عبارتند"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "with",
+    "choices": [
+      "صد",
+      "کیلومتر",
+      "با",
+      "می‌کرد"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دوست کردن",
+    "choices": [
+      "friend",
+      "stay",
+      "cause",
+      "speech"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "May",
+    "choices": [
+      "رنگ",
+      "من",
+      "آوریل",
+      "مه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "true",
+    "choices": [
+      "راست",
+      "خلیج",
+      "جزیره",
+      "دریافت"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نزدیک",
+    "choices": [
+      "دور",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "word",
+      "outside",
+      "report",
+      "end"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "الله",
+    "choices": [
+      "based on",
+      "god",
+      "Ahmed",
+      "big"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قوی",
+    "choices": [
+      "‌ها",
+      "ضعیف",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "rose garden",
+    "choices": [
+      "ترانه",
+      "اسماعیل",
+      "گلستان",
+      "الدین"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قبل ازاينکه",
+    "choices": [
+      "before",
+      "independent",
+      "cause",
+      "third"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي توجه",
+    "choices": [
+      "ugly",
+      "military",
+      "season",
+      "careless"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "usually",
+    "choices": [
+      "می",
+      "وسیله",
+      "عدم",
+      "معمولا"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "mold",
+    "choices": [
+      "محله",
+      "نامزد",
+      "هفتم",
+      "قالب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خوشحال",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "ناراحت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "time",
+    "choices": [
+      "طراحی",
+      "مدت",
+      "رشته",
+      "باشگاه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "west",
+    "choices": [
+      "صد",
+      "تصویب",
+      "جعبه",
+      "غرب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "demise",
+    "choices": [
+      "درگذشت",
+      "توابع",
+      "تعریف",
+      "احمد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "number",
+    "choices": [
+      "منطقه",
+      "شماره",
+      "تجاری",
+      "هفته"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نيک فرجام",
+    "choices": [
+      "nations",
+      "successful",
+      "help",
+      "city"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معوج",
+    "choices": [
+      "simple",
+      "often",
+      "inspection",
+      "crooked"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "race",
+    "choices": [
+      "بوده",
+      "الکتریکی",
+      "نژاد",
+      "اجرای"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "subscriber",
+    "choices": [
+      "کار",
+      "عمده",
+      "دولتی",
+      "مشترک"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شهري",
+    "choices": [
+      "best",
+      "my",
+      "city",
+      "crooked"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "old",
+      "subscriber",
+      "under",
+      "week"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به روي",
+    "choices": [
+      "their",
+      "on",
+      "stranger",
+      "model"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کنگره",
+    "choices": [
+      "beautiful",
+      "face",
+      "training",
+      "parliament"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "child",
+    "choices": [
+      "امروز",
+      "داشته",
+      "فرزند",
+      "جمهوری"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "by",
+    "choices": [
+      "مهم",
+      "شمال",
+      "حل",
+      "بدست"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تخيلي",
+    "choices": [
+      "imaginary",
+      "topic",
+      "finally",
+      "and"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نمره",
+    "choices": [
+      "murdered",
+      "number",
+      "target",
+      "art"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پاسخ",
+    "choices": [
+      "beneath",
+      "entered",
+      "translation",
+      "reply"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "my",
+    "choices": [
+      "شب",
+      "مورد",
+      "من",
+      "توان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زیبا",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "زشت",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "قالب",
+    "choices": [
+      "hundred",
+      "winner",
+      "style",
+      "mold"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به روي",
+    "choices": [
+      "outside",
+      "stay",
+      "complete",
+      "on"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مربع",
+    "choices": [
+      "uncertain",
+      "road",
+      "square",
+      "late"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شاد",
+    "choices": [
+      "that",
+      "Mohsen",
+      "happy",
+      "possible"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آنها",
+    "choices": [
+      "born",
+      "in",
+      "they",
+      "kind"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "man",
+    "choices": [
+      "مراکز",
+      "مرد",
+      "جغرافیایی",
+      "اسکار"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "product",
+    "choices": [
+      "نسبت",
+      "نزدیکی",
+      "محصول",
+      "نظام"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ادهم",
+    "choices": [
+      "shout",
+      "relations",
+      "black",
+      "include"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "حرکت",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بيعوض",
+    "choices": [
+      "finally",
+      "careless",
+      "text",
+      "free"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وسايل",
+    "choices": [
+      "state",
+      "beginning",
+      "speech",
+      "way"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Akbar",
+    "choices": [
+      "زمینه",
+      "ایرانیان",
+      "هشت",
+      "اکبر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "past",
+    "choices": [
+      "ترجمه",
+      "سفر",
+      "گذشته",
+      "داشت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "باز",
+    "choices": [
+      "هدف",
+      "بسته",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "principles",
+    "choices": [
+      "از",
+      "امام",
+      "اصول",
+      "چرا"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "won",
+    "choices": [
+      "حتی",
+      "برده",
+      "درصد",
+      "بدست"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نور",
+    "choices": [
+      "Nur",
+      "off",
+      "August",
+      "hill"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "spreading",
+    "choices": [
+      "کاربرد",
+      "توسعه",
+      "می‌باشد",
+      "ایران"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيرون",
+    "choices": [
+      "‌ها",
+      "داخل",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بيعوض",
+    "choices": [
+      "free",
+      "new",
+      "bring up",
+      "University"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بوم",
+    "choices": [
+      "country",
+      "method",
+      "museum",
+      "limit"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "seriously",
+    "choices": [
+      "نفر",
+      "جدا",
+      "فاصله",
+      "وسیله"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "وارد",
+    "choices": [
+      "won",
+      "view",
+      "entered",
+      "return"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آخری",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "اولی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "truth",
+    "choices": [
+      "آلبوم",
+      "اصل",
+      "ترجمه",
+      "کارگردان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جام شراب",
+    "choices": [
+      "hill",
+      "grail",
+      "sweet",
+      "that"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "rank",
+    "choices": [
+      "رتبه",
+      "آفریقا",
+      "گروه‌های",
+      "کیلومتری"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "محروم",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "شامل",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "grail",
+    "choices": [
+      "جام",
+      "کرد",
+      "شکل",
+      "پاسخ"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "end",
+    "choices": [
+      "اواخر",
+      "آوریل",
+      "بعدی",
+      "روستا"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "علم",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "جهل"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "پسر",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "دختر"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "affairs",
+    "choices": [
+      "امام",
+      "موقعیت",
+      "حکومت",
+      "امور"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "reason",
+      "beautiful",
+      "length",
+      "awak"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تنبل",
+    "choices": [
+      "انگلیسی",
+      "زرنگ",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "يگانه",
+    "choices": [
+      "only",
+      "ready",
+      "girl",
+      "summer"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "همان جور",
+    "choices": [
+      "hanging",
+      "same",
+      "reduction",
+      "Germany"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "limits",
+    "choices": [
+      "حد",
+      "حدود",
+      "درآمد",
+      "شهید"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "place",
+      "period",
+      "trip",
+      "bad"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "we",
+    "choices": [
+      "ما",
+      "خون",
+      "مانده",
+      "می‌کرد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "turkish",
+    "choices": [
+      "یافته",
+      "اجرا",
+      "ترک",
+      "شروع"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سهي",
+    "choices": [
+      "straight",
+      "top",
+      "above",
+      "illegal"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به کارگيري",
+    "choices": [
+      "utilization",
+      "old",
+      "iron",
+      "hanging"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "هدف",
+      "جدید",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Abdullah",
+    "choices": [
+      "خاطر",
+      "نامیده",
+      "مهر",
+      "عبدالله"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "different",
+    "choices": [
+      "بازی",
+      "قانون",
+      "متفاوت",
+      "يا"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خلف",
+    "choices": [
+      "october",
+      "imaginary",
+      "son",
+      "manner"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "revolution",
+    "choices": [
+      "جامع",
+      "فارسی",
+      "مربوط",
+      "انقلاب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تابستاني",
+    "choices": [
+      "elections",
+      "second",
+      "my",
+      "summer"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "list",
+    "choices": [
+      "فهرست",
+      "اصفهان",
+      "آلمانی",
+      "کشاورزی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "طبع",
+    "choices": [
+      "publishing",
+      "unconditional",
+      "office",
+      "known"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گرم",
+    "choices": [
+      "انگلیسی",
+      "سرد",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بروني",
+    "choices": [
+      "face",
+      "outside",
+      "verdict",
+      "piece"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "what",
+    "choices": [
+      "فارسی",
+      "غربی",
+      "ترکی",
+      "چه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آخری",
+    "choices": [
+      "انگلیسی",
+      "اولی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بیکار",
+    "choices": [
+      "هدف",
+      "مشغول",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "شرکت",
+    "choices": [
+      "participation",
+      "different",
+      "thermometer",
+      "careful"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برجسته",
+    "choices": [
+      "prominent",
+      "training",
+      "man",
+      "visage"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حامض کردن",
+    "choices": [
+      "manner",
+      "sour",
+      "awak",
+      "given"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "performance",
+    "choices": [
+      "هوایی",
+      "اجرا",
+      "فرهنگی",
+      "شاعر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سرد",
+    "choices": [
+      "گرم",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "کالاي وارده",
+    "choices": [
+      "third",
+      "inside",
+      "end",
+      "import"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "پایین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "ده",
+    "choices": [
+      "asleep",
+      "ten",
+      "boy",
+      "publishing"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خیس",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "خشک"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "انگلیسی",
+      "داخل",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "relation",
+    "choices": [
+      "است",
+      "ارتباط",
+      "مهم‌ترین",
+      "آنان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دستگيره",
+    "choices": [
+      "voice",
+      "handle",
+      "only",
+      "mean"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پاگير",
+    "choices": [
+      "Shah",
+      "source",
+      "sultan",
+      "obstruction"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "انگلیسی",
+      "پایین",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "خفته",
+    "choices": [
+      "exist",
+      "several",
+      "idle",
+      "asleep"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کره",
+    "choices": [
+      "hot",
+      "Korea",
+      "they",
+      "real"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي درد سر",
+    "choices": [
+      "include",
+      "easy",
+      "winter",
+      "threshold"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "superior",
+    "choices": [
+      "بازار",
+      "شمال",
+      "شده‌اند",
+      "برتر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دوست",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "بیگانه",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "پادشاه",
+    "choices": [
+      "ملکه",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "پادشاه",
+    "choices": [
+      "انگلیسی",
+      "ملکه",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ترسو",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "شجاع"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "office",
+    "choices": [
+      "بعدی",
+      "ملی",
+      "بین‌المللی",
+      "اداره"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شناس",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "ناشناس",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "king",
+    "choices": [
+      "همراه",
+      "فرهنگ",
+      "او",
+      "پادشاه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خواب",
+    "choices": [
+      "بیدار",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "independence",
+    "choices": [
+      "به‌",
+      "ساخت",
+      "استقلال",
+      "ساده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "کوچک",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "مدت",
+    "choices": [
+      "way",
+      "period",
+      "good",
+      "sun"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "يکه",
+    "choices": [
+      "beautiful",
+      "friend",
+      "their",
+      "unit"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "foundation",
+    "choices": [
+      "وزارت",
+      "اساس",
+      "بزرگ",
+      "خلیج"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "road",
+    "choices": [
+      "اسکار",
+      "جاده",
+      "شاعر",
+      "نظامی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کل",
+    "choices": [
+      "become",
+      "illegal",
+      "percentage",
+      "total"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "river",
+    "choices": [
+      "برنده",
+      "هدایت",
+      "رودخانه",
+      "ادامه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "start",
+    "choices": [
+      "ابتدا",
+      "حضور",
+      "مردان",
+      "بهار"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خواندن",
+    "choices": [
+      "read",
+      "uncertain",
+      "Qom",
+      "ugly"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فارس",
+    "choices": [
+      "Fars",
+      "word",
+      "left",
+      "problems"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "distance",
+    "choices": [
+      "فاصله",
+      "کتاب",
+      "منتشر",
+      "پایین"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "side",
+    "choices": [
+      "منجر",
+      "دلار",
+      "باشد",
+      "سمت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زير",
+    "choices": [
+      "person",
+      "beneath",
+      "visage",
+      "careless"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "surrounding",
+    "choices": [
+      "خبرگزاری",
+      "ژاپن",
+      "اطراف",
+      "فوق"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "باز",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "بسته"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "گرون",
+    "choices": [
+      "ارزون",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "water",
+    "choices": [
+      "ايران",
+      "نام",
+      "حمایت",
+      "آب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "body",
+    "choices": [
+      "گذاری",
+      "بدن",
+      "نبرد",
+      "دریاچه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "based on",
+    "choices": [
+      "مرتبط",
+      "جنوب",
+      "براساس",
+      "طرف"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اغلب",
+    "choices": [
+      "most",
+      "sweet",
+      "corps",
+      "stating"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تابستاني",
+    "choices": [
+      "summer",
+      "law",
+      "illegal",
+      "there"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زيردست",
+    "choices": [
+      "place",
+      "uncertain",
+      "subordinate",
+      "first"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فهرست",
+    "choices": [
+      "illegal",
+      "left",
+      "inside",
+      "list"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "امروز",
+    "choices": [
+      "standard",
+      "case",
+      "reduction",
+      "today"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "‌ها",
+      "پایین",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "علم"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "احمد",
+    "choices": [
+      "old",
+      "sign",
+      "mason",
+      "Ahmed"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واثق",
+    "choices": [
+      "king",
+      "revolution",
+      "certain",
+      "economy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "public",
+    "choices": [
+      "جمهور",
+      "محمد",
+      "بخش",
+      "نامزد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "stay",
+      "off",
+      "sweet",
+      "reduction"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "college",
+    "choices": [
+      "دهد",
+      "دانشکده",
+      "فارسی",
+      "که"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زير",
+    "choices": [
+      "leader",
+      "revolution",
+      "late",
+      "beneath"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "خیس",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "Tehran",
+      "dry",
+      "outside",
+      "widespread"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناوابستگي",
+    "choices": [
+      "revolution",
+      "independence",
+      "seizure",
+      "uncertain"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Dollar",
+    "choices": [
+      "نمود",
+      "دلار",
+      "تعدادی",
+      "میزان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "perception",
+    "choices": [
+      "تحت",
+      "معماری",
+      "دریافت",
+      "مشاهده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "green",
+    "choices": [
+      "سبز",
+      "تو",
+      "تمامی",
+      "متحد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "word",
+    "choices": [
+      "برادر",
+      "غربی",
+      "وسیله",
+      "واژه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "finished",
+    "choices": [
+      "نامه",
+      "تمام",
+      "و",
+      "شورای"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اين",
+    "choices": [
+      "this",
+      "birth",
+      "young",
+      "growth"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشکل",
+    "choices": [
+      "work",
+      "hard",
+      "imaginary",
+      "sad"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "passing",
+    "choices": [
+      "عبور",
+      "می‌توانند",
+      "برنامه‌های",
+      "نماید"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "busy",
+      "structure",
+      "well-known",
+      "bitter"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "week",
+    "choices": [
+      "هفته",
+      "تقسیمات",
+      "کمونیست",
+      "دارد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Mohammed",
+    "choices": [
+      "گروهی",
+      "شخصی",
+      "ابن",
+      "محمد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "organization",
+    "choices": [
+      "شخص",
+      "سازمان",
+      "تعریف",
+      "های"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "خیس",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "only",
+    "choices": [
+      "رخ",
+      "تنها",
+      "وزن",
+      "ملل"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دهات",
+    "choices": [
+      "شهر",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "small",
+      "utilization",
+      "stone",
+      "domain"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قمر",
+    "choices": [
+      "moon",
+      "records",
+      "new",
+      "expensive"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناقص بودن",
+    "choices": [
+      "beginning",
+      "simple",
+      "lack",
+      "old"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "world",
+    "choices": [
+      "جهان",
+      "تعریف",
+      "ساخته",
+      "یمن"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "انگلیسی",
+      "پایین",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "چه",
+    "choices": [
+      "June",
+      "what",
+      "thriving",
+      "mother"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "استحکام",
+    "choices": [
+      "post",
+      "type",
+      "weather",
+      "resistance"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "periodical",
+    "choices": [
+      "مجله",
+      "کاربرد",
+      "سرخ",
+      "شمار"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "stage manager",
+    "choices": [
+      "خبر",
+      "معماری",
+      "جای",
+      "کارگردان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جشن",
+    "choices": [
+      "paying attention",
+      "park",
+      "ceremony",
+      "friend"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "side",
+    "choices": [
+      "سازمان",
+      "وزن",
+      "طرف",
+      "ابن"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "first",
+    "choices": [
+      "نخست",
+      "اعضای",
+      "همین",
+      "بسیار"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "که",
+    "choices": [
+      "exclude",
+      "period",
+      "based on",
+      "that"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "bad",
+      "thereafter",
+      "off",
+      "asleep"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Omar",
+    "choices": [
+      "عمر",
+      "بازیگران",
+      "محسوب",
+      "همچون"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "exist",
+    "choices": [
+      "شبیه",
+      "خواننده",
+      "بودن",
+      "اخیر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "stating",
+    "choices": [
+      "جرم",
+      "سپاه",
+      "اشعار",
+      "شخص"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ليله",
+    "choices": [
+      "night",
+      "February",
+      "Fars",
+      "careless"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تابستاني",
+    "choices": [
+      "summer",
+      "end",
+      "performer",
+      "bad"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بعد از",
+    "choices": [
+      "after",
+      "contemporary",
+      "too",
+      "growth"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نژاد",
+    "choices": [
+      "won",
+      "first",
+      "race",
+      "Seine"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "court",
+    "choices": [
+      "دریافت",
+      "کشورهای",
+      "دادگاه",
+      "کرده‌اند"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بروني",
+    "choices": [
+      "outside",
+      "closed",
+      "stone",
+      "boy"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "lack",
+      "closed",
+      "young",
+      "crooked"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "score",
+    "choices": [
+      "حساب",
+      "عصر",
+      "مانند",
+      "اندازه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "discovery",
+    "choices": [
+      "کشف",
+      "اداره",
+      "خبرگزاری",
+      "ژانویه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "غيرقانوني",
+    "choices": [
+      "illegal",
+      "surely",
+      "December",
+      "soft"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "دیر",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "به داخل",
+    "choices": [
+      "give",
+      "out",
+      "ugly",
+      "inside"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نقطه اتکاء",
+    "choices": [
+      "dill",
+      "off",
+      "distance",
+      "stay"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تهيه کردن",
+    "choices": [
+      "supply",
+      "end",
+      "beginning",
+      "beginning"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پراکندگي",
+    "choices": [
+      "numbers",
+      "thermometer",
+      "scattering",
+      "three"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "elections",
+    "choices": [
+      "ریاست",
+      "برخوردار",
+      "دولتی",
+      "انتخابات"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "sweet",
+      "busy",
+      "stage manager",
+      "beautiful"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ترسو",
+    "choices": [
+      "شجاع",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "museum",
+    "choices": [
+      "موزه",
+      "اضافه",
+      "مرکز",
+      "هنگام"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نيکوترين",
+    "choices": [
+      "late",
+      "lazy",
+      "salary",
+      "best"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهبانو",
+    "choices": [
+      "relation",
+      "queen",
+      "March",
+      "eight"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "wet",
+      "sweet",
+      "woman",
+      "dry"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وادي",
+    "choices": [
+      "busy",
+      "valley",
+      "bad",
+      "hanging"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پارکومتر",
+    "choices": [
+      "statistics",
+      "stage manager",
+      "sweet",
+      "meter"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گرون",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "ارزون",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "without",
+    "choices": [
+      "میلادی",
+      "ارزش",
+      "بدون",
+      "سپس"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "covering",
+    "choices": [
+      "رفته",
+      "پوشش",
+      "مطالعه",
+      "زمینه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Azar",
+    "choices": [
+      "زندگینامه",
+      "آذر",
+      "مه",
+      "صاحب"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پايستن",
+    "choices": [
+      "stranger",
+      "country",
+      "London",
+      "last"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "group",
+    "choices": [
+      "گروه",
+      "نماینده",
+      "توانست",
+      "متن"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تنبل",
+    "choices": [
+      "زرنگ",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "همچنين",
+    "choices": [
+      "with",
+      "too",
+      "what",
+      "far"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "همانند",
+    "choices": [
+      "best",
+      "like",
+      "winter",
+      "style"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "paint",
+    "choices": [
+      "آغاز",
+      "رودخانه",
+      "اين",
+      "رنگ"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برابر",
+    "choices": [
+      "announcement",
+      "times more",
+      "idle",
+      "bottom"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آنکه",
+    "choices": [
+      "whoever",
+      "awak",
+      "same",
+      "ugly"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "same",
+    "choices": [
+      "برج",
+      "یادکرد",
+      "همان",
+      "مادر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مرخصي",
+    "choices": [
+      "stay",
+      "off",
+      "scared",
+      "inside"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زمستاني",
+    "choices": [
+      "foot",
+      "relation",
+      "winter",
+      "strong"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "professor",
+    "choices": [
+      "شدن",
+      "می‌گردد",
+      "کلمه",
+      "استاد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مسافت",
+    "choices": [
+      "beneath",
+      "than",
+      "fresh",
+      "distance"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نو",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "قدیمی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "complete",
+    "choices": [
+      "کامل",
+      "بدون",
+      "موارد",
+      "متعلق"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيعوض",
+    "choices": [
+      "way",
+      "free",
+      "there",
+      "announcement"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "limit",
+    "choices": [
+      "می‌گردد",
+      "شاعر",
+      "حد",
+      "آنچه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "decade",
+    "choices": [
+      "نقاط",
+      "دهه",
+      "بازار",
+      "دنبال"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "respect",
+      "sweet",
+      "expensive",
+      "cause"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "خوب",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "under",
+    "choices": [
+      "مراسم",
+      "بیرون",
+      "تحت",
+      "بوده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برنا",
+    "choices": [
+      "young",
+      "scared",
+      "newspaper",
+      "work"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سست بودن",
+    "choices": [
+      "lazy",
+      "hard",
+      "on",
+      "bottom"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوه",
+    "choices": [
+      "imprison",
+      "steering wheel",
+      "report",
+      "mountain"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متعلق بمن",
+    "choices": [
+      "my",
+      "discovery",
+      "book",
+      "stranger"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "until",
+      "society",
+      "king",
+      "beautiful"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "matter",
+    "choices": [
+      "ماده",
+      "سازی",
+      "قم",
+      "آغاز"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "institution",
+    "choices": [
+      "کنید",
+      "موسسه",
+      "فیزیک",
+      "ساختار"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشهور",
+    "choices": [
+      "probability",
+      "well-known",
+      "Imam",
+      "group"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "unconditional",
+    "choices": [
+      "ما",
+      "مطلق",
+      "آهن",
+      "دهه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برحسب",
+    "choices": [
+      "based on",
+      "political party",
+      "fire",
+      "unknown"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رودخانه اي",
+    "choices": [
+      "river",
+      "expensive",
+      "ranks",
+      "first"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هلفدان",
+    "choices": [
+      "then",
+      "scared",
+      "lawful",
+      "prison"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي توجه",
+    "choices": [
+      "careless",
+      "winner",
+      "time",
+      "winning"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نساء",
+    "choices": [
+      "relation",
+      "based on",
+      "woman",
+      "moon"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چپ",
+    "choices": [
+      "left",
+      "",
+      "ready",
+      "asleep"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فره",
+    "choices": [
+      "inside",
+      "good",
+      "appearance",
+      "cases"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مدت",
+    "choices": [
+      "period",
+      "father",
+      "domain",
+      "like"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سفید",
+    "choices": [
+      "سیاه",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "flight",
+    "choices": [
+      "تعیین",
+      "قتل",
+      "فروش",
+      "پرواز"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اکثر اوقات",
+    "choices": [
+      "crooked",
+      "June",
+      "often",
+      "poet"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "‌ها",
+      "نو",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "sign",
+    "choices": [
+      "ادامه",
+      "ان",
+      "اشاره",
+      "سد"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پازدن",
+    "choices": [
+      "closed",
+      "most",
+      "step",
+      "society"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "beautiful",
+      "periodical",
+      "famous",
+      "piece"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زد و خورد",
+    "choices": [
+      "in",
+      "nations",
+      "fight",
+      "foundation"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شاد",
+    "choices": [
+      "February",
+      "large",
+      "happy",
+      "fracture"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خواب",
+    "choices": [
+      "‌ها",
+      "بیدار",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "حکمراني",
+    "choices": [
+      "known",
+      "rule",
+      "dry",
+      "uncertain"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "منتشر شده",
+    "choices": [
+      "operation",
+      "appearance",
+      "published",
+      "temper"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سيما",
+    "choices": [
+      "appearance",
+      "mold",
+      "young",
+      "kind"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "همخواب",
+    "choices": [
+      "way",
+      "spouse",
+      "piece",
+      "given"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "school",
+    "choices": [
+      "ماه",
+      "سیاه",
+      "بلکه",
+      "مدرسه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "پایین",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "رفته",
+    "choices": [
+      "like",
+      "new",
+      "gone",
+      "ugly"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هفت روز",
+    "choices": [
+      "week",
+      "source",
+      "outside",
+      ""
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عربستان",
+    "choices": [
+      "power",
+      "known",
+      "black",
+      "Saudi Arabia"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوشارو",
+    "choices": [
+      "wet",
+      "big",
+      "industrious",
+      "Mohammad Reza"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "have",
+    "choices": [
+      "کتاب‌های",
+      "داشتن",
+      "اصل",
+      "سرعت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جديد",
+    "choices": [
+      "laugh",
+      "Iraq",
+      "work",
+      "novel"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "outside of",
+    "choices": [
+      "منتشر",
+      "رخ",
+      "باب",
+      "خارج"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "trace",
+      "careful",
+      "asleep",
+      "small"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هور",
+    "choices": [
+      "piece",
+      "large",
+      "inside",
+      "sun"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جدول",
+    "choices": [
+      "table",
+      "based on",
+      "include",
+      "Canada"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قانونی",
+    "choices": [
+      "انگلیسی",
+      "غیرقانونی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "اخ",
+    "choices": [
+      "Paul",
+      "numbers",
+      "Pope",
+      "brother"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هيکل",
+    "choices": [
+      "wet",
+      "body",
+      "knowledge",
+      "laugh"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برده",
+    "choices": [
+      "rural district",
+      "won",
+      "then",
+      "stranger"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوشحال",
+    "choices": [
+      "‌ها",
+      "ناراحت",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "سومين",
+    "choices": [
+      "queen",
+      "third",
+      "tower",
+      "fight"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "poet",
+    "choices": [
+      "شاه",
+      "هر",
+      "نبود",
+      "شاعر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دهستان",
+    "choices": [
+      "mother",
+      "rural district",
+      "political party",
+      "closed"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "park",
+    "choices": [
+      "دانشگاه",
+      "زبان‌های",
+      "نخستین",
+      "پارک"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نشر",
+    "choices": [
+      "new",
+      "Tehran",
+      "spreading",
+      "happy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "انگلیسی",
+      "شور",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "طرح",
+    "choices": [
+      "family",
+      "reason",
+      "project",
+      "Farhang"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Japan",
+    "choices": [
+      "رسید",
+      "ژاپن",
+      "نامه",
+      "عدد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پسر بچه",
+    "choices": [
+      "Qom",
+      "hajji",
+      "Germany",
+      "boy"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قمر",
+    "choices": [
+      "born",
+      "selection",
+      "moon",
+      "written"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "take",
+    "choices": [
+      "شده‌اند",
+      "پل",
+      "گرفتن",
+      "بود"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "article",
+    "choices": [
+      "هفت",
+      "آموزش",
+      "مقاله",
+      "سرزمین"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "foundation",
+    "choices": [
+      "اهالی",
+      "این",
+      "بن",
+      "معنی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "topic",
+    "choices": [
+      "آفریقا",
+      "خبر",
+      "تفسیر",
+      "موضوع"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "month",
+    "choices": [
+      "خرداد",
+      "يا",
+      "باقی",
+      "متر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "tremor",
+    "choices": [
+      "محمد",
+      "هشت",
+      "جنبش",
+      "تمامی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مرحله",
+    "choices": [
+      "style",
+      "bring up",
+      "laugh",
+      "stage"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مام",
+    "choices": [
+      "old",
+      "saying",
+      "numbers",
+      "mother"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اعمال",
+    "choices": [
+      "functions",
+      "big",
+      "summer",
+      "top"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "افشا شده",
+    "choices": [
+      "industrious",
+      "new",
+      "last",
+      "out"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Iran",
+    "choices": [
+      "مورد",
+      "عرب",
+      "زنده",
+      "ايران"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "crooked",
+      "country",
+      "old",
+      "include"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "musical instrument",
+    "choices": [
+      "عنوان",
+      "ساز",
+      "زیرا",
+      "شمار"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "seizure",
+    "choices": [
+      "گرفت",
+      "تاریخی",
+      "متعلق",
+      "عربی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "four",
+    "choices": [
+      "گرفتن",
+      "چهار",
+      "شهریور",
+      "شعر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "mankind",
+    "choices": [
+      "دریا",
+      "دهستان",
+      "دادند",
+      "بشر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خبر دادن",
+    "choices": [
+      "times more",
+      "published",
+      "outside",
+      "report"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "union",
+    "choices": [
+      "خراسان",
+      "اتحاد",
+      "اختلاف",
+      "حمل"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "فوتبال",
+    "choices": [
+      "soccer",
+      "NASA",
+      "white",
+      "start"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "weight",
+    "choices": [
+      "گلستان",
+      "اند",
+      "وزن",
+      "اجتماعی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سفید",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "سیاه",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "زمستان",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "تابستان",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "age",
+    "choices": [
+      "اکنون",
+      "عصر",
+      "ها",
+      "سرانجام"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گرون",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "ارزون"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "صيحه زدن",
+    "choices": [
+      "mean",
+      "cry",
+      "supply",
+      "library"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پل",
+    "choices": [
+      "Paul",
+      "laugh",
+      "perception",
+      "reduction"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "nowadays",
+    "choices": [
+      "امروزه",
+      "بازیکنان",
+      "زن",
+      "فوریه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زندانی",
+    "choices": [
+      "آزاد",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "city",
+      "end",
+      "December",
+      "careless"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهبانو",
+    "choices": [
+      "season",
+      "queen",
+      "boy",
+      "Seine"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهر",
+    "choices": [
+      "انگلیسی",
+      "دهات",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "عزيمت کردن",
+    "choices": [
+      "regarding",
+      "individuals",
+      "start",
+      "same"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کج",
+    "choices": [
+      "‌ها",
+      "مستقیم",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "famous",
+    "choices": [
+      "قالب",
+      "تئاتر",
+      "بنام",
+      "آباد"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيرون",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "داخل",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "ضعیف",
+    "choices": [
+      "قوی",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "time",
+    "choices": [
+      "زمان",
+      "موزه",
+      "کنید",
+      "انتخابات"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بي درد سر",
+    "choices": [
+      "hard",
+      "problems",
+      "easy",
+      "several"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "intensity",
+    "choices": [
+      "اطراف",
+      "مشغول",
+      "شدت",
+      "برتر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نيرومند",
+    "choices": [
+      "strong",
+      "beautiful",
+      "wet",
+      "then"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشاهده",
+    "choices": [
+      "first",
+      "flat",
+      "perception",
+      "solution"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "possible",
+    "choices": [
+      "سپتامبر",
+      "داشتن",
+      "شده",
+      "ممکن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آسان",
+    "choices": [
+      "سخت",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "مجمع",
+    "choices": [
+      "singer",
+      "ignorance",
+      "ancient.",
+      "club"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جدا",
+    "choices": [
+      "permission",
+      "Omar",
+      "seriously",
+      "end"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "well-known",
+    "choices": [
+      "پادشاه",
+      "نسخه",
+      "مردان",
+      "مشهور"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "stop",
+      "she",
+      "beautiful",
+      "old"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نمره",
+    "choices": [
+      "girl",
+      "number",
+      "festival",
+      "records"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فرهنگ",
+    "choices": [
+      "place",
+      "family",
+      "then",
+      "Farhang"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اصفهان",
+    "choices": [
+      "Mahmud",
+      "Esfehan",
+      "there",
+      "truth"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شامل",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "محروم",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "row",
+    "choices": [
+      "شود",
+      "رده",
+      "می‌رود",
+      "جلد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جاي",
+    "choices": [
+      "seizure",
+      "frontier",
+      "place",
+      "strong"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نفت خام",
+    "choices": [
+      "petroleum",
+      "outside",
+      "May",
+      "Paul"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "mud",
+    "choices": [
+      "گل",
+      "پی",
+      "مرکز",
+      "سایر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سهي",
+    "choices": [
+      "six",
+      "ready",
+      "London",
+      "straight"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چونکه",
+    "choices": [
+      "relation",
+      "small",
+      "asleep",
+      "because"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Aban",
+    "choices": [
+      "می‌شوند",
+      "آبان",
+      "دولتی",
+      "بهار"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "talented",
+      "ignorance",
+      "ugly",
+      "table"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "تلخ",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "سلطان",
+    "choices": [
+      "weather",
+      "king",
+      "age",
+      "bad"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "frontier",
+    "choices": [
+      "خدمات",
+      "عرضه",
+      "مرز",
+      "آثار"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "willing",
+    "choices": [
+      "دوره",
+      "عشق",
+      "حاضر",
+      "یاد"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زرنگ",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "تنبل",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "حرز",
+    "choices": [
+      "cheap",
+      "south",
+      "protection",
+      "small"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حرکت",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "توقف"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "ژاپن",
+    "choices": [
+      "busy",
+      "queen",
+      "Japan",
+      "resumption"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به همراه",
+    "choices": [
+      "with",
+      "wet",
+      "end",
+      "above"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "beautiful",
+      "outside",
+      "result",
+      "hard"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ملکه",
+    "choices": [
+      "انگلیسی",
+      "پادشاه",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "young",
+    "choices": [
+      "زمانی",
+      "جوان",
+      "مطلق",
+      "ضد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خوب",
+    "choices": [
+      "بد",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "mason",
+    "choices": [
+      "حسین",
+      "بنا",
+      "لحاظ",
+      "موتور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "participation",
+    "choices": [
+      "شیر",
+      "یک",
+      "کشف",
+      "شرکت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دستورالعمل",
+    "choices": [
+      "prescription",
+      "sun",
+      "late",
+      "beautiful"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علم",
+    "choices": [
+      "left",
+      "river",
+      "science",
+      "stone"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پرداخت",
+    "choices": [
+      "polishing",
+      "person",
+      "weak",
+      "late"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حصن",
+    "choices": [
+      "cry",
+      "beneath",
+      "translation",
+      "fortress"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "منابع",
+    "choices": [
+      "human",
+      "sources",
+      "old",
+      "weather"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مطمئن",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "نامطمئن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "خفته",
+    "choices": [
+      "performer",
+      "February",
+      "over",
+      "asleep"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ضعیف",
+    "choices": [
+      "قوی",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "ضحک",
+    "choices": [
+      "go",
+      "stop",
+      "inside",
+      "laugh"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوب",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "بد"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "مهمره",
+    "choices": [
+      "left",
+      "crooked",
+      "red",
+      "beginning"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوب",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "بد",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "باعرزه",
+    "choices": [
+      "capable",
+      "art",
+      "transfer",
+      "Hasan"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "پایین",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "ناراحت",
+    "choices": [
+      "خوشحال",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "reason",
+    "choices": [
+      "فرمان",
+      "آتش",
+      "کنار",
+      "جهت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "zone",
+    "choices": [
+      "منطقه",
+      "حد",
+      "آسیا",
+      "نمایندگان"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "special",
+    "choices": [
+      "جنبش",
+      "سخت",
+      "روستاهای",
+      "خاص"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Ahmed",
+    "choices": [
+      "گاز",
+      "احمد",
+      "اين",
+      "ورود"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خیالی",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "واقعی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "خوشگل",
+    "choices": [
+      "زشت",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "تابحال",
+    "choices": [
+      "beneath",
+      "so far",
+      "free",
+      "awak"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "money",
+    "choices": [
+      "پول",
+      "موجب",
+      "نیز",
+      "دریاچه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حمل و نقل",
+    "choices": [
+      "Mehr",
+      "share",
+      "ignorance",
+      "transportation"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامهربان",
+    "choices": [
+      "انگلیسی",
+      "مهربان",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "sentence",
+    "choices": [
+      "موقعیت",
+      "عضو",
+      "جمله",
+      "سیارک‌ها"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مهربان",
+    "choices": [
+      "نامهربان",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "غیرقانونی",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "قانونی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "Masood",
+    "choices": [
+      "مسعود",
+      "شخصی",
+      "ژوئن",
+      "مرتبط"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "trip",
+    "choices": [
+      "می‌رود",
+      "فرانسوی",
+      "بازیگران",
+      "سفر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "read",
+    "choices": [
+      "کنونی",
+      "پاپ",
+      "سبز",
+      "خوانده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "far",
+      "principles",
+      "go",
+      "ugly"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بر ماليدن",
+    "choices": [
+      "take",
+      "in",
+      "end",
+      "black"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چه چه",
+    "choices": [
+      "stomach",
+      "in order to",
+      "or",
+      "brave"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مدد کردن",
+    "choices": [
+      "open",
+      "remaining",
+      "way",
+      "help"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عالی",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "بدترین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "idle",
+      "ignorance",
+      "new",
+      "times more"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بلا تکليف",
+    "choices": [
+      "uncertain",
+      "yours",
+      "before",
+      "awak"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نزست",
+    "choices": [
+      "growth",
+      "first",
+      "December",
+      "old"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آلت",
+    "choices": [
+      "summer",
+      "organ",
+      "speed",
+      "spots"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "field of study",
+    "choices": [
+      "فرانسوی",
+      "رشته",
+      "انتخاب",
+      "می‌کند"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "large",
+      "economy",
+      "beautiful",
+      "bitter"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "غيرقانوني",
+    "choices": [
+      "illegal",
+      "shout",
+      "group",
+      "imaginary"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آلبوم",
+    "choices": [
+      "born",
+      "album",
+      "elections",
+      "state"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "poetry",
+    "choices": [
+      "انگلستان",
+      "رادیو",
+      "شعر",
+      "استرالیا"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "face",
+    "choices": [
+      "توسط",
+      "آوریل",
+      "صورت",
+      "ق"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ترانه",
+    "choices": [
+      "ugly",
+      "careful",
+      "Taraneh",
+      "do"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "late",
+      "dry",
+      "careless",
+      "respect"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ثمين",
+    "choices": [
+      "stop",
+      "have",
+      "children",
+      "expensive"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "whoever",
+    "choices": [
+      "اکبر",
+      "آنکه",
+      "علم",
+      "رسیدن"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عالی",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "بدترین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "transportation",
+    "choices": [
+      "خیابان",
+      "پاپ",
+      "نقل",
+      "شعر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "red",
+    "choices": [
+      "کشور",
+      "اهل",
+      "صدای",
+      "قرمز"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "marriage",
+    "choices": [
+      "استرالیا",
+      "دهستان‌های",
+      "ساکن",
+      "ازدواج"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "راست",
+    "choices": [
+      "هدف",
+      "چب",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "then",
+    "choices": [
+      "سپس",
+      "آن‌ها",
+      "قتل",
+      "نقطه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "service",
+    "choices": [
+      "یاد",
+      "سبک",
+      "خدمت",
+      "ی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سست بودن",
+    "choices": [
+      "lazy",
+      "profession",
+      "busy",
+      "strong"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اعلام",
+    "choices": [
+      "England",
+      "announcement",
+      "under",
+      "father"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شاعر",
+    "choices": [
+      "dry",
+      "big",
+      "ugly",
+      "poet"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "length",
+    "choices": [
+      "طول",
+      "شبیه",
+      "آمار",
+      "می‌تواند"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موزه",
+    "choices": [
+      "stop",
+      "to",
+      "Ahmed",
+      "museum"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چشم",
+    "choices": [
+      "friend",
+      "eye",
+      "wet",
+      "small"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "total",
+    "choices": [
+      "نشر",
+      "کل",
+      "مناطق",
+      "آزاد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "wet",
+    "choices": [
+      "ستاره",
+      "محلی",
+      "تر",
+      "هنرمند"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "intention",
+    "choices": [
+      "براي",
+      "نظر",
+      "منظور",
+      "داشت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سراي",
+    "choices": [
+      "industry",
+      "superior",
+      "world",
+      "beginning"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وزارت",
+    "choices": [
+      "last",
+      "last",
+      "ministry",
+      "bitter"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توي",
+    "choices": [
+      "style",
+      "blood",
+      "what",
+      "in"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "court",
+      "sweet",
+      "god",
+      "museum"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "face",
+      "king",
+      "beautiful",
+      "square"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Qoran",
+    "choices": [
+      "آهن",
+      "قرآن",
+      "منبع",
+      "طبقه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تئاتر",
+    "choices": [
+      "theater",
+      "weak",
+      "height",
+      "matter"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بیگانه",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "دوست"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "century",
+    "choices": [
+      "قرن",
+      "سوی",
+      "وسیله",
+      "وزن"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "همانند",
+    "choices": [
+      "like",
+      "girl",
+      "solution",
+      "bottom"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عدد چهار",
+    "choices": [
+      "cry",
+      "economy",
+      "four",
+      "source"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "relations",
+    "choices": [
+      "پرداخت",
+      "مناسب",
+      "انتقال",
+      "روابط"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "واقعی",
+    "choices": [
+      "خیالی",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "ناشناس",
+    "choices": [
+      "شناس",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "دختر",
+    "choices": [
+      "هدف",
+      "پسر",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "presence",
+    "choices": [
+      "می",
+      "وجود",
+      "صاحب",
+      "گروه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عدد",
+    "choices": [
+      "crooked",
+      "piece",
+      "letter",
+      "on"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرما",
+    "choices": [
+      "cold",
+      "matter",
+      "far",
+      "transportation"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مر",
+    "choices": [
+      "similar",
+      "big",
+      "project",
+      "bitter"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "written",
+    "choices": [
+      "ساختار",
+      "نوشته",
+      "این",
+      "ملی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رقت انگيز",
+    "choices": [
+      "sad",
+      "go",
+      "ten",
+      "uncertain"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هورا کشيدن",
+    "choices": [
+      "hard",
+      "beautiful",
+      "shout",
+      "surface"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مافوق",
+    "choices": [
+      "superior",
+      "structure",
+      "spring",
+      "king"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "little",
+    "choices": [
+      "یکی",
+      "کنار",
+      "رشته",
+      "کم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دخل",
+    "choices": [
+      "stop",
+      "new",
+      "trace",
+      "income"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "doctor",
+    "choices": [
+      "برنده",
+      "احتمال",
+      "دکتر",
+      "متفاوت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پايان يافته",
+    "choices": [
+      "gloomy",
+      "known",
+      "piece",
+      "finished"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "new",
+      "Mosque",
+      "itself",
+      "Saltanat"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "end",
+      "opposite",
+      "red",
+      "sweet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بيوک",
+    "choices": [
+      "new",
+      "time",
+      "first",
+      "big"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زیبا",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "زشت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "اولی",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "آخری",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "جدید",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "قدیمی",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "اولی",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "آخری",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "صيحه زدن",
+    "choices": [
+      "Saltanat",
+      "August",
+      "knowledge",
+      "cry"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sign",
+    "choices": [
+      "تبریز",
+      "نشان",
+      "قرار",
+      "ه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيرون",
+    "choices": [
+      "dill",
+      "sun",
+      "outside of",
+      "subscriber"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ancient.",
+    "choices": [
+      "معمولاً",
+      "فرمان",
+      "نویسنده",
+      "باستان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دانش",
+    "choices": [
+      "knowledge",
+      "they",
+      "girl",
+      "word"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "visage",
+    "choices": [
+      "اولین",
+      "رو",
+      "سنتی",
+      "فرد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "منظر",
+    "choices": [
+      "uncertain",
+      "look",
+      "",
+      "no"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "resistance",
+    "choices": [
+      "شهرستان",
+      "در",
+      "مقاومت",
+      "مطالعه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "ماندن",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "large",
+    "choices": [
+      "خیلی",
+      "بزرگ",
+      "پرداخت",
+      "سید"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "tied",
+    "choices": [
+      "طول",
+      "مرداد",
+      "زیر",
+      "بسته"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شود",
+    "choices": [
+      "union",
+      "dill",
+      "cry",
+      "probability"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دهه",
+    "choices": [
+      "incoming",
+      "album",
+      "laugh",
+      "decade"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "excess",
+    "choices": [
+      "علاوه",
+      "به",
+      "کرد",
+      "عبور"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تخيلي",
+    "choices": [
+      "imaginary",
+      "first",
+      "go",
+      "fulfillment"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "fight",
+    "choices": [
+      "مبارزه",
+      "بلند",
+      "مدیر",
+      "جعبه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بیدار",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "خواب"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "نا محرم",
+    "choices": [
+      "society",
+      "model",
+      "stranger",
+      ""
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "with",
+    "choices": [
+      "شوروی",
+      "واژه",
+      "نزد",
+      "کردستان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شير افکن",
+    "choices": [
+      "end",
+      "brave",
+      "usually",
+      "last"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "born",
+    "choices": [
+      "کارهای",
+      "متولد",
+      "جا",
+      "عملیات"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "محروم",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "شامل",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بيوک",
+    "choices": [
+      "organization",
+      "god",
+      "awak",
+      "big"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "rural district",
+    "choices": [
+      "باید",
+      "دهستان",
+      "آقای",
+      "دورهٔ"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بنت",
+    "choices": [
+      "like",
+      "moon",
+      "winning",
+      "girl"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "خوب",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "individuals",
+    "choices": [
+      "زنده",
+      "قدیمی",
+      "نسبت",
+      "افراد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "scattering",
+    "choices": [
+      "قم",
+      "سازمان",
+      "پخش",
+      "توابع"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "علامت",
+    "choices": [
+      "winter",
+      "girl",
+      "fight",
+      "standard"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "روز",
+    "choices": [
+      "volume",
+      "daytime",
+      "so far",
+      "inspection"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به انجام رساندن",
+    "choices": [
+      "laugh",
+      "do",
+      "trip",
+      "struggle"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قمر",
+    "choices": [
+      "import",
+      "moon",
+      "they",
+      "late"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حرکت",
+    "choices": [
+      "توقف",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "palace",
+    "choices": [
+      "کاخ",
+      "ممکن",
+      "اش",
+      "پست"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تابستان",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "زمستان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "سلطان",
+    "choices": [
+      "king",
+      "zone",
+      "announcement",
+      "sultan"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "غیرقانونی",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "قانونی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "به روي",
+    "choices": [
+      "on",
+      "awak",
+      "lack",
+      "training"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "بزرگ",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "قتل",
+    "choices": [
+      "murder",
+      "night",
+      "son",
+      "best"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قشنگ",
+    "choices": [
+      "زشت",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "gauze",
+      "sacred",
+      "new",
+      "sources"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مسائل",
+    "choices": [
+      "knowledge",
+      "bring up",
+      "problems",
+      "upon"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معوج",
+    "choices": [
+      "on",
+      "crooked",
+      "ton",
+      "Mehr"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "industry",
+    "choices": [
+      "حقوق",
+      "نزدیک",
+      "قرن",
+      "صنعت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برهان آوردن",
+    "choices": [
+      "reason",
+      "winning",
+      "death",
+      "free"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sultan",
+    "choices": [
+      "سری",
+      "کیلومتر",
+      "جامعه",
+      "سلطان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ثمر",
+    "choices": [
+      "result",
+      "include",
+      "shine",
+      "on"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بنت",
+    "choices": [
+      "period",
+      "girl",
+      "beneath",
+      "thriving"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "تلخ",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "end",
+      "relation",
+      "beginning",
+      "city"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رشته",
+    "choices": [
+      "field of study",
+      "tradition",
+      "speed",
+      "result"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مجهول",
+    "choices": [
+      "March",
+      "unknown",
+      "gallows",
+      "black"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حرکت",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "توقف",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "like",
+    "choices": [
+      "بصورت",
+      "ه",
+      "نتایج",
+      "فیزیک"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شهرستان",
+    "choices": [
+      "province",
+      "cold",
+      "war",
+      "Saheb"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گون",
+    "choices": [
+      "soil",
+      "side",
+      "various",
+      "type"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناراحت",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "خوشحال",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "مشفق",
+    "choices": [
+      "start",
+      "white",
+      "dill",
+      "kind"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "بیکار",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "respect",
+    "choices": [
+      "اوایل",
+      "داده",
+      "لحاظ",
+      "پنجم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Nur",
+    "choices": [
+      "می‌دهند",
+      "نور",
+      "کیلومتری",
+      "دفتر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "بيرون"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "توجيه",
+    "choices": [
+      "area",
+      "winter",
+      "explanation",
+      "problems"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "بالا"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "ساز",
+    "choices": [
+      "musical instrument",
+      "start",
+      "stone",
+      "hanging"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "پایین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "درون",
+    "choices": [
+      "",
+      "under",
+      "interior",
+      "successful"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "beautiful",
+      "small",
+      "threshold",
+      "Abbas"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "India",
+    "choices": [
+      "سرعت",
+      "هند",
+      "اطراف",
+      "جام"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "everybody",
+    "choices": [
+      "زنان",
+      "گل",
+      "ساده",
+      "همه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "person",
+    "choices": [
+      "حاضر",
+      "عمده",
+      "وجود",
+      "شخص"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سبقت",
+    "choices": [
+      "passing",
+      "same",
+      "tongue",
+      "position"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آفتاب",
+    "choices": [
+      "‌ها",
+      "مهتاب",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "تابستان",
+    "choices": [
+      "زمستان",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "کودک",
+    "choices": [
+      "thereafter",
+      "child",
+      "ugly",
+      "imprison"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زندانی",
+    "choices": [
+      "آزاد",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "کوچیک",
+    "choices": [
+      "انگلیسی",
+      "بزرگ",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "امر",
+    "choices": [
+      "matter",
+      "increase",
+      "simple",
+      "wet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چارديواري",
+    "choices": [
+      "house",
+      "old",
+      "Mohsen",
+      "end"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پادشاه",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "ملکه",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "حرکت",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "توقف"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "پرونده",
+    "choices": [
+      "country",
+      "case",
+      "Saudi Arabia",
+      "there"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "orchard",
+    "choices": [
+      "غیر",
+      "باغ",
+      "قرمز",
+      "لندن"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اکتشاف",
+    "choices": [
+      "give",
+      "discovery",
+      "have",
+      "hard"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ترسو",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "شجاع"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "stone",
+    "choices": [
+      "هاي",
+      "سلطان",
+      "میلیون",
+      "سنگ"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچیک",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "بزرگ"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "selection",
+    "choices": [
+      "انتخاب",
+      "چاپ",
+      "براساس",
+      "عدم"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موتلف",
+    "choices": [
+      "left",
+      "united",
+      "unconditional",
+      "black"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قشنگ",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "زشت",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "soccer",
+    "choices": [
+      "دل",
+      "فوتبال",
+      "ایرانی",
+      "جمع"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چپ",
+    "choices": [
+      "registeration",
+      "young",
+      "left",
+      "winter"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "reply",
+    "choices": [
+      "اضافه",
+      "ماشین",
+      "اسلامی",
+      "پاسخ"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "thrust",
+    "choices": [
+      "یعنی",
+      "هشت",
+      "عبارت",
+      "فشار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "معني بخشيدن",
+    "choices": [
+      "beautiful",
+      "known",
+      "mean",
+      "large"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "too",
+    "choices": [
+      "گونه",
+      "حسین",
+      "هم",
+      "هشت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ترقي کردن",
+    "choices": [
+      "increase",
+      "agreement",
+      "until",
+      "India"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ازدواج",
+    "choices": [
+      "spreading",
+      "paint",
+      "marriage",
+      "total"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "with",
+    "choices": [
+      "همه",
+      "همین",
+      "همراه",
+      "آمار"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زنداني کردن",
+    "choices": [
+      "truth",
+      "such as",
+      "imprison",
+      "happy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نيکوترين",
+    "choices": [
+      "beautiful",
+      "loaded",
+      "best",
+      "industrious"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نمره",
+    "choices": [
+      "winning",
+      "time",
+      "number",
+      "talented"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sake",
+    "choices": [
+      "هنر",
+      "آموزش",
+      "خاطر",
+      "دل"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "احاطه",
+    "choices": [
+      "large",
+      "west",
+      "surrounding",
+      "human"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آزاد",
+    "choices": [
+      "انگلیسی",
+      "زندانی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "worthiness",
+    "choices": [
+      "ابراهیم",
+      "ارزش",
+      "معروف",
+      "مدیر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشکل",
+    "choices": [
+      "hard",
+      "sun",
+      "white",
+      "soul"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "درگذشت",
+    "choices": [
+      "first",
+      "demise",
+      "University",
+      "publisher"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حاوي بودن",
+    "choices": [
+      "complete",
+      "",
+      "word",
+      "include"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "woman",
+    "choices": [
+      "صنایع",
+      "سالگی",
+      "جامع",
+      "زن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "reason",
+    "choices": [
+      "داشت",
+      "اعدام",
+      "سبب",
+      "تهیه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ذکر",
+    "choices": [
+      "library",
+      "park",
+      "length",
+      "remembering"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شاگردي",
+    "choices": [
+      "training",
+      "revolution",
+      "son",
+      "sour"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوشگل",
+    "choices": [
+      "زشت",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "solution",
+    "choices": [
+      "حل",
+      "هوایی",
+      "قرن",
+      "ده"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گرم",
+    "choices": [
+      "سرد",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "transfer",
+    "choices": [
+      "مربوط",
+      "انتقال",
+      "سرزمین",
+      "حقیقت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Mahmud",
+    "choices": [
+      "هفته",
+      "سپس",
+      "آوریل",
+      "محمود"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "but also",
+    "choices": [
+      "گرفتن",
+      "بلکه",
+      "اواخر",
+      "فروش"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برنا",
+    "choices": [
+      "brave",
+      "young",
+      "sad",
+      "house"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زنداني کردن",
+    "choices": [
+      "imprison",
+      "dependent",
+      "person",
+      "stranger"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حزبي",
+    "choices": [
+      "political party",
+      "five",
+      "steering wheel",
+      "stranger"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رل",
+    "choices": [
+      "awak",
+      "word",
+      "foundation",
+      "role"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "illegal",
+      "small",
+      "November",
+      "hot"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سیاه",
+    "choices": [
+      "‌ها",
+      "سفید",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "utilization",
+    "choices": [
+      "کشته",
+      "مسعود",
+      "ایشان",
+      "کاربرد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هراسانده",
+    "choices": [
+      "",
+      "scared",
+      "mountain",
+      "fulfillment"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرد",
+    "choices": [
+      "گرم",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "‌ها",
+      "ماندن",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ماندن",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "رفتن",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "خنده",
+    "choices": [
+      "گریه",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "winter",
+      "went",
+      "ugly",
+      "black"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "certain",
+      "late",
+      "sweet",
+      "Paul"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهبانو",
+    "choices": [
+      "unknown",
+      "queen",
+      "nominee",
+      "old"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شجاع",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "ترسو",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بر روي",
+    "choices": [
+      "above",
+      "way",
+      "June",
+      "straight"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مرخصي",
+    "choices": [
+      "off",
+      "news",
+      "top",
+      "sweet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "غشاوت",
+    "choices": [
+      "woman",
+      "speech",
+      "surname",
+      "covering"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "بیکار",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بیدار",
+    "choices": [
+      "انگلیسی",
+      "خواب",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "آبادي",
+    "choices": [
+      "respect",
+      "village",
+      "but also",
+      "mean"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامه",
+    "choices": [
+      "letter",
+      "truth",
+      "inside",
+      "best"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مسجد",
+    "choices": [
+      "with",
+      "late",
+      "Mosque",
+      "result"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نزدیک",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "دور"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "به داخل",
+    "choices": [
+      "military",
+      "scared",
+      "inside",
+      "beautiful"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "استوار",
+    "choices": [
+      "two",
+      "Sinai Mountain",
+      "Mohsen",
+      "wet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "لسان",
+    "choices": [
+      "India",
+      "beginning",
+      "tongue",
+      "end"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچیک",
+    "choices": [
+      "هدف",
+      "بزرگ",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ديروقت",
+    "choices": [
+      "late",
+      "shine",
+      "summer",
+      "imaginary"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محمود",
+    "choices": [
+      "Qom",
+      "old",
+      "total",
+      "Mahmud"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "شروع"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "تلخ",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "شیرین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "album",
+      "young",
+      "closed",
+      "imprison"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "necessary",
+    "choices": [
+      "دریافت",
+      "رسیدن",
+      "انگلیسی",
+      "لازم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "newspaper",
+      "beautiful",
+      "affairs",
+      "new"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "end",
+      "white",
+      "Mehr",
+      "manner"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قانونی",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "غیرقانونی",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "soul",
+    "choices": [
+      "جان",
+      "تصمیم",
+      "بهترین",
+      "سینما"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "probability",
+    "choices": [
+      "بندی",
+      "امکان",
+      "هوای",
+      "گذاری"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هراسانده",
+    "choices": [
+      "scared",
+      "Iran",
+      "gone",
+      "height"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اداره",
+    "choices": [
+      "height",
+      "rear",
+      "office",
+      "worst"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خاک",
+    "choices": [
+      "well-known",
+      "soil",
+      "beneath",
+      "season"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "river",
+    "choices": [
+      "رود",
+      "پیرامون",
+      "علیه",
+      "انتشار"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بیگانه",
+    "choices": [
+      "‌ها",
+      "دوست",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "موتور",
+    "choices": [
+      "motor",
+      "Mosque",
+      "whoever",
+      "idle"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "state",
+    "choices": [
+      "کد",
+      "حال",
+      "کمک",
+      "ش"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "system",
+    "choices": [
+      "کردن",
+      "آهن",
+      "دارند",
+      "نظام"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "leader",
+    "choices": [
+      "بیش",
+      "رهبر",
+      "آخرین",
+      "تیم"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ايالت",
+    "choices": [
+      "winter",
+      "state",
+      "wet",
+      "imprison"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "unconditional",
+      "right",
+      "closed",
+      "king"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سترگ",
+    "choices": [
+      "letter",
+      "age",
+      "with",
+      "large"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "six",
+    "choices": [
+      "اجازه",
+      "الدین",
+      "شش",
+      "دلار"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شاگردي",
+    "choices": [
+      "training",
+      "sediment",
+      "hour",
+      "table"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرما",
+    "choices": [
+      "big",
+      "cold",
+      "spreading",
+      "stranger"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هيچ",
+    "choices": [
+      "sign",
+      "significant",
+      "such as",
+      "no"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوشحال",
+    "choices": [
+      "هدف",
+      "ناراحت",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "square",
+      "go",
+      "seven",
+      "careful"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مهتاب",
+    "choices": [
+      "هدف",
+      "آفتاب",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "سخت",
+    "choices": [
+      "‌ها",
+      "آسان",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "until",
+    "choices": [
+      "کانادا",
+      "تا",
+      "اقدام",
+      "میلیون"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "military",
+    "choices": [
+      "وقتی",
+      "خود",
+      "اولین",
+      "ارتش"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سیاه",
+    "choices": [
+      "سفید",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "beautiful",
+      "lack",
+      "white",
+      "fracture"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شور",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "شیرین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "نامهربان",
+    "choices": [
+      "مهربان",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "بلا",
+    "choices": [
+      "art",
+      "without",
+      "dry",
+      "last"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "prominent",
+    "choices": [
+      "همان",
+      "برجسته",
+      "عهده",
+      "زندان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رده",
+    "choices": [
+      "dry",
+      "immigration",
+      "row",
+      "given"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "انگلیسی",
+      "زیبا",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "hanging",
+    "choices": [
+      "کودکان",
+      "متال",
+      "اعدام",
+      "خانوار"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بر روي",
+    "choices": [
+      "spring",
+      "above",
+      "talented",
+      "study"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کرمان",
+    "choices": [
+      "Kerman",
+      "bottom",
+      "salary",
+      "tongue"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "spots",
+    "choices": [
+      "زن",
+      "نقاط",
+      "جلوگیری",
+      "پایین"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "type",
+    "choices": [
+      "نوع",
+      "مهم‌ترین",
+      "یافته",
+      "شاه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "June",
+    "choices": [
+      "امپراتوری",
+      "اصول",
+      "ژانویه",
+      "ژوئن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "gone",
+    "choices": [
+      "رفته",
+      "بطور",
+      "اجرای",
+      "پرورش"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "محل",
+    "choices": [
+      "immigration",
+      "Mohsen",
+      "out",
+      "source"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "standard",
+    "choices": [
+      "سبک",
+      "دو",
+      "استاندارد",
+      "فیزیک"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "واثق",
+    "choices": [
+      "certain",
+      "then",
+      "saying",
+      "large"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "winner",
+    "choices": [
+      "نوشته",
+      "مساحت",
+      "آفریقا",
+      "قهرمان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "به همراه",
+    "choices": [
+      "week",
+      "except",
+      "well-known",
+      "with"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "size",
+    "choices": [
+      "سیستم",
+      "اندازه",
+      "آبان",
+      "محصول"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "star",
+      "way",
+      "beginning",
+      "old"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دربار",
+    "choices": [
+      "upon",
+      "court",
+      "spread",
+      "off"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پادشاه",
+    "choices": [
+      "انگلیسی",
+      "ملکه",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نامطمئن",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "مطمئن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "آغاز",
+    "choices": [
+      "‌ها",
+      "پایان",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "انجمن",
+    "choices": [
+      "cold",
+      "August",
+      "society",
+      "nominee"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اکتبر",
+    "choices": [
+      "services",
+      "october",
+      "small",
+      "list"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کل",
+    "choices": [
+      "beautiful",
+      "moon",
+      "total",
+      "resumption"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شتاب",
+    "choices": [
+      "cold",
+      "old",
+      "only",
+      "speed"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آفريده",
+    "choices": [
+      "old",
+      "doctor",
+      "museum",
+      "creature"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "opposite",
+    "choices": [
+      "اتحاد",
+      "اعمال",
+      "مقابل",
+      "کوتاه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Korea",
+    "choices": [
+      "زندگینامه",
+      "کره",
+      "یکدیگر",
+      "خویش"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دوست",
+    "choices": [
+      "هدف",
+      "بیگانه",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "صلابه",
+    "choices": [
+      "gallows",
+      "late",
+      "include",
+      "dependent"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "fresh",
+    "choices": [
+      "زنده",
+      "کشورهای",
+      "تقسیمات",
+      "سیارک"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "area",
+    "choices": [
+      "مورد",
+      "سطح",
+      "آموزش",
+      "جمهور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "احتیاط",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "بااحتیاط"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "NASA",
+    "choices": [
+      "پایین",
+      "کد",
+      "ناسا",
+      "ارتباط"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "daytime",
+    "choices": [
+      "جهانی",
+      "خدمات",
+      "مطرح",
+      "روز"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "طول",
+    "choices": [
+      "open",
+      "type",
+      "length",
+      "thriving"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ثبت",
+    "choices": [
+      "past",
+      "look",
+      "registeration",
+      "bad"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کانادا",
+    "choices": [
+      "Canada",
+      "mud",
+      "talented",
+      "increase"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "library",
+    "choices": [
+      "هنری",
+      "کتابخانه",
+      "شهرستان",
+      "حوزه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نزست",
+    "choices": [
+      "Farhang",
+      "ugly",
+      "careful",
+      "first"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بیگانه",
+    "choices": [
+      "‌ها",
+      "دوست",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Rome",
+    "choices": [
+      "آهنگ",
+      "کنار",
+      "روم",
+      "عامل"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سپتامبر",
+    "choices": [
+      "include",
+      "September",
+      "ugly",
+      "hundred"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "tower",
+    "choices": [
+      "استان‌های",
+      "باشگاه",
+      "برج",
+      "آیت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "انگليس",
+    "choices": [
+      "simple",
+      "England",
+      "kind",
+      "theater"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناشناس",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "شناس",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "رخسار",
+    "choices": [
+      "visage",
+      "relation",
+      "second",
+      "hard"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "she",
+    "choices": [
+      "مهم",
+      "نظیر",
+      "او",
+      "کوه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شامل",
+    "choices": [
+      "محروم",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "چپ",
+    "choices": [
+      "left",
+      "March",
+      "ugly",
+      "sweet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سطح",
+    "choices": [
+      "ignorance",
+      "public",
+      "until",
+      "area"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "صنعت",
+    "choices": [
+      "end",
+      "Dollar",
+      "Farhang",
+      "industry"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "god",
+    "choices": [
+      "کانادا",
+      "الله",
+      "هزار",
+      "میزان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "به روي",
+    "choices": [
+      "true",
+      "new",
+      "on",
+      "stay"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "verdict",
+    "choices": [
+      "سی",
+      "دریافت",
+      "محسن",
+      "حکم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رضا",
+    "choices": [
+      "ugly",
+      "immigration",
+      "orchard",
+      "Reza"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "star",
+    "choices": [
+      "ستاره",
+      "کم",
+      "تدریس",
+      "مشترک"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مربوط",
+    "choices": [
+      "relevant",
+      "my",
+      "gone",
+      "happy"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شامل",
+    "choices": [
+      "rukh",
+      "including",
+      "my",
+      "including"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برد",
+    "choices": [
+      "winning",
+      "black",
+      "similar",
+      "hard"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "early",
+      "asleep",
+      "different",
+      ""
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "singer",
+    "choices": [
+      "هنگامی",
+      "خواننده",
+      "پا",
+      "آن‌ها"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "publishing",
+    "choices": [
+      "هدایت",
+      "چاپ",
+      "می‌شوند",
+      "بدین"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شناس",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "ناشناس",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بوم",
+    "choices": [
+      "affairs",
+      "country",
+      "person",
+      "mean"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوب",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "بد"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "احتیاط",
+    "choices": [
+      "‌ها",
+      "بااحتیاط",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "release",
+    "choices": [
+      "کارشناسی",
+      "کمک",
+      "محمد",
+      "انتشار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "براي چه",
+    "choices": [
+      "Farhang",
+      "why",
+      "stage manager",
+      "factors"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "fracture",
+    "choices": [
+      "سلطان",
+      "محمود",
+      "دل",
+      "شکست"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "project",
+      "real",
+      "warm",
+      "beautiful"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عمر",
+    "choices": [
+      "order",
+      "Japan",
+      "Omar",
+      "under"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ادامه",
+    "choices": [
+      "new",
+      "valley",
+      "materials",
+      "resumption"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نفر",
+    "choices": [
+      "easy",
+      "functions",
+      "child",
+      "person"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "two",
+    "choices": [
+      "ساخته",
+      "دادند",
+      "المللی",
+      "دو"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پرواز",
+    "choices": [
+      "military",
+      "stomach",
+      "flight",
+      "total"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "seven",
+    "choices": [
+      "هفت",
+      "دوم",
+      "تاریخچه",
+      "اسپانیا"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "story",
+    "choices": [
+      "داستان",
+      "نیویورک",
+      "فلسفه",
+      "چیزی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سلطان",
+    "choices": [
+      "scared",
+      "king",
+      "black",
+      "knowledge"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "volume",
+      "early",
+      "treatment",
+      "under"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "saying",
+    "choices": [
+      "نظام",
+      "درگذشت",
+      "گفته",
+      "بیماری"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "همه جاگير",
+    "choices": [
+      "real",
+      "prescription",
+      "widespread",
+      "thereafter"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "your",
+    "choices": [
+      "تو",
+      "ریشه",
+      "مکان",
+      "جشنواره"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Khorasan",
+    "choices": [
+      "خانه",
+      "آوریل",
+      "زندگینامه",
+      "خراسان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "number",
+    "choices": [
+      "شهید",
+      "انتخاب",
+      "چنین",
+      "تعداد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "ugly",
+      "trip",
+      "worthiness",
+      "king"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "correlated",
+    "choices": [
+      "رده",
+      "مرتبط",
+      "بیشتر",
+      "خدمات"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برملا",
+    "choices": [
+      "affairs",
+      "known",
+      "time",
+      "new"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "spring",
+    "choices": [
+      "خاطر",
+      "اضافه",
+      "رود",
+      "بهار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شامل",
+    "choices": [
+      "‌ها",
+      "محروم",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "spring",
+      "ugly",
+      "they",
+      "threshold"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "بالا"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "جلد",
+    "choices": [
+      "volume",
+      "turkish",
+      "Japan",
+      "person"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "حرکت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "مشکل",
+    "choices": [
+      "cause",
+      "hard",
+      "hot",
+      "sad"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "راست",
+    "choices": [
+      "چب",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "جوان",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "پیر",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "independent",
+    "choices": [
+      "مصرف",
+      "خیابان",
+      "موضوع",
+      "مستقل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "dry",
+      "based on",
+      "she",
+      "return"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدانوسيله",
+    "choices": [
+      "time",
+      "go",
+      "second",
+      "thereafter"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بيوک",
+    "choices": [
+      "respect",
+      "last",
+      "way",
+      "big"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "انگلیسی",
+      "دیر",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Kerman",
+    "choices": [
+      "طول",
+      "کرمان",
+      "اداره",
+      "قانون"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آب و هوا",
+    "choices": [
+      "weather",
+      "cheap",
+      "what",
+      "outside"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "they",
+    "choices": [
+      "تولد",
+      "ساز",
+      "کالیفرنیا",
+      "آنها"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "start",
+    "choices": [
+      "آهنگ",
+      "ادبی",
+      "بزرگ‌ترین",
+      "آغاز"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عيد",
+    "choices": [
+      "bad",
+      "festival",
+      "small",
+      "speech"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Fars",
+    "choices": [
+      "آمریکایی",
+      "شورای",
+      "فارس",
+      "نماینده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "yet",
+    "choices": [
+      "اقدام",
+      "هنوز",
+      "جدا",
+      "کشور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "داخل",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "محرور",
+    "choices": [
+      "hot",
+      "organization",
+      "young",
+      "go"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خوشگل",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "زشت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "suburbs",
+    "choices": [
+      "رمان",
+      "شرق",
+      "کوتاه",
+      "توابع"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "upon",
+    "choices": [
+      "شب",
+      "خارجی",
+      "اصل",
+      "سر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "several",
+    "choices": [
+      "چند",
+      "ابن",
+      "هاي",
+      "دید"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آسان",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "سخت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "آثار",
+    "choices": [
+      "weak",
+      "works",
+      "best",
+      "ugly"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "like",
+    "choices": [
+      "مردم",
+      "آلمان",
+      "طراحی",
+      "همچون"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عراق",
+    "choices": [
+      "certain",
+      "Iraq",
+      "December",
+      "family"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ترک",
+    "choices": [
+      "turkish",
+      "resident",
+      "truth",
+      "but also"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "talented",
+    "choices": [
+      "مبارزه",
+      "درباره",
+      "هنرمند",
+      "شیراز"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "rule",
+    "choices": [
+      "حکومت",
+      "جمهور",
+      "دو",
+      "درجه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ادهم",
+    "choices": [
+      "black",
+      "girl",
+      "summer",
+      "out"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "volume",
+    "choices": [
+      "فراهم",
+      "جلد",
+      "بالای",
+      "ساله"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "February",
+    "choices": [
+      "ژوئیه",
+      "الکتریکی",
+      "ص",
+      "بهمن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "reduction",
+    "choices": [
+      "فیلم‌های",
+      "معروف",
+      "کاهش",
+      "آذر"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ناشر",
+    "choices": [
+      "Saheb",
+      "successful",
+      "over",
+      "publisher"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فرانسه",
+    "choices": [
+      "summer",
+      "ugly",
+      "France",
+      "with"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "help",
+    "choices": [
+      "اساس",
+      "براساس",
+      "ده",
+      "کمک"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "square",
+    "choices": [
+      "جام",
+      "مربع",
+      "تعیین",
+      "سایت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "small",
+      "big",
+      "friend",
+      "best"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "role",
+    "choices": [
+      "یاد",
+      "مفهوم",
+      "افغانستان",
+      "نقش"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "style",
+    "choices": [
+      "کسب",
+      "مقاله",
+      "نمود",
+      "عبارت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مر",
+    "choices": [
+      "bitter",
+      "but also",
+      "score",
+      "beautiful"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نفر",
+    "choices": [
+      "person",
+      "time",
+      "thriving",
+      "growth"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "second",
+    "choices": [
+      "مستقیم",
+      "گرفته‌است",
+      "دوباره",
+      "شخصی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جزء",
+    "choices": [
+      "portion",
+      "children",
+      "inside",
+      "top"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هزار",
+    "choices": [
+      "last",
+      "worst",
+      "thousand",
+      "in"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مهر",
+    "choices": [
+      "beginning",
+      "movement",
+      "Mehr",
+      "end"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "غير شرطي",
+    "choices": [
+      "unconditional",
+      "newspaper",
+      "blood",
+      "Shah"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محله",
+    "choices": [
+      "neigborhood",
+      "end",
+      "last",
+      "city"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زندانی",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "آزاد"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "جدید",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "قدیمی",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "through",
+    "choices": [
+      "بیت",
+      "فوق",
+      "بیمارستان",
+      "توسط"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "درسته",
+    "choices": [
+      "first",
+      "they",
+      "lazy",
+      "complete"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نحوه",
+    "choices": [
+      "Shah",
+      "method",
+      "beneath",
+      "cry"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "زیبا"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "آتش",
+    "choices": [
+      "fire",
+      "hajji",
+      "true",
+      "ugly"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "resulting",
+    "choices": [
+      "آن",
+      "اهالی",
+      "منجر",
+      "سالگی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شرق",
+    "choices": [
+      "Aban",
+      "institution",
+      "operation",
+      "orient"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "brother",
+    "choices": [
+      "ورودی",
+      "ارتفاع",
+      "برادر",
+      "علم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "that",
+    "choices": [
+      "که",
+      "اطراف",
+      "آب",
+      "خاصی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نقطه اتکاء",
+    "choices": [
+      "expansion",
+      "stay",
+      "late",
+      "profit"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شاد",
+    "choices": [
+      "related",
+      "won",
+      "happy",
+      "new"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "free",
+      "star",
+      "stop",
+      "post"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "what",
+    "choices": [
+      "کارگردانی",
+      "آنچه",
+      "اول",
+      "پیدا"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ready",
+    "choices": [
+      "جلوگیری",
+      "جوایز",
+      "ندارد",
+      "فراهم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "book",
+    "choices": [
+      "ساعت",
+      "کتاب",
+      "اعضای",
+      "ابهام‌زدایی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گلزار",
+    "choices": [
+      "inequality",
+      "reason",
+      "busy",
+      "rose garden"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Kurdistan",
+    "choices": [
+      "تجاری",
+      "زنان",
+      "کردستان",
+      "نوعی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سن",
+    "choices": [
+      "age",
+      "sweet",
+      "album",
+      "Azar"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مر",
+    "choices": [
+      "scared",
+      "bitter",
+      "gauze",
+      "relations"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حامض کردن",
+    "choices": [
+      "easy",
+      "six",
+      "sour",
+      "busy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متعدد",
+    "choices": [
+      "crooked",
+      "truth",
+      "various",
+      "spouse"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معوج",
+    "choices": [
+      "crooked",
+      "beneath",
+      "Rome",
+      "principles"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مافوق",
+    "choices": [
+      "king",
+      "superior",
+      "revolution",
+      "Kurdish"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ابوي",
+    "choices": [
+      "father",
+      "manner",
+      "cry",
+      "style"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشغول",
+    "choices": [
+      "busy",
+      "published",
+      "works",
+      "training"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بوم",
+    "choices": [
+      "province",
+      "country",
+      "bank",
+      "weak"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محاذي",
+    "choices": [
+      "opposite",
+      "boy",
+      "red",
+      "unit"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "با ملاحظه",
+    "choices": [
+      "go",
+      "relations",
+      "score",
+      "careful"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نطق",
+    "choices": [
+      "petroleum",
+      "speech",
+      "scared",
+      "slow"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سطح",
+    "choices": [
+      "report",
+      "mountain",
+      "area",
+      "inside"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خنده",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "گریه",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "operation",
+    "choices": [
+      "یک",
+      "دریا",
+      "سطح",
+      "عمل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "philosophy",
+    "choices": [
+      "مطرح",
+      "فلسفه",
+      "همه",
+      "موتور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سترگ",
+    "choices": [
+      "easy",
+      "late",
+      "large",
+      "winter"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دختر",
+    "choices": [
+      "هدف",
+      "پسر",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Esfand",
+    "choices": [
+      "سبب",
+      "اسفند",
+      "آباد",
+      "عدد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "speed",
+    "choices": [
+      "سرعت",
+      "بود",
+      "آن‌ها",
+      "کیلومتری"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "start",
+    "choices": [
+      "شروع",
+      "روز",
+      "زبان",
+      "زنان"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هراسانده",
+    "choices": [
+      "neigborhood",
+      "beautiful",
+      "scared",
+      "sake"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "return",
+    "choices": [
+      "بازگشت",
+      "آنچه",
+      "عباس",
+      "قدیمی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پرديز",
+    "choices": [
+      "over",
+      "brave",
+      "park",
+      "loaded"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "why",
+    "choices": [
+      "حدود",
+      "چرا",
+      "میانه",
+      "بصورت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بااحتیاط",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "احتیاط"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "زیبا",
+    "choices": [
+      "هدف",
+      "زشت",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "method",
+    "choices": [
+      "فرهنگ",
+      "خمینی",
+      "روش",
+      "دانش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بوم",
+    "choices": [
+      "country",
+      "tree",
+      "outside",
+      "industrious"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سترگ",
+    "choices": [
+      "Saltanat",
+      "children",
+      "large",
+      "money"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زرنگ",
+    "choices": [
+      "تنبل",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "شجره",
+    "choices": [
+      "easy",
+      "tree",
+      "square",
+      "wealthy"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برحسب",
+    "choices": [
+      "hand",
+      "out",
+      "based on",
+      "red"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "spreading",
+      "ugly",
+      "ceremony",
+      "period"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "to",
+    "choices": [
+      "غربی",
+      "کسب",
+      "به",
+      "کرده‌است"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زمستان",
+    "choices": [
+      "انگلیسی",
+      "تابستان",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "انجمن",
+    "choices": [
+      "right",
+      "relation",
+      "only",
+      "society"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ته",
+    "choices": [
+      "yours",
+      "surrounding",
+      "nations",
+      "bottom"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باستان",
+    "choices": [
+      "far",
+      "spouse",
+      "stay",
+      "ancient."
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Afghanistan",
+    "choices": [
+      "ساختار",
+      "نماید",
+      "مربع",
+      "افغانستان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جوان",
+    "choices": [
+      "پیر",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "فضايي",
+    "choices": [
+      "busy",
+      "space",
+      "imprison",
+      "Egypt"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متولد",
+    "choices": [
+      "method",
+      "born",
+      "strong",
+      "Abdullah"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تهران",
+    "choices": [
+      "above",
+      "idle",
+      "Tehran",
+      "stop"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "total",
+    "choices": [
+      "درگاه",
+      "می‌شود",
+      "دیده",
+      "جمع"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "فره",
+    "choices": [
+      "unknown",
+      "good",
+      "simple",
+      "right"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "united",
+    "choices": [
+      "متحد",
+      "زمانی",
+      "معمولا",
+      "تصویر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "انگلیسی",
+      "شروع",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "مجهول",
+    "choices": [
+      "sun",
+      "unknown",
+      "certain",
+      "successful"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناحيه دسته بندي",
+    "choices": [
+      "wet",
+      "lazy",
+      "strong",
+      "zone"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اوليه",
+    "choices": [
+      "old",
+      "primary",
+      "on",
+      "services"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "born",
+    "choices": [
+      "پیشنهاد",
+      "زاده",
+      "عربی",
+      "فرد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "collection",
+    "choices": [
+      "مجموعه",
+      "سپس",
+      "افراد",
+      "کم"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيضاء",
+    "choices": [
+      "white",
+      "",
+      "state",
+      "prescription"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پرونده",
+    "choices": [
+      "saying",
+      "records",
+      "Dollar",
+      "left"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علت",
+    "choices": [
+      "museum",
+      "Mordad",
+      "tremor",
+      "cause"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "روم",
+    "choices": [
+      "weak",
+      "Rome",
+      "dill",
+      "there"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "غلط گرفتن",
+    "choices": [
+      "exclude",
+      "step",
+      "correct",
+      "new"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "rukh",
+    "choices": [
+      "رخ",
+      "انواع",
+      "زبان‌های",
+      "رشته"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "‌ها",
+      "خیس",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "زیبا",
+    "choices": [
+      "‌ها",
+      "زشت",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "نو"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "worth",
+    "choices": [
+      "نوامبر",
+      "انتشار",
+      "مقدار",
+      "جدا"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "there",
+    "choices": [
+      "آموزشی",
+      "مرگ",
+      "وسیله",
+      "آنجا"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مرطوب",
+    "choices": [
+      "announcement",
+      "England",
+      "wet",
+      "free"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شور",
+    "choices": [
+      "انگلیسی",
+      "شیرین",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "فروشگاه",
+    "choices": [
+      "rank",
+      "market",
+      "foundation",
+      "new"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشفق",
+    "choices": [
+      "point",
+      "kind",
+      "order",
+      "nowadays"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامهربان",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "مهربان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "their",
+    "choices": [
+      "ماهی",
+      "شماره",
+      "خود",
+      "بودن"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بيوک",
+    "choices": [
+      "England",
+      "big",
+      "worst",
+      "with"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اعتماد",
+    "choices": [
+      "trust",
+      "yours",
+      "industrious",
+      "wealthy"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زنداني کردن",
+    "choices": [
+      "expansion",
+      "first",
+      "target",
+      "imprison"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "کوچیک",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "knowledge",
+    "choices": [
+      "دانش",
+      "بازیکنان",
+      "یا",
+      "بزرگی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "يمين",
+    "choices": [
+      "province",
+      "Saltanat",
+      "grail",
+      "right"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مام",
+    "choices": [
+      "mother",
+      "structure",
+      "state",
+      "expansion"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "new",
+    "choices": [
+      "بخش‌های",
+      "عربی",
+      "کیلومتری",
+      "نو"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کج",
+    "choices": [
+      "مستقیم",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "تنبل",
+    "choices": [
+      "زرنگ",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "منته",
+    "choices": [
+      "growth",
+      "sour",
+      "valley",
+      "finally"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "طرح",
+    "choices": [
+      "project",
+      "leader",
+      "first",
+      "topic"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "شروع",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "فتوا",
+    "choices": [
+      "group",
+      "speed",
+      "bottom",
+      "sentence"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "nominee",
+    "choices": [
+      "نامزد",
+      "اعضای",
+      "تحصیل",
+      "گرم"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Pope",
+    "choices": [
+      "حالی",
+      "علوم",
+      "قهرمان",
+      "پاپ"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "appearance",
+    "choices": [
+      "می‌آید",
+      "نمود",
+      "ق",
+      "ولایت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سکستگي",
+    "choices": [
+      "doctor",
+      "speech",
+      "green",
+      "fracture"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تابستان",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "زمستان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "قشنگ",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "تخيلي",
+    "choices": [
+      "hundred",
+      "Mosque",
+      "reason",
+      "imaginary"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "house",
+    "choices": [
+      "بازدید",
+      "خانه",
+      "دریافت",
+      "یمن"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "داخل",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "مصرف",
+    "choices": [
+      "Mehr",
+      "use",
+      "surname",
+      "prominent"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "يمين",
+    "choices": [
+      "operation",
+      "beautiful",
+      "Imam",
+      "right"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشخص",
+    "choices": [
+      "dam",
+      "specific",
+      "awak",
+      "number"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خفته",
+    "choices": [
+      "solution",
+      "asleep",
+      "mean",
+      "dry"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "number",
+    "choices": [
+      "گروهی",
+      "شهری",
+      "کمک",
+      "شمار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خیالی",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "واقعی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "دیر",
+    "choices": [
+      "زود",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "village",
+    "choices": [
+      "آیت",
+      "کشور",
+      "مفهوم",
+      "روستا"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اخبار",
+    "choices": [
+      "news",
+      "statistics",
+      "old",
+      "this"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ايفاء",
+    "choices": [
+      "fulfillment",
+      "small",
+      "moon",
+      "foundation"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پیر",
+    "choices": [
+      "جوان",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "مانند",
+    "choices": [
+      "new",
+      "such as",
+      "scattering",
+      "worst"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تالي",
+    "choices": [
+      "necessary",
+      "region",
+      "similar",
+      "brave"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "october",
+    "choices": [
+      "پدرش",
+      "چاپ",
+      "زادگان",
+      "اکتبر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رويه",
+    "choices": [
+      "surface",
+      "number",
+      "end",
+      "winter"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "آغاز"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "شروع",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "محل",
+    "choices": [
+      "went",
+      "source",
+      "excess",
+      "trip"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سیاه",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "سفید"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "hard",
+    "choices": [
+      "کسب",
+      "سخت",
+      "محسوب",
+      "سایر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Iraq",
+    "choices": [
+      "میرزا",
+      "عراق",
+      "مختلف",
+      "خورشید"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "motive",
+    "choices": [
+      "نبرد",
+      "نشان",
+      "موجب",
+      "چندین"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مبح",
+    "choices": [
+      "post",
+      "topic",
+      "country",
+      "Mohammad Reza"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "top",
+      "night",
+      "public",
+      "beneath"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کسري دار",
+    "choices": [
+      "what",
+      "tower",
+      "under",
+      "fight"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "لشکري",
+    "choices": [
+      "loaded",
+      "side",
+      "soul",
+      "military"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "stroke",
+    "choices": [
+      "مهر",
+      "ناشر",
+      "رضوی",
+      "خط"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زير",
+    "choices": [
+      "out",
+      "meter",
+      "include",
+      "beneath"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نابرابري",
+    "choices": [
+      "they",
+      "standard",
+      "young",
+      "inequality"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "province",
+    "choices": [
+      "ایران",
+      "موارد",
+      "کامل",
+      "شهرستان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برد",
+    "choices": [
+      "exclude",
+      "winning",
+      "Dollar",
+      "moon"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شش",
+    "choices": [
+      "hour",
+      "published",
+      "thermometer",
+      "six"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "هدف",
+      "حرکت",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "چب",
+    "choices": [
+      "‌ها",
+      "راست",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "جنوب",
+    "choices": [
+      "south",
+      "their",
+      "united",
+      "functions"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sale",
+    "choices": [
+      "هایی",
+      "مطلق",
+      "مستقیم",
+      "فروش"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شور",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "شیرین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "خوشگل",
+    "choices": [
+      "هدف",
+      "زشت",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "نزست",
+    "choices": [
+      "first",
+      "portion",
+      "small",
+      "creature"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي درد سر",
+    "choices": [
+      "industrious",
+      "easy",
+      "resulting",
+      "gallows"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باستثناي",
+    "choices": [
+      "new",
+      "fracture",
+      "except",
+      "queen"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آباد",
+    "choices": [
+      "thriving",
+      "red",
+      "mean",
+      "struggle"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "energetic",
+    "choices": [
+      "بین",
+      "ساده",
+      "فعال",
+      "آبی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "rarely",
+    "choices": [
+      "کمتر",
+      "عرب",
+      "قانون",
+      "پنجم"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سابق",
+    "choices": [
+      "first",
+      "sign",
+      "former",
+      "went"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "in order to",
+    "choices": [
+      "بعضی",
+      "براي",
+      "یا",
+      "کاری"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حامض کردن",
+    "choices": [
+      "sour",
+      "sad",
+      "summer",
+      "beautiful"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "seaport",
+    "choices": [
+      "شهری",
+      "بندر",
+      "سپتامبر",
+      "قانون"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "plant",
+    "choices": [
+      "دستگاه",
+      "جمله",
+      "دانشگاه",
+      "دفاع"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "Meshed",
+      "best",
+      "child",
+      "far"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واقعی",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "خیالی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "beginning",
+      "point",
+      "ugly",
+      "then"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مصالح",
+    "choices": [
+      "affairs",
+      "November",
+      "over",
+      "study"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پایین",
+    "choices": [
+      "انگلیسی",
+      "بالا",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "شامل",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "محروم"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "پسر",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "دختر"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "واقعی",
+    "choices": [
+      "انگلیسی",
+      "خیالی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "area",
+    "choices": [
+      "مساحت",
+      "با",
+      "همانند",
+      "توسط"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "هدف",
+      "کوچک",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "پیر",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "جوان",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "قشنگ",
+    "choices": [
+      "زشت",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "شير افکن",
+    "choices": [
+      "moon",
+      "brave",
+      "bottom",
+      "stop"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "theater",
+    "choices": [
+      "آبان",
+      "جدا",
+      "جلوگیری",
+      "تئاتر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "راست",
+    "choices": [
+      "‌ها",
+      "چب",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "مارس",
+    "choices": [
+      "March",
+      "dry",
+      "Saudi Arabia",
+      "protection"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نا محرم",
+    "choices": [
+      "Qoran",
+      "love",
+      "stranger",
+      "fracture"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "north",
+    "choices": [
+      "شمال",
+      "ماه",
+      "صدا",
+      "کوچک"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "utilization",
+    "choices": [
+      "ذکر",
+      "ایالات",
+      "اگر",
+      "استفاده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ولو شدن",
+    "choices": [
+      "marriage",
+      "spread",
+      "mean",
+      "grail"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زندانی",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "آزاد"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بر روي",
+    "choices": [
+      "free",
+      "top",
+      "Mordad",
+      "above"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عالی",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "بدترین",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "what",
+    "choices": [
+      "استقلال",
+      "گرفته‌است",
+      "توسعه",
+      "ها"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نيکوترين",
+    "choices": [
+      "best",
+      "read",
+      "intensity",
+      "new"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حکم",
+    "choices": [
+      "several",
+      "good",
+      "verdict",
+      "fulfillment"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سيستم",
+    "choices": [
+      "park",
+      "end",
+      "expensive",
+      "system"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بهمن",
+    "choices": [
+      "ignorance",
+      "February",
+      "imprison",
+      "wet"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اصول رعيتي",
+    "choices": [
+      "principles",
+      "mountain",
+      "operation",
+      "performer"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "such as",
+    "choices": [
+      "مانند",
+      "فوریه",
+      "خدمات",
+      "محمد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "before",
+    "choices": [
+      "عصر",
+      "اکثر",
+      "جعبه",
+      "قبل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "درس خواندن",
+    "choices": [
+      "study",
+      "struggle",
+      "winning",
+      "small"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محرور",
+    "choices": [
+      "permission",
+      "then",
+      "certain",
+      "hot"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آزاد",
+    "choices": [
+      "زندانی",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "sale",
+      "museum",
+      "independent",
+      "go"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "با ملاحظه",
+    "choices": [
+      "old",
+      "given",
+      "death",
+      "careful"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "hanging",
+      "fortress",
+      "small",
+      "beginning"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "gauze",
+    "choices": [
+      "شرقی",
+      "دارد",
+      "نقشه",
+      "گاز"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ما",
+    "choices": [
+      "hard",
+      "inside",
+      "we",
+      "Shah"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اسلام",
+    "choices": [
+      "incoming",
+      "Mahmud",
+      "Islam",
+      "statistics"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "than",
+    "choices": [
+      "کرده‌است",
+      "مصرف",
+      "هم",
+      "از"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچیک",
+    "choices": [
+      "انگلیسی",
+      "بزرگ",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "حرکت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "کارگردان",
+    "choices": [
+      "stage manager",
+      "dill",
+      "uncertain",
+      "tongue"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "season",
+    "choices": [
+      "انتشار",
+      "دانش",
+      "فصل",
+      "نرم"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "various",
+    "choices": [
+      "مختلف",
+      "جدید",
+      "خدمات",
+      "نقطه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بي توجه",
+    "choices": [
+      "stop",
+      "careless",
+      "surely",
+      "God"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "based on",
+    "choices": [
+      "طبق",
+      "شاه",
+      "پر",
+      "افراد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خشک",
+    "choices": [
+      "‌ها",
+      "خیس",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "those",
+    "choices": [
+      "روم",
+      "کانادا",
+      "روشن",
+      "آن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ماندن",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "رفتن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "use",
+    "choices": [
+      "دنیا",
+      "مصرف",
+      "مشغول",
+      "جمله"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ولادت",
+    "choices": [
+      "birth",
+      "off",
+      "based on",
+      "but"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "يگانه",
+    "choices": [
+      "stay",
+      "lazy",
+      "strong",
+      "only"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sediment",
+    "choices": [
+      "توضیح",
+      "جرم",
+      "ماهی",
+      "امر"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "widespread",
+    "choices": [
+      "رهبر",
+      "نقاشی",
+      "گسترده",
+      "جستارهای"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نقطه اتکاء",
+    "choices": [
+      "stay",
+      "attack",
+      "big",
+      "sweet"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خودش",
+    "choices": [
+      "publisher",
+      "itself",
+      "good",
+      "include"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معده",
+    "choices": [
+      "thereafter",
+      "translation",
+      "cheap",
+      "stomach"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشکل",
+    "choices": [
+      "surely",
+      "appearance",
+      "hard",
+      "last"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرد",
+    "choices": [
+      "هدف",
+      "گرم",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "سبک",
+    "choices": [
+      "stay",
+      "December",
+      "style",
+      "cheap"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "خوشگل"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "نو",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "قدیمی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "همزمان",
+    "choices": [
+      "contemporary",
+      "operation",
+      "those",
+      "hot"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "superior",
+    "choices": [
+      "ارشد",
+      "وزیر",
+      "نظیر",
+      "هوا"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "report",
+    "choices": [
+      "کمتر",
+      "معمولا",
+      "بدن",
+      "گزارش"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "word",
+    "choices": [
+      "توسعه",
+      "باغ",
+      "درمان",
+      "کلمه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "so far",
+    "choices": [
+      "خودش",
+      "تاکنون",
+      "وبگاه",
+      "نمونه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "احتمال",
+    "choices": [
+      "knowledge",
+      "free",
+      "probability",
+      "obstruction"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رابطه",
+    "choices": [
+      "exclude",
+      "body",
+      "relation",
+      "out"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چوبخط",
+    "choices": [
+      "list",
+      "score",
+      "total",
+      "steady"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ساکن",
+    "choices": [
+      "resident",
+      "written",
+      "old",
+      "old"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قم",
+    "choices": [
+      "Qom",
+      "bitter",
+      "best",
+      "what"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "universal",
+    "choices": [
+      "جمع",
+      "جامع",
+      "هر",
+      "جزیره"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "winning",
+    "choices": [
+      "برنامه",
+      "برد",
+      "پایه",
+      "کشته"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برنا",
+    "choices": [
+      "expensive",
+      "yet",
+      "ugly",
+      "young"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رويش",
+    "choices": [
+      "united",
+      "growth",
+      "piece",
+      "hard"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "study",
+    "choices": [
+      "شرقی",
+      "عامل",
+      "مطالعه",
+      "فقط"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "king",
+      "ancient.",
+      "term",
+      "centers"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "surname",
+      "than",
+      "bad",
+      "girl"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "people",
+    "choices": [
+      "موزه",
+      "مردم",
+      "آمریکا",
+      "کمک"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بنت",
+    "choices": [
+      "",
+      "girl",
+      "center",
+      "region"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حد",
+    "choices": [
+      "known",
+      "include",
+      "limit",
+      "far"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ملکه",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "پادشاه"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "برنا",
+    "choices": [
+      "cry",
+      "young",
+      "dependent",
+      "year"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "view",
+    "choices": [
+      "هنگام",
+      "مراسم",
+      "نظر",
+      "مجله"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حجار",
+    "choices": [
+      "far",
+      "list",
+      "mason",
+      "certain"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "surely",
+    "choices": [
+      "حقیقت",
+      "نظیر",
+      "البته",
+      "سیاست"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "three",
+    "choices": [
+      "خیابان",
+      "سه",
+      "پانویس",
+      "همانند"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "specific",
+    "choices": [
+      "شهریور",
+      "مشخص",
+      "صنعتی",
+      "مرحله"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "‌ها",
+      "شور",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "Imam",
+    "choices": [
+      "سلطنت",
+      "ترکی",
+      "امام",
+      "دهستان"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "made",
+    "choices": [
+      "نوعی",
+      "ساخته",
+      "دسترسی",
+      "قبلی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "family",
+    "choices": [
+      "نرم",
+      "کسی",
+      "خانوار",
+      "محصول"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "gloomy",
+    "choices": [
+      "مردان",
+      "گرفته",
+      "بلکه",
+      "با"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "festival",
+    "choices": [
+      "ادبی",
+      "ثابت",
+      "جشنواره",
+      "زاده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عرب",
+    "choices": [
+      "perception",
+      "lack",
+      "flat",
+      "Arab"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نا محرم",
+    "choices": [
+      "stranger",
+      "good",
+      "cold",
+      "several"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "went",
+    "choices": [
+      "تقویم",
+      "پهلوی",
+      "رفت",
+      "برخوردار"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "year",
+    "choices": [
+      "فیلم",
+      "سال",
+      "میزان",
+      "چنین"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "جدید"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "گشادن",
+    "choices": [
+      "open",
+      "resumption",
+      "cheap",
+      "people"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شهر کوچک",
+    "choices": [
+      "town",
+      "girl",
+      "fulfillment",
+      "go"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بوم",
+    "choices": [
+      "man",
+      "thrust",
+      "field of study",
+      "country"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واگذارکردن",
+    "choices": [
+      "family",
+      "late",
+      "transfer",
+      "release"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آفتاب",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "مهتاب"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "Khan",
+    "choices": [
+      "هفتم",
+      "خان",
+      "کوه",
+      "مارس"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رقت انگيز",
+    "choices": [
+      "human",
+      "sad",
+      "lawful",
+      "open"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "this",
+    "choices": [
+      "گفت",
+      "اين",
+      "می‌شوند",
+      "ترین"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "unconditional",
+      "use",
+      "third",
+      "go"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "لمس",
+    "choices": [
+      "known",
+      "tongue",
+      "soft",
+      "Abbas"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خاطر",
+    "choices": [
+      "demise",
+      "temper",
+      "kind",
+      "sake"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برملا",
+    "choices": [
+      "album",
+      "known",
+      "Khorasan",
+      "limits"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "probability",
+    "choices": [
+      "دختر",
+      "عصر",
+      "احتمال",
+      "جایزه"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "روشن",
+    "choices": [
+      "‌ها",
+      "خاموش",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "گرم",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "سرد"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "ثمين",
+    "choices": [
+      "ugly",
+      "left",
+      "girl",
+      "expensive"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کار",
+    "choices": [
+      "known",
+      "work",
+      "ton",
+      "principles"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دست",
+    "choices": [
+      "science",
+      "hand",
+      "king",
+      "interior"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عملکرد",
+    "choices": [
+      "operation",
+      "expensive",
+      "hot",
+      "salary"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تازه کردن",
+    "choices": [
+      "out",
+      "shout",
+      "fresh",
+      "out"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دوست کردن",
+    "choices": [
+      "young",
+      "mankind",
+      "new",
+      "friend"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آخری",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "اولی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "August",
+    "choices": [
+      "ای",
+      "تلویزیون",
+      "حقوق",
+      "اوت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "محرور",
+    "choices": [
+      "hot",
+      "dry",
+      "structure",
+      "kind"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "corps",
+    "choices": [
+      "سپاه",
+      "قهرمانی",
+      "می‌گردد",
+      "پارک"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ورنام",
+    "choices": [
+      "Germany",
+      "help",
+      "surname",
+      "to"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "share",
+    "choices": [
+      "قسمت",
+      "مدیر",
+      "هزار",
+      "جان"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "روزنامه",
+    "choices": [
+      "summer",
+      "Kurdish",
+      "son",
+      "newspaper"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "شور",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "Europe",
+    "choices": [
+      "اروپا",
+      "تولید",
+      "کلیسای",
+      "گرفته"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حرارتسنج",
+    "choices": [
+      "nominee",
+      "thermometer",
+      "moon",
+      "wet"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ژوئن",
+    "choices": [
+      "what",
+      "June",
+      "in order to",
+      "then"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "time",
+    "choices": [
+      "دیگری",
+      "سرعت",
+      "اعداد",
+      "هنگام"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گل آلود کردن",
+    "choices": [
+      "mud",
+      "out",
+      "point",
+      "result"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "translation",
+    "choices": [
+      "آمده",
+      "کلمه",
+      "ترجمه",
+      "نقل"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "surname",
+    "choices": [
+      "پانویس",
+      "حساب",
+      "ساختمان",
+      "شهرت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بدترین",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "عالی",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "strength",
+      "go",
+      "outside",
+      "import"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علم",
+    "choices": [
+      "age",
+      "on",
+      "science",
+      "new"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ثانيه",
+    "choices": [
+      "ugly",
+      "same",
+      "second",
+      "translation"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بزرگ",
+    "choices": [
+      "انگلیسی",
+      "کوچیک",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "way",
+    "choices": [
+      "ان",
+      "داخلی",
+      "ه",
+      "راه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "relation",
+    "choices": [
+      "رابطه",
+      "فرانسوی",
+      "علم",
+      "رود"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "office",
+    "choices": [
+      "دفتر",
+      "غربی",
+      "مرکزی",
+      "طبیعی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چب",
+    "choices": [
+      "انگلیسی",
+      "راست",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "statistics",
+    "choices": [
+      "آمار",
+      "کشور",
+      "پی",
+      "فیلم"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Germany",
+    "choices": [
+      "بازیگران",
+      "عبارت",
+      "آلمان",
+      "محمد"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "امضا کردن",
+    "choices": [
+      "sign",
+      "sweet",
+      "good",
+      "but also"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بوم",
+    "choices": [
+      "park",
+      "region",
+      "finally",
+      "shout"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "hajji",
+    "choices": [
+      "ترک",
+      "روشن",
+      "حاج",
+      "تاریخ"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "افراد",
+    "choices": [
+      "sacred",
+      "area",
+      "individuals",
+      "Dollar"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عباس",
+    "choices": [
+      "Abbas",
+      "public",
+      "best",
+      "mold"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باز",
+    "choices": [
+      "هدف",
+      "بسته",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "واردشونده",
+    "choices": [
+      "utilization",
+      "Saudi Arabia",
+      "closed",
+      "incoming"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ماندن",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "رفتن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "ته",
+    "choices": [
+      "sacred",
+      "winner",
+      "rukh",
+      "bottom"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خنده",
+    "choices": [
+      "گریه",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "subject",
+    "choices": [
+      "می‌توانند",
+      "سر",
+      "آزاد",
+      "باب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "معروف",
+    "choices": [
+      "far",
+      "old",
+      "famous",
+      "side"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ضعیف",
+    "choices": [
+      "قوی",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "بد",
+    "choices": [
+      "bad",
+      "late",
+      "spreading",
+      "manner"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ثامن",
+    "choices": [
+      "eight",
+      "temper",
+      "bring up",
+      "three"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جدید",
+    "choices": [
+      "قدیمی",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "رابطه",
+    "choices": [
+      "decade",
+      "blood",
+      "relation",
+      "read"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "son",
+    "choices": [
+      "پسر",
+      "تحقیقات",
+      "ج",
+      "جام"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چند تا",
+    "choices": [
+      "several",
+      "",
+      "perception",
+      "good"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "unique",
+    "choices": [
+      "اصفهان",
+      "تک",
+      "فرزند",
+      "فی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تلخ",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "شیرین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "most",
+    "choices": [
+      "اول",
+      "آیت",
+      "اعمال",
+      "اکثر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "person",
+    "choices": [
+      "علاوه",
+      "روی",
+      "فرد",
+      "همکاری"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مدل سازي",
+    "choices": [
+      "stage",
+      "happy",
+      "model",
+      "tied"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بیدار",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "خواب",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "increase",
+    "choices": [
+      "بسته",
+      "اطراف",
+      "اضافه",
+      "خوبی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "نو",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "نبرد",
+    "choices": [
+      "conflict",
+      "sad",
+      "famous",
+      "straight"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "slow",
+    "choices": [
+      "مختلف",
+      "کنند",
+      "کند",
+      "پیروزی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ايشان",
+    "choices": [
+      "she",
+      "why",
+      "soft",
+      "government"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متن",
+    "choices": [
+      "famous",
+      "seaport",
+      "text",
+      "upon"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اداره",
+    "choices": [
+      "given",
+      "like",
+      "expansion",
+      "office"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ديروقت",
+    "choices": [
+      "late",
+      "so far",
+      "small",
+      "new"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "registeration",
+      "winning",
+      "closed",
+      "cold"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اولاد",
+    "choices": [
+      "children",
+      "province",
+      "several",
+      "seriously"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پايه",
+    "choices": [
+      "summer",
+      "translation",
+      "foundation",
+      "organization"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "cause",
+    "choices": [
+      "پس",
+      "باعث",
+      "برتر",
+      "شامل"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "به همراه",
+    "choices": [
+      "with",
+      "incoming",
+      "sake",
+      "time"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پريرو",
+    "choices": [
+      "bitter",
+      "beautiful",
+      "include",
+      "sour"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بمجرد",
+    "choices": [
+      "right",
+      "share",
+      "beautiful",
+      "upon"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حسن",
+    "choices": [
+      "first",
+      "over",
+      "Hasan",
+      "possible"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کوتاهمدت",
+    "choices": [
+      "sweet",
+      "stating",
+      "short",
+      "unknown"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موت",
+    "choices": [
+      "tower",
+      "height",
+      "stop",
+      "death"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بدايت",
+    "choices": [
+      "summer",
+      "surely",
+      "beginning",
+      "state"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نقش کردن",
+    "choices": [
+      "what",
+      "Egypt",
+      "imprison",
+      "paint"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سست بودن",
+    "choices": [
+      "Abdullah",
+      "son",
+      "awak",
+      "lazy"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جهل",
+    "choices": [
+      "orient",
+      "have",
+      "left",
+      "ignorance"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تلخ",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "شیرین"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "پسر بچه",
+    "choices": [
+      "old",
+      "bitter",
+      "cry",
+      "boy"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "براي آن که",
+    "choices": [
+      "in order to",
+      "fulfillment",
+      "large",
+      "sour"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واژه",
+    "choices": [
+      "shine",
+      "prescription",
+      "word",
+      "best"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حقوق",
+    "choices": [
+      "period",
+      "law",
+      "people",
+      "foundation"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "flat",
+    "choices": [
+      "گذشته",
+      "تخت",
+      "کارهای",
+      "عبور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اندازه کم",
+    "choices": [
+      "new",
+      "little",
+      "profit",
+      "records"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "قشنگ"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "yours",
+    "choices": [
+      "شده‌است",
+      "هنر",
+      "شما",
+      "بیماری"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سفید",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "سیاه",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "hill",
+    "choices": [
+      "تپه",
+      "ماهی",
+      "آذربایجان",
+      "خویش"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شهبانو",
+    "choices": [
+      "before",
+      "September",
+      "queen",
+      "end"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "warm",
+    "choices": [
+      "بسته",
+      "اقتصادی",
+      "سالهای",
+      "گرم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "جدید"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "خواب",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "بیدار"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "گشادن",
+    "choices": [
+      "black",
+      "doctor",
+      "open",
+      "ugly"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناشناس",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "شناس"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "mountain",
+    "choices": [
+      "کارشناسی",
+      "همچون",
+      "پروژه",
+      "کوه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "قدرت",
+    "choices": [
+      "model",
+      "power",
+      "sweet",
+      "look"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دولت سرا",
+    "choices": [
+      "lawful",
+      "cry",
+      "parliament",
+      "palace"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "place",
+    "choices": [
+      "پیدا",
+      "مکان",
+      "سیارک",
+      "شهری"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "immigration",
+    "choices": [
+      "نظیر",
+      "عربی",
+      "پرداخت",
+      "مهاجرت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خاموش",
+    "choices": [
+      "روشن",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "ارزان قيمت",
+    "choices": [
+      "exclude",
+      "meter",
+      "surrounding",
+      "cheap"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گرم",
+    "choices": [
+      "هدف",
+      "سرد",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "seizure",
+      "upon",
+      "position",
+      "stop"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "راستين",
+    "choices": [
+      "king",
+      "end",
+      "real",
+      "that"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "every",
+    "choices": [
+      "هر",
+      "دادن",
+      "رود",
+      "نشر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "loaded",
+    "choices": [
+      "خاصی",
+      "پر",
+      "دستور",
+      "نزد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "beginning",
+      "river",
+      "up",
+      "boy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "گشودگي",
+    "choices": [
+      "revolution",
+      "solution",
+      "word",
+      ""
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ارزون",
+    "choices": [
+      "گرون",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "گریه",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "خنده"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "hundred",
+    "choices": [
+      "ارشد",
+      "عنوان",
+      "صد",
+      "خویش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سه لو",
+    "choices": [
+      "boy",
+      "industry",
+      "three",
+      "that"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "داخل",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "پسر",
+    "choices": [
+      "انگلیسی",
+      "دختر",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "خاموش",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "روشن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بیکار",
+    "choices": [
+      "انگلیسی",
+      "مشغول",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ارايه",
+    "choices": [
+      "under",
+      "providing",
+      "new",
+      "scattering"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "performer",
+    "choices": [
+      "سپس",
+      "کننده",
+      "فرد",
+      "همچنین"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بیکار",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "مشغول"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "اشعار",
+    "choices": [
+      "certain",
+      "Mohsen",
+      "stating",
+      "ugly"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علت",
+    "choices": [
+      "off",
+      "cause",
+      "marriage",
+      "grail"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "rear",
+    "choices": [
+      "پیشین",
+      "علوم",
+      "پشت",
+      "ارزش"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "portion",
+    "choices": [
+      "دادگاه",
+      "زنان",
+      "سپس",
+      "بخش"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مشفق",
+    "choices": [
+      "kind",
+      "services",
+      "surely",
+      "group"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سپوختن",
+    "choices": [
+      "stranger",
+      "industrious",
+      "currently",
+      "thrust"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Saheb",
+    "choices": [
+      "خرداد",
+      "صاحب",
+      "دارد",
+      "حمایت"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مرتبط",
+    "choices": [
+      "total",
+      "Masood",
+      "correlated",
+      "knowledge"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "capable",
+    "choices": [
+      "جا",
+      "قابل",
+      "اروپا",
+      "سطح"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ماهور",
+    "choices": [
+      "sweet",
+      "weak",
+      "hill",
+      "art"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برنامه",
+    "choices": [
+      "share",
+      "plan",
+      "those",
+      "necessary"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "permission",
+    "choices": [
+      "اجازه",
+      "نظریه",
+      "آب",
+      "به"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زرنگ",
+    "choices": [
+      "‌ها",
+      "تنبل",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "مرطوب",
+    "choices": [
+      "prison",
+      "wet",
+      "big",
+      "bad"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "وقف شده",
+    "choices": [
+      "currently",
+      "trip",
+      "sacred",
+      "above"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معني بخشيدن",
+    "choices": [
+      "mean",
+      "house",
+      "in",
+      "worst"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي زور",
+    "choices": [
+      "ugly",
+      "old",
+      "known",
+      "weak"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "احتیاط",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "بااحتیاط"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "but",
+    "choices": [
+      "اما",
+      "می‌گیرد",
+      "آمریکایی",
+      "رسمی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ceremony",
+    "choices": [
+      "مراسم",
+      "کارشناسی",
+      "اجازه",
+      "میانه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تخيلي",
+    "choices": [
+      "number",
+      "soul",
+      "imprison",
+      "imaginary"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "relevant",
+    "choices": [
+      "پرورش",
+      "آمد",
+      "می‌رود",
+      "مربوط"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مفهوم",
+    "choices": [
+      "off",
+      "uderstood",
+      "wealthy",
+      "night"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "schedule",
+      "expensive",
+      "new",
+      "imaginary"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "با ملاحظه",
+    "choices": [
+      "dry",
+      "certain",
+      "careful",
+      "total"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "eight",
+    "choices": [
+      "هشت",
+      "مادر",
+      "همانند",
+      "مراسم"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نو",
+    "choices": [
+      "‌ها",
+      "قدیمی",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "آب ديدگي",
+    "choices": [
+      "subordinate",
+      "title",
+      "new",
+      "temper"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حاوي بودن",
+    "choices": [
+      "war",
+      "Arab",
+      "volume",
+      "include"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سیاه",
+    "choices": [
+      "هدف",
+      "سفید",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بخدمت",
+    "choices": [
+      "grail",
+      "to",
+      "strong",
+      "good"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توافقنامه",
+    "choices": [
+      "agreement",
+      "or",
+      "crooked",
+      "second"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شمرده",
+    "choices": [
+      "total",
+      "score",
+      "sources",
+      "counted"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "تلخ",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "top",
+      "first",
+      "brave",
+      "brave"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "منجر",
+    "choices": [
+      "last",
+      "covering",
+      "hot",
+      "resulting"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دسته",
+    "choices": [
+      "small",
+      "group",
+      "idle",
+      "treatment"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بروني",
+    "choices": [
+      "outside",
+      "Aban",
+      "new",
+      "left"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "independence",
+      "Meshed",
+      "old",
+      "reason"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برحسب",
+    "choices": [
+      "based on",
+      "square",
+      "Khorasan",
+      "old"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "nations",
+    "choices": [
+      "جنسی",
+      "ملل",
+      "بدین",
+      "ارومیه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چه",
+    "choices": [
+      "brave",
+      "country",
+      "what",
+      "government"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تهاجم کردن",
+    "choices": [
+      "rukh",
+      "attack",
+      "old",
+      "unknown"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "attack",
+    "choices": [
+      "حساب",
+      "مسائل",
+      "حمله",
+      "نویسنده"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "protection",
+    "choices": [
+      "حفظ",
+      "باز",
+      "بیشتر",
+      "خاصی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آنگه",
+    "choices": [
+      "young",
+      "then",
+      "eight",
+      "go"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نيکوترين",
+    "choices": [
+      "children",
+      "hundred",
+      "unknown",
+      "best"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "tune",
+    "choices": [
+      "بازی",
+      "دانشکده",
+      "آهنگ",
+      "فیلم‌های"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "government",
+    "choices": [
+      "چه",
+      "آن",
+      "دولت",
+      "شهرهای"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بیگانه",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "دوست",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "unit",
+      "sweet",
+      "sweet",
+      "laugh"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پايستن",
+    "choices": [
+      "sake",
+      "spring",
+      "last",
+      "September"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بيضاء",
+    "choices": [
+      "bring up",
+      "Japan",
+      "white",
+      "London"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "manner",
+    "choices": [
+      "هنری",
+      "نیز",
+      "خلیج",
+      "بطور"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "five",
+    "choices": [
+      "توزیع",
+      "پنج",
+      "نور",
+      "رسید"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "stratum",
+    "choices": [
+      "طبقه",
+      "تو",
+      "هنری",
+      "سرعت"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چينه",
+    "choices": [
+      "permission",
+      "eight",
+      "then",
+      "stratum"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "training",
+    "choices": [
+      "میلادی",
+      "آموزش",
+      "موجود",
+      "حمله"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نوامبر",
+    "choices": [
+      "lawful",
+      "sun",
+      "November",
+      "friend"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رخ",
+    "choices": [
+      "laugh",
+      "face",
+      "Mehr",
+      "stop"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Saudi Arabia",
+    "choices": [
+      "فرانسه",
+      "عربستان",
+      "توانست",
+      "بعضی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "currently",
+    "choices": [
+      "زیادی",
+      "اکنون",
+      "تعریف",
+      "بسیاری"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "weather",
+    "choices": [
+      "نگهداری",
+      "هوا",
+      "گسترش",
+      "مشهور"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حرفه",
+    "choices": [
+      "profession",
+      "ready",
+      "currently",
+      "first"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "همه",
+    "choices": [
+      "lazy",
+      "presence",
+      "black",
+      "everybody"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انتخابات",
+    "choices": [
+      "elections",
+      "outside",
+      "careless",
+      "above"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "زیبا",
+      "هدف",
+      "‌ها",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "پایان",
+    "choices": [
+      "آغاز",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "organ",
+    "choices": [
+      "عضو",
+      "برنامه",
+      "ارزش",
+      "اهالی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "tradition",
+    "choices": [
+      "گسترده",
+      "گاهی",
+      "سنت",
+      "الکتریکی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شاه",
+    "choices": [
+      "universal",
+      "person",
+      "Shah",
+      "summer"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "works",
+    "choices": [
+      "خانوار",
+      "آوریل",
+      "آثار",
+      "موجود"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سهي",
+    "choices": [
+      "old",
+      "uncertain",
+      "but",
+      "straight"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به کارگيري",
+    "choices": [
+      "neigborhood",
+      "utilization",
+      "tradition",
+      "late"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کج",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "مستقیم"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "يمين",
+    "choices": [
+      "free",
+      "right",
+      "weak",
+      "large"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "نزدیک",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "speech",
+    "choices": [
+      "ماده",
+      "دسترسی",
+      "ابتدا",
+      "سخن"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "حضر",
+    "choices": [
+      "cheap",
+      "presence",
+      "order",
+      "foot"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "point",
+    "choices": [
+      "نقطه",
+      "بکار",
+      "ساخته",
+      "دار"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اکبر",
+    "choices": [
+      "wet",
+      "brave",
+      "happy",
+      "Akbar"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "روابط",
+    "choices": [
+      "crooked",
+      "easy",
+      "tongue",
+      "relations"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قدیمی",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "جدید"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "شبکهايي",
+    "choices": [
+      "out",
+      "network",
+      "bitter",
+      "independent"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "افشا شده",
+    "choices": [
+      "out",
+      "times more",
+      "study",
+      "ten"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پسر بچه",
+    "choices": [
+      "boy",
+      "weak",
+      "left",
+      "free"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "market",
+    "choices": [
+      "کرده",
+      "بازار",
+      "خراسان",
+      "ترک"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مستثني کردن",
+    "choices": [
+      "left",
+      "exclude",
+      "known",
+      "prominent"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "tied",
+      "if",
+      "moon",
+      "Germany"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آنها",
+    "choices": [
+      "they",
+      "similar",
+      "young",
+      "word"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باغ",
+    "choices": [
+      "registeration",
+      "what",
+      "orchard",
+      "have"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خراسان",
+    "choices": [
+      "right",
+      "winner",
+      "south",
+      "Khorasan"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "title",
+    "choices": [
+      "نام",
+      "پیوند",
+      "می‌باشند",
+      "خاصی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بي توجه",
+    "choices": [
+      "Masood",
+      "free",
+      "Seine",
+      "careless"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامهربان",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "مهربان",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "south",
+      "end",
+      "new",
+      "they"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آسان",
+    "choices": [
+      "انگلیسی",
+      "سخت",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "پايستن",
+    "choices": [
+      "various",
+      "last",
+      "small",
+      "records"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "letter",
+    "choices": [
+      "جستارهای",
+      "نامه",
+      "مقام",
+      "متولد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "نقطه اتکاء",
+    "choices": [
+      "factors",
+      "stay",
+      "Mohammed",
+      "in order to"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "poetry",
+      "top",
+      "easy",
+      "ugly"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بربستي",
+    "choices": [
+      "lawful",
+      "Germany",
+      "Masood",
+      "world"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واقعی",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "خیالی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "محترم داشتن",
+    "choices": [
+      "respect",
+      "Meshed",
+      "busy",
+      "resident"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "احتیاط",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "بااحتیاط"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "مقدار",
+    "choices": [
+      "right",
+      "worth",
+      "money",
+      "if"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "far",
+      "trip",
+      "end",
+      "moon"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سال نجومي",
+    "choices": [
+      "left",
+      "moon",
+      "year",
+      "ministry"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناراحت",
+    "choices": [
+      "انگلیسی",
+      "خوشحال",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "struggle",
+    "choices": [
+      "باعث",
+      "ص",
+      "تلاش",
+      "اهالی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "خیس",
+    "choices": [
+      "خشک",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "ارقام",
+    "choices": [
+      "spread",
+      "statistics",
+      "presence",
+      "stranger"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "برخوردار بودن",
+    "choices": [
+      "year",
+      "busy",
+      "have",
+      "last"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "راست",
+    "choices": [
+      "چب",
+      "‌ها",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "سبک",
+    "choices": [
+      "end",
+      "look",
+      "cry",
+      "manner"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "trust",
+    "choices": [
+      "آزاد",
+      "برنامه‌های",
+      "مهم‌ترین",
+      "عهده"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دلار",
+    "choices": [
+      "exclude",
+      "new",
+      "only",
+      "Dollar"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انواع",
+    "choices": [
+      "correct",
+      "unique",
+      "types",
+      "why"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دهات",
+    "choices": [
+      "شهر",
+      "انگلیسی",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "امروزه",
+    "choices": [
+      "type",
+      "sweet",
+      "nowadays",
+      "start"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جشن",
+    "choices": [
+      "ceremony",
+      "village",
+      "scared",
+      "prison"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ديروقت",
+    "choices": [
+      "Mordad",
+      "mean",
+      "on",
+      "late"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ايران",
+    "choices": [
+      "strong",
+      "black",
+      "Iran",
+      "certain"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "blood",
+    "choices": [
+      "زیر",
+      "خارجی",
+      "علت",
+      "خون"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مستثني کردن",
+    "choices": [
+      "open",
+      "exclude",
+      "start",
+      "scared"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "bank",
+    "choices": [
+      "وزارت",
+      "جنوبی",
+      "بانک",
+      "بازی"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "جاه",
+    "choices": [
+      "province",
+      "position",
+      "careless",
+      "total"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پسر بچه",
+    "choices": [
+      "hajji",
+      "respect",
+      "boy",
+      "dill"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توي",
+    "choices": [
+      "mankind",
+      "sweet",
+      "knowledge",
+      "in"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خیس",
+    "choices": [
+      "‌ها",
+      "خشک",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "يکه",
+    "choices": [
+      "ugly",
+      "born",
+      "unique",
+      "old"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پیر",
+    "choices": [
+      "جوان",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "عيال",
+    "choices": [
+      "family",
+      "known",
+      "prominent",
+      "imaginary"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "صيحه زدن",
+    "choices": [
+      "that",
+      "inspection",
+      "December",
+      "cry"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "بيرون"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "نوشين",
+    "choices": [
+      "go",
+      "sweet",
+      "end",
+      "red"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "time",
+    "choices": [
+      "علیه",
+      "ساخته",
+      "تلویزیون",
+      "بار"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مرخصي",
+    "choices": [
+      "off",
+      "last",
+      "west",
+      "off"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "sacred",
+    "choices": [
+      "شورای",
+      "مقدس",
+      "تلاش",
+      "گذشته"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "پسر",
+    "choices": [
+      "دختر",
+      "انگلیسی",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "واژه",
+    "choices": [
+      "last",
+      "woman",
+      "word",
+      "bottom"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "November",
+    "choices": [
+      "مثل",
+      "نوامبر",
+      "حکم",
+      "برخوردار"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شمال",
+    "choices": [
+      "hot",
+      "left",
+      "Korea",
+      "north"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "given",
+    "choices": [
+      "داده",
+      "قرآن",
+      "سلطنت",
+      "حقوق"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بلکه",
+    "choices": [
+      "Aban",
+      "closed",
+      "but also",
+      "philosophy"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "امر",
+    "choices": [
+      "cold",
+      "order",
+      "sign",
+      "imaginary"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دانش",
+    "choices": [
+      "place",
+      "awak",
+      "knowledge",
+      "most"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "providing",
+    "choices": [
+      "سپس",
+      "آخر",
+      "کتاب",
+      "ارائه"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "night",
+    "choices": [
+      "میانه",
+      "شب",
+      "پیام",
+      "می‌توان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "الزامي",
+    "choices": [
+      "new",
+      "India",
+      "face",
+      "necessary"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي درد سر",
+    "choices": [
+      "use",
+      "people",
+      "easy",
+      "turkish"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "services",
+    "choices": [
+      "پیش",
+      "سازی",
+      "طور",
+      "خدمات"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آن",
+    "choices": [
+      "beneath",
+      "bitter",
+      "project",
+      "those"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "love",
+    "choices": [
+      "آب",
+      "نمایندگان",
+      "عراق",
+      "عشق"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دور",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "نزدیک"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "art",
+    "choices": [
+      "فرد",
+      "گاهی",
+      "منطقه",
+      "هنر"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "trace",
+    "choices": [
+      "ورود",
+      "اثر",
+      "تحت",
+      "زیاد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "سخت",
+    "choices": [
+      "انگلیسی",
+      "آسان",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "مهربان",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "نامهربان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "شروع",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "هدف",
+      "پایان"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "زشت",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "خوشگل"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "منظومه",
+    "choices": [
+      "collection",
+      "lawful",
+      "last",
+      "industry"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معني بخشيدن",
+    "choices": [
+      "foundation",
+      "mean",
+      "Masood",
+      "awak"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ministry",
+    "choices": [
+      "شرقی",
+      "ما",
+      "زیرا",
+      "وزارت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بااحتیاط",
+    "choices": [
+      "انگلیسی",
+      "احتیاط",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ناس",
+    "choices": [
+      "small",
+      "stop",
+      "people",
+      "bad"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "متعدد",
+    "choices": [
+      "stop",
+      "inside",
+      "various",
+      "out"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ضحک",
+    "choices": [
+      "laugh",
+      "unknown",
+      "late",
+      "Sinai Mountain"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ثمين",
+    "choices": [
+      "Afghanistan",
+      "mean",
+      "expensive",
+      "mean"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "winning",
+      "product",
+      "old",
+      "foundation"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "پشت",
+    "choices": [
+      "ugly",
+      "rear",
+      "old",
+      "but"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شور",
+    "choices": [
+      "شیرین",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "منظره",
+    "choices": [
+      "capable",
+      "black",
+      "album",
+      "view"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عزيمت کردن",
+    "choices": [
+      "start",
+      "report",
+      "with",
+      "spring"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "کتابخانه",
+    "choices": [
+      "inside",
+      "kind",
+      "library",
+      "leader"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شیرین",
+    "choices": [
+      "انگلیسی",
+      "تلخ",
+      "‌ها",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "conflict",
+    "choices": [
+      "بنابراین",
+      "نور",
+      "امکان",
+      "نبرد"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مستثني کردن",
+    "choices": [
+      "story",
+      "unknown",
+      "exclude",
+      "musical instrument"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مصالح",
+    "choices": [
+      "power",
+      "dry",
+      "materials",
+      "given"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "داخل",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "بيرون",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "صنفي",
+    "choices": [
+      "left",
+      "union",
+      "city",
+      "first"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "blood",
+      "end",
+      "out",
+      "wealthy"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "طور",
+    "choices": [
+      "written",
+      "Sinai Mountain",
+      "tune",
+      "war"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "lack",
+    "choices": [
+      "شاعر",
+      "عمل",
+      "عدم",
+      "دریافت"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "percentage",
+    "choices": [
+      "درصد",
+      "فشار",
+      "بزرگ‌ترین",
+      "سیارک‌ها"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گریه",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "خنده",
+      "انگلیسی"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "beautiful",
+      "old",
+      "province",
+      "ugly"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "steady",
+      "top",
+      "prominent",
+      "certain"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ويژه",
+    "choices": [
+      "imaginary",
+      "special",
+      "relation",
+      "old"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "novel",
+    "choices": [
+      "رمان",
+      "تأثیر",
+      "به‌",
+      "قرمز"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چپ",
+    "choices": [
+      "left",
+      "sweet",
+      "spread",
+      "end"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ناراحت",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "خوشحال",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "شهرستان",
+    "choices": [
+      "return",
+      "ugly",
+      "bad",
+      "province"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "فاتح",
+    "choices": [
+      "winner",
+      "late",
+      "type",
+      "superior"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مسطور",
+    "choices": [
+      "beginning",
+      "Canada",
+      "do",
+      "written"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بي زور",
+    "choices": [
+      "leader",
+      "weak",
+      "first",
+      "project"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ارزون",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "گرون",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "اندازه",
+    "choices": [
+      "size",
+      "training",
+      "resulting",
+      "busy"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جانبي",
+    "choices": [
+      "court",
+      "Afghanistan",
+      "side",
+      "free"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بلا تکليف",
+    "choices": [
+      "ceremony",
+      "bad",
+      "village",
+      "uncertain"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "motor",
+    "choices": [
+      "موتور",
+      "میراث",
+      "جهان",
+      "تئاتر"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "significant",
+    "choices": [
+      "آزاد",
+      "مهم",
+      "سده",
+      "رشد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "اولی",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "آخری"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "steering wheel",
+    "choices": [
+      "تا",
+      "کامپیوتر",
+      "کانادا",
+      "فرمان"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "fulfillment",
+    "choices": [
+      "ابن",
+      "ج",
+      "اول",
+      "انجام"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "انقطاع يافتن",
+    "choices": [
+      "end",
+      "Imam",
+      "lack",
+      "affairs"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خون",
+    "choices": [
+      "inside",
+      "operation",
+      "knowledge",
+      "blood"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "اثر",
+    "choices": [
+      "well-known",
+      "cases",
+      "imprison",
+      "trace"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "regarding",
+    "choices": [
+      "در",
+      "روم",
+      "اصلی",
+      "المللی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "inside",
+    "choices": [
+      "اما",
+      "او",
+      "داخل",
+      "شود"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "September",
+      "science",
+      "small",
+      "summer"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "به داخل",
+    "choices": [
+      "sour",
+      "mold",
+      "inside",
+      "market"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ranks",
+    "choices": [
+      "پاریس",
+      "برنامه",
+      "اضافه",
+      "مناسب"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مه",
+    "choices": [
+      "May",
+      "first",
+      "table",
+      "complete"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "publisher",
+    "choices": [
+      "مارس",
+      "ناشر",
+      "ارائه",
+      "یعنی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شير افکن",
+    "choices": [
+      "girl",
+      "cry",
+      "help",
+      "brave"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سرحد",
+    "choices": [
+      "happy",
+      "frontier",
+      "resistance",
+      "river"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بلا تکليف",
+    "choices": [
+      "unconditional",
+      "possible",
+      "worth",
+      "uncertain"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "معوج",
+    "choices": [
+      "ugly",
+      "country",
+      "crooked",
+      "birth"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بسته",
+    "choices": [
+      "‌ها",
+      "باز",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "post",
+    "choices": [
+      "باستان",
+      "پست",
+      "سیارک‌ها",
+      "می‌کنند"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "چب",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "راست"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "غير از",
+    "choices": [
+      "product",
+      "ugly",
+      "than",
+      "field of study"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چرخ سکان",
+    "choices": [
+      "month",
+      "brave",
+      "include",
+      "steering wheel"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "هور",
+    "choices": [
+      "new",
+      "sun",
+      "october",
+      "went"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامزد",
+    "choices": [
+      "counted",
+      "sad",
+      "nominee",
+      "first"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "علم",
+    "choices": [
+      "جهل",
+      "‌ها",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "نزست",
+    "choices": [
+      "spreading",
+      "tower",
+      "first",
+      "principles"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چپ",
+    "choices": [
+      "race",
+      "lawful",
+      "left",
+      "road"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "father",
+    "choices": [
+      "پدر",
+      "پس",
+      "نظام",
+      "ایتالیا"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "رفت",
+    "choices": [
+      "iron",
+      "wet",
+      "went",
+      "presence"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "height",
+    "choices": [
+      "روستایی",
+      "پنجم",
+      "برنده",
+      "ارتفاع"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "ترجمه و اقتباس",
+    "choices": [
+      "cold",
+      "idle",
+      "translation",
+      "child"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "album",
+    "choices": [
+      "آلبوم",
+      "درون",
+      "اجازه",
+      "معرفی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "report",
+    "choices": [
+      "ژوئیه",
+      "خبر",
+      "برج",
+      "واقع"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "شجاع",
+    "choices": [
+      "انگلیسی",
+      "ترسو",
+      "هدف",
+      "‌ها"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "اجرا",
+    "choices": [
+      "given",
+      "performance",
+      "motive",
+      "illegal"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "similar",
+    "choices": [
+      "وابسته",
+      "مقام",
+      "همانند",
+      "بیرون"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "گشادن",
+    "choices": [
+      "open",
+      "neigborhood",
+      "yours",
+      "Esfehan"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "science",
+    "choices": [
+      "درجه",
+      "متعلق",
+      "ساختمان",
+      "علم"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "news",
+    "choices": [
+      "سطح",
+      "برنده",
+      "دورهٔ",
+      "اطلاعات"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زود",
+    "choices": [
+      "هدف",
+      "‌ها",
+      "انگلیسی",
+      "دیر"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بدترین",
+    "choices": [
+      "‌ها",
+      "عالی",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "model",
+    "choices": [
+      "ش",
+      "گرفت",
+      "الکتریکی",
+      "مدل"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "آوا",
+    "choices": [
+      "best",
+      "voice",
+      "friend",
+      "energetic"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آلمان",
+    "choices": [
+      "Mohsen",
+      "go",
+      "Germany",
+      "year old"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بانک",
+    "choices": [
+      "Arab",
+      "bank",
+      "like",
+      "without"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "جدید",
+    "choices": [
+      "‌ها",
+      "هدف",
+      "انگلیسی",
+      "قدیمی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "قانونی",
+    "choices": [
+      "‌ها",
+      "غیرقانونی",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "اسفند",
+    "choices": [
+      "busy",
+      "Esfand",
+      "successful",
+      "open"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "طرز عمل",
+    "choices": [
+      "treatment",
+      "straight",
+      "Mohsen",
+      "that"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "town",
+    "choices": [
+      "شهر",
+      "خانواده",
+      "بزرگ‌ترین",
+      "آمد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "مهتاب",
+    "choices": [
+      "‌ها",
+      "آفتاب",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "اذن",
+    "choices": [
+      "permission",
+      "bitter",
+      "foot",
+      "far"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "دیر",
+    "choices": [
+      "زود",
+      "هدف",
+      "انگلیسی",
+      "‌ها"
+    ],
+    "answer": 0,
+    "type": "antonym"
+  },
+  {
+    "question": "حکم فرما",
+    "choices": [
+      "sun",
+      "under",
+      "ruling",
+      "universal"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "خان",
+    "choices": [
+      "Khan",
+      "king",
+      "go",
+      "in"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Taraneh",
+    "choices": [
+      "همراه",
+      "ترانه",
+      "عراق",
+      "هجری"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "دانشسرا",
+    "choices": [
+      "right",
+      "seizure",
+      "college",
+      "stratum"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نامطمئن",
+    "choices": [
+      "انگلیسی",
+      "هدف",
+      "‌ها",
+      "مطمئن"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "network",
+    "choices": [
+      "وب",
+      "شبکه",
+      "باشگاه",
+      "قالب"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "به روي",
+    "choices": [
+      "on",
+      "military",
+      "old",
+      "stay"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نوازش کردن",
+    "choices": [
+      "time",
+      "expensive",
+      "God",
+      "stroke"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "left",
+    "choices": [
+      "چپ",
+      "مدتی",
+      "امر",
+      "اتحادیه"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "عاطل",
+    "choices": [
+      "beautiful",
+      "idle",
+      "time",
+      "specific"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حادث",
+    "choices": [
+      "new",
+      "new",
+      "bitter",
+      "order"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حامض کردن",
+    "choices": [
+      "born",
+      "scared",
+      "best",
+      "sour"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نزدیک",
+    "choices": [
+      "‌ها",
+      "دور",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "famous",
+    "choices": [
+      "معروف",
+      "دریایی",
+      "نگاه",
+      "زیاد"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "factors",
+    "choices": [
+      "عوامل",
+      "دستگاه",
+      "پل",
+      "آموزشی"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "هور",
+    "choices": [
+      "sun",
+      "source",
+      "system",
+      "ignorance"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بربستي",
+    "choices": [
+      "state",
+      "lawful",
+      "small",
+      "beginning"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "types",
+    "choices": [
+      "کشف",
+      "انواع",
+      "سد",
+      "زمان"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "children",
+    "choices": [
+      "دهستان",
+      "زادگان",
+      "دریافت",
+      "اقتصاد"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "بالا",
+    "choices": [
+      "open",
+      "top",
+      "like",
+      "free"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "محرور",
+    "choices": [
+      "small",
+      "king",
+      "usually",
+      "hot"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "واثق",
+    "choices": [
+      "certain",
+      "verdict",
+      "free",
+      "universal"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "state",
+    "choices": [
+      "رهبری",
+      "حالت",
+      "نفت",
+      "نقشه"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "obstruction",
+    "choices": [
+      "سده",
+      "زندگی",
+      "ژانویه",
+      "نماینده"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "shine",
+    "choices": [
+      "می‌باشد",
+      "سیاه",
+      "سر",
+      "برق"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "زير",
+    "choices": [
+      "on",
+      "beneath",
+      "small",
+      "stop"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بطي",
+    "choices": [
+      "slow",
+      "doctor",
+      "registeration",
+      "professor"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سلطان",
+    "choices": [
+      "straight",
+      "NASA",
+      "right",
+      "king"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رفتن",
+    "choices": [
+      "possible",
+      "talented",
+      "go",
+      "late"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "steady",
+    "choices": [
+      "مرز",
+      "ساز",
+      "آسیا",
+      "ثابت"
+    ],
+    "answer": 3,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کسري دار",
+    "choices": [
+      "under",
+      "open",
+      "four",
+      "october"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ارزان قيمت",
+    "choices": [
+      "stay",
+      "cold",
+      "resumption",
+      "cheap"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشکل",
+    "choices": [
+      "exclude",
+      "hard",
+      "list",
+      "Abdullah"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "تقلا",
+    "choices": [
+      "suburbs",
+      "stop",
+      "struggle",
+      "beautiful"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "Islam",
+    "choices": [
+      "هرمزگان",
+      "اسلام",
+      "و",
+      "پاسخ"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "Saltanat",
+    "choices": [
+      "فرهنگ",
+      "سلطنت",
+      "عربی",
+      "یا"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "تلخ",
+    "choices": [
+      "‌ها",
+      "شیرین",
+      "هدف",
+      "انگلیسی"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "ظاهر فريبنده",
+    "choices": [
+      "young",
+      "beautiful",
+      "phantom",
+      "include"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "بلا تکليف",
+    "choices": [
+      "sour",
+      "uncertain",
+      "exclude",
+      "everybody"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "thermometer",
+    "choices": [
+      "شوروی",
+      "روزنامه",
+      "درجه",
+      "حضور"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "including",
+    "choices": [
+      "بیشتر",
+      "شامل",
+      "شوروی",
+      "سال"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "or",
+    "choices": [
+      "پوشش",
+      "پس",
+      "يا",
+      "یاد"
+    ],
+    "answer": 2,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "salary",
+    "choices": [
+      "اهالی",
+      "حقوق",
+      "تلویزیونی",
+      "بسیاری"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "south",
+    "choices": [
+      "بریتانیا",
+      "جنوب",
+      "مارس",
+      "هوایی"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کوچک",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "بزرگ",
+      "‌ها"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "اشعار",
+    "choices": [
+      "happy",
+      "start",
+      "poetry",
+      "grail"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مايل",
+    "choices": [
+      "willing",
+      "in order to",
+      "museum",
+      "lack"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "باز گشتن",
+    "choices": [
+      "bank",
+      "city",
+      "return",
+      "asleep"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "رابطه",
+    "choices": [
+      "relation",
+      "performance",
+      "grail",
+      "girl"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "سترگ",
+    "choices": [
+      "schedule",
+      "weak",
+      "beautiful",
+      "large"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ادهم",
+    "choices": [
+      "white",
+      "black",
+      "industry",
+      "closed"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "remaining",
+    "choices": [
+      "مشاهیر",
+      "مانده",
+      "بریتانیا",
+      "می"
+    ],
+    "answer": 1,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "کننده",
+    "choices": [
+      "performer",
+      "brave",
+      "unknown",
+      "necessary"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "افغانستان",
+    "choices": [
+      "Afghanistan",
+      "far",
+      "past",
+      "bottom"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مسعود",
+    "choices": [
+      "sun",
+      "organ",
+      "country",
+      "Masood"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توقف",
+    "choices": [
+      "stop",
+      "stop",
+      "stroke",
+      "brave"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مشترک",
+    "choices": [
+      "structure",
+      "early",
+      "subscriber",
+      "take"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آزاد",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "زندانی"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "در آمدن",
+    "choices": [
+      "new",
+      "cause",
+      "rural district",
+      "become"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "موسفيد",
+    "choices": [
+      "counted",
+      "old",
+      "do",
+      "far"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "راه",
+    "choices": [
+      "with",
+      "uncertain",
+      "road",
+      "field of study"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "انگيختار",
+    "choices": [
+      "length",
+      "inside",
+      "motive",
+      "cheap"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "عکس",
+    "choices": [
+      "contrary",
+      "inside",
+      "kind",
+      "Hasan"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "آزاد",
+    "choices": [
+      "‌ها",
+      "زندانی",
+      "انگلیسی",
+      "هدف"
+    ],
+    "answer": 1,
+    "type": "antonym"
+  },
+  {
+    "question": "بيضاء",
+    "choices": [
+      "white",
+      "standard",
+      "mankind",
+      "former"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "توي",
+    "choices": [
+      "outside of",
+      "in",
+      "report",
+      "father"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ارزان قيمت",
+    "choices": [
+      "or",
+      "cheap",
+      "like",
+      "bad"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "چه",
+    "choices": [
+      "what",
+      "times more",
+      "newspaper",
+      "defense"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قوی",
+    "choices": [
+      "‌ها",
+      "انگلیسی",
+      "ضعیف",
+      "هدف"
+    ],
+    "answer": 2,
+    "type": "antonym"
+  },
+  {
+    "question": "زرنگ",
+    "choices": [
+      "هدف",
+      "انگلیسی",
+      "‌ها",
+      "تنبل"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "موسسه",
+    "choices": [
+      "Iran",
+      "laugh",
+      "nominee",
+      "institution"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "قشنگ",
+    "choices": [
+      "انگلیسی",
+      "‌ها",
+      "هدف",
+      "زشت"
+    ],
+    "answer": 3,
+    "type": "antonym"
+  },
+  {
+    "question": "بسيط",
+    "choices": [
+      "closed",
+      "simple",
+      "temper",
+      "bitter"
+    ],
+    "answer": 1,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "مطلق",
+    "choices": [
+      "independent",
+      "unknown",
+      "weak",
+      "spreading"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "ته",
+    "choices": [
+      "family",
+      "type",
+      "easy",
+      "bottom"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "حاوي بودن",
+    "choices": [
+      "weather",
+      "phantom",
+      "Kerman",
+      "include"
+    ],
+    "answer": 3,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "نازيبا",
+    "choices": [
+      "beginning",
+      "ugly",
+      "ugly",
+      "soft"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "known",
+    "choices": [
+      "شناخته",
+      "عدد",
+      "آغاز",
+      "فناوری"
+    ],
+    "answer": 0,
+    "type": "translate_fa_en"
+  },
+  {
+    "question": "برهان آوردن",
+    "choices": [
+      "reason",
+      "cheap",
+      "sour",
+      "son"
+    ],
+    "answer": 0,
+    "type": "translate_en_fa"
+  },
+  {
+    "question": "شير افکن",
+    "choices": [
+      "top",
+      "handle",
+      "brave",
+      "power"
+    ],
+    "answer": 2,
+    "type": "translate_en_fa"
+  }
+]

@@ -24,7 +24,13 @@ document.querySelector(".choose-lang").addEventListener("click",function(){
     //window["anything"] will convert "anything" string to object because window is also an object
     document.querySelector(".quiz").style.display="block";
     
-    document.querySelector(".question").innerHTML="<h1>"+window[lang][countQues].question+"</h1>";
+    if(window[lang][countQues].type == "antonym") {
+        document.querySelector(".question").innerHTML= "Antonym of <br/>" +
+        "<h1>"+window[lang][countQues].question+"</h1>";
+    } else {
+        document.querySelector(".question").innerHTML= "Translation of <br/>" +
+        "<h1>"+window[lang][countQues].question+"</h1>";
+    }
      for (i=0;i<=3;i++){                     
         document.getElementById("opt"+i).value=window[lang][countQues].choices[i];
         document.getElementById("lb"+i).innerHTML=window[lang][countQues].choices[i];
@@ -36,8 +42,6 @@ document.querySelector(".choose-lang").addEventListener("click",function(){
 });
 
 document.querySelector(".view-results").style.display="unset";
-
-
 
 
 document.querySelector(".submit-answer").addEventListener("click",function(){
@@ -64,7 +68,16 @@ document.querySelector(".submit-answer").addEventListener("click",function(){
     }
     
     document.getElementById("ques-left").textContent="Question : "+(countQues+1)+"/"+window[lang].length;
-    document.querySelector(".question").innerHTML="<h1>"+window[lang][countQues].question+"</h1>";
+
+    if(window[lang][countQues].type == "antonym") {
+        document.querySelector(".question").innerHTML= "Antonym of <br/>" +
+        "<h1>"+window[lang][countQues].question+"</h1>";
+    } else {
+        document.querySelector(".question").innerHTML= "Translation of <br/>" +
+        "<h1>"+window[lang][countQues].question+"</h1>";
+    }
+
+    // document.querySelector(".question").innerHTML="<h1>"+window[lang][countQues].question+"</h1>";
     for (i=0;i<=3;i++){                     
         document.getElementById("opt"+i).value=window[lang][countQues].choices[i];
         document.getElementById("lb"+i).innerHTML=window[lang][countQues].choices[i];
