@@ -30,7 +30,7 @@ nav li{
 }
 
 #wrapper{
-    /* background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url("hero-img.jpg"); */
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("logo.png");
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -52,7 +52,7 @@ nav li{
     margin-left: 30px;
     border: 2px solid #FF9933;
     padding: 15px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     font-family: monospace;
 /*    letter-spacing: 1.5px;*/
 /*    font-weight: 400;*/
@@ -70,7 +70,7 @@ nav li{
 #language{
     background-color:white;
     padding:12px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     cursor:pointer;
     border:2px solid black;
 
@@ -139,8 +139,8 @@ nav li{
 
 .question{
 /*    background-color: antiquewhite;*/
-    font-family: 'Roboto Slab', sans-serif;
-    letter-spacing: .13em;
+    /* font-family: 'Roboto Slab', sans-serif; */
+    /* letter-spacing: .13em; */
 }
 
 .choice{
@@ -233,7 +233,7 @@ nav li{
     padding: 5%
 }
 #restart{
-    background-color:#ff9933;
+    /* background-color:#ff9933; */
     margin-left: 30px;
     border: 2px solid #FF9933;
     padding: 15px;
