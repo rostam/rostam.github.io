@@ -115,9 +115,10 @@ nav li{
 
 #ques-view{
 /*    background-color:aqua;*/
-    height: 35px;
-    margin-top: 10px;
-    padding: 2px;
+    /* height: 35px; */
+    /* margin-top: 10px; */
+    /* padding: 2px; */
+    visibility: hidden;
 }
 .ques-circle{
     float: left;
