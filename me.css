@@ -73,5 +73,10 @@ li {
     background-color: chocolate;
 }
 
+h3 {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+  
 
 
