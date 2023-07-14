@@ -21,7 +21,7 @@ pubs.forEach(function (pub) {
     let kws = kw.split(',');
     let str = "<table><tr>";
     kws.forEach(function (k) {
-        str += "<td><div class= 'square " + k.trim() + "'>";
+        str += "<td><div class= 'mysquare " + k.trim() + "'>";
         str += k.trim() + "</div></td>";
     });
     span_node.innerHTML = str;
@@ -42,7 +42,7 @@ function clickCategory(cat) {
         if (document.getElementById(c + "-cat").style.fontWeight == "bold") {
             for (let i = 0; i < all.length; i++) {
                 let txt = all[i].innerHTML;
-                if (txt.indexOf("square "+c) == -1) all[i].hidden = true;
+                if (txt.indexOf("mysquare "+c) == -1) all[i].hidden = true;
             }
         }
     });

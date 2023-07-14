@@ -2,11 +2,37 @@
 <html lang="en"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Ali Rostami</title>
-    <link rel="stylesheet" href="me.css">
     <link rel="icon" type="image/png" href="ali.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="me.css">
+
     <script src="papers.js"></script>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pubs">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:rostamiev@gmail.com">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
 <h1>Ali Rostami</h1>
 <h3>Software Engineer and Postdoctoral Researcher</h3>
 <img src="ali.jpg" style="float: right;margin: 8px;" alt="Photo: Ali Rostami, 2013">
@@ -164,13 +190,15 @@
 <h4>Clicking on one of the following categories will show the publications which have at least that category:</h4>
 <table style="font-size: 16px;">
     <tr>
-        <td><div class="square GTA" onclick="clickCategory('GTA')">GTA</div></td><td onclick="clickCategory('GTA')" style="font-weight: normal;" id="GTA-cat">Graph Theory and its Applications</td>
-        <td><div class="square DAV" onclick="clickCategory('DAV')">DAV</div></td><td onclick="clickCategory('DAV')" style="font-weight: normal;" id="DAV-cat">Data Analysis and Visualization</td>
-        <td><div class="square CSC" onclick="clickCategory('CSC')">CSC</div></td><td onclick="clickCategory('CSC')" style="font-weight: normal;" id="CSC-cat">Combinatorial Scientific Computing</td>
-        <td><div class="square EDU" onclick="clickCategory('EDU')">EDU</div></td><td onclick="clickCategory('EDU')" style="font-weight: normal;" id="EDU-cat">Educational Themes</td>
-        <td><div class="square PAC" onclick="clickCategory('PAC')">PAC</div></td><td onclick="clickCategory('PAC')" style="font-weight: normal;" id="PAC-cat">Parallel Computing</td>
+        <td><div class="mysquare GTA" onclick="clickCategory('GTA')">GTA</div></td><td onclick="clickCategory('GTA')" style="font-weight: normal;" id="GTA-cat">Graph Theory and its Applications</td>
+        <td><div class="mysquare DAV" onclick="clickCategory('DAV')">DAV</div></td><td onclick="clickCategory('DAV')" style="font-weight: normal;" id="DAV-cat">Data Analysis and Visualization</td>
+        <td><div class="mysquare CSC" onclick="clickCategory('CSC')">CSC</div></td><td onclick="clickCategory('CSC')" style="font-weight: normal;" id="CSC-cat">Combinatorial Scientific Computing</td>
+        <td><div class="mysquare EDU" onclick="clickCategory('EDU')">EDU</div></td><td onclick="clickCategory('EDU')" style="font-weight: normal;" id="EDU-cat">Educational Themes</td>
+        <td><div class="mysquare PAC" onclick="clickCategory('PAC')">PAC</div></td><td onclick="clickCategory('PAC')" style="font-weight: normal;" id="PAC-cat">Parallel Computing</td>
     </tr>
 </table>
 <ol reversed><div id="publications"></div></ol>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="index.js"></script>
 </body></html>

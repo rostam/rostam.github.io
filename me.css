@@ -40,9 +40,9 @@ li {
     margin-bottom: 0.6em;
 }
 
-.square {
-    height: 16px;
-    width: 32px;
+.mysquare {
+    height: 32px;
+    width: 64px;
     font-size: 13px;
     text-align:center;
     font-weight: bold;
