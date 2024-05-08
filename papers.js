@@ -1,5 +1,21 @@
 pubs = [
   {
+    "authors": "Maxwell Christopher Day, Frank Christopher Hawthorne, Ali Rostami.",
+    "title" : "Bond topology of chain, ribbon and tube silicates. Part II. Geometrical analysis of infinite 1D arrangements of (TO4) n-tetrahedra.",
+    "proceedings" : "Acta Crystallographica Section A Foundations and Advances",
+    "year" : 2024,
+    "keywords" : "Vis, GTA",
+    "doi" : "https://doi.org/10.1107/S2053273324002432"
+  },
+  {
+    "authors": "Maxwell Christopher Day, Ali Rostami, Frank Christopher Hawthorne.",
+    "title" : "Graph T-T (V1.0Beta), a program for embedding and visualizing periodic graphs in 3D Euclidean space.",
+    "proceedings" : "Acta Crystallographica Section A Foundations and Advances",
+    "year" : 2024,
+    "keywords" : "Vis, GTA",
+    "doi" : "https://doi.org/10.1107/S2053273324002523"
+  },
+  {
     "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "Preconditioning Jacobian Systems by Superimposing Diagonal Blocks.",
     "proceedings" : "Proceedings of the 20th International Conference on Computational Science, Amsterdam, The Netherlands",
