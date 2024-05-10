@@ -4,7 +4,7 @@ pubs = [
     "title" : "Bond topology of chain, ribbon and tube silicates. Part II. Geometrical analysis of infinite 1D arrangements of (TO4) n-tetrahedra.",
     "proceedings" : "Acta Crystallographica Section A Foundations and Advances",
     "year" : 2024,
-    "keywords" : "Vis, GTA",
+    "keywords" : "DAV, GTA",
     "doi" : "https://doi.org/10.1107/S2053273324002432"
   },
   {
@@ -12,7 +12,7 @@ pubs = [
     "title" : "Graph T-T (V1.0Beta), a program for embedding and visualizing periodic graphs in 3D Euclidean space.",
     "proceedings" : "Acta Crystallographica Section A Foundations and Advances",
     "year" : 2024,
-    "keywords" : "Vis, GTA",
+    "keywords" : "DAV, GTA",
     "doi" : "https://doi.org/10.1107/S2053273324002523"
   },
   {
