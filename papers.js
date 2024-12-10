@@ -2,7 +2,7 @@ pubs = [
   {
     "authors": "Maxwell Christopher Day, Frank Christopher Hawthorne, Ali Rostami.",
     "title" : "Bond topology of chain, ribbon and tube silicates. Part II. Geometrical analysis of infinite 1D arrangements of (TO4) n-tetrahedra.",
-    "proceedings" : "Acta Crystallographica Section A Foundations and Advances",
+    "proceedings" : "Acta Crystallographica Section A Foundations and Advances, 2024.",
     "year" : 2024,
     "keywords" : "DAV, GTA",
     "doi" : "https://doi.org/10.1107/S2053273324002432"
@@ -10,7 +10,7 @@ pubs = [
   {
     "authors": "Maxwell Christopher Day, Ali Rostami, Frank Christopher Hawthorne.",
     "title" : "Graph T-T (V1.0Beta), a program for embedding and visualizing periodic graphs in 3D Euclidean space.",
-    "proceedings" : "Acta Crystallographica Section A Foundations and Advances",
+    "proceedings" : "Acta Crystallographica Section A Foundations and Advances, 2024.",
     "year" : 2024,
     "keywords" : "DAV, GTA",
     "doi" : "https://doi.org/10.1107/S2053273324002523"
@@ -18,7 +18,7 @@ pubs = [
   {
     "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "Preconditioning Jacobian Systems by Superimposing Diagonal Blocks.",
-    "proceedings" : "Proceedings of the 20th International Conference on Computational Science, Amsterdam, The Netherlands",
+    "proceedings" : "Proceedings of the 20th International Conference on Computational Science, Amsterdam, The Netherlands, 2020.",
     "year" : 2020,
     "keywords" : "CSC, GTA",
     "doi":"https://doi.org/10.1007/978-3-030-50417-5_8"
@@ -26,7 +26,7 @@ pubs = [
   {
     "authors": "M. Ali Rostami, Martin Bücker.",
     "title" : "An Inexact Combinatorial Model for Maximizing the Number of Discovered Nonzero Entries.",
-    "proceedings" : "2020 Proceedings of the SIAM Workshop on Combinatorial Scientific Computing",
+    "proceedings" : "2020 Proceedings of the SIAM Workshop on Combinatorial Scientific Computing, 2020.",
     "year" : 2020,
     "keywords" : "CSC, GTA",
     "doi":"https://doi.org/10.1137/1.9781611976229.4"
@@ -34,7 +34,7 @@ pubs = [
   {
     "authors": "A. Ali, S. Elumalai, T. Mansour, M. Ali Rostami.",
     "title": "On the Complementary Equienergetic Graphs",
-    "proceedings": "match - communication in mathematical and computer chemistry, volume 83, number 3",
+    "proceedings": "match - communication in mathematical and computer chemistry, volume 83, number 3, 2020.",
     "year": 2020,
     "keywords": "GTA",
     "doi": "http://match.pmf.kg.ac.rs/content83n3.htm"
