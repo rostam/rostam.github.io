@@ -3,7 +3,7 @@ var gArchive = undefined;
 var rounds = [];
 var orange_alpha = "rgba(255,165,0,0.5)";
 var blue_alpha = "rgba(0,0,255,0.5)";
-var red_alpha = "rgba255,0,0,0.5)";
+var red_alpha = "rgba(255,0,0,0.5)";
 var green_alpha = "rgba(0,255,0,0.5)";
 var magenta_alpha = "rgba(255,0,255,0.5)";
 

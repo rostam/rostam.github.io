@@ -43,7 +43,7 @@ function start_test() {
     fill_matrix_selection();
     if(!eval("animation")) d3.select("#save").style("visibility","hidden");
     d3.select("#ref")
-        .attr("href","http://doi.org/"+reference_url)
+        .attr("href","https://doi.org/"+reference_url)
         .html(reference_text);
     var e = document.getElementById("selectMat");
     var strUser = e.options[e.selectedIndex].value;
