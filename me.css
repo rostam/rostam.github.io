@@ -5,7 +5,7 @@ body {
     margin-top: 1em;
     /*color: white;*/
     font-style: normal;
-    font-family: Baskerville;
+    font-family: Baskerville, "Book Antiqua", Georgia, serif;
 /*, "Lato", "Helvetica Neue", sans-serif;*/
     font-size: 16px;
     line-height: 1.5;
@@ -47,7 +47,7 @@ li {
     text-align:center;
     font-weight: bold;
     margin: 5px;
-    border: 1px;
+    border: 1px solid transparent;
     border-radius: 8px;
     padding: 5px;
     font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
@@ -76,7 +76,11 @@ li {
 h3 {
     padding-top: 70px;
     margin-top: -70px;
-  }
-  
+}
 
-
+@media (max-width: 768px) {
+    body {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}

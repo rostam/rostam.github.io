@@ -24,6 +24,7 @@ pubs.forEach(function (pub) {
         str += "<td><div class= 'mysquare " + k.trim() + "'>";
         str += k.trim() + "</div></td>";
     });
+    str += "</tr></table>";
     span_node.innerHTML = str;
     li_node.appendChild(span_node);
     pub_div.appendChild(li_node);
