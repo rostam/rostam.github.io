@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="An overview of Ali Rostami's GitHub repositories.">
+    <meta name="keywords" content="Ali Rostami, GitHub, repositories, graph theory, GraphTea, C++, Java, Python">
+    <meta name="author" content="Ali Rostami">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositories – Ali Rostami</title>
+    <link rel="icon" type="image/png" href="ali.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="me.css">
+    <style>
+        .repo-table th { background-color: #f8f9fa; }
+        .badge-lang { font-size: 0.8em; padding: 3px 7px; border-radius: 4px; color: #fff; }
+        .lang-java     { background-color: #b07219; }
+        .lang-cpp      { background-color: #f34b7d; }
+        .lang-python   { background-color: #3572A5; }
+        .lang-js       { background-color: #f1e05a; color: #333; }
+        .lang-rust     { background-color: #dea584; color: #333; }
+        .lang-tex      { background-color: #3D6117; }
+        .lang-html     { background-color: #e34c26; }
+        .lang-other    { background-color: #aaa; }
+        .section-heading { border-left: 4px solid #007bff; padding-left: 10px; margin-top: 2rem; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.html">Ali Rostami</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="repositories.html">Repositories <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 80px; padding-bottom: 40px;">
+
+        <h1>GitHub Repositories</h1>
+        <p class="lead">An overview of my ~95 public and private repositories, grouped by theme.
+            <a href="https://github.com/rostam" target="_blank">View them all on GitHub →</a>
+        </p>
+
+        <hr>
+
+        <!-- GraphTea Ecosystem -->
+        <h2 class="section-heading">GraphTea Ecosystem</h2>
+        <p>My flagship project is <a href="https://github.com/rostam/GraphTea" target="_blank"><strong>GraphTea</strong></a> (93 ★) — an open-source mathematical platform for graph algorithms and visualizations. Over the years I've ported and extended it across many platforms and languages.</p>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Language</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/GraphTea" target="_blank">GraphTea</a> ★93</td><td><span class="badge-lang lang-java">Java</span></td><td>Core desktop graph theory software</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GTea" target="_blank">GTea</a> ★4</td><td><span class="badge-lang lang-java">Java</span></td><td>Online version of GraphTea</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GTeaShell" target="_blank">GTeaShell</a></td><td><span class="badge-lang lang-java">Java</span></td><td>Shell/CLI version</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GTeaMinimal" target="_blank">GTeaMinimal</a> / <a href="https://github.com/rostam/GTeaApp" target="_blank">GTeaApp</a></td><td><span class="badge-lang lang-java">Java</span></td><td>Stripped-down variants</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GTeaJS" target="_blank">GTeaJS</a> / <a href="https://github.com/rostam/CSCTea" target="_blank">CSCTea</a></td><td><span class="badge-lang lang-js">JavaScript</span></td><td>JavaScript/web ports</td></tr>
+                    <tr><td><a href="https://github.com/rostam/CGTea" target="_blank">CGTea</a> ★2</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Mini-version of GTea in C++</td></tr>
+                    <tr><td><a href="https://github.com/rostam/CGTeaQt" target="_blank">CGTeaQt</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Qt desktop version</td></tr>
+                    <tr><td><a href="https://github.com/rostam/CGTeaWeb" target="_blank">CGTeaWeb</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Web version via C++/WASM</td></tr>
+                    <tr><td><a href="https://github.com/rostam/WASMTea" target="_blank">WASMTea</a></td><td><span class="badge-lang lang-html">HTML/WASM</span></td><td>Browser port via WebAssembly</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GSearchTea" target="_blank">GSearchTea</a> ★1</td><td><span class="badge-lang lang-java">Java</span></td><td>Graph search with Apache Flink/Spark</td></tr>
+                    <tr><td><a href="https://github.com/rostam/rust_gtea" target="_blank">rust_gtea</a></td><td><span class="badge-lang lang-rust">Rust</span></td><td>Rust rewrite of GTea</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GraphTea_Examples" target="_blank">GraphTea_Examples</a> ★1</td><td><span class="badge-lang lang-other">Perl</span></td><td>Example graphs generated by GraphTea</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Graph Theory Research -->
+        <h2 class="section-heading">Graph Theory Research</h2>
+        <p>Algorithmic and combinatorial research repositories — graph coloring, optimization, homomorphism, and more.</p>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Language</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/PreCol" target="_blank">PreCol</a> ★1</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Preconditioning and graph coloring</td></tr>
+                    <tr><td><a href="https://github.com/rostam/graph-exact-coloring-heuristic" target="_blank">graph-exact-coloring-heuristic</a> ★1</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Coloring heuristic using exact coloring on subgraphs</td></tr>
+                    <tr><td><a href="https://github.com/rostam/graph-coloring-max-gain" target="_blank">graph-coloring-max-gain</a> ★1</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Maximizing discovered nonzero entries via combinatorial model</td></tr>
+                    <tr><td><a href="https://github.com/rostam/restricted-coloring" target="_blank">restricted-coloring</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Minimal restricted coloring algorithm</td></tr>
+                    <tr><td><a href="https://github.com/rostam/compile-time-graph" target="_blank">compile-time-graph</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Compile-time graph construction</td></tr>
+                    <tr><td><a href="https://github.com/rostam/GPetersonMIS" target="_blank">GPetersonMIS</a> ★1</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Maximum Independent Set on generalized Petersen graphs</td></tr>
+                    <tr><td><a href="https://github.com/rostam/PCST-experience" target="_blank">PCST-experience</a> ★1</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Prize-collecting Steiner tree problem</td></tr>
+                    <tr><td><a href="https://github.com/rostam/pcst_rust" target="_blank">pcst_rust</a></td><td><span class="badge-lang lang-python">Python</span></td><td>PCST in Rust with Python interface</td></tr>
+                    <tr><td><a href="https://github.com/rostam/vertex-cover-problem-ilp" target="_blank">vertex-cover-problem-ilp</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>ILP formulation for vertex cover</td></tr>
+                    <tr><td><a href="https://github.com/rostam/LinearOptimizationExperiments" target="_blank">LinearOptimizationExperiments</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Linear optimization experiments</td></tr>
+                    <tr><td><a href="https://github.com/rostam/NonHomomorphism" target="_blank">NonHomomorphism</a> ★1</td><td><span class="badge-lang lang-tex">TeX</span></td><td>Paper on graph non-homomorphisms</td></tr>
+                    <tr><td><a href="https://github.com/rostam/homsearch" target="_blank">homsearch</a> ★1 (fork)</td><td><span class="badge-lang lang-python">Python</span></td><td>Graph homomorphism and retract searching</td></tr>
+                    <tr><td><a href="https://github.com/rostam/SIMG-VIZ" target="_blank">SIMG-VIZ</a> ★2</td><td><span class="badge-lang lang-java">Java</span></td><td>Visualization system for entity resolution and clustering</td></tr>
+                    <tr><td><a href="https://github.com/rostam/wiener-polarity-index-of-nanostar-dendrimers" target="_blank">wiener-polarity-index-of-nanostar-dendrimers</a></td><td><span class="badge-lang lang-tex">TeX</span></td><td>Paper on Wiener polarity index</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- NLP / Chatbots / AI -->
+        <h2 class="section-heading">NLP / Chatbots / AI</h2>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Language</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/GeneralChatBot" target="_blank">GeneralChatBot</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Chatbot for German language</td></tr>
+                    <tr><td><a href="https://github.com/rostam/PyGeneralChatBot" target="_blank">PyGeneralChatBot</a></td><td><span class="badge-lang lang-python">Python</span></td><td>General-purpose chatbot in Python</td></tr>
+                    <tr><td><a href="https://github.com/rostam/aitandem" target="_blank">aitandem</a></td><td><span class="badge-lang lang-js">JavaScript</span></td><td>AI tandem language chatbot</td></tr>
+                    <tr><td><a href="https://github.com/rostam/CodonNetworkx" target="_blank">CodonNetworkx</a></td><td><span class="badge-lang lang-python">Python</span></td><td>Codon network analysis with NetworkX</td></tr>
+                    <tr><td><a href="https://github.com/rostam/qdrant_title_search" target="_blank">qdrant_title_search</a></td><td><span class="badge-lang lang-python">Python</span></td><td>Fuzzy title search with Qdrant</td></tr>
+                    <tr><td><a href="https://github.com/rostam/DivLengua" target="_blank">DivLengua</a></td><td><span class="badge-lang lang-js">JavaScript</span></td><td>Language learning tool</td></tr>
+                    <tr><td>kaldi (fork)</td><td><span class="badge-lang lang-other">Shell</span></td><td>Kaldi ASR toolkit</td></tr>
+                    <tr><td>SuperAGI (fork)</td><td><span class="badge-lang lang-python">Python</span></td><td>Autonomous AI agent framework</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ML / Data Science -->
+        <h2 class="section-heading">Machine Learning / Data Science</h2>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Language</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/neunet-tea" target="_blank">neunet-tea</a> ★1</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Self-built neural network in C++</td></tr>
+                    <tr><td><a href="https://github.com/rostam/data-processing" target="_blank">data-processing</a></td><td><span class="badge-lang lang-python">Python</span></td><td>Data processing pipeline scripts</td></tr>
+                    <tr><td><a href="https://github.com/rostam/pisa-data-set-analysis" target="_blank">pisa-data-set-analysis</a></td><td><span class="badge-lang lang-html">HTML</span></td><td>Analysis of the PISA dataset</td></tr>
+                    <tr><td>machine-learning (fork)</td><td><span class="badge-lang lang-other">Jupyter</span></td><td>Udacity ML curriculum content</td></tr>
+                    <tr><td>CarND-LaneLines-P1 (fork)</td><td><span class="badge-lang lang-other">Jupyter</span></td><td>Self-driving car lane finding</td></tr>
+                    <tr><td>tiny-dnn (fork)</td><td><span class="badge-lang lang-cpp">C++</span></td><td>Header-only deep learning framework</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Quizzes / Education -->
+        <h2 class="section-heading">Quizzes / Education Tools</h2>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Language</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/generate_questions_for_quiz" target="_blank">generate_questions_for_quiz</a></td><td><span class="badge-lang lang-python">Python</span></td><td>AI-based quiz question generator</td></tr>
+                    <tr><td><a href="https://github.com/rostam/quizpulse" target="_blank">quizpulse</a></td><td><span class="badge-lang lang-js">JavaScript</span></td><td>QuizPulse web app</td></tr>
+                    <tr><td><a href="https://github.com/rostam/AhaQuiz" target="_blank">AhaQuiz</a></td><td><span class="badge-lang lang-other">Astro</span></td><td>Quiz app built with AhaStack/Astro</td></tr>
+                    <tr><td><a href="https://github.com/rostam/KNIME_coding_challenge" target="_blank">KNIME_coding_challenge</a> ★1</td><td><span class="badge-lang lang-java">Java</span></td><td>KNIME coding challenge submission</td></tr>
+                    <tr><td><a href="https://github.com/rostam/EXPLAINBook" target="_blank">EXPLAINBook</a></td><td>–</td><td>Book about the EXPLAIN interactive learning tool</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Academic Writing -->
+        <h2 class="section-heading">Academic Writing</h2>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/rostami-disseration" target="_blank">rostami-disseration</a></td><td>PhD dissertation (TeX)</td></tr>
+                    <tr><td><a href="https://github.com/rostam/proposals" target="_blank">proposals</a></td><td>Research proposals (TeX)</td></tr>
+                    <tr><td><a href="https://github.com/rostam/NonHomomorphism" target="_blank">NonHomomorphism</a></td><td>Paper on graph non-homomorphisms (TeX)</td></tr>
+                    <tr><td><a href="https://github.com/rostam/wiener-polarity-index-of-nanostar-dendrimers" target="_blank">wiener-polarity-index-of-nanostar-dendrimers</a></td><td>Paper on chemical graph theory (TeX)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Experiments & Interview Prep -->
+        <h2 class="section-heading">Experiments &amp; Interview Prep</h2>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Language</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://github.com/rostam/Experiments" target="_blank">Experiments</a> ★2</td><td><span class="badge-lang lang-python">Python / C++ / Rust</span></td><td>Programming experiments in multiple languages</td></tr>
+                    <tr><td><a href="https://github.com/rostam/elements_of_programming" target="_blank">elements_of_programming</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Interview prep (Elements of Programming)</td></tr>
+                    <tr><td><a href="https://github.com/rostam/InterviewQuestions" target="_blank">InterviewQuestions</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Vodafone interview questions</td></tr>
+                    <tr><td><a href="https://github.com/rostam/python_from_js" target="_blank">python_from_js</a></td><td><span class="badge-lang lang-python">Python</span></td><td>Calling Python from JavaScript</td></tr>
+                    <tr><td><a href="https://github.com/rostam/riverraidrust" target="_blank">riverraidrust</a> (fork)</td><td><span class="badge-lang lang-rust">Rust</span></td><td>Text-based River Raid clone in Rust</td></tr>
+                    <tr><td><a href="https://github.com/rostam/HoloAudioObjectProject" target="_blank">HoloAudioObjectProject</a></td><td><span class="badge-lang lang-cpp">C++</span></td><td>Application for Holo job application</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Personal / Web -->
+        <h2 class="section-heading">Personal / Web</h2>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered repo-table">
+                <thead><tr><th>Repository</th><th>Description</th></tr></thead>
+                <tbody>
+                    <tr><td><a href="https://rostam.github.io/" target="_blank">rostam.github.io</a> ★2</td><td>This personal website (JavaScript)</td></tr>
+                    <tr><td><a href="https://github.com/rostam/csc-website" target="_blank">csc-website</a></td><td>CSC research group website (JavaScript)</td></tr>
+                    <tr><td><a href="https://github.com/rostam/rostam" target="_blank">rostam</a></td><td>GitHub profile README repo</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+        <p class="text-muted" style="font-size: 0.9em;">Last updated: April 2026. <a href="https://github.com/rostam" target="_blank">github.com/rostam</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
