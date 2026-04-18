@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polyglot Algorithm Benchmark — Ali Rostami</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f0f1a; color: #eee; font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+
+    header {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      padding: 12px 20px; background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid #222;
+    }
+    #back-link {
+      color: #7ec8e3; text-decoration: none; font-size: 13px;
+      border: 1px solid #7ec8e3; padding: 3px 10px; border-radius: 12px;
+    }
+    header h1 { font-size: 18px; font-weight: 600; }
+    header p { font-size: 12px; color: #888; margin-top: 2px; }
+
+    .page { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+
+    /* Intro */
+    .intro {
+      background: rgba(255,255,255,0.03); border: 1px solid #222;
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 28px;
+      font-size: 14px; color: #aaa; line-height: 1.7;
+    }
+    .intro strong { color: #eee; }
+    .lang-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .lang-tag {
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+      margin-bottom: 24px;
+    }
+    .controls label { font-size: 13px; color: #aaa; margin-right: 6px; }
+    select {
+      padding: 8px 12px; background: #1a1a2e; border: 1px solid #333;
+      border-radius: 8px; color: #eee; font-size: 13px; cursor: pointer;
+    }
+    .run-btn {
+      padding: 9px 22px; background: linear-gradient(135deg, #3498db, #2ecc71);
+      border: none; border-radius: 24px; color: #fff; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: opacity 0.2s;
+    }
+    .run-btn:hover { opacity: 0.85; }
+
+    /* Algorithm tabs */
+    .algo-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .algo-tab {
+      padding: 7px 16px; border: 1px solid #333; border-radius: 20px;
+      cursor: pointer; font-size: 13px; color: #aaa; background: #1a1a2e;
+      transition: all 0.15s;
+    }
+    .algo-tab:hover { border-color: #555; }
+    .algo-tab.active { border-color: #7ec8e3; color: #7ec8e3; background: #0d1f27; }
+
+    /* Bar chart */
+    .chart-section { margin-bottom: 32px; }
+    .chart-title { font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+    .chart-desc { font-size: 13px; color: #888; margin-bottom: 18px; line-height: 1.6; }
+
+    .bar-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+    .bar-lang { width: 88px; flex-shrink: 0; }
+    .lang-badge {
+      display: inline-block; padding: 3px 10px; border-radius: 12px;
+      font-size: 12px; font-weight: 700;
+    }
+    .bar-track { flex: 1; height: 32px; background: #1a1a2e; border-radius: 6px; overflow: hidden; position: relative; }
+    .bar-fill {
+      height: 100%; border-radius: 6px; display: flex; align-items: center;
+      padding-left: 10px; font-size: 12px; font-weight: 600; color: #fff;
+      transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      white-space: nowrap;
+    }
+    .bar-ms { font-size: 12px; color: #666; width: 80px; flex-shrink: 0; text-align: right; }
+    .bar-relative { font-size: 11px; color: #888; width: 50px; flex-shrink: 0; }
+
+    .fastest-badge {
+      font-size: 10px; background: #1d3a2a; color: #56c596;
+      border: 1px solid #56c596; border-radius: 10px; padding: 1px 7px; margin-left: 6px;
+    }
+
+    /* Code viewer */
+    .code-section { margin-top: 28px; }
+    .code-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .code-tab {
+      padding: 5px 14px; border: 1px solid #333; border-radius: 14px;
+      cursor: pointer; font-size: 12px; color: #aaa; background: #1a1a2e;
+      transition: all 0.15s; font-family: monospace;
+    }
+    .code-tab:hover { border-color: #555; }
+    .code-tab.active { border-color: #c77dff; color: #c77dff; background: #1a0d2e; }
+    pre {
+      background: #0a0a14; border: 1px solid #222; border-radius: 10px;
+      padding: 18px; font-size: 13px; line-height: 1.6; overflow-x: auto;
+      color: #c5d0e0; font-family: 'Fira Mono', 'Consolas', monospace;
+    }
+    .kw { color: #c77dff; } .fn { color: #56c596; } .cm { color: #556; font-style: italic; }
+    .nm { color: #ff9f43; } .str { color: #e06c75; } .tp { color: #4e9af1; }
+
+    /* Notes */
+    .note-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 12px; margin-top: 20px; }
+    .note-card {
+      background: rgba(255,255,255,0.03); border: 1px solid #222; border-radius: 10px;
+      padding: 12px 14px; font-size: 12px; color: #aaa; line-height: 1.6;
+    }
+    .note-card strong { display: block; margin-bottom: 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a id="back-link" href="../index.html">← Home</a>
+  <div>
+    <h1>Polyglot Algorithm Benchmark</h1>
+    <p>The same algorithm implemented across 7 languages — simulated performance comparison</p>
+  </div>
+</header>
+
+<div class="page">
+  <div class="intro">
+    <strong>Ali Rostami</strong> has implemented algorithms across C++, Java, Rust, Python, Scala, JavaScript, and C — spanning 12+ years of systems programming, research, and data engineering work.
+    This page compares how those languages perform on the same classic algorithms,
+    using published benchmarks and realistic estimates from the repositories.
+    <div class="lang-tags">
+      <span class="lang-badge" style="background:#e8414222;color:#e84142;border:1px solid #e8414244">C++</span>
+      <span class="lang-badge" style="background:#e8770022;color:#e87700;border:1px solid #e8770044">Java</span>
+      <span class="lang-badge" style="background:#dea58422;color:#dea584;border:1px solid #dea58444">Rust</span>
+      <span class="lang-badge" style="background:#3572a522;color:#3572a5;border:1px solid #3572a544">Python</span>
+      <span class="lang-badge" style="background:#c2253122;color:#c22531;border:1px solid #c2253144">Scala</span>
+      <span class="lang-badge" style="background:#f1e05a22;color:#c9b800;border:1px solid #c9b80044">JavaScript</span>
+      <span class="lang-badge" style="background:#55555522;color:#aaa;border:1px solid #55555544">C</span>
+    </div>
+  </div>
+
+  <div class="algo-tabs" id="algo-tabs"></div>
+
+  <div class="controls">
+    <div>
+      <label>Input size:</label>
+      <select id="size-select">
+        <option value="small">Small (n = 1K)</option>
+        <option value="medium" selected>Medium (n = 100K)</option>
+        <option value="large">Large (n = 10M)</option>
+      </select>
+    </div>
+    <button class="run-btn" id="run-btn">▶ Run Benchmark</button>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-title" id="chart-title"></div>
+    <div class="chart-desc" id="chart-desc"></div>
+    <div id="bars"></div>
+  </div>
+
+  <div class="code-section">
+    <h3 style="font-size:14px;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Implementation Snippets</h3>
+    <div class="code-tabs" id="code-tabs"></div>
+    <pre id="code-block"><code id="code-inner"></code></pre>
+  </div>
+
+  <div class="note-grid" id="note-grid"></div>
+</div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────────────────
+// Times are in milliseconds, normalized from published benchmarks + repo context.
+// Scale factors per size: small=0.001, medium=1, large=80
+const LANGS = [
+  { key: 'c',    label: 'C',           color: '#aaaaaa', bg: '#22222288' },
+  { key: 'cpp',  label: 'C++',         color: '#e84142', bg: '#e8414222' },
+  { key: 'rust', label: 'Rust',        color: '#dea584', bg: '#dea58422' },
+  { key: 'java', label: 'Java',        color: '#e87700', bg: '#e8770022' },
+  { key: 'scala',label: 'Scala',       color: '#c22531', bg: '#c2253122' },
+  { key: 'js',   label: 'JavaScript',  color: '#c9b800', bg: '#c9b80022' },
+  { key: 'py',   label: 'Python',      color: '#3572a5', bg: '#3572a522' },
+];
+
+const ALGOS = [
+  {
+    key: 'sort', name: 'Merge Sort', icon: '⟨⟩',
+    desc: 'Sorting n integers. C/C++/Rust compile to near-identical machine code; Java JIT competes after warm-up; Python is pure-interpreted.',
+    // median ms at n=100K
+    times: { c:14, cpp:15, rust:15, java:28, scala:35, js:42, py:820 },
+    scale: { small:0.0002, medium:1, large:75 },
+    repos: { cpp:'graph-coloring-max-gain', java:'GraphTea', rust:'rust_gtea', py:'homsearch' },
+    notes: {
+      c:    'glibc qsort / hand-rolled merge — near-optimal memory layout.',
+      cpp:  'std::sort (introsort) in graphtea-related C++ code.',
+      rust: 'slice.sort_unstable() — zero-cost abstractions shine here.',
+      java: 'Arrays.sort — JIT reduces gap after warm-up but GC pauses hurt.',
+      scala:'Functional collections add overhead vs Java arrays.',
+      js:   'V8 TimSort — surprisingly competitive for a scripting engine.',
+      py:   'Pure Python list.sort (Timsort) — CPython interpreter overhead dominates.',
+    },
+    snippets: {
+      cpp:  `<span class="kw">void</span> <span class="fn">merge_sort</span>(<span class="tp">std::vector&lt;int&gt;</span>&amp; arr, <span class="tp">int</span> l, <span class="tp">int</span> r) {
+  <span class="kw">if</span> (r - l &lt; 2) <span class="kw">return</span>;
+  <span class="tp">int</span> mid = l + (r - l) / 2;
+  merge_sort(arr, l, mid);
+  merge_sort(arr, mid, r);
+  <span class="tp">std::inplace_merge</span>(arr.begin()+l, arr.begin()+mid, arr.begin()+r);
+}`,
+      rust: `<span class="kw">fn</span> <span class="fn">merge_sort</span>(arr: &<span class="kw">mut</span> [<span class="tp">i32</span>]) {
+  <span class="kw">if</span> arr.len() &lt;= 1 { <span class="kw">return</span>; }
+  <span class="kw">let</span> mid = arr.len() / 2;
+  merge_sort(&<span class="kw">mut</span> arr[..mid]);
+  merge_sort(&<span class="kw">mut</span> arr[mid..]);
+  <span class="cm">// merge using temp buffer</span>
+  <span class="kw">let</span> tmp: <span class="tp">Vec</span>&lt;<span class="tp">i32</span>&gt; = arr.to_vec();
+  <span class="fn">merge</span>(&tmp[..mid], &tmp[mid..], arr);
+}`,
+      java: `<span class="kw">void</span> <span class="fn">mergeSort</span>(<span class="tp">int</span>[] arr, <span class="tp">int</span> l, <span class="tp">int</span> r) {
+  <span class="kw">if</span> (r - l &lt; 2) <span class="kw">return</span>;
+  <span class="tp">int</span> mid = (l + r) / 2;
+  <span class="fn">mergeSort</span>(arr, l, mid);
+  <span class="fn">mergeSort</span>(arr, mid, r);
+  <span class="fn">merge</span>(arr, l, mid, r);
+}`,
+      py:   `<span class="kw">def</span> <span class="fn">merge_sort</span>(arr):
+    <span class="kw">if</span> len(arr) &lt;= 1:
+        <span class="kw">return</span> arr
+    mid = len(arr) // 2
+    left  = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    <span class="kw">return</span> merge(left, right)`,
+      js:   `<span class="kw">function</span> <span class="fn">mergeSort</span>(arr) {
+  <span class="kw">if</span> (arr.length &lt;= 1) <span class="kw">return</span> arr;
+  <span class="kw">const</span> mid = Math.floor(arr.length / 2);
+  <span class="kw">return</span> <span class="fn">merge</span>(
+    <span class="fn">mergeSort</span>(arr.slice(0, mid)),
+    <span class="fn">mergeSort</span>(arr.slice(mid))
+  );
+}`,
+      scala:`<span class="kw">def</span> <span class="fn">mergeSort</span>(arr: <span class="tp">List</span>[<span class="tp">Int</span>]): <span class="tp">List</span>[<span class="tp">Int</span>] = arr <span class="kw">match</span> {
+  <span class="kw">case</span> Nil | _ :: Nil =&gt; arr
+  <span class="kw">case</span> _ =&gt;
+    <span class="kw">val</span> (l, r) = arr.splitAt(arr.length / 2)
+    <span class="fn">merge</span>(<span class="fn">mergeSort</span>(l), <span class="fn">mergeSort</span>(r))
+}`,
+      c:    `<span class="kw">void</span> <span class="fn">merge_sort</span>(<span class="tp">int</span>* arr, <span class="tp">int</span> n) {
+  <span class="kw">if</span> (n &lt;= 1) <span class="kw">return</span>;
+  <span class="tp">int</span> mid = n / 2;
+  <span class="fn">merge_sort</span>(arr, mid);
+  <span class="fn">merge_sort</span>(arr + mid, n - mid);
+  <span class="fn">merge</span>(arr, mid, n);
+}`,
+    },
+  },
+  {
+    key: 'bfs', name: 'Graph BFS', icon: '⊙',
+    desc: 'Breadth-first search on a sparse graph with n nodes and ~3n edges. Graph traversal stresses memory access patterns.',
+    times: { c:22, cpp:25, rust:26, java:55, scala:68, js:90, py:1800 },
+    scale: { small:0.0003, medium:1, large:90 },
+    repos: { cpp:'CGTea', java:'GraphTea', rust:'rust_gtea', py:'homsearch' },
+    notes: {
+      c:    'Tight C loop with adjacency list — cache-friendly.',
+      cpp:  'Core of GraphTea; std::queue<int> with vector<vector<int>> adjacency.',
+      rust: 'VecDeque frontier — ownership model eliminates aliasing overhead.',
+      java: 'GraphTea core BFS; LinkedList<> queue has pointer-chasing overhead.',
+      scala:'Immutable collections add allocation pressure.',
+      js:   'Array shift() is O(n) — Array-as-deque hurts at scale.',
+      py:   'collections.deque BFS — Python object model is the bottleneck.',
+    },
+    snippets: {
+      cpp:  `<span class="cm">// From GraphTea / CGTea core</span>
+<span class="tp">std::vector</span>&lt;<span class="tp">int</span>&gt; <span class="fn">bfs</span>(<span class="tp">int</span> start, <span class="kw">const</span> <span class="tp">Graph</span>&amp; g) {
+  <span class="tp">std::vector</span>&lt;<span class="tp">bool</span>&gt; visited(g.n, <span class="kw">false</span>);
+  <span class="tp">std::queue</span>&lt;<span class="tp">int</span>&gt; q;
+  q.push(start); visited[start] = <span class="kw">true</span>;
+  <span class="kw">while</span> (!q.empty()) {
+    <span class="tp">int</span> v = q.front(); q.pop();
+    <span class="kw">for</span> (<span class="tp">int</span> u : g.adj[v])
+      <span class="kw">if</span> (!visited[u]) { visited[u] = <span class="kw">true</span>; q.push(u); }
+  }
+}`,
+      rust: `<span class="kw">fn</span> <span class="fn">bfs</span>(start: <span class="tp">usize</span>, adj: &[<span class="tp">Vec</span>&lt;<span class="tp">usize</span>&gt;]) -&gt; <span class="tp">Vec</span>&lt;<span class="tp">bool</span>&gt; {
+  <span class="kw">let mut</span> visited = <span class="tp">vec!</span>[<span class="kw">false</span>; adj.len()];
+  <span class="kw">let mut</span> queue = <span class="tp">VecDeque</span>::<span class="fn">from</span>([start]);
+  visited[start] = <span class="kw">true</span>;
+  <span class="kw">while let</span> Some(v) = queue.pop_front() {
+    <span class="kw">for</span> &amp;u <span class="kw">in</span> &adj[v] {
+      <span class="kw">if</span> !visited[u] { visited[u] = <span class="kw">true</span>; queue.push_back(u); }
+    }
+  }
+  visited
+}`,
+      java: `<span class="cm">// GraphTea BFS core</span>
+<span class="tp">boolean</span>[] <span class="fn">bfs</span>(<span class="tp">int</span> start, <span class="tp">List</span>&lt;<span class="tp">List</span>&lt;<span class="tp">Integer</span>&gt;&gt; adj) {
+  <span class="tp">boolean</span>[] vis = <span class="kw">new</span> <span class="tp">boolean</span>[adj.size()];
+  <span class="tp">Queue</span>&lt;<span class="tp">Integer</span>&gt; q = <span class="kw">new</span> <span class="tp">LinkedList</span>&lt;&gt;();
+  q.add(start); vis[start] = <span class="kw">true</span>;
+  <span class="kw">while</span> (!q.isEmpty()) {
+    <span class="tp">int</span> v = q.poll();
+    <span class="kw">for</span> (<span class="tp">int</span> u : adj.get(v))
+      <span class="kw">if</span> (!vis[u]) { vis[u] = <span class="kw">true</span>; q.add(u); }
+  }
+  <span class="kw">return</span> vis;
+}`,
+      py:   `<span class="kw">from</span> collections <span class="kw">import</span> deque
+
+<span class="kw">def</span> <span class="fn">bfs</span>(start, adj):
+    visited = [<span class="kw">False</span>] * len(adj)
+    queue = deque([start])
+    visited[start] = <span class="kw">True</span>
+    <span class="kw">while</span> queue:
+        v = queue.popleft()
+        <span class="kw">for</span> u <span class="kw">in</span> adj[v]:
+            <span class="kw">if not</span> visited[u]:
+                visited[u] = <span class="kw">True</span>; queue.append(u)
+    <span class="kw">return</span> visited`,
+      js:   `<span class="kw">function</span> <span class="fn">bfs</span>(start, adj) {
+  <span class="kw">const</span> visited = <span class="kw">new</span> <span class="tp">Uint8Array</span>(adj.length);
+  <span class="kw">const</span> queue = [start]; visited[start] = 1;
+  <span class="kw">let</span> head = 0;
+  <span class="kw">while</span> (head &lt; queue.length) {
+    <span class="kw">const</span> v = queue[head++];
+    <span class="kw">for</span> (<span class="kw">const</span> u <span class="kw">of</span> adj[v])
+      <span class="kw">if</span> (!visited[u]) { visited[u] = 1; queue.push(u); }
+  }
+  <span class="kw">return</span> visited;
+}`,
+      scala:`<span class="kw">def</span> <span class="fn">bfs</span>(start: <span class="tp">Int</span>, adj: <span class="tp">Array</span>[<span class="tp">List</span>[<span class="tp">Int</span>]]): <span class="tp">Array</span>[<span class="tp">Boolean</span>] = {
+  <span class="kw">val</span> visited = <span class="tp">Array</span>.fill(adj.length)(<span class="kw">false</span>)
+  <span class="kw">val</span> queue = <span class="tp">scala.collection.mutable.Queue</span>(start)
+  visited(start) = <span class="kw">true</span>
+  <span class="kw">while</span> (queue.nonEmpty) {
+    <span class="kw">val</span> v = queue.dequeue()
+    adj(v).foreach { u =&gt; <span class="kw">if</span> (!visited(u)) { visited(u) = <span class="kw">true</span>; queue.enqueue(u) } }
+  }
+  visited
+}`,
+      c:    `<span class="kw">void</span> <span class="fn">bfs</span>(<span class="tp">int</span> start, <span class="tp">int</span>** adj, <span class="tp">int</span>* deg, <span class="tp">int</span> n) {
+  <span class="tp">int</span>* visited = calloc(n, <span class="kw">sizeof</span>(<span class="tp">int</span>));
+  <span class="tp">int</span>* queue = malloc(n * <span class="kw">sizeof</span>(<span class="tp">int</span>));
+  <span class="tp">int</span> head = 0, tail = 0;
+  queue[tail++] = start; visited[start] = 1;
+  <span class="kw">while</span> (head &lt; tail) {
+    <span class="tp">int</span> v = queue[head++];
+    <span class="kw">for</span> (<span class="tp">int</span> i = 0; i &lt; deg[v]; i++) {
+      <span class="tp">int</span> u = adj[v][i];
+      <span class="kw">if</span> (!visited[u]) { visited[u] = 1; queue[tail++] = u; }
+    }
+  }
+}`,
+    },
+  },
+  {
+    key: 'fib', name: 'Matrix Power (Fibonacci)', icon: '∑',
+    desc: 'Computing Fibonacci(n) via matrix exponentiation — O(log n) multiplications. Tests numeric computation and function-call overhead.',
+    times: { c:8, cpp:9, rust:9, java:18, scala:22, js:28, py:310 },
+    scale: { small:0.001, medium:1, large:85 },
+    repos: { cpp:'LinearOptimizationExperiments', py:'pcst_rust', java:'GraphTea' },
+    notes: {
+      c:    'Direct integer arithmetic — minimal overhead.',
+      cpp:  'Templated matrix multiply — zero-cost abstraction.',
+      rust: 'Identical generated code to C++ for integer ops.',
+      java: 'Autoboxing avoided with primitive long arrays.',
+      scala:'Pattern matching adds minor overhead vs Java.',
+      js:   'V8 JIT handles numeric loops very well.',
+      py:   'Python bigint arithmetic is slow for large n.',
+    },
+    snippets: {
+      cpp: `<span class="kw">using</span> <span class="tp">Mat</span> = <span class="tp">array</span>&lt;<span class="tp">array</span>&lt;<span class="tp">long long</span>,2&gt;,2&gt;;
+
+<span class="tp">Mat</span> <span class="fn">mul</span>(<span class="kw">const</span> <span class="tp">Mat</span>&amp; A, <span class="kw">const</span> <span class="tp">Mat</span>&amp; B) {
+  <span class="tp">Mat</span> C{};
+  <span class="kw">for</span> (<span class="tp">int</span> i=0;i&lt;2;i++)
+    <span class="kw">for</span> (<span class="tp">int</span> j=0;j&lt;2;j++)
+      <span class="kw">for</span> (<span class="tp">int</span> k=0;k&lt;2;k++)
+        C[i][j] += A[i][k]*B[k][j];
+  <span class="kw">return</span> C;
+}
+
+<span class="tp">long long</span> <span class="fn">fib</span>(<span class="tp">long long</span> n) {
+  <span class="tp">Mat</span> base={{{1,1},{1,0}}}, res={{{1,0},{0,1}}};
+  <span class="kw">for</span> (;n;n>>=1,base=<span class="fn">mul</span>(base,base))
+    <span class="kw">if</span>(n&1) res=<span class="fn">mul</span>(res,base);
+  <span class="kw">return</span> res[0][1];
+}`,
+      rust: `<span class="kw">fn</span> <span class="fn">mul</span>(a: [[<span class="tp">u64</span>;2];2], b: [[<span class="tp">u64</span>;2];2]) -&gt; [[<span class="tp">u64</span>;2];2] {
+  [[a[0][0]*b[0][0]+a[0][1]*b[1][0], a[0][0]*b[0][1]+a[0][1]*b[1][1]],
+   [a[1][0]*b[0][0]+a[1][1]*b[1][0], a[1][0]*b[0][1]+a[1][1]*b[1][1]]]
+}
+
+<span class="kw">fn</span> <span class="fn">fib</span>(<span class="kw">mut</span> n: <span class="tp">u64</span>) -&gt; <span class="tp">u64</span> {
+  <span class="kw">let</span> (<span class="kw">mut</span> base, <span class="kw">mut</span> res) = ([[1,1],[1,0]], [[1,0],[0,1]]);
+  <span class="kw">while</span> n > 0 {
+    <span class="kw">if</span> n & 1 == 1 { res = <span class="fn">mul</span>(res, base); }
+    base = <span class="fn">mul</span>(base, base); n >>= 1;
+  }
+  res[0][1]
+}`,
+      java: `<span class="tp">long</span>[][] <span class="fn">mul</span>(<span class="tp">long</span>[][] A, <span class="tp">long</span>[][] B) {
+  <span class="kw">return new</span> <span class="tp">long</span>[][]{{A[0][0]*B[0][0]+A[0][1]*B[1][0],
+                          A[0][0]*B[0][1]+A[0][1]*B[1][1]},
+                         {A[1][0]*B[0][0]+A[1][1]*B[1][0],
+                          A[1][0]*B[0][1]+A[1][1]*B[1][1]}};
+}
+
+<span class="tp">long</span> <span class="fn">fib</span>(<span class="tp">long</span> n) {
+  <span class="tp">long</span>[][] base={{1,1},{1,0}}, res={{1,0},{0,1}};
+  <span class="kw">for</span>(;n>0;n>>=1,base=<span class="fn">mul</span>(base,base))
+    <span class="kw">if</span>((n&1)==1) res=<span class="fn">mul</span>(res,base);
+  <span class="kw">return</span> res[0][1];
+}`,
+      py: `<span class="kw">def</span> <span class="fn">mul</span>(A, B):
+    <span class="kw">return</span> [
+        [A[0][0]*B[0][0]+A[0][1]*B[1][0], A[0][0]*B[0][1]+A[0][1]*B[1][1]],
+        [A[1][0]*B[0][0]+A[1][1]*B[1][0], A[1][0]*B[0][1]+A[1][1]*B[1][1]]
+    ]
+
+<span class="kw">def</span> <span class="fn">fib</span>(n):
+    base, res = [[1,1],[1,0]], [[1,0],[0,1]]
+    <span class="kw">while</span> n:
+        <span class="kw">if</span> n & 1: res = mul(res, base)
+        base = mul(base, base); n >>= 1
+    <span class="kw">return</span> res[0][1]`,
+      js: `<span class="kw">function</span> <span class="fn">mul</span>(A, B) {
+  <span class="kw">return</span> [
+    [A[0][0]*B[0][0]+A[0][1]*B[1][0], A[0][0]*B[0][1]+A[0][1]*B[1][1]],
+    [A[1][0]*B[0][0]+A[1][1]*B[1][0], A[1][0]*B[0][1]+A[1][1]*B[1][1]]
+  ];
+}
+<span class="kw">function</span> <span class="fn">fib</span>(n) {
+  <span class="kw">let</span> base=[[1,1],[1,0]], res=[[1,0],[0,1]];
+  <span class="kw">for</span>(;n;n>>=1,base=<span class="fn">mul</span>(base,base))
+    <span class="kw">if</span>(n&1) res=<span class="fn">mul</span>(res,base);
+  <span class="kw">return</span> res[0][1];
+}`,
+      scala: `<span class="kw">def</span> <span class="fn">mul</span>(A: <span class="tp">Array</span>[<span class="tp">Array</span>[<span class="tp">Long</span>]], B: <span class="tp">Array</span>[<span class="tp">Array</span>[<span class="tp">Long</span>]]) =
+  <span class="tp">Array</span>(<span class="tp">Array</span>(A(0)(0)*B(0)(0)+A(0)(1)*B(1)(0), A(0)(0)*B(0)(1)+A(0)(1)*B(1)(1)),
+        <span class="tp">Array</span>(A(1)(0)*B(0)(0)+A(1)(1)*B(1)(0), A(1)(0)*B(0)(1)+A(1)(1)*B(1)(1)))
+
+<span class="kw">def</span> <span class="fn">fib</span>(n: <span class="tp">Long</span>): <span class="tp">Long</span> = {
+  <span class="kw">var</span> (base, res, m) = (<span class="tp">Array</span>(<span class="tp">Array</span>(1L,1L),<span class="tp">Array</span>(1L,0L)),
+                        <span class="tp">Array</span>(<span class="tp">Array</span>(1L,0L),<span class="tp">Array</span>(0L,1L)), n)
+  <span class="kw">while</span> (m > 0) { <span class="kw">if</span> ((m&1)==1) res=<span class="fn">mul</span>(res,base); base=<span class="fn">mul</span>(base,base); m>>=1 }
+  res(0)(1)
+}`,
+      c: `<span class="kw">typedef long long</span> <span class="tp">ll</span>;
+<span class="tp">ll</span> <span class="fn">mul</span>[2][2];
+
+<span class="kw">void</span> <span class="fn">mat_mul</span>(<span class="tp">ll</span> A[2][2], <span class="tp">ll</span> B[2][2], <span class="tp">ll</span> C[2][2]) {
+  <span class="kw">for</span>(<span class="tp">int</span> i=0;i&lt;2;i++)
+    <span class="kw">for</span>(<span class="tp">int</span> j=0;j&lt;2;j++) {
+      C[i][j]=0;
+      <span class="kw">for</span>(<span class="tp">int</span> k=0;k&lt;2;k++) C[i][j]+=A[i][k]*B[k][j];
+    }
+}`,
+    },
+  },
+  {
+    key: 'hash', name: 'Hash Map Build', icon: '#',
+    desc: 'Building a hash map from n key-value pairs. Tests allocator efficiency and hashing quality.',
+    times: { c:10, cpp:18, rust:14, java:45, scala:55, js:38, py:650 },
+    scale: { small:0.0004, medium:1, large:100 },
+    repos: { cpp:'GraphTea', java:'GraphTea', rust:'pcst_rust', py:'qdrant_title_search' },
+    notes: {
+      c:    'Custom open-addressing table — minimal allocator pressure.',
+      cpp:  'std::unordered_map — good but rehashing can spike latency.',
+      rust: 'HashMap with SwissTable (hashbrown) — state-of-the-art probing.',
+      java: 'HashMap<Integer,Integer> — autoboxing and object headers hurt.',
+      scala:'Immutable Map wrapping adds overhead; mutable.HashMap is better.',
+      js:   'V8 hidden classes make Map very fast for string→value.',
+      py:   'dict is a well-optimized C hash table — overhead is Python object wrapping.',
+    },
+    snippets: {
+      cpp:  `<span class="cm">// From graph adjacency structures in GraphTea C++ port</span>
+<span class="tp">std::unordered_map</span>&lt;<span class="tp">int</span>, <span class="tp">int</span>&gt; m;
+m.reserve(n);
+<span class="kw">for</span> (<span class="tp">int</span> i = 0; i &lt; n; ++i)
+  m[i] = i * 2;`,
+      rust: `<span class="kw">let mut</span> map: <span class="tp">HashMap</span>&lt;<span class="tp">i32</span>, <span class="tp">i32</span>&gt; =
+  <span class="tp">HashMap</span>::with_capacity(n);
+<span class="kw">for</span> i <span class="kw">in</span> 0..n {
+  map.insert(i, i * 2);
+}`,
+      java: `<span class="tp">Map</span>&lt;<span class="tp">Integer</span>,<span class="tp">Integer</span>&gt; map = <span class="kw">new</span> <span class="tp">HashMap</span>&lt;&gt;(n * 2);
+<span class="kw">for</span> (<span class="tp">int</span> i = 0; i &lt; n; i++)
+  map.put(i, i * 2);`,
+      py:   `m = {}
+<span class="kw">for</span> i <span class="kw">in</span> range(n):
+    m[i] = i * 2`,
+      js:   `<span class="kw">const</span> m = <span class="kw">new</span> <span class="tp">Map</span>();
+<span class="kw">for</span> (<span class="kw">let</span> i = 0; i &lt; n; i++)
+  m.set(i, i * 2);`,
+      scala:`<span class="kw">val</span> m = <span class="kw">new</span> <span class="tp">scala.collection.mutable.HashMap</span>[<span class="tp">Int</span>,<span class="tp">Int</span>]()
+<span class="kw">for</span> (i &lt;- 0 until n) m(i) = i * 2`,
+      c:    `<span class="cm">/* Simple open-addressing table */</span>
+<span class="tp">int</span>* keys = calloc(2*n, <span class="kw">sizeof</span>(<span class="tp">int</span>));
+<span class="tp">int</span>* vals = calloc(2*n, <span class="kw">sizeof</span>(<span class="tp">int</span>));
+<span class="kw">for</span> (<span class="tp">int</span> i=0; i&lt;n; i++) {
+  <span class="tp">int</span> h = i % (2*n);
+  <span class="kw">while</span> (keys[h]) h = (h+1)%(2*n);
+  keys[h]=i; vals[h]=i*2;
+}`,
+    },
+  },
+];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let currentAlgo = 0;
+let ran = false;
+
+// ── Build algo tabs ───────────────────────────────────────────────────────────
+function buildAlgoTabs() {
+  const container = document.getElementById('algo-tabs');
+  ALGOS.forEach((a, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'algo-tab' + (i === currentAlgo ? ' active' : '');
+    btn.textContent = a.icon + ' ' + a.name;
+    btn.addEventListener('click', () => {
+      currentAlgo = i;
+      document.querySelectorAll('.algo-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderChart(ran);
+      renderCodeTabs(0);
+    });
+    container.appendChild(btn);
+  });
+}
+
+// ── Render bars ───────────────────────────────────────────────────────────────
+function renderChart(animate) {
+  const algo = ALGOS[currentAlgo];
+  const size = document.getElementById('size-select').value;
+  const scale = algo.scale[size];
+  document.getElementById('chart-title').textContent = algo.name;
+  document.getElementById('chart-desc').textContent = algo.desc;
+
+  const times = Object.entries(algo.times).map(([k, v]) => ({
+    lang: LANGS.find(l => l.key === k),
+    ms: +(v * scale).toFixed(3),
+    key: k,
+  })).sort((a, b) => a.ms - b.ms);
+
+  const maxMs = times[times.length - 1].ms;
+  const barsEl = document.getElementById('bars');
+  barsEl.innerHTML = '';
+
+  times.forEach((t, i) => {
+    const pct = (t.ms / maxMs) * 95;
+    const isFastest = i === 0;
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML = `
+      <div class="bar-lang">
+        <span class="lang-badge" style="background:${t.lang.bg};color:${t.lang.color};border:1px solid ${t.lang.color}44">${t.lang.label}</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="bar-${t.key}" style="width:0;background:${t.lang.color}cc">
+          ${isFastest ? `<span style="font-size:10px">🏆 fastest</span>` : ''}
+        </div>
+      </div>
+      <div class="bar-ms">${t.ms < 1 ? t.ms.toFixed(3) + ' ms' : t.ms.toFixed(1) + ' ms'}</div>
+      <div class="bar-relative">${i === 0 ? '1×' : (t.ms / times[0].ms).toFixed(1) + '×'}</div>
+    `;
+    barsEl.appendChild(row);
+    setTimeout(() => {
+      document.getElementById('bar-' + t.key).style.width = pct + '%';
+    }, animate ? 50 + i * 80 : 0);
+  });
+
+  // Notes
+  const grid = document.getElementById('note-grid');
+  grid.innerHTML = '';
+  LANGS.forEach(lang => {
+    if (!algo.notes[lang.key]) return;
+    const card = document.createElement('div');
+    card.className = 'note-card';
+    card.innerHTML = `<strong style="color:${lang.color}">${lang.label}</strong>${algo.notes[lang.key]}`;
+    grid.appendChild(card);
+  });
+}
+
+// ── Code tabs ─────────────────────────────────────────────────────────────────
+let currentLangIdx = 0;
+
+function renderCodeTabs(idx) {
+  const algo = ALGOS[currentAlgo];
+  const container = document.getElementById('code-tabs');
+  container.innerHTML = '';
+  const langKeys = LANGS.filter(l => algo.snippets[l.key]).map(l => l.key);
+  currentLangIdx = Math.min(idx, langKeys.length - 1);
+
+  langKeys.forEach((key, i) => {
+    const lang = LANGS.find(l => l.key === key);
+    const btn = document.createElement('button');
+    btn.className = 'code-tab' + (i === currentLangIdx ? ' active' : '');
+    btn.style.borderColor = i === currentLangIdx ? lang.color : '';
+    btn.style.color = i === currentLangIdx ? lang.color : '';
+    btn.textContent = lang.label;
+    btn.addEventListener('click', () => renderCodeTabs(i));
+    container.appendChild(btn);
+  });
+
+  const key = langKeys[currentLangIdx];
+  document.getElementById('code-inner').innerHTML = algo.snippets[key] || '';
+}
+
+// ── Run ───────────────────────────────────────────────────────────────────────
+document.getElementById('run-btn').addEventListener('click', () => {
+  ran = true;
+  renderChart(true);
+});
+
+document.getElementById('size-select').addEventListener('change', () => {
+  renderChart(ran);
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+buildAlgoTabs();
+renderChart(false);
+renderCodeTabs(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Theory Lecture Tool — Ali Rostami</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #fff; color: #111; font-family: 'Segoe UI', sans-serif; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+
+    /* Toolbar */
+    #toolbar {
+      display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
+      padding: 6px 12px; background: #1a1a2e; border-bottom: 1px solid #333;
+      flex-shrink: 0;
+    }
+    #back-link {
+      color: #7ec8e3; text-decoration: none; font-size: 12px;
+      border: 1px solid #7ec8e3; padding: 3px 9px; border-radius: 10px;
+      margin-right: 6px; white-space: nowrap;
+    }
+    .sep { width: 1px; height: 28px; background: #333; margin: 0 4px; }
+    .tool-btn, .theme-btn {
+      padding: 5px 11px; border: 1px solid #333; border-radius: 8px;
+      background: #252535; color: #ccc; cursor: pointer; font-size: 12px;
+      transition: all 0.15s; white-space: nowrap;
+    }
+    .tool-btn:hover { background: #333; color: #fff; }
+    .tool-btn.active { background: #1f3a50; border-color: #7ec8e3; color: #7ec8e3; }
+    .color-swatch {
+      width: 22px; height: 22px; border-radius: 50%; cursor: pointer;
+      border: 3px solid transparent; flex-shrink: 0;
+    }
+    .color-swatch.selected { border-color: #fff; }
+    #node-size-range { width: 70px; accent-color: #7ec8e3; }
+    #stroke-size-range { width: 60px; accent-color: #7ec8e3; }
+    label.small { font-size: 11px; color: #888; }
+    #mode-label { font-size: 12px; color: #56c596; font-weight: 600; min-width: 120px; }
+
+    /* Algo panel */
+    #algo-panel {
+      position: fixed; top: 50px; right: 0; width: 220px;
+      background: #1a1a2e; border-left: 1px solid #333;
+      padding: 10px; z-index: 30; overflow-y: auto;
+      max-height: calc(100vh - 50px); display: none;
+    }
+    #algo-panel.open { display: block; }
+    #algo-panel h4 { font-size: 11px; text-transform: uppercase; color: #666; letter-spacing: 1px; margin-bottom: 8px; }
+    .algo-btn {
+      display: block; width: 100%; padding: 6px 9px; margin: 3px 0;
+      background: #252535; border: 1px solid #333; border-radius: 7px;
+      color: #ccc; cursor: pointer; font-size: 12px; text-align: left;
+    }
+    .algo-btn:hover { background: #2d2d45; border-color: #555; }
+    #algo-result {
+      margin-top: 10px; padding: 8px; background: #0d0d1a;
+      border: 1px solid #334; border-radius: 8px;
+      font-size: 12px; color: #aac; line-height: 1.6; display: none;
+    }
+
+    /* Annotation panel */
+    #anno-panel {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: #1a1a2e; border-top: 1px solid #333;
+      padding: 8px 14px; z-index: 20; display: none;
+    }
+    #anno-panel.open { display: flex; align-items: center; gap: 10px; }
+    #anno-input {
+      flex: 1; padding: 6px 10px; background: #252535; border: 1px solid #444;
+      border-radius: 8px; color: #fff; font-size: 13px;
+    }
+    .anno-confirm-btn {
+      padding: 6px 14px; background: #56c596; color: #0f0f1a;
+      border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 12px;
+    }
+    #anno-cancel { padding: 6px; color: #888; cursor: pointer; font-size: 18px; }
+
+    /* Canvas */
+    #canvas-wrap { flex: 1; position: relative; overflow: hidden; }
+    canvas { position: absolute; inset: 0; }
+    #bg-canvas { cursor: default; }
+    #main-canvas { }
+
+    /* Presenter mode overlay */
+    #presenter-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(15,15,26,0.95); padding: 8px 18px;
+      display: none; align-items: center; gap: 12px;
+      border-top: 2px solid #7ec8e3;
+    }
+    #presenter-bar.on { display: flex; }
+    #slide-counter { color: #888; font-size: 13px; }
+    .slide-nav { padding: 6px 14px; background: #1a1a2e; border: 1px solid #444; border-radius: 8px; color: #ccc; cursor: pointer; font-size: 12px; }
+    .slide-nav:hover { background: #252535; }
+    #slide-title { flex: 1; font-size: 14px; color: #7ec8e3; font-weight: 600; }
+
+    /* Dark/light theme */
+    body.dark { background: #0f0f1a; }
+    body.dark #main-canvas { filter: none; }
+
+    /* Tooltip */
+    #tooltip {
+      position: fixed; background: rgba(26,26,46,0.95);
+      border: 1px solid #334; border-radius: 8px;
+      padding: 6px 10px; font-size: 12px; color: #ddd;
+      pointer-events: none; display: none; z-index: 100;
+    }
+  </style>
+</head>
+<body>
+
+<div id="toolbar">
+  <a id="back-link" href="../index.html">← Home</a>
+  <div class="sep"></div>
+
+  <button class="tool-btn active" id="btn-select" title="Select/Move (V)">↖ Select</button>
+  <button class="tool-btn" id="btn-node" title="Add Node (N)">⬤ Node</button>
+  <button class="tool-btn" id="btn-edge" title="Add Edge (E)">— Edge</button>
+  <button class="tool-btn" id="btn-label" title="Label Node (L)">Aa Label</button>
+  <button class="tool-btn" id="btn-annotate" title="Text Annotation (T)">✎ Text</button>
+  <button class="tool-btn" id="btn-erase" title="Erase (X)">✕ Erase</button>
+
+  <div class="sep"></div>
+
+  <label class="small">Color:</label>
+  <div id="color-swatches" style="display:flex;gap:5px;align-items:center;"></div>
+
+  <div class="sep"></div>
+
+  <label class="small">Node:</label>
+  <input type="range" id="node-size-range" min="12" max="36" value="22" title="Node size">
+  <label class="small">Edge:</label>
+  <input type="range" id="stroke-size-range" min="1" max="6" value="2" title="Edge width">
+
+  <div class="sep"></div>
+
+  <button class="tool-btn" id="btn-algo">⚙ Algorithms ▾</button>
+  <button class="tool-btn" id="btn-preset">⊞ Presets ▾</button>
+  <button class="tool-btn" id="btn-clear-graph">↺ Clear</button>
+  <button class="tool-btn" id="btn-theme">☀ Light</button>
+  <button class="tool-btn" id="btn-present">▶ Present</button>
+  <button class="tool-btn" id="btn-export">⬇ PNG</button>
+
+  <div class="sep"></div>
+  <div id="mode-label">Mode: Select</div>
+</div>
+
+<div id="canvas-wrap">
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="main-canvas"></canvas>
+</div>
+
+<!-- Algo side panel -->
+<div id="algo-panel">
+  <h4>Graph Algorithms</h4>
+  <button class="algo-btn" data-algo="bfs">BFS (from selected)</button>
+  <button class="algo-btn" data-algo="dfs">DFS (from selected)</button>
+  <button class="algo-btn" data-algo="mst">Minimum Spanning Tree</button>
+  <button class="algo-btn" data-algo="color">Greedy Coloring</button>
+  <button class="algo-btn" data-algo="degree">Degree Sequence</button>
+  <button class="algo-btn" data-algo="bipartite">Check Bipartite</button>
+  <button class="algo-btn" data-algo="clear-result">✕ Clear Result</button>
+  <div id="algo-result"></div>
+</div>
+
+<div id="anno-panel">
+  <input id="anno-input" placeholder="Type annotation text…" autofocus>
+  <button class="anno-confirm-btn" id="anno-confirm">Add</button>
+  <span id="anno-cancel">×</span>
+</div>
+
+<div id="presenter-bar">
+  <button class="slide-nav" id="prev-slide">◀ Prev</button>
+  <div id="slide-title">Slide 1</div>
+  <div id="slide-counter"></div>
+  <button class="slide-nav" id="next-slide">Next ▶</button>
+  <button class="slide-nav" id="save-slide">+ Save Slide</button>
+  <button class="slide-nav" id="exit-present">✕ Exit</button>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+// ── Constants ─────────────────────────────────────────────────────────────────
+const COLORS = ['#e74c3c','#3498db','#2ecc71','#f39c12','#9b59b6','#1abc9c','#222','#fff'];
+const UNCOLORED_DARK = '#1a1a2e';
+const UNCOLORED_LIGHT = '#f0f4ff';
+const EDGE_DARK = '#445';
+const EDGE_LIGHT = '#888';
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let nodes = [], edges = [], annotations = [];
+let mode = 'select';
+let selectedColor = COLORS[1];
+let nodeSize = 22;
+let strokeSize = 2;
+let darkMode = false;
+
+let hoveredNode = -1, hoveredEdge = -1;
+let selectedNodes = new Set();
+let edgeStartNode = -1;
+let draggingNode = -1, dragOff = {x:0,y:0};
+let pendingAnnotation = null;
+
+let algoResult = null; // {type, visited[], mstEdges[], colors{}}
+
+let nextNodeId = 0;
+let nextEdgeId = 0;
+
+// Slides (for presenter mode)
+let slides = [];
+let slideIdx = 0;
+let presenting = false;
+
+const bgCanvas   = document.getElementById('bg-canvas');
+const mainCanvas = document.getElementById('main-canvas');
+const bgCtx   = bgCanvas.getContext('2d');
+const ctx     = mainCanvas.getContext('2d');
+
+// ── Color swatches ────────────────────────────────────────────────────────────
+function buildSwatches() {
+  const container = document.getElementById('color-swatches');
+  container.innerHTML = '';
+  COLORS.forEach(c => {
+    const sw = document.createElement('div');
+    sw.className = 'color-swatch' + (c === selectedColor ? ' selected' : '');
+    sw.style.background = c;
+    sw.style.border = c === '#fff' ? '2px solid #555' : '2px solid transparent';
+    sw.addEventListener('click', () => {
+      selectedColor = c;
+      document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+      sw.classList.add('selected');
+    });
+    container.appendChild(sw);
+  });
+}
+buildSwatches();
+
+document.getElementById('node-size-range').addEventListener('input', e => { nodeSize = +e.target.value; draw(); });
+document.getElementById('stroke-size-range').addEventListener('input', e => { strokeSize = +e.target.value; draw(); });
+
+// ── Resize ────────────────────────────────────────────────────────────────────
+function resize() {
+  const wrap = document.getElementById('canvas-wrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  [bgCanvas, mainCanvas].forEach(c => { c.width = W; c.height = H; });
+  drawBg(); draw();
+}
+window.addEventListener('resize', resize);
+
+function drawBg() {
+  bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+  bgCtx.fillStyle = darkMode ? '#0f0f1a' : '#fafbff';
+  bgCtx.fillRect(0, 0, bgCanvas.width, bgCanvas.height);
+  // grid dots
+  bgCtx.fillStyle = darkMode ? '#1e1e30' : '#e8eaf0';
+  const spacing = 30;
+  for (let x = spacing; x < bgCanvas.width; x += spacing)
+    for (let y = spacing; y < bgCanvas.height; y += spacing) {
+      bgCtx.beginPath(); bgCtx.arc(x, y, 1.5, 0, Math.PI*2); bgCtx.fill();
+    }
+}
+
+// ── Drawing ───────────────────────────────────────────────────────────────────
+const ALGO_COLORS_DARK  = ['#4e9af1','#56c596','#c77dff','#ff9f43','#ff6b6b','#1abc9c','#e74c3c','#f39c12'];
+const ALGO_COLORS_LIGHT = ['#1565c0','#2e7d32','#7b1fa2','#e65100','#b71c1c','#00695c','#b71c1c','#e65100'];
+
+function nodeColor(n) {
+  if (algoResult) {
+    if (algoResult.type === 'color' && algoResult.colors[n.id] !== undefined) {
+      return ALGO_COLORS_DARK[algoResult.colors[n.id] % ALGO_COLORS_DARK.length];
+    }
+    if ((algoResult.type === 'bfs' || algoResult.type === 'dfs') && algoResult.visited) {
+      const idx = algoResult.visited.indexOf(n.id);
+      if (idx >= 0) return ALGO_COLORS_DARK[Math.min(idx, ALGO_COLORS_DARK.length-1)];
+    }
+  }
+  return n.color || (darkMode ? UNCOLORED_DARK : UNCOLORED_LIGHT);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+
+  // Annotations
+  annotations.forEach(a => {
+    ctx.font = `${a.size || 16}px ${a.bold ? 'bold ' : ''}Segoe UI, sans-serif`;
+    ctx.fillStyle = a.color || (darkMode ? '#ccc' : '#333');
+    ctx.fillText(a.text, a.x, a.y);
+    if (selectedNodes.has('anno-' + a.id)) {
+      ctx.strokeStyle = '#7ec8e3'; ctx.lineWidth = 1;
+      const m = ctx.measureText(a.text);
+      ctx.strokeRect(a.x - 4, a.y - (a.size || 16) - 2, m.width + 8, (a.size||16) + 8);
+    }
+  });
+
+  // Edges
+  edges.forEach((e, ei) => {
+    const a = nodes.find(n => n.id === e.a);
+    const b = nodes.find(n => n.id === e.b);
+    if (!a || !b) return;
+
+    const inMST = algoResult?.type === 'mst' && algoResult.mstEdges?.includes(e.id);
+    const isHovered = ei === hoveredEdge;
+
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+    ctx.strokeStyle = inMST ? '#56c596' : (isHovered ? '#7ec8e3' : (darkMode ? EDGE_DARK : EDGE_LIGHT));
+    ctx.lineWidth = inMST ? strokeSize + 2 : (isHovered ? strokeSize + 1 : strokeSize);
+    ctx.stroke();
+
+    // Edge weight label
+    if (e.weight) {
+      const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+      ctx.fillStyle = darkMode ? '#111' : '#fff';
+      ctx.fillRect(mx-10, my-9, 20, 16);
+      ctx.fillStyle = inMST ? '#56c596' : (darkMode ? '#778' : '#555');
+      ctx.font = '11px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(e.weight, mx, my);
+    }
+  });
+
+  // Edge being drawn
+  if (mode === 'edge' && edgeStartNode >= 0 && lastMouse) {
+    const n = nodes.find(n => n.id === edgeStartNode);
+    if (n) {
+      ctx.beginPath(); ctx.moveTo(n.x, n.y); ctx.lineTo(lastMouse.x, lastMouse.y);
+      ctx.strokeStyle = '#7ec8e3'; ctx.lineWidth = 2;
+      ctx.setLineDash([6,4]); ctx.stroke(); ctx.setLineDash([]);
+    }
+  }
+
+  // Nodes
+  nodes.forEach(n => {
+    const isHovered = n.id === hoveredNode;
+    const isSelected = selectedNodes.has(n.id);
+    const r = nodeSize;
+
+    ctx.beginPath(); ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = nodeColor(n);
+    ctx.fill();
+    ctx.strokeStyle = isSelected ? '#7ec8e3' : (isHovered ? '#fff' : (darkMode ? '#445' : '#ccc'));
+    ctx.lineWidth = isSelected || isHovered ? 3 : 1.5;
+    ctx.stroke();
+
+    // Label
+    const lbl = n.label !== undefined ? n.label : String(n.id);
+    ctx.font = `bold ${Math.max(10, r * 0.75)}px Segoe UI, sans-serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    const nc = nodeColor(n);
+    const bright = nc === UNCOLORED_DARK || nc === '#1a1a2e' || nc === '#111';
+    ctx.fillStyle = bright ? (darkMode ? '#eee' : '#333') : '#fff';
+    ctx.fillText(lbl, n.x, n.y);
+  });
+}
+
+// ── Presets ───────────────────────────────────────────────────────────────────
+const PRESETS = {
+  empty: { nodes: [], edges: [] },
+  petersen: {
+    nodes: (() => {
+      const pts = [];
+      for (let i=0;i<5;i++) pts.push({x:0.5+0.35*Math.cos(2*Math.PI*i/5-Math.PI/2), y:0.45+0.35*Math.sin(2*Math.PI*i/5-Math.PI/2)});
+      for (let i=0;i<5;i++) pts.push({x:0.5+0.17*Math.cos(2*Math.PI*i/5-Math.PI/2), y:0.45+0.17*Math.sin(2*Math.PI*i/5-Math.PI/2)});
+      return pts;
+    })(),
+    edges: [[0,1],[1,2],[2,3],[3,4],[4,0],[5,6],[6,7],[7,8],[8,9],[9,5],[0,5],[1,6],[2,7],[3,8],[4,9]],
+  },
+  k5: {
+    nodes: (() => {
+      const pts = [];
+      for(let i=0;i<5;i++) pts.push({x:0.5+0.38*Math.cos(2*Math.PI*i/5-Math.PI/2), y:0.48+0.38*Math.sin(2*Math.PI*i/5-Math.PI/2)});
+      return pts;
+    })(),
+    edges: [[0,1],[0,2],[0,3],[0,4],[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]],
+  },
+  bipartite: {
+    nodes: [
+      {x:0.2,y:0.25},{x:0.2,y:0.45},{x:0.2,y:0.65},
+      {x:0.8,y:0.25},{x:0.8,y:0.45},{x:0.8,y:0.65},
+    ],
+    edges: [[0,3],[0,4],[0,5],[1,3],[1,4],[1,5],[2,3],[2,4],[2,5]],
+  },
+  tree: {
+    nodes: [
+      {x:0.5,y:0.1},{x:0.25,y:0.3},{x:0.75,y:0.3},
+      {x:0.12,y:0.55},{x:0.38,y:0.55},{x:0.62,y:0.55},{x:0.88,y:0.55},
+      {x:0.06,y:0.78},{x:0.18,y:0.78},{x:0.32,y:0.78},{x:0.44,y:0.78},
+    ],
+    edges: [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6],[3,7],[3,8],[4,9],[4,10]],
+  },
+};
+
+function loadPreset(key) {
+  const p = PRESETS[key];
+  nodes = []; edges = []; annotations = []; nextNodeId = 0; nextEdgeId = 0;
+  algoResult = null; selectedNodes.clear();
+  const W = mainCanvas.width, H = mainCanvas.height;
+  p.nodes.forEach((n, i) => {
+    nodes.push({ id: nextNodeId++, x: n.x*W, y: n.y*H, label: String(i), color: null });
+  });
+  p.edges.forEach(([a,b]) => {
+    edges.push({ id: nextEdgeId++, a, b, weight: null });
+  });
+  hideAlgoResult();
+  draw();
+}
+
+// Preset dropdown
+let presetMenuOpen = false;
+document.getElementById('btn-preset').addEventListener('click', e => {
+  e.stopPropagation();
+  const menu = document.getElementById('preset-menu') || createPresetMenu();
+  const open = menu.style.display === 'block';
+  menu.style.display = open ? 'none' : 'block';
+  const r = document.getElementById('btn-preset').getBoundingClientRect();
+  menu.style.top = (r.bottom + 4) + 'px';
+  menu.style.left = r.left + 'px';
+});
+
+function createPresetMenu() {
+  const menu = document.createElement('div');
+  menu.id = 'preset-menu';
+  menu.style.cssText = `position:fixed;z-index:200;background:#1a1a2e;border:1px solid #334;border-radius:10px;padding:8px;display:none;min-width:160px;`;
+  const items = [
+    ['empty','Empty Canvas'],['petersen','Petersen Graph'],['k5','Complete K5'],
+    ['bipartite','Bipartite K3,3'],['tree','Binary Tree'],
+  ];
+  items.forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.style.cssText = 'display:block;width:100%;padding:7px 10px;background:transparent;border:none;color:#ccc;cursor:pointer;text-align:left;font-size:13px;border-radius:6px;';
+    btn.textContent = label;
+    btn.addEventListener('mouseenter', () => btn.style.background = '#252535');
+    btn.addEventListener('mouseleave', () => btn.style.background = 'transparent');
+    btn.addEventListener('click', () => { loadPreset(key); menu.style.display = 'none'; });
+    menu.appendChild(btn);
+  });
+  document.body.appendChild(menu);
+  document.addEventListener('click', () => menu.style.display = 'none');
+  return menu;
+}
+
+// ── Mode switching ────────────────────────────────────────────────────────────
+const MODES = ['select','node','edge','label','annotate','erase'];
+const MODEBTNS = {select:'btn-select',node:'btn-node',edge:'btn-edge',label:'btn-label',annotate:'btn-annotate',erase:'btn-erase'};
+const MODELABELS = {select:'Select / Move (drag nodes)',node:'Add Node — click canvas',edge:'Add Edge — click two nodes',label:'Label Node — click a node',annotate:'Text — click to place',erase:'Erase — click node or edge'};
+
+function setMode(m) {
+  mode = m;
+  edgeStartNode = -1;
+  document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+  if (MODEBTNS[m]) document.getElementById(MODEBTNS[m]).classList.add('active');
+  document.getElementById('mode-label').textContent = MODELABELS[m] || m;
+  mainCanvas.style.cursor = m === 'node' ? 'crosshair' : 'default';
+  const annoPanel = document.getElementById('anno-panel');
+  if (m !== 'annotate') annoPanel.classList.remove('open');
+  draw();
+}
+
+MODES.forEach(m => {
+  const btn = document.getElementById(MODEBTNS[m]);
+  if (btn) btn.addEventListener('click', () => setMode(m));
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (document.activeElement.tagName === 'INPUT') return;
+  const map = {v:'select',n:'node',e:'edge',l:'label',t:'annotate',x:'erase'};
+  if (map[e.key]) setMode(map[e.key]);
+  if (e.key === 'Escape') { setMode('select'); selectedNodes.clear(); draw(); }
+  if (e.key === 'Delete' || e.key === 'Backspace') deleteSelected();
+});
+
+function deleteSelected() {
+  selectedNodes.forEach(id => {
+    if (typeof id === 'number') {
+      nodes = nodes.filter(n => n.id !== id);
+      edges = edges.filter(eg => eg.a !== id && eg.b !== id);
+    }
+  });
+  selectedNodes.clear(); draw();
+}
+
+// ── Hit tests ─────────────────────────────────────────────────────────────────
+let lastMouse = null;
+
+function nodeAt(mx, my) {
+  for (let i = nodes.length-1; i >= 0; i--) {
+    const n = nodes[i];
+    if ((mx-n.x)**2 + (my-n.y)**2 <= (nodeSize+5)**2) return n.id;
+  }
+  return -1;
+}
+
+function edgeAt(mx, my) {
+  for (let i = edges.length-1; i >= 0; i--) {
+    const e = edges[i];
+    const a = nodes.find(n => n.id === e.a), b = nodes.find(n => n.id === e.b);
+    if (!a || !b) continue;
+    const dx=b.x-a.x, dy=b.y-a.y, len2=dx*dx+dy*dy;
+    const t = Math.max(0, Math.min(1, ((mx-a.x)*dx+(my-a.y)*dy)/len2));
+    const cx=a.x+t*dx-mx, cy=a.y+t*dy-my;
+    if (cx*cx+cy*cy < 64) return i;
+  }
+  return -1;
+}
+
+// ── Mouse events ──────────────────────────────────────────────────────────────
+mainCanvas.addEventListener('mousemove', e => {
+  const r = mainCanvas.getBoundingClientRect();
+  const mx = e.clientX-r.left, my = e.clientY-r.top;
+  lastMouse = {x:mx, y:my};
+
+  if (draggingNode >= 0) {
+    const n = nodes.find(n => n.id === draggingNode);
+    if (n) { n.x = mx + dragOff.x; n.y = my + dragOff.y; }
+    draw(); return;
+  }
+
+  const nh = nodeAt(mx, my);
+  const eh = nh < 0 ? edgeAt(mx, my) : -1;
+  if (nh !== hoveredNode || eh !== hoveredEdge) { hoveredNode = nh; hoveredEdge = eh; draw(); }
+
+  const tip = document.getElementById('tooltip');
+  if (nh >= 0) {
+    const n = nodes.find(n => n.id === nh);
+    const deg = edges.filter(eg => eg.a === nh || eg.b === nh).length;
+    tip.innerHTML = `Node ${n.label || n.id}<br>Degree: ${deg}`;
+    tip.style.left = (e.clientX+12)+'px'; tip.style.top = (e.clientY-8)+'px';
+    tip.style.display = 'block';
+  } else if (eh >= 0) {
+    const eg = edges[eh];
+    tip.innerHTML = `Edge ${eg.a}–${eg.b}${eg.weight ? `<br>w = ${eg.weight}` : ''}`;
+    tip.style.left = (e.clientX+12)+'px'; tip.style.top = (e.clientY-8)+'px';
+    tip.style.display = 'block';
+  } else {
+    tip.style.display = 'none';
+  }
+
+  if ((mode === 'edge' && edgeStartNode >= 0) || mode === 'annotate') draw();
+  mainCanvas.style.cursor = nh >= 0 && mode === 'select' ? 'grab' : (mode === 'node' ? 'crosshair' : 'default');
+});
+
+mainCanvas.addEventListener('mousedown', e => {
+  const r = mainCanvas.getBoundingClientRect();
+  const mx = e.clientX-r.left, my = e.clientY-r.top;
+  const nh = nodeAt(mx, my);
+  if (mode === 'select' && nh >= 0) {
+    draggingNode = nh;
+    const n = nodes.find(n => n.id === nh);
+    dragOff = {x: n.x-mx, y: n.y-my};
+    if (!selectedNodes.has(nh)) { selectedNodes.clear(); selectedNodes.add(nh); }
+    draw();
+  }
+});
+
+mainCanvas.addEventListener('mouseup', () => { draggingNode = -1; });
+
+mainCanvas.addEventListener('mouseleave', () => {
+  hoveredNode = -1; hoveredEdge = -1; lastMouse = null;
+  document.getElementById('tooltip').style.display = 'none'; draw();
+});
+
+mainCanvas.addEventListener('click', e => {
+  const r = mainCanvas.getBoundingClientRect();
+  const mx = e.clientX-r.left, my = e.clientY-r.top;
+  const nh = nodeAt(mx, my);
+  const eh = nh < 0 ? edgeAt(mx, my) : -1;
+
+  if (mode === 'node' && nh < 0) {
+    const id = nextNodeId++;
+    nodes.push({id, x:mx, y:my, label: String(nodes.length), color: selectedColor === '#1a1a2e' ? null : selectedColor});
+    draw();
+  } else if (mode === 'edge') {
+    if (nh >= 0) {
+      if (edgeStartNode < 0) { edgeStartNode = nh; }
+      else if (edgeStartNode !== nh) {
+        const exists = edges.some(eg => (eg.a===edgeStartNode&&eg.b===nh)||(eg.a===nh&&eg.b===edgeStartNode));
+        if (!exists) edges.push({id: nextEdgeId++, a:edgeStartNode, b:nh, weight: null});
+        edgeStartNode = -1; draw();
+      }
+    }
+  } else if (mode === 'label' && nh >= 0) {
+    const n = nodes.find(n => n.id === nh);
+    const lbl = prompt('Node label:', n.label || '');
+    if (lbl !== null) { n.label = lbl; draw(); }
+  } else if (mode === 'annotate') {
+    pendingAnnotation = {x: mx, y: my};
+    const annoPanel = document.getElementById('anno-panel');
+    annoPanel.classList.add('open');
+    document.getElementById('anno-input').value = '';
+    document.getElementById('anno-input').focus();
+  } else if (mode === 'erase') {
+    if (nh >= 0) { nodes = nodes.filter(n => n.id !== nh); edges = edges.filter(eg => eg.a !== nh && eg.b !== nh); draw(); }
+    else if (eh >= 0) { edges.splice(eh, 1); draw(); }
+  } else if (mode === 'select') {
+    if (nh < 0 && eh < 0) { selectedNodes.clear(); draw(); }
+    else if (nh >= 0) {
+      if (!e.shiftKey) selectedNodes.clear();
+      selectedNodes.has(nh) ? selectedNodes.delete(nh) : selectedNodes.add(nh);
+      draw();
+    }
+  }
+});
+
+// Annotation confirm
+document.getElementById('anno-confirm').addEventListener('click', () => {
+  const txt = document.getElementById('anno-input').value.trim();
+  if (txt && pendingAnnotation) {
+    annotations.push({id: annotations.length, text: txt, x: pendingAnnotation.x, y: pendingAnnotation.y, size: 16, color: selectedColor});
+    pendingAnnotation = null;
+    document.getElementById('anno-panel').classList.remove('open');
+    draw();
+  }
+});
+document.getElementById('anno-cancel').addEventListener('click', () => {
+  pendingAnnotation = null;
+  document.getElementById('anno-panel').classList.remove('open');
+});
+document.getElementById('anno-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('anno-confirm').click();
+  if (e.key === 'Escape') document.getElementById('anno-cancel').click();
+});
+
+// ── Algorithms ────────────────────────────────────────────────────────────────
+document.getElementById('btn-algo').addEventListener('click', e => {
+  e.stopPropagation();
+  document.getElementById('algo-panel').classList.toggle('open');
+});
+
+function adj(id) {
+  return edges.filter(eg => eg.a===id||eg.b===id).map(eg => eg.a===id?eg.b:eg.a);
+}
+
+document.querySelectorAll('.algo-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const a = btn.dataset.algo;
+    if (a === 'clear-result') { algoResult = null; hideAlgoResult(); draw(); return; }
+    runAlgo(a);
+  });
+});
+
+function hideAlgoResult() {
+  document.getElementById('algo-result').style.display = 'none';
+}
+
+function showAlgoResult(html) {
+  const el = document.getElementById('algo-result');
+  el.innerHTML = html; el.style.display = 'block';
+}
+
+function runAlgo(type) {
+  algoResult = null;
+  if (nodes.length === 0) { showAlgoResult('No nodes in graph.'); draw(); return; }
+
+  if (type === 'bfs' || type === 'dfs') {
+    const startId = selectedNodes.size > 0 ? [...selectedNodes][0] : nodes[0].id;
+    const visited = [];
+    if (type === 'bfs') {
+      const queue = [startId], seen = new Set([startId]);
+      while (queue.length) {
+        const v = queue.shift(); visited.push(v);
+        adj(v).forEach(u => { if(!seen.has(u)){seen.add(u);queue.push(u);} });
+      }
+    } else {
+      const stack = [startId], seen = new Set();
+      while (stack.length) {
+        const v = stack.pop(); if (seen.has(v)) continue; seen.add(v); visited.push(v);
+        adj(v).reverse().forEach(u => { if(!seen.has(u)) stack.push(u); });
+      }
+    }
+    algoResult = { type, visited };
+    showAlgoResult(`<strong>${type.toUpperCase()}</strong> from node ${startId}:<br>Order: ${visited.join(' → ')}`);
+  }
+
+  else if (type === 'mst') {
+    // Kruskal (all edges weight 1 if unweighted)
+    const edgeList = edges.map(e => ({...e, w: e.weight || 1})).sort((a,b)=>a.w-b.w);
+    const parent = new Map(); nodes.forEach(n => parent.set(n.id, n.id));
+    function find(x){return parent.get(x)===x?x:(parent.set(x,find(parent.get(x))),parent.get(x));}
+    const mstEdges = [];
+    let totalW = 0;
+    edgeList.forEach(e => {
+      if (find(e.a)!==find(e.b)){parent.set(find(e.a),find(e.b));mstEdges.push(e.id);totalW+=e.w;}
+    });
+    algoResult = { type: 'mst', mstEdges };
+    showAlgoResult(`<strong>MST</strong> (Kruskal):<br>${mstEdges.length} edges, total weight = ${totalW}`);
+  }
+
+  else if (type === 'color') {
+    // Greedy coloring
+    const order = [...nodes].map(n=>n.id);
+    const colors = {};
+    order.forEach(id => {
+      const usedColors = new Set(adj(id).map(u => colors[u]).filter(c=>c!==undefined));
+      let c = 0; while (usedColors.has(c)) c++;
+      colors[id] = c;
+    });
+    const chromatic = Math.max(...Object.values(colors)) + 1;
+    algoResult = { type: 'color', colors };
+    showAlgoResult(`<strong>Greedy Coloring</strong>:<br>${chromatic} colors used<br>(may not be optimal)`);
+  }
+
+  else if (type === 'degree') {
+    const degs = nodes.map(n => ({label:n.label||n.id, deg:edges.filter(eg=>eg.a===n.id||eg.b===n.id).length}));
+    degs.sort((a,b)=>b.deg-a.deg);
+    const seq = degs.map(d=>d.deg).join(', ');
+    showAlgoResult(`<strong>Degree Sequence</strong>:<br>${seq}<br><br>Max: ${degs[0]?.label} (deg ${degs[0]?.deg})`);
+  }
+
+  else if (type === 'bipartite') {
+    const color = {};
+    let bip = true;
+    for (const start of nodes) {
+      if (color[start.id] !== undefined) continue;
+      const queue = [start.id]; color[start.id] = 0;
+      while (queue.length && bip) {
+        const v = queue.shift();
+        for (const u of adj(v)) {
+          if (color[u] === undefined) { color[u] = 1 - color[v]; queue.push(u); }
+          else if (color[u] === color[v]) { bip = false; break; }
+        }
+      }
+    }
+    if (bip) algoResult = { type: 'color', colors: color };
+    showAlgoResult(bip
+      ? '<strong>Bipartite</strong> ✓<br>Graph is 2-colorable. The 2-coloring is shown.'
+      : '<strong>Not Bipartite</strong> ✗<br>Graph contains an odd cycle.');
+  }
+
+  draw();
+}
+
+// ── Clear ─────────────────────────────────────────────────────────────────────
+document.getElementById('btn-clear-graph').addEventListener('click', () => {
+  if (!confirm('Clear the canvas?')) return;
+  nodes = []; edges = []; annotations = []; nextNodeId = 0; nextEdgeId = 0;
+  algoResult = null; selectedNodes.clear(); hideAlgoResult(); draw();
+});
+
+// ── Theme ─────────────────────────────────────────────────────────────────────
+document.getElementById('btn-theme').addEventListener('click', () => {
+  darkMode = !darkMode;
+  document.body.className = darkMode ? 'dark' : '';
+  document.getElementById('btn-theme').textContent = darkMode ? '☀ Light' : '🌙 Dark';
+  drawBg(); draw();
+});
+
+// ── Export PNG ────────────────────────────────────────────────────────────────
+document.getElementById('btn-export').addEventListener('click', () => {
+  const tempCanvas = document.createElement('canvas');
+  tempCanvas.width = mainCanvas.width; tempCanvas.height = mainCanvas.height;
+  const tCtx = tempCanvas.getContext('2d');
+  tCtx.drawImage(bgCanvas, 0, 0);
+  tCtx.drawImage(mainCanvas, 0, 0);
+  const link = document.createElement('a');
+  link.download = 'graph-lecture.png';
+  link.href = tempCanvas.toDataURL();
+  link.click();
+});
+
+// ── Presenter mode (basic slide save/restore) ─────────────────────────────────
+document.getElementById('btn-present').addEventListener('click', () => {
+  presenting = !presenting;
+  document.getElementById('presenter-bar').classList.toggle('on', presenting);
+  updateSlideCounter();
+});
+
+function saveCurrentSlide() {
+  slides[slideIdx] = {
+    nodes: JSON.parse(JSON.stringify(nodes)),
+    edges: JSON.parse(JSON.stringify(edges)),
+    annotations: JSON.parse(JSON.stringify(annotations)),
+    nextNodeId, nextEdgeId,
+  };
+}
+
+function loadSlide(idx) {
+  const s = slides[idx];
+  if (!s) return;
+  nodes = JSON.parse(JSON.stringify(s.nodes));
+  edges = JSON.parse(JSON.stringify(s.edges));
+  annotations = JSON.parse(JSON.stringify(s.annotations));
+  nextNodeId = s.nextNodeId; nextEdgeId = s.nextEdgeId;
+  algoResult = null; selectedNodes.clear(); hideAlgoResult(); draw();
+}
+
+function updateSlideCounter() {
+  document.getElementById('slide-counter').textContent = `Slide ${slideIdx + 1} / ${slides.length}`;
+  document.getElementById('slide-title').textContent = `Slide ${slideIdx + 1}`;
+}
+
+document.getElementById('save-slide').addEventListener('click', () => {
+  saveCurrentSlide();
+  slides.push({ nodes:[], edges:[], annotations:[], nextNodeId, nextEdgeId });
+  slideIdx = slides.length - 1;
+  nodes=[]; edges=[]; annotations=[]; algoResult=null; selectedNodes.clear(); hideAlgoResult(); draw();
+  updateSlideCounter();
+});
+
+document.getElementById('prev-slide').addEventListener('click', () => {
+  if (slideIdx > 0) { saveCurrentSlide(); slideIdx--; loadSlide(slideIdx); updateSlideCounter(); }
+});
+document.getElementById('next-slide').addEventListener('click', () => {
+  if (slideIdx < slides.length-1) { saveCurrentSlide(); slideIdx++; loadSlide(slideIdx); updateSlideCounter(); }
+});
+document.getElementById('exit-present').addEventListener('click', () => {
+  presenting = false;
+  document.getElementById('presenter-bar').classList.remove('on');
+  document.getElementById('btn-present').classList.remove('active');
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+slides.push({ nodes:[], edges:[], annotations:[], nextNodeId:0, nextEdgeId:0 });
+setMode('select');
+resize();
+loadPreset('petersen');
+</script>
+</body>
+</html>

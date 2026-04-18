@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Coloring Puzzle — Ali Rostami</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f0f1a; color: #eee; font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+
+    header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 20px; background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid #222;
+    }
+    #back-link {
+      color: #7ec8e3; text-decoration: none; font-size: 13px;
+      border: 1px solid #7ec8e3; padding: 3px 10px; border-radius: 12px;
+    }
+    header h1 { font-size: 18px; font-weight: 600; }
+    header p { font-size: 12px; color: #888; margin-top: 2px; }
+
+    main { display: flex; gap: 0; height: calc(100vh - 57px); }
+
+    /* Sidebar */
+    #sidebar {
+      width: 260px; flex-shrink: 0;
+      background: rgba(255,255,255,0.03); border-right: 1px solid #222;
+      padding: 16px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .side-section h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-bottom: 8px; }
+
+    /* Puzzle list */
+    .puzzle-btn {
+      display: block; width: 100%; padding: 8px 10px; margin: 3px 0;
+      background: #1a1a2e; border: 1px solid #333; border-radius: 8px;
+      color: #ccc; cursor: pointer; text-align: left; font-size: 13px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .puzzle-btn:hover { background: #222; border-color: #555; }
+    .puzzle-btn.active { border-color: #7ec8e3; color: #7ec8e3; background: #0d1f27; }
+    .puzzle-btn small { display: block; color: #666; font-size: 11px; margin-top: 2px; }
+    .puzzle-btn .stars { color: #f0a500; font-size: 11px; }
+
+    /* Color palette */
+    #palette { display: flex; flex-wrap: wrap; gap: 8px; }
+    .color-swatch {
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      border: 3px solid transparent; transition: transform 0.15s, border-color 0.15s;
+    }
+    .color-swatch:hover { transform: scale(1.15); }
+    .color-swatch.selected { border-color: #fff; transform: scale(1.15); }
+
+    /* Stats */
+    #stat-colors { font-size: 28px; font-weight: 700; color: #7ec8e3; }
+    #stat-moves { font-size: 13px; color: #888; }
+    #stat-chromatic { font-size: 12px; color: #666; margin-top: 4px; }
+
+    /* Buttons */
+    .action-btn {
+      width: 100%; padding: 8px; border: none; border-radius: 8px;
+      cursor: pointer; font-size: 13px; font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .action-btn:hover { opacity: 0.85; }
+    #btn-hint { background: #2d4a3e; color: #56c596; }
+    #btn-reset { background: #2d1f1f; color: #ff6b6b; }
+    #btn-solve { background: #1f2d4a; color: #7ec8e3; }
+
+    /* Hint box */
+    #hint-box {
+      background: #1a1f2e; border: 1px solid #334; border-radius: 8px;
+      padding: 10px; font-size: 12px; color: #aac; display: none; line-height: 1.5;
+    }
+
+    /* Canvas area */
+    #canvas-area {
+      flex: 1; position: relative; overflow: hidden;
+    }
+    canvas { position: absolute; inset: 0; }
+
+    /* Overlay */
+    #overlay {
+      position: absolute; inset: 0;
+      display: none; align-items: center; justify-content: center;
+      background: rgba(15,15,26,0.88); z-index: 10; flex-direction: column; gap: 14px;
+    }
+    #overlay h2 { font-size: 32px; color: #56c596; }
+    #overlay p { font-size: 16px; color: #aaa; }
+    #btn-next {
+      padding: 10px 28px; background: #56c596; color: #0f0f1a;
+      border: none; border-radius: 24px; cursor: pointer; font-size: 15px; font-weight: 700;
+    }
+
+    /* Conflict indicator */
+    #conflict-msg {
+      position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+      background: rgba(255,80,80,0.15); border: 1px solid #ff6b6b;
+      color: #ff9999; font-size: 13px; padding: 5px 14px; border-radius: 16px;
+      display: none; z-index: 5; pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a id="back-link" href="../index.html">← Home</a>
+  <div>
+    <h1>Graph Coloring Puzzle</h1>
+    <p>Color every node so no two adjacent nodes share a color. Use as few colors as possible!</p>
+  </div>
+</header>
+
+<main>
+  <div id="sidebar">
+    <div class="side-section">
+      <h3>Puzzles</h3>
+      <div id="puzzle-list"></div>
+    </div>
+
+    <div class="side-section">
+      <h3>Color Palette</h3>
+      <div id="palette"></div>
+    </div>
+
+    <div class="side-section">
+      <h3>Score</h3>
+      <div id="stat-colors">—</div>
+      <div id="stat-moves">0 moves</div>
+      <div id="stat-chromatic"></div>
+    </div>
+
+    <div class="side-section" style="display:flex;flex-direction:column;gap:8px">
+      <button class="action-btn" id="btn-hint">💡 Hint</button>
+      <button class="action-btn" id="btn-solve">✨ Auto-Solve</button>
+      <button class="action-btn" id="btn-reset">↺ Reset</button>
+    </div>
+
+    <div id="hint-box"></div>
+  </div>
+
+  <div id="canvas-area">
+    <canvas id="canvas"></canvas>
+    <div id="conflict-msg">Adjacent nodes share a color!</div>
+    <div id="overlay">
+      <h2>🎉 Solved!</h2>
+      <p id="overlay-msg"></p>
+      <button id="btn-next">Next Puzzle →</button>
+    </div>
+  </div>
+</main>
+
+<script>
+// ── Palette ──────────────────────────────────────────────────────────────────
+const PALETTE = [
+  '#e74c3c', '#3498db', '#2ecc71', '#f39c12',
+  '#9b59b6', '#1abc9c', '#e67e22', '#e91e63',
+  '#00bcd4', '#8bc34a',
+];
+const UNCOLORED = '#2a2a3a';
+
+// ── Puzzle definitions ────────────────────────────────────────────────────────
+// Each puzzle: { name, difficulty (1-3), chromatic, nodes:[{x,y}], edges:[[i,j]...] }
+// Coordinates in 0..1 range, scaled to canvas
+const PUZZLES = [
+  {
+    name: 'Triangle',
+    difficulty: 1, chromatic: 3,
+    desc: 'The simplest cycle: 3 nodes.',
+    nodes: [{x:0.5,y:0.15},{x:0.2,y:0.75},{x:0.8,y:0.75}],
+    edges: [[0,1],[1,2],[0,2]],
+  },
+  {
+    name: 'Square',
+    difficulty: 1, chromatic: 2,
+    desc: 'A 4-cycle. Only 2 colors needed!',
+    nodes: [{x:0.25,y:0.2},{x:0.75,y:0.2},{x:0.75,y:0.8},{x:0.25,y:0.8}],
+    edges: [[0,1],[1,2],[2,3],[3,0]],
+  },
+  {
+    name: 'Petersen',
+    difficulty: 2, chromatic: 3,
+    desc: 'The classic Petersen graph — famous in graph theory.',
+    nodes: [
+      {x:0.5,y:0.08},
+      {x:0.82,y:0.32},{x:0.69,y:0.72},{x:0.31,y:0.72},{x:0.18,y:0.32},
+      {x:0.5,y:0.28},
+      {x:0.65,y:0.48},{x:0.58,y:0.65},{x:0.42,y:0.65},{x:0.35,y:0.48},
+    ],
+    edges: [
+      [0,1],[1,2],[2,3],[3,4],[4,0],
+      [5,6],[6,7],[7,8],[8,9],[9,5],
+      [0,5],[1,6],[2,7],[3,8],[4,9],
+    ],
+  },
+  {
+    name: 'Complete K4',
+    difficulty: 2, chromatic: 4,
+    desc: 'Every node connects to every other — needs 4 colors.',
+    nodes: [{x:0.5,y:0.1},{x:0.85,y:0.7},{x:0.15,y:0.7},{x:0.5,y:0.5}],
+    edges: [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]],
+  },
+  {
+    name: 'Wheel W5',
+    difficulty: 2, chromatic: 4,
+    desc: 'A hub connected to a 5-cycle.',
+    nodes: [
+      {x:0.5,y:0.5},
+      {x:0.5,y:0.1},{x:0.86,y:0.35},{x:0.72,y:0.82},{x:0.28,y:0.82},{x:0.14,y:0.35},
+    ],
+    edges: [
+      [0,1],[0,2],[0,3],[0,4],[0,5],
+      [1,2],[2,3],[3,4],[4,5],[5,1],
+    ],
+  },
+  {
+    name: 'Bipartite K3,3',
+    difficulty: 2, chromatic: 2,
+    desc: 'Classic bipartite graph — 2 colors always suffice.',
+    nodes: [
+      {x:0.2,y:0.2},{x:0.2,y:0.5},{x:0.2,y:0.8},
+      {x:0.8,y:0.2},{x:0.8,y:0.5},{x:0.8,y:0.8},
+    ],
+    edges: [
+      [0,3],[0,4],[0,5],[1,3],[1,4],[1,5],[2,3],[2,4],[2,5],
+    ],
+  },
+  {
+    name: 'Dodecahedron',
+    difficulty: 3, chromatic: 3,
+    desc: 'The graph of a dodecahedron — 20 nodes, 30 edges.',
+    nodes: (function() {
+      const pts = [];
+      const r = [0.38, 0.22, 0.10];
+      const counts = [5, 5, 5, 5];
+      // outer ring (5)
+      for (let i=0;i<5;i++) pts.push({x:0.5+0.42*Math.cos(2*Math.PI*i/5-Math.PI/2), y:0.5+0.42*Math.sin(2*Math.PI*i/5-Math.PI/2)});
+      // outer-mid ring (5)
+      for (let i=0;i<5;i++) pts.push({x:0.5+0.26*Math.cos(2*Math.PI*i/5-Math.PI/2), y:0.5+0.26*Math.sin(2*Math.PI*i/5-Math.PI/2)});
+      // inner-mid ring (5)
+      for (let i=0;i<5;i++) pts.push({x:0.5+0.14*Math.cos(2*Math.PI*i/5), y:0.5+0.14*Math.sin(2*Math.PI*i/5)});
+      // center ring (5)
+      for (let i=0;i<5;i++) pts.push({x:0.5+0.30*Math.cos(2*Math.PI*i/5), y:0.5+0.30*Math.sin(2*Math.PI*i/5)});
+      return pts;
+    })(),
+    edges: [
+      [0,1],[1,2],[2,3],[3,4],[4,0],
+      [0,5],[1,6],[2,7],[3,8],[4,9],
+      [5,6],[6,7],[7,8],[8,9],[9,5],
+      [5,15],[6,11],[7,12],[8,13],[9,14],
+      [10,11],[11,12],[12,13],[13,14],[14,10],
+      [10,15],[15,16],[16,17],[17,18],[18,19],[19,10],
+      [10,19],
+    ],
+  },
+  {
+    name: 'Crown Graph',
+    difficulty: 3, chromatic: 3,
+    desc: 'Bipartite with extra diagonal edges — tricky!',
+    nodes: (function() {
+      const n = 8, pts = [];
+      for (let i=0;i<n;i++) pts.push({x:0.5+0.42*Math.cos(2*Math.PI*i/n-Math.PI/2), y:0.5+0.42*Math.sin(2*Math.PI*i/n-Math.PI/2)});
+      return pts;
+    })(),
+    edges: (function() {
+      const edges = [];
+      for (let i=0;i<8;i++) edges.push([i,(i+1)%8]);
+      for (let i=0;i<4;i++) edges.push([i,i+4]);
+      edges.push([0,5],[1,6],[2,7],[3,4]);
+      return edges;
+    })(),
+  },
+];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let puzzleIdx = 0;
+let nodeColors = [];
+let selectedColor = PALETTE[0];
+let moves = 0;
+let dragging = false;
+let hoveredNode = -1;
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+  const area = document.getElementById('canvas-area');
+  canvas.width = area.clientWidth;
+  canvas.height = area.clientHeight;
+  draw();
+}
+
+function scaledNodes() {
+  const p = PUZZLES[puzzleIdx];
+  const pad = 60;
+  return p.nodes.map(n => ({
+    x: pad + n.x * (canvas.width - pad * 2),
+    y: pad + n.y * (canvas.height - pad * 2),
+  }));
+}
+
+// ── Drawing ───────────────────────────────────────────────────────────────────
+function draw() {
+  const p = PUZZLES[puzzleIdx];
+  const nodes = scaledNodes();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Edges
+  ctx.lineWidth = 2;
+  p.edges.forEach(([a, b]) => {
+    const conflict =
+      nodeColors[a] && nodeColors[b] && nodeColors[a] === nodeColors[b];
+    ctx.strokeStyle = conflict ? '#ff4444' : '#334';
+    ctx.beginPath();
+    ctx.moveTo(nodes[a].x, nodes[a].y);
+    ctx.lineTo(nodes[b].x, nodes[b].y);
+    ctx.stroke();
+  });
+
+  // Nodes
+  nodes.forEach((n, i) => {
+    const r = i === hoveredNode ? 22 : 18;
+    const col = nodeColors[i] || UNCOLORED;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = col;
+    ctx.fill();
+    ctx.strokeStyle = i === hoveredNode ? '#fff' : '#555';
+    ctx.lineWidth = i === hoveredNode ? 3 : 1.5;
+    ctx.stroke();
+    // Node index label
+    ctx.fillStyle = col === UNCOLORED ? '#777' : '#fff';
+    ctx.font = 'bold 11px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(i, n.x, n.y);
+  });
+}
+
+// ── Conflict detection ────────────────────────────────────────────────────────
+function hasConflict() {
+  const p = PUZZLES[puzzleIdx];
+  return p.edges.some(([a, b]) =>
+    nodeColors[a] && nodeColors[b] && nodeColors[a] === nodeColors[b]
+  );
+}
+
+function isSolved() {
+  const p = PUZZLES[puzzleIdx];
+  return nodeColors.every(c => c) && !hasConflict();
+}
+
+function colorsUsed() {
+  return new Set(nodeColors.filter(Boolean)).size;
+}
+
+function updateStats() {
+  const p = PUZZLES[puzzleIdx];
+  const used = colorsUsed();
+  document.getElementById('stat-colors').textContent = used || '—';
+  document.getElementById('stat-moves').textContent = `${moves} move${moves !== 1 ? 's' : ''}`;
+  document.getElementById('stat-chromatic').textContent =
+    used ? (used === p.chromatic ? `✓ Optimal (χ = ${p.chromatic})` : `χ = ${p.chromatic} — can you use fewer?`) : '';
+}
+
+// ── Node hit test ─────────────────────────────────────────────────────────────
+function nodeAt(mx, my) {
+  const nodes = scaledNodes();
+  for (let i = nodes.length - 1; i >= 0; i--) {
+    const dx = mx - nodes[i].x, dy = my - nodes[i].y;
+    if (dx * dx + dy * dy <= 22 * 22) return i;
+  }
+  return -1;
+}
+
+// ── Events ────────────────────────────────────────────────────────────────────
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const h = nodeAt(e.clientX - rect.left, e.clientY - rect.top);
+  if (h !== hoveredNode) { hoveredNode = h; draw(); }
+  canvas.style.cursor = h >= 0 ? 'pointer' : 'default';
+});
+
+canvas.addEventListener('mouseleave', () => { hoveredNode = -1; draw(); });
+
+canvas.addEventListener('click', e => {
+  const rect = canvas.getBoundingClientRect();
+  const ni = nodeAt(e.clientX - rect.left, e.clientY - rect.top);
+  if (ni < 0) return;
+  nodeColors[ni] = selectedColor;
+  moves++;
+  draw();
+  updateStats();
+  checkConflict();
+  if (isSolved()) showWin();
+});
+
+function checkConflict() {
+  const msg = document.getElementById('conflict-msg');
+  if (hasConflict()) {
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 1800);
+  }
+}
+
+// ── Palette ───────────────────────────────────────────────────────────────────
+function buildPalette() {
+  const pal = document.getElementById('palette');
+  pal.innerHTML = '';
+  PALETTE.forEach(col => {
+    const sw = document.createElement('div');
+    sw.className = 'color-swatch' + (col === selectedColor ? ' selected' : '');
+    sw.style.background = col;
+    sw.addEventListener('click', () => {
+      selectedColor = col;
+      document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+      sw.classList.add('selected');
+    });
+    pal.appendChild(sw);
+  });
+}
+
+// ── Puzzle list ───────────────────────────────────────────────────────────────
+function buildPuzzleList() {
+  const list = document.getElementById('puzzle-list');
+  list.innerHTML = '';
+  PUZZLES.forEach((p, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'puzzle-btn' + (i === puzzleIdx ? ' active' : '');
+    const stars = '★'.repeat(p.difficulty) + '☆'.repeat(3 - p.difficulty);
+    btn.innerHTML = `${p.name}<small><span class="stars">${stars}</span> · χ = ${p.chromatic}</small>`;
+    btn.addEventListener('click', () => loadPuzzle(i));
+    list.appendChild(btn);
+  });
+}
+
+// ── Load puzzle ───────────────────────────────────────────────────────────────
+function loadPuzzle(idx) {
+  puzzleIdx = idx;
+  nodeColors = new Array(PUZZLES[idx].nodes.length).fill(null);
+  moves = 0;
+  hoveredNode = -1;
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('hint-box').style.display = 'none';
+  document.getElementById('conflict-msg').style.display = 'none';
+  buildPuzzleList();
+  draw();
+  updateStats();
+}
+
+// ── Win screen ────────────────────────────────────────────────────────────────
+function showWin() {
+  const p = PUZZLES[puzzleIdx];
+  const used = colorsUsed();
+  const optimal = used === p.chromatic;
+  document.getElementById('overlay-msg').textContent =
+    optimal
+      ? `You used exactly χ(G) = ${p.chromatic} colors — optimal! Solved in ${moves} moves.`
+      : `Solved in ${moves} moves with ${used} colors. The chromatic number is ${p.chromatic} — can you beat it?`;
+  document.getElementById('overlay').style.display = 'flex';
+}
+
+document.getElementById('btn-next').addEventListener('click', () => {
+  loadPuzzle((puzzleIdx + 1) % PUZZLES.length);
+});
+
+// ── Hint ──────────────────────────────────────────────────────────────────────
+document.getElementById('btn-hint').addEventListener('click', () => {
+  const p = PUZZLES[puzzleIdx];
+  const box = document.getElementById('hint-box');
+  const uncolored = nodeColors.map((c,i) => c ? -1 : i).filter(i => i >= 0);
+  if (uncolored.length === 0) { box.textContent = 'All nodes are colored!'; box.style.display = 'block'; return; }
+  // Find a node with the most colored neighbors (most constrained)
+  let best = -1, bestCount = -1;
+  uncolored.forEach(ni => {
+    const neighborColors = p.edges
+      .filter(([a,b]) => a === ni || b === ni)
+      .map(([a,b]) => nodeColors[a === ni ? b : a])
+      .filter(Boolean);
+    if (neighborColors.length > bestCount) { bestCount = neighborColors.length; best = ni; }
+  });
+  const neighborColors = new Set(p.edges
+    .filter(([a,b]) => a === best || b === best)
+    .map(([a,b]) => nodeColors[a === best ? b : a])
+    .filter(Boolean));
+  const available = PALETTE.filter(c => !neighborColors.has(c));
+  box.innerHTML = `Try coloring <strong>node ${best}</strong> — it has ${bestCount} colored neighbor(s). You need a color not in: ${[...neighborColors].map(c=>`<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${c};vertical-align:middle;margin:0 2px"></span>`).join('') || 'none'}.`;
+  box.style.display = 'block';
+});
+
+// ── Auto-solve (greedy) ───────────────────────────────────────────────────────
+document.getElementById('btn-solve').addEventListener('click', () => {
+  const p = PUZZLES[puzzleIdx];
+  const adj = p.nodes.map(() => []);
+  p.edges.forEach(([a,b]) => { adj[a].push(b); adj[b].push(a); });
+  nodeColors = p.nodes.map(() => null);
+  // Greedy coloring
+  for (let i = 0; i < p.nodes.length; i++) {
+    const usedColors = new Set(adj[i].map(j => nodeColors[j]).filter(Boolean));
+    nodeColors[i] = PALETTE.find(c => !usedColors.has(c)) || PALETTE[0];
+  }
+  moves++;
+  draw();
+  updateStats();
+  if (isSolved()) showWin();
+});
+
+// ── Reset ─────────────────────────────────────────────────────────────────────
+document.getElementById('btn-reset').addEventListener('click', () => loadPuzzle(puzzleIdx));
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+window.addEventListener('resize', resize);
+buildPalette();
+loadPuzzle(0);
+resize();
+</script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallel Algorithm Race — Ali Rostami</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f0f1a; color: #eee; font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+
+    header {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      padding: 12px 20px; background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid #222;
+    }
+    #back-link {
+      color: #7ec8e3; text-decoration: none; font-size: 13px;
+      border: 1px solid #7ec8e3; padding: 3px 10px; border-radius: 12px;
+    }
+    header h1 { font-size: 18px; font-weight: 600; }
+    header p { font-size: 12px; color: #888; margin-top: 2px; }
+
+    .page { display: flex; height: calc(100vh - 57px); }
+
+    /* Controls panel */
+    #controls {
+      width: 270px; flex-shrink: 0; background: rgba(255,255,255,0.03);
+      border-right: 1px solid #222; padding: 16px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .ctrl-section h3 {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+      color: #666; margin-bottom: 10px;
+    }
+    label { display: block; font-size: 13px; color: #bbb; margin-bottom: 6px; }
+    input[type=range] { width: 100%; accent-color: #7ec8e3; margin-bottom: 2px; }
+    .range-val { font-size: 12px; color: #7ec8e3; font-weight: 600; }
+
+    select {
+      width: 100%; padding: 7px 10px; background: #1a1a2e;
+      border: 1px solid #333; border-radius: 8px; color: #eee; font-size: 13px;
+    }
+
+    .run-btn {
+      width: 100%; padding: 10px; border: none; border-radius: 10px;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      background: linear-gradient(135deg, #2ecc71, #3498db);
+      color: #fff; transition: opacity 0.2s, transform 0.1s;
+    }
+    .run-btn:hover { opacity: 0.88; transform: scale(1.02); }
+    .run-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+    #reset-btn {
+      width: 100%; padding: 7px; border: 1px solid #444; border-radius: 8px;
+      background: transparent; color: #aaa; font-size: 13px; cursor: pointer;
+    }
+    #reset-btn:hover { background: #1a1a2e; }
+
+    /* Explanation box */
+    #explain-box {
+      background: #1a1f2e; border: 1px solid #334; border-radius: 8px;
+      padding: 10px 12px; font-size: 12px; color: #aac; line-height: 1.6;
+    }
+    #explain-box strong { color: #7ec8e3; }
+
+    /* Main visualization */
+    #viz { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+    /* Race tracks */
+    #tracks {
+      flex: 1; display: flex; flex-direction: column;
+      padding: 16px; gap: 10px; overflow-y: auto;
+    }
+    .track-label {
+      font-size: 11px; color: #777; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 4px;
+    }
+    .track-row { display: flex; align-items: center; gap: 10px; }
+    .proc-label { width: 90px; flex-shrink: 0; font-size: 12px; color: #aaa; }
+    .track-bar-bg {
+      flex: 1; height: 28px; background: #1a1a2a; border-radius: 6px; overflow: hidden;
+      position: relative;
+    }
+    .track-bar {
+      height: 100%; border-radius: 6px; width: 0;
+      display: flex; align-items: center; justify-content: flex-end;
+      padding-right: 8px; font-size: 11px; font-weight: 600; color: #fff;
+      transition: none;
+      position: relative; overflow: hidden;
+    }
+    .track-bar::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 60%, rgba(255,255,255,0.15));
+    }
+    .busy-indicator {
+      position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+      width: 6px; height: 6px; border-radius: 50%; background: #fff;
+      animation: pulse 0.6s ease-in-out infinite alternate;
+      display: none;
+    }
+    @keyframes pulse { from { opacity: 0.3; } to { opacity: 1; } }
+
+    /* Speedup chart */
+    #chart-area {
+      height: 200px; border-top: 1px solid #222;
+      padding: 12px 16px; display: flex; flex-direction: column; gap: 6px;
+    }
+    #chart-area h4 { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    #chart-canvas { flex: 1; }
+
+    /* Stats bar */
+    #stats-bar {
+      padding: 10px 16px; background: rgba(255,255,255,0.03);
+      border-top: 1px solid #222; display: flex; gap: 28px; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-val { font-size: 22px; font-weight: 700; color: #7ec8e3; }
+    .stat-lbl { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Phase legend */
+    #phase-legend {
+      display: flex; gap: 14px; flex-wrap: wrap; padding: 0 16px 8px;
+    }
+    .phase-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #888; }
+    .phase-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a id="back-link" href="../index.html">← Home</a>
+  <div>
+    <h1>Parallel Algorithm Race</h1>
+    <p>Watch sequential vs parallel execution compete in real time</p>
+  </div>
+</header>
+
+<div class="page">
+  <div id="controls">
+    <div class="ctrl-section">
+      <h3>Algorithm</h3>
+      <select id="algo-select">
+        <option value="matvec">Matrix–Vector Multiply (SpMV)</option>
+        <option value="bfs">Breadth-First Search (BFS)</option>
+        <option value="sort">Parallel Merge Sort</option>
+        <option value="prefix">Prefix Sum (Scan)</option>
+      </select>
+    </div>
+
+    <div class="ctrl-section">
+      <h3>Problem Size  <span class="range-val" id="n-val"></span></h3>
+      <input type="range" id="n-range" min="1" max="9" value="5">
+    </div>
+
+    <div class="ctrl-section">
+      <h3>Processors  <span class="range-val" id="p-val"></span></h3>
+      <input type="range" id="p-range" min="1" max="8" value="4">
+    </div>
+
+    <button class="run-btn" id="run-btn">▶ Race!</button>
+    <button id="reset-btn">↺ Reset</button>
+
+    <div id="explain-box"></div>
+  </div>
+
+  <div id="viz">
+    <div id="phase-legend"></div>
+    <div id="tracks"></div>
+    <div id="stats-bar">
+      <div class="stat"><div class="stat-val" id="s-seq">—</div><div class="stat-lbl">Sequential (ms)</div></div>
+      <div class="stat"><div class="stat-val" id="s-par">—</div><div class="stat-lbl">Parallel (ms)</div></div>
+      <div class="stat"><div class="stat-val" id="s-speedup">—</div><div class="stat-lbl">Speedup</div></div>
+      <div class="stat"><div class="stat-val" id="s-eff">—</div><div class="stat-lbl">Efficiency</div></div>
+    </div>
+    <div id="chart-area">
+      <h4>Speedup Curve (Amdahl's Law)</h4>
+      <canvas id="chart-canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Algorithm definitions ─────────────────────────────────────────────────────
+// Each algo returns { phases, seqTime(n), parTime(n,p), parallelFraction }
+// Phases: [{name, color, seqFrac, parFrac}]
+
+const ALGOS = {
+  matvec: {
+    name: 'Sparse Matrix–Vector Multiply',
+    desc: '<strong>SpMV</strong> distributes matrix rows across <strong>P processors</strong>. Each processor computes a subset of dot products independently, then results are gathered. Communication cost: the x-vector broadcast.<br><br>Connected to the PreCol library and CSC research.',
+    phases: [
+      { name: 'Init / Load data', color: '#4e9af1', seqFrac: 0.05, parFrac: 0.05 },
+      { name: 'Broadcast x-vector', color: '#ff9f43', seqFrac: 0, parFrac: 0.08 },
+      { name: 'Local row dot products', color: '#56c596', seqFrac: 0.88, parFrac: 0.80 },
+      { name: 'Gather results', color: '#c77dff', seqFrac: 0.07, parFrac: 0.07 },
+    ],
+    parallelFraction: 0.88,
+  },
+  bfs: {
+    name: 'Breadth-First Search',
+    desc: '<strong>Parallel BFS</strong> assigns graph vertices across processors. Each level of the BFS frontier is processed in parallel, but synchronization between levels adds overhead.<br><br>Related to GraphTea and big graph analytics work.',
+    phases: [
+      { name: 'Init frontier', color: '#4e9af1', seqFrac: 0.03, parFrac: 0.03 },
+      { name: 'Frontier expansion', color: '#56c596', seqFrac: 0.70, parFrac: 0.65 },
+      { name: 'Level sync (barrier)', color: '#ff6b6b', seqFrac: 0.05, parFrac: 0.18 },
+      { name: 'Merge visited sets', color: '#c77dff', seqFrac: 0.22, parFrac: 0.14 },
+    ],
+    parallelFraction: 0.72,
+  },
+  sort: {
+    name: 'Parallel Merge Sort',
+    desc: '<strong>Parallel merge sort</strong> divides the array into P chunks, sorts each locally, then merges. The final merge phase is inherently sequential, limiting speedup (Amdahl\'s Law).<br><br>A classic example of how parallel gain is bounded by serial fractions.',
+    phases: [
+      { name: 'Distribute data', color: '#4e9af1', seqFrac: 0.03, parFrac: 0.04 },
+      { name: 'Local sort (parallel)', color: '#56c596', seqFrac: 0.65, parFrac: 0.62 },
+      { name: 'Merge (sequential)', color: '#ff6b6b', seqFrac: 0.32, parFrac: 0.32 },
+      { name: 'Write output', color: '#ff9f43', seqFrac: 0.00, parFrac: 0.02 },
+    ],
+    parallelFraction: 0.65,
+  },
+  prefix: {
+    name: 'Parallel Prefix Sum (Scan)',
+    desc: '<strong>Parallel scan</strong> uses a tree-based up-sweep + down-sweep pass. Near-ideal parallelism: O(n) work, O(log n) depth.<br><br>A building block in many parallel algorithms: BFS, histograms, compression.',
+    phases: [
+      { name: 'Distribute array', color: '#4e9af1', seqFrac: 0.03, parFrac: 0.03 },
+      { name: 'Up-sweep (reduce)', color: '#56c596', seqFrac: 0.45, parFrac: 0.44 },
+      { name: 'Down-sweep (broadcast)', color: '#c77dff', seqFrac: 0.45, parFrac: 0.44 },
+      { name: 'Gather', color: '#ff9f43', seqFrac: 0.07, parFrac: 0.09 },
+    ],
+    parallelFraction: 0.94,
+  },
+};
+
+const N_LABELS = ['128', '512', '2K', '8K', '32K', '128K', '512K', '2M', '4M'];
+const BASE_TIME_MS = [2, 6, 18, 55, 170, 520, 1600, 4800, 9600];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let animating = false;
+let animFrames = [];
+
+// ── Controls ──────────────────────────────────────────────────────────────────
+const nRange = document.getElementById('n-range');
+const pRange = document.getElementById('p-range');
+const nVal   = document.getElementById('n-val');
+const pVal   = document.getElementById('p-val');
+
+function updateLabels() {
+  nVal.textContent = N_LABELS[+nRange.value - 1];
+  pVal.textContent = +pRange.value + 'P';
+}
+nRange.addEventListener('input', updateLabels);
+pRange.addEventListener('input', updateLabels);
+updateLabels();
+
+document.getElementById('algo-select').addEventListener('change', updateExplain);
+
+function updateExplain() {
+  const algo = ALGOS[document.getElementById('algo-select').value];
+  document.getElementById('explain-box').innerHTML = algo.desc;
+}
+updateExplain();
+
+// ── Build track UI ────────────────────────────────────────────────────────────
+function buildTracks(P, phases) {
+  const tracks = document.getElementById('tracks');
+  tracks.innerHTML = '';
+
+  // Phase legend
+  const legend = document.getElementById('phase-legend');
+  legend.innerHTML = phases.map(ph =>
+    `<div class="phase-item"><div class="phase-dot" style="background:${ph.color}"></div>${ph.name}</div>`
+  ).join('');
+
+  // Sequential row
+  const seqSection = document.createElement('div');
+  seqSection.innerHTML = `<div class="track-label">Sequential</div>`;
+  const seqRow = document.createElement('div');
+  seqRow.className = 'track-row';
+  seqRow.innerHTML = `<div class="proc-label">1 processor</div>`;
+  const seqBg = document.createElement('div');
+  seqBg.className = 'track-bar-bg';
+  seqBg.id = 'bar-seq';
+  seqRow.appendChild(seqBg);
+  seqSection.appendChild(seqRow);
+  tracks.appendChild(seqSection);
+
+  // Parallel rows
+  const parSection = document.createElement('div');
+  parSection.innerHTML = `<div class="track-label">Parallel (${P} processors)</div>`;
+  for (let i = 0; i < P; i++) {
+    const row = document.createElement('div');
+    row.className = 'track-row';
+    row.innerHTML = `<div class="proc-label">Processor ${i}</div>`;
+    const bg = document.createElement('div');
+    bg.className = 'track-bar-bg';
+    bg.id = `bar-p${i}`;
+    row.appendChild(bg);
+    parSection.appendChild(row);
+  }
+  tracks.appendChild(parSection);
+}
+
+function makeSegmentedBar(containerId, phases, fracs, totalWidthPct, durationMs, delayMs) {
+  // Build a bar made of colored phase segments that fills over time
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+
+  let cumFrac = 0;
+  phases.forEach((ph, i) => {
+    const seg = document.createElement('div');
+    seg.style.cssText = `
+      position:absolute; top:0; bottom:0; left:0; width:0;
+      background:${ph.color}; transition:none;
+    `;
+    seg.id = `${containerId}-seg${i}`;
+    container.appendChild(seg);
+
+    const segStart = cumFrac;
+    const segEnd = cumFrac + fracs[i];
+    cumFrac = segEnd;
+
+    // Animate this segment
+    const segStartTime = delayMs + durationMs * segStart;
+    const segDuration = durationMs * fracs[i];
+    const segEndPct = totalWidthPct * segEnd;
+    const segStartPct = totalWidthPct * segStart;
+
+    animFrames.push({ seg, segStartTime, segDuration, segStartPct, segEndPct });
+  });
+}
+
+// ── Animation loop ────────────────────────────────────────────────────────────
+function runAnimation(seqMs, parMs, P, phases) {
+  const ANIM_TOTAL = 3000; // animation duration in ms
+  const seqAnimMs = ANIM_TOTAL * 0.55;
+  const parAnimMs = ANIM_TOTAL * 0.55;
+
+  // Sequential bar fills in seqAnimMs
+  makeSegmentedBar('bar-seq', phases,
+    phases.map(ph => ph.seqFrac), 97, seqAnimMs, 0);
+
+  // Parallel bars start at same time, each fills in parAnimMs
+  for (let i = 0; i < P; i++) {
+    // Slightly stagger start for visual effect, same end time
+    const stagger = i * 30;
+    makeSegmentedBar(`bar-p${i}`, phases,
+      phases.map(ph => ph.parFrac), 97 * parMs / seqMs, parAnimMs, stagger);
+  }
+
+  const startTime = performance.now();
+
+  function tick(now) {
+    const elapsed = now - startTime;
+    let allDone = true;
+
+    animFrames.forEach(f => {
+      const t = elapsed - f.segStartTime;
+      if (t < 0) { allDone = false; return; }
+      if (t >= f.segDuration) {
+        f.seg.style.width = f.segEndPct + '%';
+      } else {
+        allDone = false;
+        const progress = t / f.segDuration;
+        const eased = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+        f.seg.style.width = (f.segStartPct + (f.segEndPct - f.segStartPct) * eased) + '%';
+      }
+    });
+
+    if (!allDone || elapsed < ANIM_TOTAL) {
+      requestAnimationFrame(tick);
+    } else {
+      document.getElementById('run-btn').disabled = false;
+      animating = false;
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+// ── Speedup chart ─────────────────────────────────────────────────────────────
+function drawSpeedupChart(algo, actualP, actualSpeedup) {
+  const canvas = document.getElementById('chart-canvas');
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width - 32;
+  canvas.height = 140;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const PAD = { l: 40, r: 20, t: 10, b: 30 };
+  const maxP = 16;
+  const f = algo.parallelFraction;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid
+  ctx.strokeStyle = '#222'; ctx.lineWidth = 1;
+  for (let p = 2; p <= maxP; p += 2) {
+    const x = PAD.l + (p / maxP) * (W - PAD.l - PAD.r);
+    ctx.beginPath(); ctx.moveTo(x, PAD.t); ctx.lineTo(x, H - PAD.b); ctx.stroke();
+  }
+  for (let s = 2; s <= maxP; s += 2) {
+    const y = H - PAD.b - (s / maxP) * (H - PAD.t - PAD.b);
+    ctx.beginPath(); ctx.moveTo(PAD.l, y); ctx.lineTo(W - PAD.r, y); ctx.stroke();
+  }
+
+  // Ideal speedup (y = p)
+  ctx.strokeStyle = '#334'; ctx.lineWidth = 1.5;
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(PAD.l, H - PAD.b);
+  ctx.lineTo(PAD.l + (maxP / maxP) * (W - PAD.l - PAD.r), H - PAD.b - (maxP / maxP) * (H - PAD.t - PAD.b));
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Amdahl's curve
+  ctx.strokeStyle = '#7ec8e3'; ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  for (let p = 1; p <= maxP; p += 0.1) {
+    const s = 1 / ((1 - f) + f / p);
+    const x = PAD.l + ((p - 1) / (maxP - 1)) * (W - PAD.l - PAD.r);
+    const y = H - PAD.b - (s / maxP) * (H - PAD.t - PAD.b);
+    p === 1 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  // Actual point
+  if (actualP > 1) {
+    const x = PAD.l + ((actualP - 1) / (maxP - 1)) * (W - PAD.l - PAD.r);
+    const y = H - PAD.b - (actualSpeedup / maxP) * (H - PAD.t - PAD.b);
+    ctx.beginPath(); ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.fillStyle = '#ff9f43'; ctx.fill();
+    ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke();
+  }
+
+  // Axes
+  ctx.strokeStyle = '#444'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(PAD.l, PAD.t); ctx.lineTo(PAD.l, H - PAD.b); ctx.lineTo(W - PAD.r, H - PAD.b); ctx.stroke();
+
+  // Labels
+  ctx.fillStyle = '#666'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center';
+  for (let p = 2; p <= maxP; p += 2) {
+    const x = PAD.l + ((p - 1) / (maxP - 1)) * (W - PAD.l - PAD.r);
+    ctx.fillText(p, x, H - 6);
+  }
+  ctx.textAlign = 'right';
+  for (let s = 2; s <= maxP; s += 2) {
+    const y = H - PAD.b - (s / maxP) * (H - PAD.t - PAD.b);
+    ctx.fillText(s + 'x', PAD.l - 4, y + 4);
+  }
+  ctx.fillStyle = '#7ec8e3'; ctx.font = '10px sans-serif'; ctx.textAlign = 'left';
+  ctx.fillText('Amdahl', PAD.l + 5, PAD.t + 12);
+  ctx.fillStyle = '#334';
+  ctx.fillText('Ideal', PAD.l + 5, PAD.t + 24);
+}
+
+// ── Run ───────────────────────────────────────────────────────────────────────
+document.getElementById('run-btn').addEventListener('click', run);
+document.getElementById('reset-btn').addEventListener('click', () => {
+  if (animating) return;
+  document.getElementById('tracks').innerHTML = '';
+  document.getElementById('phase-legend').innerHTML = '';
+  ['s-seq','s-par','s-speedup','s-eff'].forEach(id => document.getElementById(id).textContent = '—');
+});
+
+function run() {
+  if (animating) return;
+  animating = true;
+  animFrames = [];
+  document.getElementById('run-btn').disabled = true;
+
+  const algoKey = document.getElementById('algo-select').value;
+  const algo = ALGOS[algoKey];
+  const nIdx = +nRange.value - 1;
+  const P = +pRange.value;
+
+  const baseMs = BASE_TIME_MS[nIdx];
+  const f = algo.parallelFraction;
+  // Amdahl's law
+  const seqMs = baseMs;
+  const parMs = baseMs * ((1 - f) + f / P);
+  const speedup = seqMs / parMs;
+  const efficiency = speedup / P;
+
+  buildTracks(P, algo.phases);
+  runAnimation(seqMs, parMs, P, algo.phases);
+
+  // Update stats after a brief delay
+  setTimeout(() => {
+    document.getElementById('s-seq').textContent = seqMs.toFixed(0);
+    document.getElementById('s-par').textContent = parMs.toFixed(1);
+    document.getElementById('s-speedup').textContent = speedup.toFixed(2) + '×';
+    document.getElementById('s-eff').textContent = (efficiency * 100).toFixed(0) + '%';
+    drawSpeedupChart(algo, P, speedup);
+  }, 400);
+}
+
+// Initial chart
+drawSpeedupChart(ALGOS['matvec'], 0, 0);
+</script>
+</body>
+</html>

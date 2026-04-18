@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publication Knowledge Graph — Ali Rostami</title>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.21.0/dist/cytoscape.min.js"></script>
+  <script src="../papers.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f0f1a; color: #eee; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+
+    #cy { position: fixed; inset: 0; }
+
+    /* Top bar */
+    #topbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 20;
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 16px;
+      background: linear-gradient(to bottom, rgba(15,15,26,0.97), rgba(15,15,26,0));
+      pointer-events: none;
+    }
+    #topbar > * { pointer-events: all; }
+    #back-link {
+      color: #7ec8e3; text-decoration: none; font-size: 13px;
+      border: 1px solid #7ec8e3; padding: 3px 10px; border-radius: 12px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    #back-link:hover { background: rgba(126,200,227,0.15); }
+    #title { font-size: 16px; font-weight: 600; color: #fff; }
+    #subtitle { font-size: 12px; color: #888; }
+
+    /* Category filters */
+    #filters {
+      position: fixed; top: 56px; left: 12px; z-index: 20;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .filter-btn {
+      padding: 4px 13px; border: none; border-radius: 20px;
+      cursor: pointer; font-size: 12px; font-weight: 600;
+      opacity: 0.45; transition: opacity 0.2s, transform 0.1s;
+      text-align: left;
+    }
+    .filter-btn.active { opacity: 1; }
+    .filter-btn:hover { transform: scale(1.05); }
+
+    /* Legend */
+    #legend {
+      position: fixed; top: 56px; right: 12px; z-index: 20;
+      background: rgba(15,15,26,0.88); border: 1px solid #333;
+      border-radius: 10px; padding: 10px 14px; font-size: 12px;
+    }
+    #legend h6 { color: #999; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 7px; }
+    .legend-row { display: flex; align-items: center; gap: 7px; margin: 4px 0; color: #ccc; }
+    .legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+    .legend-diamond {
+      width: 10px; height: 10px; background: #888;
+      transform: rotate(45deg); flex-shrink: 0;
+    }
+
+    /* View toggle */
+    #view-toggle {
+      position: fixed; bottom: 220px; right: 12px; z-index: 20;
+      background: rgba(15,15,26,0.88); border: 1px solid #333;
+      border-radius: 10px; padding: 8px 12px; font-size: 12px;
+    }
+    #view-toggle p { color: #999; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .view-btn {
+      display: block; width: 100%; padding: 4px 8px; margin: 3px 0;
+      background: #222; color: #aaa; border: 1px solid #444;
+      border-radius: 6px; cursor: pointer; font-size: 12px;
+      text-align: left; transition: background 0.2s;
+    }
+    .view-btn.active { background: #334; color: #7ec8e3; border-color: #7ec8e3; }
+    .view-btn:hover { background: #2a2a3a; }
+
+    /* Stats */
+    #stats {
+      position: fixed; bottom: 12px; right: 12px; z-index: 20;
+      background: rgba(15,15,26,0.88); border: 1px solid #333;
+      border-radius: 10px; padding: 8px 14px; font-size: 12px; color: #888;
+      line-height: 1.7;
+    }
+
+    /* Detail panel */
+    #panel {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
+      background: rgba(18,18,32,0.97);
+      border-top: 2px solid #334;
+      padding: 14px 20px 14px 20px;
+      display: none;
+      max-height: 210px; overflow-y: auto;
+    }
+    #panel-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 5px; padding-right: 30px; }
+    #panel-meta { font-size: 12px; color: #999; margin-bottom: 4px; }
+    #panel-venue { font-size: 12px; color: #bbb; margin-bottom: 6px; }
+    #panel-link a { font-size: 13px; color: #7ec8e3; }
+    #panel-close {
+      position: absolute; top: 12px; right: 16px;
+      cursor: pointer; font-size: 20px; color: #666; line-height: 1;
+    }
+    #panel-close:hover { color: #ccc; }
+
+    /* Spinner */
+    #spinner {
+      position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      z-index: 50; text-align: center; color: #888; font-size: 14px;
+    }
+    .spin {
+      width: 40px; height: 40px; border: 3px solid #333;
+      border-top-color: #7ec8e3; border-radius: 50%;
+      animation: spin 0.8s linear infinite; margin: 0 auto 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<div id="spinner"><div class="spin"></div>Building graph…</div>
+
+<div id="topbar">
+  <a id="back-link" href="../index.html">← Home</a>
+  <div>
+    <div id="title">Publication Knowledge Graph</div>
+    <div id="subtitle">Click a node to explore · Scroll to zoom · Drag to pan</div>
+  </div>
+</div>
+
+<div id="filters">
+  <button class="filter-btn active" data-cat="GTA" style="background:#4e9af1;color:#fff;">GTA · Graph Theory</button>
+  <button class="filter-btn active" data-cat="CSC" style="background:#56c596;color:#111;">CSC · Sci. Computing</button>
+  <button class="filter-btn active" data-cat="DAV" style="background:#c77dff;color:#fff;">DAV · Data & Viz</button>
+  <button class="filter-btn active" data-cat="PAC" style="background:#ff9f43;color:#111;">PAC · Parallel Comp.</button>
+  <button class="filter-btn active" data-cat="EDU" style="background:#ff6b6b;color:#fff;">EDU · Education</button>
+</div>
+
+<div id="legend">
+  <h6>Node Types</h6>
+  <div class="legend-row"><div class="legend-dot" style="background:#4e9af1"></div> GTA paper</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#56c596"></div> CSC paper</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#c77dff"></div> DAV paper</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#ff9f43"></div> PAC paper</div>
+  <div class="legend-row"><div class="legend-dot" style="background:#ff6b6b"></div> EDU paper</div>
+  <div class="legend-row"><div class="legend-diamond"></div> Co-author</div>
+</div>
+
+<div id="view-toggle">
+  <p>View Mode</p>
+  <button class="view-btn active" id="btn-bipartite">Papers + Authors</button>
+  <button class="view-btn" id="btn-papers">Papers Only</button>
+  <button class="view-btn" id="btn-authors">Authors Only</button>
+</div>
+
+<div id="stats"></div>
+
+<div id="panel">
+  <div id="panel-close">×</div>
+  <div id="panel-title"></div>
+  <div id="panel-meta"></div>
+  <div id="panel-venue"></div>
+  <div id="panel-link"></div>
+</div>
+
+<div id="cy"></div>
+
+<script>
+const CAT_COLORS = {
+  GTA: '#4e9af1',
+  CSC: '#56c596',
+  DAV: '#c77dff',
+  PAC: '#ff9f43',
+  EDU: '#ff6b6b',
+};
+
+function parseAuthors(str) {
+  return str
+    .replace(/\band\b/gi, ',')
+    .split(',')
+    .map(a => a.trim().replace(/\.$/, '').trim())
+    .filter(a => a.length > 2);
+}
+
+function primaryCat(keywords) {
+  for (const c of ['CSC', 'PAC', 'EDU', 'DAV', 'GTA']) {
+    if (keywords.includes(c)) return c;
+  }
+  return 'GTA';
+}
+
+function shortTitle(t) {
+  return t.length > 50 ? t.slice(0, 47) + '…' : t;
+}
+
+// Build elements
+const paperNodes = [];
+const authorNodes = [];
+const bipartiteEdges = [];
+const authorMap = new Map();
+
+pubs.forEach((pub, i) => {
+  const cats = pub.keywords.split(',').map(k => k.trim());
+  const primary = primaryCat(pub.keywords);
+  paperNodes.push({
+    data: {
+      id: `p${i}`, type: 'paper', primary, cats,
+      label: shortTitle(pub.title),
+      title: pub.title, proceedings: pub.proceedings,
+      year: pub.year, doi: pub.doi || '', authors: pub.authors,
+    }
+  });
+
+  parseAuthors(pub.authors).forEach(name => {
+    const key = name.toLowerCase().replace(/[\s.]+/g, ' ').trim();
+    if (!authorMap.has(key)) {
+      authorMap.set(key, { id: `a_${authorMap.size}`, label: name, papers: 0 });
+    }
+    authorMap.get(key).papers++;
+    bipartiteEdges.push({
+      data: { id: `e_${i}_${key}`, source: `p${i}`, target: authorMap.get(key).id, type: 'authorship' }
+    });
+  });
+});
+
+authorMap.forEach(v => {
+  authorNodes.push({ data: { id: v.id, type: 'author', label: v.label, count: v.papers } });
+});
+
+// Paper–paper edges based on shared co-authors
+const paperPaperEdges = [];
+const authorToPapers = new Map();
+bipartiteEdges.forEach(e => {
+  const a = e.data.target, p = e.data.source;
+  if (!authorToPapers.has(a)) authorToPapers.set(a, []);
+  authorToPapers.get(a).push(p);
+});
+const ppSeen = new Set();
+authorToPapers.forEach(papers => {
+  for (let i = 0; i < papers.length; i++) {
+    for (let j = i + 1; j < papers.length; j++) {
+      const key = [papers[i], papers[j]].sort().join('|');
+      if (!ppSeen.has(key)) {
+        ppSeen.add(key);
+        paperPaperEdges.push({
+          data: { id: `pp_${key}`, source: papers[i], target: papers[j], type: 'shared-author' }
+        });
+      }
+    }
+  }
+});
+
+// Author–author edges: shared papers
+const authorAuthorEdges = [];
+const paperToAuthors = new Map();
+bipartiteEdges.forEach(e => {
+  const a = e.data.target, p = e.data.source;
+  if (!paperToAuthors.has(p)) paperToAuthors.set(p, []);
+  paperToAuthors.get(p).push(a);
+});
+const aaSeen = new Set();
+paperToAuthors.forEach(authors => {
+  for (let i = 0; i < authors.length; i++) {
+    for (let j = i + 1; j < authors.length; j++) {
+      const key = [authors[i], authors[j]].sort().join('|');
+      if (!aaSeen.has(key)) {
+        aaSeen.add(key);
+        authorAuthorEdges.push({
+          data: { id: `aa_${key}`, source: authors[i], target: authors[j], type: 'coauthor' }
+        });
+      }
+    }
+  }
+});
+
+const cyStyles = [
+  {
+    selector: 'node[type="paper"]',
+    style: {
+      'background-color': ele => CAT_COLORS[ele.data('primary')] || '#888',
+      'label': 'data(label)',
+      'color': '#ddd', 'font-size': '8px',
+      'text-wrap': 'wrap', 'text-max-width': '85px',
+      'width': 20, 'height': 20,
+      'text-valign': 'bottom', 'text-halign': 'center',
+      'text-background-color': '#0f0f1a', 'text-background-opacity': 0.7,
+      'text-background-padding': '2px',
+    }
+  },
+  {
+    selector: 'node[type="author"]',
+    style: {
+      'background-color': '#777', 'shape': 'diamond',
+      'label': 'data(label)', 'color': '#bbb', 'font-size': '8px',
+      'width': ele => 10 + Math.min(ele.data('count') * 3, 20),
+      'height': ele => 10 + Math.min(ele.data('count') * 3, 20),
+      'text-valign': 'bottom', 'text-halign': 'center',
+    }
+  },
+  {
+    selector: 'edge[type="authorship"]',
+    style: { 'width': 0.7, 'line-color': '#444', 'opacity': 0.6, 'curve-style': 'bezier' }
+  },
+  {
+    selector: 'edge[type="shared-author"]',
+    style: { 'width': 1.2, 'line-color': '#556', 'opacity': 0.5, 'curve-style': 'bezier' }
+  },
+  {
+    selector: 'edge[type="coauthor"]',
+    style: { 'width': 1.5, 'line-color': '#667', 'opacity': 0.5, 'curve-style': 'bezier' }
+  },
+  {
+    selector: 'node:selected',
+    style: { 'border-width': 3, 'border-color': '#fff' }
+  },
+  {
+    selector: '.dim',
+    style: { 'opacity': 0.08 }
+  },
+  {
+    selector: '.highlight',
+    style: { 'opacity': 1, 'border-width': 2, 'border-color': '#fff' }
+  }
+];
+
+let currentView = 'bipartite';
+let cy = null;
+
+function buildCy(view) {
+  if (cy) cy.destroy();
+  document.getElementById('spinner').style.display = 'block';
+
+  let nodes, edges;
+  if (view === 'bipartite') {
+    nodes = [...paperNodes, ...authorNodes];
+    edges = bipartiteEdges;
+  } else if (view === 'papers') {
+    nodes = paperNodes;
+    edges = paperPaperEdges;
+  } else {
+    nodes = authorNodes;
+    edges = authorAuthorEdges;
+  }
+
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements: [...nodes, ...edges],
+    style: cyStyles,
+    layout: {
+      name: 'cose',
+      animate: false,
+      randomize: true,
+      nodeRepulsion: view === 'bipartite' ? 6000 : 10000,
+      idealEdgeLength: view === 'bipartite' ? 50 : 80,
+      edgeElasticity: 100,
+      gravity: 0.4,
+      numIter: 1500,
+      fit: true,
+      padding: 50,
+    }
+  });
+
+  cy.ready(() => {
+    document.getElementById('spinner').style.display = 'none';
+    updateStats();
+    applyFilters();
+  });
+
+  cy.on('tap', 'node', evt => {
+    const d = evt.target.data();
+    cy.elements().addClass('dim');
+    evt.target.removeClass('dim').addClass('highlight');
+    evt.target.neighborhood().removeClass('dim').addClass('highlight');
+
+    const panel = document.getElementById('panel');
+    if (d.type === 'paper') {
+      document.getElementById('panel-title').textContent = d.title;
+      document.getElementById('panel-meta').textContent =
+        `${d.year}  ·  ${d.cats.join(', ')}  ·  ${d.authors}`;
+      document.getElementById('panel-venue').textContent = d.proceedings;
+      document.getElementById('panel-link').innerHTML =
+        d.doi ? `<a href="${d.doi}" target="_blank">View Paper ↗</a>` : '';
+    } else {
+      const connected = evt.target.neighborhood('node[type="paper"]');
+      document.getElementById('panel-title').textContent = d.label;
+      document.getElementById('panel-meta').textContent =
+        `${connected.length} publication(s)`;
+      document.getElementById('panel-venue').textContent =
+        connected.map(n => n.data('title')).join('  ·  ');
+      document.getElementById('panel-link').innerHTML = '';
+    }
+    panel.style.display = 'block';
+  });
+
+  cy.on('tap', evt => {
+    if (evt.target === cy) {
+      cy.elements().removeClass('dim highlight');
+      document.getElementById('panel').style.display = 'none';
+    }
+  });
+}
+
+function updateStats() {
+  const vis = cy.nodes(':visible');
+  const papers = vis.filter('[type="paper"]').length;
+  const authors = vis.filter('[type="author"]').length;
+  const edges = cy.edges(':visible').length;
+  document.getElementById('stats').innerHTML =
+    `${papers} papers&nbsp;&nbsp;${authors ? authors + ' authors&nbsp;&nbsp;' : ''}${edges} connections`;
+}
+
+const activeFilters = new Set(['GTA', 'CSC', 'DAV', 'PAC', 'EDU']);
+
+function applyFilters() {
+  if (!cy) return;
+  cy.elements().show();
+  if (currentView !== 'bipartite' && currentView !== 'papers') { updateStats(); return; }
+
+  cy.nodes('[type="paper"]').forEach(n => {
+    const cats = n.data('cats');
+    if (!cats.some(c => activeFilters.has(c))) {
+      n.hide();
+      n.connectedEdges().hide();
+    }
+  });
+
+  if (currentView === 'bipartite') {
+    cy.nodes('[type="author"]').forEach(n => {
+      if (n.connectedEdges(':visible').length === 0) n.hide();
+    });
+  }
+  updateStats();
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const cat = btn.dataset.cat;
+    if (activeFilters.has(cat)) {
+      activeFilters.delete(cat);
+      btn.classList.remove('active');
+    } else {
+      activeFilters.add(cat);
+      btn.classList.add('active');
+    }
+    applyFilters();
+  });
+});
+
+['bipartite', 'papers', 'authors'].forEach(v => {
+  document.getElementById(`btn-${v}`).addEventListener('click', () => {
+    if (currentView === v) return;
+    currentView = v;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(`btn-${v}`).classList.add('active');
+    document.getElementById('panel').style.display = 'none';
+    buildCy(v);
+  });
+});
+
+document.getElementById('panel-close').addEventListener('click', () => {
+  document.getElementById('panel').style.display = 'none';
+  if (cy) cy.elements().removeClass('dim highlight');
+});
+
+buildCy('bipartite');
+</script>
+</body>
+</html>

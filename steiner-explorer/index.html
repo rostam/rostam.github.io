@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCST / Steiner Tree Explorer — Ali Rostami</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f0f1a; color: #eee; font-family: 'Segoe UI', sans-serif; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+
+    header {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      padding: 10px 18px; background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid #222; flex-shrink: 0;
+    }
+    #back-link {
+      color: #7ec8e3; text-decoration: none; font-size: 13px;
+      border: 1px solid #7ec8e3; padding: 3px 10px; border-radius: 12px;
+    }
+    header h1 { font-size: 17px; font-weight: 600; }
+    header p { font-size: 12px; color: #888; margin-top: 1px; }
+
+    .body { display: flex; flex: 1; overflow: hidden; }
+
+    /* Sidebar */
+    #sidebar {
+      width: 260px; flex-shrink: 0; border-right: 1px solid #222;
+      background: rgba(255,255,255,0.025); padding: 14px;
+      overflow-y: auto; display: flex; flex-direction: column; gap: 16px;
+    }
+    .side-section h3 {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+      color: #666; margin-bottom: 8px;
+    }
+    .mode-btn, .action-btn, .preset-btn {
+      display: block; width: 100%; padding: 7px 10px; margin: 3px 0;
+      background: #1a1a2e; border: 1px solid #333; border-radius: 8px;
+      color: #ccc; cursor: pointer; text-align: left; font-size: 13px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .mode-btn:hover, .action-btn:hover, .preset-btn:hover { background: #252535; border-color: #555; }
+    .mode-btn.active { border-color: #7ec8e3; color: #7ec8e3; background: #0d1f27; }
+    .action-btn.primary { background: #1f3a2a; border-color: #56c596; color: #56c596; }
+    .action-btn.danger  { background: #2d1f1f; border-color: #ff6b6b; color: #ff6b6b; }
+    .action-btn.warn    { background: #2d2a1f; border-color: #ff9f43; color: #ff9f43; }
+
+    .info-box {
+      background: #1a1f2e; border: 1px solid #334; border-radius: 8px;
+      padding: 10px 12px; font-size: 12px; color: #99aabb; line-height: 1.6;
+    }
+    .info-box strong { color: #7ec8e3; }
+    .info-box a { color: #7ec8e3; }
+
+    #cost-display {
+      font-size: 24px; font-weight: 700; color: #56c596;
+    }
+    #cost-label { font-size: 12px; color: #666; }
+
+    /* Canvas */
+    #canvas-wrap { flex: 1; position: relative; overflow: hidden; }
+    canvas { position: absolute; inset: 0; cursor: crosshair; }
+
+    /* Tooltip */
+    #tooltip {
+      position: absolute; background: rgba(15,15,26,0.92);
+      border: 1px solid #334; border-radius: 8px;
+      padding: 8px 12px; font-size: 12px; color: #ddd;
+      pointer-events: none; display: none; z-index: 10; max-width: 200px;
+    }
+
+    /* Mode indicator */
+    #mode-indicator {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(15,15,26,0.85); border: 1px solid #334;
+      border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #aaa;
+      pointer-events: none;
+    }
+
+    /* Legend */
+    #legend {
+      position: absolute; top: 10px; right: 10px;
+      background: rgba(15,15,26,0.85); border: 1px solid #334;
+      border-radius: 10px; padding: 10px 14px; font-size: 12px;
+    }
+    .leg-row { display: flex; align-items: center; gap: 7px; margin: 3px 0; color: #bbb; }
+    .leg-circle { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .leg-line { width: 20px; height: 3px; flex-shrink: 0; }
+
+    input[type=range] { width: 100%; accent-color: #56c596; }
+    .range-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+    .range-row span { font-size: 12px; color: #888; }
+    .range-val { font-size: 12px; color: #56c596; font-weight: 600; }
+
+    /* Step display */
+    #step-info {
+      background: #1a1f2e; border: 1px solid #334; border-radius: 8px;
+      padding: 10px 12px; font-size: 12px; color: #99aabb; line-height: 1.5; display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a id="back-link" href="../index.html">← Home</a>
+  <div>
+    <h1>Prize-Collecting Steiner Tree Explorer</h1>
+    <p>Build a graph, assign prizes &amp; costs, then find the optimal subtree</p>
+  </div>
+</header>
+
+<div class="body">
+  <div id="sidebar">
+    <div class="side-section">
+      <h3>Edit Mode</h3>
+      <button class="mode-btn active" id="btn-node">⬤ Add Node</button>
+      <button class="mode-btn" id="btn-edge">— Add Edge</button>
+      <button class="mode-btn" id="btn-prize">★ Set Prize</button>
+      <button class="mode-btn" id="btn-cost">⚖ Set Edge Cost</button>
+      <button class="mode-btn" id="btn-delete">✕ Delete</button>
+    </div>
+
+    <div class="side-section">
+      <h3>Node Prize / Edge Cost</h3>
+      <div class="range-row"><span>Value</span><span class="range-val" id="val-display">5</span></div>
+      <input type="range" id="val-range" min="1" max="20" value="5">
+    </div>
+
+    <div class="side-section">
+      <h3>Algorithm</h3>
+      <button class="action-btn primary" id="btn-solve">▶ Find PCST (Greedy)</button>
+      <button class="action-btn warn" id="btn-step">⏭ Step Through</button>
+      <button class="action-btn danger" id="btn-clear">↺ Clear Graph</button>
+    </div>
+
+    <div class="side-section">
+      <h3>Presets</h3>
+      <button class="preset-btn" data-preset="simple">Simple (6 nodes)</button>
+      <button class="preset-btn" data-preset="grid">3×3 Grid</button>
+      <button class="preset-btn" data-preset="telecom">Telecom Network</button>
+    </div>
+
+    <div class="side-section">
+      <h3>Result</h3>
+      <div id="cost-display">—</div>
+      <div id="cost-label">total profit (prizes − costs)</div>
+      <div id="step-info"></div>
+    </div>
+
+    <div class="info-box">
+      <strong>Prize-Collecting Steiner Tree</strong><br>
+      Select a connected subgraph to <em>maximize</em>: sum of node prizes − sum of edge costs.<br><br>
+      Based on <a href="https://github.com/rostam/PCST-experience" target="_blank">PCST-experience</a> research. Nodes with high prize and low-cost edges are the most attractive.
+    </div>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+    <div id="tooltip"></div>
+    <div id="mode-indicator">Mode: Add Node</div>
+    <div id="legend">
+      <div class="leg-row"><div class="leg-circle" style="background:#56c596"></div> In solution</div>
+      <div class="leg-row"><div class="leg-circle" style="background:#4e9af1"></div> Regular node</div>
+      <div class="leg-row"><div class="leg-circle" style="background:#888"></div> Excluded</div>
+      <div class="leg-row"><div class="leg-line" style="background:#56c596"></div> Solution edge</div>
+      <div class="leg-row"><div class="leg-line" style="background:#334"></div> Regular edge</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Data model ────────────────────────────────────────────────────────────────
+let nodes = [];   // {id, x, y, prize, inSolution, label}
+let edges = [];   // {id, a, b, cost, inSolution}
+let nextNodeId = 0;
+let nextEdgeId = 0;
+
+// ── UI state ──────────────────────────────────────────────────────────────────
+let mode = 'node';
+let edgeStart = -1;   // node id for edge drawing
+let stepState = null; // for step-through
+let hoveredNode = -1;
+let hoveredEdge = -1;
+let draggingNode = -1;
+let dragOffX = 0, dragOffY = 0;
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+const modeIndicator = document.getElementById('mode-indicator');
+
+const MODENAMES = {
+  node: 'Add Node', edge: 'Add Edge', prize: 'Set Prize',
+  cost: 'Set Edge Cost', delete: 'Delete'
+};
+
+function setMode(m) {
+  mode = m;
+  edgeStart = -1;
+  modeIndicator.textContent = 'Mode: ' + MODENAMES[m];
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + m).classList.add('active');
+  canvas.style.cursor = m === 'node' ? 'crosshair' : 'default';
+  draw();
+}
+
+['node','edge','prize','cost','delete'].forEach(m =>
+  document.getElementById('btn-' + m).addEventListener('click', () => setMode(m))
+);
+
+const valRange = document.getElementById('val-range');
+const valDisplay = document.getElementById('val-display');
+valRange.addEventListener('input', () => { valDisplay.textContent = valRange.value; });
+
+// ── Canvas resize ─────────────────────────────────────────────────────────────
+function resize() {
+  const wrap = document.getElementById('canvas-wrap');
+  canvas.width = wrap.clientWidth;
+  canvas.height = wrap.clientHeight;
+  draw();
+}
+window.addEventListener('resize', resize);
+
+// ── Presets ───────────────────────────────────────────────────────────────────
+const PRESETS = {
+  simple: {
+    nodes: [
+      {x:0.25,y:0.3,prize:8},{x:0.5,y:0.15,prize:3},{x:0.75,y:0.3,prize:12},
+      {x:0.2,y:0.7,prize:5},{x:0.5,y:0.75,prize:15},{x:0.8,y:0.7,prize:6},
+    ],
+    edges: [[0,1,2],[1,2,2],[0,3,3],[1,4,4],[2,5,3],[3,4,2],[4,5,3],[0,4,6],[2,4,5]],
+  },
+  grid: {
+    nodes: [
+      {x:0.2,y:0.2,prize:4},{x:0.5,y:0.2,prize:9},{x:0.8,y:0.2,prize:2},
+      {x:0.2,y:0.5,prize:6},{x:0.5,y:0.5,prize:14},{x:0.8,y:0.5,prize:7},
+      {x:0.2,y:0.8,prize:3},{x:0.5,y:0.8,prize:10},{x:0.8,y:0.8,prize:5},
+    ],
+    edges: [
+      [0,1,3],[1,2,4],[3,4,2],[4,5,3],[6,7,4],[7,8,3],
+      [0,3,2],[3,6,3],[1,4,2],[4,7,2],[2,5,3],[5,8,2],
+    ],
+  },
+  telecom: {
+    nodes: [
+      {x:0.5,y:0.1,prize:20},{x:0.15,y:0.35,prize:8},{x:0.85,y:0.35,prize:7},
+      {x:0.1,y:0.7,prize:5},{x:0.35,y:0.8,prize:12},{x:0.65,y:0.8,prize:11},
+      {x:0.9,y:0.7,prize:4},{x:0.5,y:0.55,prize:3},
+    ],
+    edges: [
+      [0,1,4],[0,2,4],[1,3,3],[1,4,5],[2,5,5],[2,6,3],
+      [3,4,2],[4,5,3],[5,6,2],[1,7,6],[2,7,6],[4,7,3],[5,7,3],
+    ],
+  },
+};
+
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.preset;
+    loadPreset(PRESETS[key]);
+  });
+});
+
+function loadPreset(preset) {
+  nodes = []; edges = []; nextNodeId = 0; nextEdgeId = 0;
+  clearSolution();
+  preset.nodes.forEach((n, i) => {
+    nodes.push({ id: nextNodeId++, x: n.x, y: n.y, prize: n.prize, inSolution: false, label: String(i) });
+  });
+  preset.edges.forEach(([a, b, cost]) => {
+    edges.push({ id: nextEdgeId++, a, b, cost, inSolution: false });
+  });
+  document.getElementById('cost-display').textContent = '—';
+  document.getElementById('step-info').style.display = 'none';
+  stepState = null;
+  draw();
+}
+
+// ── Drawing ───────────────────────────────────────────────────────────────────
+function nodeScreen(n) {
+  return { x: n.x * canvas.width, y: n.y * canvas.height };
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw edges
+  edges.forEach((e, ei) => {
+    const a = nodes.find(n => n.id === e.a);
+    const b = nodes.find(n => n.id === e.b);
+    if (!a || !b) return;
+    const pa = nodeScreen(a), pb = nodeScreen(b);
+    ctx.beginPath();
+    ctx.moveTo(pa.x, pa.y);
+    ctx.lineTo(pb.x, pb.y);
+    if (e.inSolution) {
+      ctx.strokeStyle = '#56c596'; ctx.lineWidth = 4;
+    } else if (ei === hoveredEdge) {
+      ctx.strokeStyle = '#667'; ctx.lineWidth = 3;
+    } else {
+      ctx.strokeStyle = '#2a2a3a'; ctx.lineWidth = 2;
+    }
+    ctx.stroke();
+
+    // Cost label
+    const mx = (pa.x + pb.x) / 2, my = (pa.y + pb.y) / 2;
+    ctx.fillStyle = e.inSolution ? '#56c596' : '#666';
+    ctx.font = '11px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = '#111';
+    ctx.fillRect(mx - 8, my - 8, 16, 14);
+    ctx.fillStyle = e.inSolution ? '#56c596' : '#556';
+    ctx.fillText(e.cost, mx, my);
+  });
+
+  // Edge being drawn
+  if (mode === 'edge' && edgeStart >= 0) {
+    const n = nodes.find(n => n.id === edgeStart);
+    if (n && lastMouse) {
+      const p = nodeScreen(n);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(lastMouse.x, lastMouse.y);
+      ctx.strokeStyle = '#556'; ctx.lineWidth = 2; ctx.setLineDash([6,3]);
+      ctx.stroke(); ctx.setLineDash([]);
+    }
+  }
+
+  // Draw nodes
+  nodes.forEach(n => {
+    const { x, y } = nodeScreen(n);
+    const r = 20 + Math.min(n.prize * 1.2, 14);
+    const isHovered = n.id === hoveredNode;
+
+    // Shadow for solution nodes
+    if (n.inSolution) {
+      ctx.beginPath(); ctx.arc(x, y, r + 5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(86,197,150,0.15)'; ctx.fill();
+    }
+
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = n.inSolution ? '#1d3d2e' : (n.excluded ? '#1a1a1a' : '#1a1a2e');
+    ctx.fill();
+    ctx.strokeStyle = n.inSolution ? '#56c596' : (isHovered ? '#fff' : '#4e9af1');
+    ctx.lineWidth = n.inSolution ? 3 : (isHovered ? 2.5 : 1.5);
+    ctx.stroke();
+
+    // Prize label
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = `bold ${Math.max(10, 12 + n.prize * 0.2)}px sans-serif`;
+    ctx.fillStyle = n.inSolution ? '#56c596' : '#aaa';
+    ctx.fillText(n.prize, x, y);
+
+    // Small node id
+    ctx.font = '9px sans-serif'; ctx.fillStyle = '#555';
+    ctx.fillText(n.label || n.id, x, y + r + 10);
+  });
+}
+
+// ── Hit tests ─────────────────────────────────────────────────────────────────
+let lastMouse = null;
+
+function nodeAt(mx, my) {
+  for (let i = nodes.length - 1; i >= 0; i--) {
+    const { x, y } = nodeScreen(nodes[i]);
+    const r = 20 + Math.min(nodes[i].prize * 1.2, 14);
+    if ((mx-x)**2 + (my-y)**2 <= (r+4)**2) return nodes[i].id;
+  }
+  return -1;
+}
+
+function edgeAt(mx, my) {
+  for (let i = edges.length - 1; i >= 0; i--) {
+    const a = nodes.find(n => n.id === edges[i].a);
+    const b = nodes.find(n => n.id === edges[i].b);
+    if (!a || !b) continue;
+    const pa = nodeScreen(a), pb = nodeScreen(b);
+    const dx = pb.x - pa.x, dy = pb.y - pa.y;
+    const len2 = dx*dx + dy*dy;
+    const t = Math.max(0, Math.min(1, ((mx-pa.x)*dx + (my-pa.y)*dy) / len2));
+    const cx = pa.x + t*dx - mx, cy = pa.y + t*dy - my;
+    if (cx*cx + cy*cy < 64) return i;
+  }
+  return -1;
+}
+
+// ── Mouse events ──────────────────────────────────────────────────────────────
+canvas.addEventListener('mousemove', e => {
+  const r = canvas.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  lastMouse = { x: mx, y: my };
+
+  if (draggingNode >= 0) {
+    const n = nodes.find(n => n.id === draggingNode);
+    if (n) {
+      n.x = Math.max(0.05, Math.min(0.95, (mx + dragOffX) / canvas.width));
+      n.y = Math.max(0.05, Math.min(0.95, (my + dragOffY) / canvas.height));
+    }
+    draw(); return;
+  }
+
+  const nh = nodeAt(mx, my);
+  const eh = nh < 0 ? edgeAt(mx, my) : -1;
+  if (nh !== hoveredNode || eh !== hoveredEdge) {
+    hoveredNode = nh; hoveredEdge = eh; draw();
+  }
+
+  // Tooltip
+  if (nh >= 0) {
+    const n = nodes.find(n => n.id === nh);
+    tooltip.innerHTML = `Node ${n.label}<br>Prize: <strong>${n.prize}</strong>${n.inSolution ? '<br>✓ In solution' : ''}`;
+    tooltip.style.left = (e.clientX - r.left + 12) + 'px';
+    tooltip.style.top  = (e.clientY - r.top  - 10) + 'px';
+    tooltip.style.display = 'block';
+  } else if (eh >= 0) {
+    const eg = edges[eh];
+    tooltip.innerHTML = `Edge ${eg.a}–${eg.b}<br>Cost: <strong>${eg.cost}</strong>${eg.inSolution ? '<br>✓ In solution' : ''}`;
+    tooltip.style.left = (e.clientX - r.left + 12) + 'px';
+    tooltip.style.top  = (e.clientY - r.top  - 10) + 'px';
+    tooltip.style.display = 'block';
+  } else {
+    tooltip.style.display = 'none';
+  }
+
+  if (mode === 'edge' && edgeStart >= 0) draw();
+  canvas.style.cursor = nh >= 0 ? (mode === 'node' ? 'grab' : 'pointer') : (mode === 'node' ? 'crosshair' : 'default');
+});
+
+canvas.addEventListener('mousedown', e => {
+  const r = canvas.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  const nh = nodeAt(mx, my);
+  if (nh >= 0 && mode === 'node') {
+    const n = nodes.find(n => n.id === nh);
+    const { x, y } = nodeScreen(n);
+    draggingNode = nh;
+    dragOffX = x - mx; dragOffY = y - my;
+  }
+});
+
+canvas.addEventListener('mouseup', e => {
+  draggingNode = -1;
+});
+
+canvas.addEventListener('mouseleave', () => {
+  hoveredNode = -1; hoveredEdge = -1; lastMouse = null;
+  tooltip.style.display = 'none'; draw();
+});
+
+canvas.addEventListener('click', e => {
+  const r = canvas.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  const nh = nodeAt(mx, my);
+  const eh = nh < 0 ? edgeAt(mx, my) : -1;
+  const val = +valRange.value;
+
+  if (mode === 'node' && nh < 0) {
+    const label = nodes.length.toString();
+    nodes.push({ id: nextNodeId++, x: mx / canvas.width, y: my / canvas.height, prize: val, inSolution: false, label });
+    draw();
+  } else if (mode === 'edge') {
+    if (nh >= 0) {
+      if (edgeStart < 0) {
+        edgeStart = nh;
+      } else if (edgeStart !== nh) {
+        const exists = edges.some(eg => (eg.a === edgeStart && eg.b === nh) || (eg.a === nh && eg.b === edgeStart));
+        if (!exists) edges.push({ id: nextEdgeId++, a: edgeStart, b: nh, cost: val, inSolution: false });
+        edgeStart = -1; draw();
+      }
+    }
+  } else if (mode === 'prize' && nh >= 0) {
+    nodes.find(n => n.id === nh).prize = val;
+    draw();
+  } else if (mode === 'cost' && eh >= 0) {
+    edges[eh].cost = val;
+    draw();
+  } else if (mode === 'delete') {
+    if (nh >= 0) {
+      nodes = nodes.filter(n => n.id !== nh);
+      edges = edges.filter(eg => eg.a !== nh && eg.b !== nh);
+    } else if (eh >= 0) {
+      edges.splice(eh, 1);
+    }
+    draw();
+  }
+});
+
+// ── PCST Greedy solver ────────────────────────────────────────────────────────
+// Greedy: start with all nodes, build MST, then prune unprofitable leaves
+function solvePCST() {
+  clearSolution();
+  if (nodes.length === 0) return;
+
+  // Prim's MST on prize-weighted graph, then prune
+  // Prize − edge cost objective
+  const inMST = new Set();
+  const mstEdges = new Set();
+
+  // Kruskal on subgraph, then prune leaves with negative net prize
+  let bestProfit = 0;
+  let bestSubset = null;
+
+  // Try all connected subsets (for small graphs ≤ 12), greedy otherwise
+  if (nodes.length <= 12) {
+    const N = nodes.length;
+    for (let mask = 1; mask < (1 << N); mask++) {
+      const subset = [];
+      for (let i = 0; i < N; i++) if (mask & (1 << i)) subset.push(i);
+
+      // Check connectivity via included edges
+      const subEdges = edges.filter(eg => {
+        const ai = nodes.findIndex(n => n.id === eg.a);
+        const bi = nodes.findIndex(n => n.id === eg.b);
+        return ai >= 0 && bi >= 0 && (mask & (1 << ai)) && (mask & (1 << bi));
+      });
+      if (!isConnected(subset, subEdges)) continue;
+
+      // MST cost of this subset
+      const mstCost = mstEdgeCost(subset, subEdges);
+      const prizesSum = subset.reduce((s, i) => s + nodes[i].prize, 0);
+      const profit = prizesSum - mstCost;
+      if (profit > bestProfit) { bestProfit = profit; bestSubset = { subset, subEdges }; }
+    }
+  } else {
+    bestSubset = greedyPCST();
+    if (bestSubset) bestProfit = bestSubset.subset.reduce((s, i) => s + nodes[i].prize, 0) - bestSubset.mstCost;
+  }
+
+  if (bestSubset) {
+    bestSubset.subset.forEach(i => { nodes[i].inSolution = true; });
+    // Mark MST edges of best subset
+    const mstEdgeSet = getMSTEdges(bestSubset.subset, bestSubset.subEdges || edges.filter(eg => {
+      const ai = nodes.findIndex(n => n.id === eg.a);
+      const bi = nodes.findIndex(n => n.id === eg.b);
+      return bestSubset.subset.includes(ai) && bestSubset.subset.includes(bi);
+    }));
+    mstEdgeSet.forEach(eid => { const eg = edges.find(e => e.id === eid); if (eg) eg.inSolution = true; });
+    document.getElementById('cost-display').textContent = '+' + bestProfit;
+  } else {
+    document.getElementById('cost-display').textContent = '0 (no profitable subtree)';
+  }
+  draw();
+}
+
+function isConnected(subset, subEdges) {
+  if (subset.length <= 1) return true;
+  const adj = new Map(); subset.forEach(i => adj.set(i, []));
+  subEdges.forEach(eg => {
+    const ai = nodes.findIndex(n => n.id === eg.a);
+    const bi = nodes.findIndex(n => n.id === eg.b);
+    if (adj.has(ai) && adj.has(bi)) { adj.get(ai).push(bi); adj.get(bi).push(ai); }
+  });
+  const visited = new Set([subset[0]]);
+  const queue = [subset[0]];
+  while (queue.length) {
+    const cur = queue.shift();
+    for (const nb of (adj.get(cur) || [])) {
+      if (!visited.has(nb)) { visited.add(nb); queue.push(nb); }
+    }
+  }
+  return visited.size === subset.length;
+}
+
+function mstEdgeCost(subset, subEdges) {
+  if (subset.length <= 1) return 0;
+  return getMSTEdges(subset, subEdges)
+    .reduce((s, eid) => s + (edges.find(e => e.id === eid)?.cost || 0), 0);
+}
+
+function getMSTEdges(subset, subEdges) {
+  // Kruskal
+  const parent = new Map(); subset.forEach(i => parent.set(i, i));
+  function find(x) { return parent.get(x) === x ? x : (parent.set(x, find(parent.get(x))), parent.get(x)); }
+  function union(a, b) { parent.set(find(a), find(b)); }
+
+  const sorted = [...subEdges].sort((a, b) => a.cost - b.cost);
+  const mst = [];
+  sorted.forEach(eg => {
+    const ai = nodes.findIndex(n => n.id === eg.a);
+    const bi = nodes.findIndex(n => n.id === eg.b);
+    if (!subset.includes(ai) || !subset.includes(bi)) return;
+    if (find(ai) !== find(bi)) { union(ai, bi); mst.push(eg.id); }
+  });
+  return mst;
+}
+
+function greedyPCST() {
+  // Greedy: start with highest-prize node, expand
+  if (nodes.length === 0) return null;
+  const best = [...nodes].sort((a,b) => b.prize - a.prize)[0];
+  const subset = [nodes.indexOf(best)];
+  const mstCost = { val: 0 };
+  let improved = true;
+  while (improved) {
+    improved = false;
+    let bestGain = 0, bestNode = -1, bestEdge = null;
+    nodes.forEach((n, i) => {
+      if (subset.includes(i)) return;
+      const connecting = edges.filter(eg => {
+        const ai = nodes.findIndex(nd => nd.id === eg.a);
+        const bi = nodes.findIndex(nd => nd.id === eg.b);
+        return (subset.includes(ai) && bi === i) || (subset.includes(bi) && ai === i);
+      });
+      if (connecting.length === 0) return;
+      const minEdge = connecting.reduce((a,b) => a.cost < b.cost ? a : b);
+      const gain = n.prize - minEdge.cost;
+      if (gain > bestGain) { bestGain = gain; bestNode = i; bestEdge = minEdge; }
+    });
+    if (bestNode >= 0) { subset.push(bestNode); mstCost.val += bestEdge.cost; improved = true; }
+  }
+  return { subset, mstCost: mstCost.val };
+}
+
+function clearSolution() {
+  nodes.forEach(n => { n.inSolution = false; n.excluded = false; });
+  edges.forEach(e => e.inSolution = false);
+  stepState = null;
+}
+
+document.getElementById('btn-solve').addEventListener('click', () => {
+  document.getElementById('step-info').style.display = 'none';
+  solvePCST();
+});
+
+document.getElementById('btn-clear').addEventListener('click', () => {
+  nodes = []; edges = []; nextNodeId = 0; nextEdgeId = 0;
+  clearSolution();
+  document.getElementById('cost-display').textContent = '—';
+  document.getElementById('step-info').style.display = 'none';
+  draw();
+});
+
+// ── Step-through ──────────────────────────────────────────────────────────────
+document.getElementById('btn-step').addEventListener('click', () => {
+  if (!stepState) {
+    // Init step state: greedy expansion
+    clearSolution();
+    if (nodes.length === 0) return;
+    const best = [...nodes].sort((a,b) => b.prize - a.prize)[0];
+    stepState = {
+      subset: [nodes.indexOf(best)],
+      step: 0,
+      done: false,
+    };
+    nodes[nodes.indexOf(best)].inSolution = true;
+    showStep(`Step 1: Start with highest-prize node (prize = ${best.prize}).`);
+    draw(); return;
+  }
+  if (stepState.done) { stepState = null; clearSolution(); showStep('Reset. Press Step to start again.'); draw(); return; }
+
+  // Find best expansion
+  let bestGain = 0, bestNodeIdx = -1, bestEdge = null;
+  nodes.forEach((n, i) => {
+    if (stepState.subset.includes(i)) return;
+    const connecting = edges.filter(eg => {
+      const ai = nodes.findIndex(nd => nd.id === eg.a);
+      const bi = nodes.findIndex(nd => nd.id === eg.b);
+      return (stepState.subset.includes(ai) && bi === i) || (stepState.subset.includes(bi) && ai === i);
+    });
+    if (connecting.length === 0) return;
+    const minEdge = connecting.reduce((a,b) => a.cost < b.cost ? a : b);
+    const gain = n.prize - minEdge.cost;
+    if (gain > bestGain) { bestGain = gain; bestNodeIdx = i; bestEdge = minEdge; }
+  });
+
+  stepState.step++;
+  if (bestNodeIdx >= 0) {
+    stepState.subset.push(bestNodeIdx);
+    nodes[bestNodeIdx].inSolution = true;
+    bestEdge.inSolution = true;
+    const profit = stepState.subset.reduce((s,i) => s + nodes[i].prize, 0) -
+      edges.filter(e => e.inSolution).reduce((s,e) => s + e.cost, 0);
+    showStep(`Step ${stepState.step + 1}: Add node ${nodes[bestNodeIdx].label} (prize ${nodes[bestNodeIdx].prize}, edge cost ${bestEdge.cost}, marginal gain +${bestGain.toFixed(0)}). Profit = ${profit.toFixed(0)}.`);
+    document.getElementById('cost-display').textContent = profit > 0 ? '+' + profit.toFixed(0) : profit.toFixed(0);
+  } else {
+    stepState.done = true;
+    showStep(`Done! No more profitable expansions. Press Step to reset.`);
+  }
+  draw();
+});
+
+function showStep(msg) {
+  const box = document.getElementById('step-info');
+  box.style.display = 'block';
+  box.textContent = msg;
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+resize();
+loadPreset(PRESETS.simple);
+</script>
+</body>
+</html>
