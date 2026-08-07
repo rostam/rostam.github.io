@@ -1,0 +1,187 @@
+/* ==========================================================================
+   explain/site.css — shared chrome for the EXPLAIN sub-site.
+
+   The interactive modules are fixed-width desktop tools (two 500px SVG
+   canvases side by side), so this file deliberately does NOT try to make
+   them fluid. What it does is give every EXPLAIN page the same typography,
+   colour and header as the main site, and — most importantly — a way back
+   to rostam.github.io, which none of these pages had.
+   ========================================================================== */
+
+:root {
+    --explain-blue: #0067a6;
+    --explain-blue-dark: #004e7f;
+    --font-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bg: #fbfaf8;
+    --text: #1b1917;
+    --text-muted: #5f5952;
+    --border: #e5e0d8;
+    --accent: #0e5f6e;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-serif);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------------------- top bar */
+
+.explain-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    padding: .5rem clamp(.75rem, 3vw, 1.5rem);
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-sans);
+    font-size: .875rem;
+}
+
+.explain-bar__back {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.explain-bar__back:hover { text-decoration: underline; }
+
+.explain-bar__sep { color: var(--border); }
+
+.explain-bar__here { color: var(--text-muted); }
+
+.explain-bar__spacer { margin-left: auto; }
+
+/* --------------------------------------------------------------- banner */
+
+.explain-banner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem clamp(.75rem, 3vw, 1.5rem);
+    background: var(--explain-blue);
+    color: #fff;
+}
+.explain-banner img { max-width: 260px; height: auto; }
+.explain-banner__title {
+    font-family: var(--font-sans);
+    font-size: clamp(1.1rem, 3.5vw, 1.7rem);
+    font-weight: 500;
+    margin: 0;
+}
+.explain-banner a { color: #fff; }
+
+/* ----------------------------------------------------------- page shell */
+
+.explain-page {
+    max-width: 62rem;
+    margin-inline: auto;
+    padding: 1.5rem clamp(.75rem, 3vw, 1.5rem) 3rem;
+}
+
+.explain-page h2 { font-size: 1.5rem; margin-top: 2rem; }
+.explain-page h3 { font-size: 1.1rem; margin-bottom: .25rem; }
+.explain-page p { max-width: 68ch; }
+.explain-page a { color: var(--accent); }
+
+/* ------------------------------------------------------- module listing */
+
+.module-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Previously a bare list of link text with no indication of what any
+   module actually did. */
+.module-card {
+    display: block;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color .15s ease, transform .15s ease;
+}
+.module-card:hover {
+    border-color: var(--explain-blue);
+    transform: translateY(-2px);
+}
+.module-card__title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 0 .3rem;
+}
+.module-card__desc {
+    font-size: .9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+}
+.module-card__tag {
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .1rem .45rem;
+    border-radius: 4px;
+    background: #eef4f8;
+    color: #0d4a72;
+    font-family: var(--font-sans);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+}
+
+/* --------------------------------------------------------------- people */
+
+.people { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.people h3 {
+    font-family: var(--font-sans);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.people p { margin: 0; }
+
+/* ------------------------------------------------------- desktop notice */
+
+.desktop-note {
+    display: none;
+    margin: 1rem clamp(.75rem, 3vw, 1.5rem);
+    padding: .75rem 1rem;
+    border: 1px solid #e3d5a8;
+    border-left: 4px solid #c9a227;
+    border-radius: 6px;
+    background: #fdf8e6;
+    color: #5c4708;
+    font-family: var(--font-sans);
+    font-size: .875rem;
+}
+
+/* These modules need two 500px canvases side by side; below that they are
+   unusable, so say so rather than letting the user fight the layout. */
+@media (max-width: 1060px) {
+    .desktop-note { display: block; }
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem 1rem;
+    z-index: 200;
+}
+.skip-link:focus { left: 0; }

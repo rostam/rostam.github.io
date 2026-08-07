@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Graph icon">
+  <rect width="32" height="32" rx="7" fill="#0e5f6e"/>
+  <path d="M10 22.5 L16 9.5 L22.5 19 Z" fill="none" stroke="#ffffff" stroke-width="1.8"
+        stroke-linejoin="round" opacity="0.75"/>
+  <g fill="#ffffff">
+    <circle cx="10" cy="22.5" r="3.4"/>
+    <circle cx="16" cy="9.5" r="3.4"/>
+    <circle cx="22.5" cy="19" r="3.4"/>
+  </g>
+</svg>

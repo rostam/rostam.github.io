@@ -2,344 +2,540 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="description"
-        content="Welcome to Ali Rostami's personal website, showcasing projects, publications, and contact information.">
-    <meta name="keywords"
-        content="Ali Rostami, Mohammad Ali Rostami, M. Ali Rostami, Graph Visualization, Graph Algorithms, Parallel Programming, Software Engineer">
-    <meta name="author" content="Ali Rostami">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ali Rostami — Senior Data Scientist and Algorithm Engineer at Vodafone. Graph algorithms, combinatorial optimization and large-scale data systems. Projects, interactive demos and 30+ publications.">
+    <meta name="keywords"
+        content="Ali Rostami, Mohammad Ali Rostami, M. Ali Rostami, Graph Visualization, Graph Algorithms, Combinatorial Optimization, Parallel Programming, Software Engineer, Data Scientist">
+    <meta name="author" content="Ali Rostami">
+    <meta name="theme-color" content="#0e5f6e">
 
+    <title>Ali Rostami — Senior Data Scientist &amp; Algorithm Engineer</title>
 
-    <!-- JSON-LD structured data -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="ali.jpg">
+    <link rel="stylesheet" href="me.css">
+
+    <!-- Open Graph / link previews -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ali Rostami — Senior Data Scientist &amp; Algorithm Engineer">
+    <meta property="og:description"
+        content="Graph algorithms, combinatorial optimization and large-scale data systems.">
+    <meta property="og:url" content="https://rostam.github.io/">
+    <meta property="og:image" content="https://rostam.github.io/ali.jpg">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Ali Rostami",
+      "alternateName": ["M. Ali Rostami", "Mohammad Ali Rostami"],
       "jobTitle": "Senior Data Scientist and Algorithm Engineer",
       "url": "https://rostam.github.io/",
+      "image": "https://rostam.github.io/ali.jpg",
+      "email": "mailto:rostamiev@gmail.com",
+      "worksFor": { "@type": "Organization", "name": "Vodafone" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Friedrich Schiller University Jena" },
+        { "@type": "CollegeOrUniversity", "name": "RWTH Aachen University" },
+        { "@type": "CollegeOrUniversity", "name": "Sharif University of Technology" }
+      ],
+      "knowsAbout": [
+        "Graph algorithms", "Combinatorial optimization", "Integer programming",
+        "Parallel computing", "Data visualization", "Natural language understanding"
+      ],
       "sameAs": [
+        "https://github.com/rostam",
         "https://www.linkedin.com/in/malirostami/",
-
-        "https://github.com/rostam"
+        "https://scholar.google.de/citations?hl=en&user=0UH9S5QAAAAJ",
+        "https://orcid.org/0000-0001-6154-4464",
+        "https://www.researchgate.net/profile/M_Ali_Rostami",
+        "https://dbs.uni-leipzig.de/person/mohammad_ali_rostami",
+        "http://c3e.de/team/arostami"
       ]
     }
     </script>
-
-
-
-    <title>Ali Rostami</title>
-    <link rel="icon" type="image/png" href="ali.jpg">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="me.css">
-
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Ali Rostami</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#languages">Languages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#profiles">Profiles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#pubs">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="repositories.html">Repositories</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="examplesDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Some Possible Ideas
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="examplesDropdown">
-                        <a class="dropdown-item" href="pubgraph/index.html">Publication Knowledge Graph</a>
-                        <a class="dropdown-item" href="coloring-game/index.html">Graph Coloring Puzzle</a>
-                        <a class="dropdown-item" href="parallel-race/index.html">Parallel Algorithm Race</a>
-                        <a class="dropdown-item" href="steiner-explorer/index.html">Steiner Tree Explorer</a>
-                        <a class="dropdown-item" href="polyglot-bench/index.html">Polyglot Benchmark</a>
-                        <a class="dropdown-item" href="graph-lecture/index.html">Graph Lecture Tool</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mailto:rostamiev@gmail.com">Contact</a>
-                </li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main">
+        <div class="site-nav__inner">
+            <a class="site-nav__brand" href="./">Ali Rostami</a>
+
+            <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list"
+                aria-label="Toggle navigation menu">☰</button>
+
+            <ul class="site-nav__list" id="nav-list">
+                <li><a class="site-nav__link" href="#experience">Experience</a></li>
+                <li><a class="site-nav__link" href="#skills">Skills</a></li>
+                <li><a class="site-nav__link" href="#projects">Projects</a></li>
+                <li><a class="site-nav__link" href="#demos">Demos</a></li>
+                <li><a class="site-nav__link" href="#publications">Publications</a></li>
+                <li><a class="site-nav__link" href="repositories.html">Repositories</a></li>
+                <li><a class="site-nav__cta" href="M_Ali_Rostami_Resume.pdf">Résumé (PDF)</a></li>
             </ul>
         </div>
     </nav>
 
-    <h1 style="padding-top: 70px;">Ali Rostami</h1>
-    <h3>Senior Data Scientist and Algorithm Engineer</h3>
-    <img src="ali.jpg" style="float: right;margin: 8px;" alt="Photo of Ali Rostami">
-    <br>
-    <h2>Professional Experience</h2>
-    <ul>
-        <li><strong>Senior Data Scientist and Algorithm Engineer at Vodafone</strong> (August 2023 – present):
-            Analytical graph models using combinatorial optimization, integer programming, and big data methods;
-            time series analysis, clustering, and geo-analysis.</li>
-        <li><strong>Senior Data Scientist at Deutsche Telekom</strong>, through Axxessio GmbH (March 2021 – July 2023):
-            Designed and implemented an NLU system covering TV, appointment, weather and other domains;
-            built annotation tools, a ranking system for training data, and a fuzzy search concept for content entity recognition.</li>
-        <li><strong>Senior Data Scientist at Deutsche Telekom</strong>, through MobilabSolutions (February 2019 – February 2021):
-            Similar NLU tasks as above.</li>
-        <li><strong>Senior Software Engineer at <a href="https://www.scads.de/en/">ScaDS</a> and <a href="https://www.knime.com/">KNIME</a></strong> (February 2017 – January 2019):
-            Built a visualization system for large graphs using Spark and Flink; developed graph analysis workflow tools integrated into the KNIME platform.</li>
-        <li><strong>Junior Software Engineer</strong>, parallel to PhD studies (2012 – 2016):
-            Parallelized a serial geothermal simulation code using MPI and OpenMP for the Jülich Supercomputer Centre.</li>
-    </ul>
+    <main id="main" class="page">
 
-    <h2>Education</h2>
-    <ul>
-        <li><strong>PhD in Combinatorial Scientific Computing</strong>: Friedrich Schiller University Jena, 2012–2016. <a
-                href="https://cuvillier.de/de/shop/publications/7637-combining-partial-jacobian-computation-and-preconditioning-new-heuristics-educational-modules-and-applications">My
-                thesis</a>.</li>
-        <li><strong>MSc in Media Informatics</strong>: RWTH Aachen University, 2010–2012.</li>
-        <li><strong>BSc in Applied Mathematics</strong>: Sharif University of Technology, 2004–2009.</li>
-    </ul>
+        <!-- ============================ Hero ============================ -->
+        <header class="hero">
+            <div>
+                <p class="hero__eyebrow">Senior Data Scientist &amp; Algorithm Engineer</p>
+                <h1>Ali Rostami</h1>
+                <p class="hero__role">Vodafone · Düsseldorf, Germany</p>
 
-    <!-- <h2>Technical Skills</h2>
-    <ul>
-        <li>Programming: Java/Scala, C++17, Python, JavaScript/Node.js</li>
-        <li>Parallelization: MPI, OpenMP, Apache Flink, Apache Spark, CUDA</li>
-        <li>Other: Go, Rust</li>
-    </ul> -->
+                <p class="hero__pitch">
+                    I build graph and optimization systems at production scale — currently
+                    modelling fibre-network rollout at Vodafone with combinatorial optimization
+                    and integer programming. PhD in Combinatorial Scientific Computing.
+                </p>
 
-    <h2>Teaching and Leadership</h2>
-    <ul>
-        <li>Taught parallel programming, visual analytics, and big data</li>
-        <li>Supervised seminars and theses</li>
-        <li>Coordinated the international GraphTea project</li>
-    </ul>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="M_Ali_Rostami_Resume.pdf">Download résumé (PDF)</a>
+                    <a class="btn btn--ghost" href="mailto:rostamiev@gmail.com">rostamiev@gmail.com</a>
+                    <a class="btn btn--ghost" href="https://github.com/rostam/">GitHub</a>
+                </div>
+            </div>
 
-    <hr>
+            <img class="hero__photo" src="ali.jpg" width="168" height="168" alt="Portrait of Ali Rostami">
+        </header>
 
-    <!-- 
-<p>
-My name is Ali, and I am currently excelling as a Senior Data Scientist at Vodafone, where I'm at the forefront of solving complex optimization problems on graphs for simulating optical fiber implementation. This role leverages my extensive background in mathematics and computer science, directly applying my expertise in algorithm development and optimization to enhance telecommunications infrastructure.
-</p><p>
-Before joining Vodafone, I made significant contributions to the field as a Senior Data Scientist at Deutsche Telekom, focusing on the Magenta Voice project. My work centered on leveraging big data and advanced analytics to improve voice recognition technologies, showcasing my ability to innovate in fast-paced, technology-driven environments.
-</p><p>
-Previously, I honed my skills as a Senior Software Engineer at the Big Data Competence Center (<a href="https://www.scads.de/en/">ScaDS</a>), collaborating on projects with <a href="https://www.knime.com/">KNIME</a>. This experience deepened my understanding of data analytics platforms and big data ecosystems, preparing me for more complex data science challenges.
-</p><p>
-My academic foundation is robust, with a BSc in Applied Mathematics from Sharif University of Technology and an MSc in Media Informatics from RWTH Aachen, Germany. I completed my PhD in Combinatorial Scientific Computing at Friedrich Schiller University Jena in 2016, where my thesis contributed valuable insights into the field. Here is 
-<a href="https://cuvillier.de/de/shop/publications/7637-combining-partial-jacobian-computation-and-preconditioning-new-heuristics-educational-modules-and-applications">my thesis</a>.
-</p><p>
-Throughout my career, I've consistently blended research with practical applications, teaching subjects like parallel programming, visual analytics, and big data. I've supervised numerous seminars and theses, shaping the next generation of scientists and engineers. My leadership was instrumental in coordinating the international GraphTea project, underlining my capability to lead complex, collaborative efforts.
-</p><p>
-Technically, I am proficient in a variety of programming languages and technologies, including Java/Scala, C++17, Python (with libraries like pandas, numpy, matplotlib, sklearn), and JavaScript/node.js. My experience extends to parallelization libraries (MPI, OpenMP/Threading, Apache Flink, Apache Spark, CUDA) and I have explored programming with Go and Rust. My diverse technical skill set enables me to tackle a wide range of data science challenges, from algorithm optimization to big data processing.
-</p><p>
-In every role, I've aimed to merge the analytical rigor of mathematics with the innovative potential of computer science, driving advancements in technology and contributing to the cutting-edge developments in data science and telecommunications.
-</p> -->
+        <!-- ========================= Experience ========================= -->
+        <section class="section" id="experience">
+            <h2>Experience</h2>
 
-    <h3 id="skills">Skills</h3>
-    <div class="container">
-        <div class="row">
-            <div class="  col-md-2 my-2">
-                <img src="icons8-java-96.png" alt="Java">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="entry__when">Aug 2023 — present</div>
+                    <div>
+                        <h3 class="entry__title">Senior Data Scientist and Algorithm Engineer</h3>
+                        <div class="entry__org">Vodafone</div>
+                        <p class="entry__body">
+                            Analytical graph models using combinatorial optimization, integer
+                            programming and big data methods; time series analysis, clustering
+                            and geo-analysis.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="entry">
+                    <div class="entry__when">Mar 2021 — Jul 2023</div>
+                    <div>
+                        <h3 class="entry__title">Senior Data Scientist</h3>
+                        <div class="entry__org">Deutsche Telekom, through Axxessio GmbH</div>
+                        <p class="entry__body">
+                            Designed and implemented an NLU system covering TV, appointment,
+                            weather and other domains. Built annotation tools, a ranking system
+                            for training data, and a fuzzy search concept for content entity
+                            recognition.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="entry">
+                    <div class="entry__when">Feb 2019 — Feb 2021</div>
+                    <div>
+                        <h3 class="entry__title">Senior Data Scientist</h3>
+                        <div class="entry__org">Deutsche Telekom, through MobilabSolutions</div>
+                        <p class="entry__body">
+                            Natural language understanding for the Magenta voice platform —
+                            the same problem space as the Axxessio engagement above.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="entry">
+                    <div class="entry__when">Feb 2017 — Jan 2019</div>
+                    <div>
+                        <h3 class="entry__title">Senior Software Engineer</h3>
+                        <div class="entry__org">
+                            <a href="https://www.scads.de/en/">ScaDS</a> and
+                            <a href="https://www.knime.com/">KNIME</a>
+                        </div>
+                        <p class="entry__body">
+                            Built a visualization system for large graphs using Spark and Flink,
+                            and developed graph analysis workflow tools integrated into the
+                            KNIME Analytics Platform.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="entry">
+                    <div class="entry__when">2012 — 2016</div>
+                    <div>
+                        <h3 class="entry__title">Junior Software Engineer</h3>
+                        <div class="entry__org">Parallel to PhD studies</div>
+                        <p class="entry__body">
+                            Parallelized a serial geothermal simulation code using MPI and
+                            OpenMP for the Jülich Supercomputer Centre.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 id="education" style="margin-top:2.5rem">Education</h3>
+            <ul class="entries">
+                <li class="entry">
+                    <div class="entry__when">2012 — 2016</div>
+                    <div>
+                        <h4 class="entry__title">PhD, Combinatorial Scientific Computing</h4>
+                        <div class="entry__org">Friedrich Schiller University Jena</div>
+                        <p class="entry__body">
+                            <a
+                                href="https://cuvillier.de/de/shop/publications/7637-combining-partial-jacobian-computation-and-preconditioning-new-heuristics-educational-modules-and-applications">Combining
+                                Partial Jacobian Computation and Preconditioning</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <div class="entry__when">2010 — 2012</div>
+                    <div>
+                        <h4 class="entry__title">MSc, Media Informatics</h4>
+                        <div class="entry__org">RWTH Aachen University</div>
+                    </div>
+                </li>
+                <li class="entry">
+                    <div class="entry__when">2004 — 2009</div>
+                    <div>
+                        <h4 class="entry__title">BSc, Applied Mathematics</h4>
+                        <div class="entry__org">Sharif University of Technology</div>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 style="margin-top:2.5rem">Teaching &amp; leadership</h3>
+            <ul>
+                <li>Taught parallel programming, visual analytics and big data.</li>
+                <li>Supervised seminars and theses.</li>
+                <li>Coordinated the international GraphTea project.</li>
+            </ul>
+        </section>
+
+        <!-- =========================== Skills =========================== -->
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+            <p class="section__lead">Where each of these has actually been used.</p>
+
+            <div class="skill-group">
+                <div class="skill-group__label">Programming</div>
+                <ul class="tags">
+                    <li><span class="tag tag--lead">Java / Scala <span class="tag__note">GraphTea, KNIME</span></span></li>
+                    <li><span class="tag tag--lead">C++17 <span class="tag__note">PreCol, ChemTea</span></span></li>
+                    <li><span class="tag tag--lead">Python <span class="tag__note">NLU, ChemTea</span></span></li>
+                    <li><span class="tag">JavaScript / Node <span class="tag__note">EXPLAIN, SIMG-VIZ</span></span></li>
+                    <li><span class="tag">Rust <span class="tag__note">exploratory</span></span></li>
+                    <li><span class="tag">Go <span class="tag__note">exploratory</span></span></li>
+                </ul>
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="icons8-c-plus-plus-96.png" alt="C++">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+
+            <div class="skill-group">
+                <div class="skill-group__label">Parallel &amp; distributed</div>
+                <ul class="tags">
+                    <li><span class="tag">MPI <span class="tag__note">SHEMAT-Suite, Jülich</span></span></li>
+                    <li><span class="tag">OpenMP</span></li>
+                    <li><span class="tag">CUDA</span></li>
+                    <li><span class="tag">Apache Spark <span class="tag__note">ScaDS, BIGGR</span></span></li>
+                    <li><span class="tag">Apache Flink <span class="tag__note">ScaDS, BIGGR</span></span></li>
+                </ul>
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="icons8-python-96.png" alt="Python">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+
+            <div class="skill-group">
+                <div class="skill-group__label">Data &amp; modelling</div>
+                <ul class="tags">
+                    <li><span class="tag">pandas</span></li>
+                    <li><span class="tag">NumPy</span></li>
+                    <li><span class="tag">scikit-learn</span></li>
+                    <li><span class="tag">matplotlib</span></li>
+                    <li><span class="tag">Time series &amp; clustering</span></li>
+                    <li><span class="tag">NLU / NLP</span></li>
+                </ul>
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="icons8-javascript-96.png" alt="Javascript">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+
+            <div class="skill-group">
+                <div class="skill-group__label">Research areas</div>
+                <ul class="tags">
+                    <li><span class="tag">Graph algorithms</span></li>
+                    <li><span class="tag">Combinatorial optimization</span></li>
+                    <li><span class="tag">Integer programming</span></li>
+                    <li><span class="tag">Automatic differentiation</span></li>
+                    <li><span class="tag">Graph coloring &amp; preconditioning</span></li>
+                    <li><span class="tag">Visual analytics</span></li>
+                </ul>
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="apache_spark_logo_icon_96.png" alt="Apache Spark">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+
+            <div class="skill-group">
+                <div class="skill-group__label">Languages</div>
+                <ul class="lang-list">
+                    <li>Persian <span class="lang-list__level">Native</span></li>
+                    <li>English <span class="lang-list__level">Fluent</span></li>
+                    <li>German <span class="lang-list__level">Fluent</span></li>
+                    <li>Spanish <span class="lang-list__level">Intermediate</span></li>
+                </ul>
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="flink_squirrel_96_color.png" alt="Apache Flink">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+        </section>
+
+        <!-- ========================== Projects ========================== -->
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+
+            <ul class="projects">
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">GraphTea</h3>
+                        <span class="project__when">2012 — now</span>
+                    </div>
+                    <p class="project__body">
+                        An open-source mathematical platform for graph algorithms and
+                        visualizations. I am a developer, designer and maintainer, and I
+                        coordinate the international project.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="http://www.graphtheorysoftware.com/">Website</a></li>
+                        <li><a href="https://github.com/graphtheorysoftware/GraphTea">Source</a></li>
+                        <li><a href="http://csc.inf-ra.uni-jena.de/server/index.html">Run online</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">Magenta</h3>
+                        <span class="project__when">2019 — 2022</span>
+                    </div>
+                    <p class="project__body">
+                        Deutsche Telekom's voicification project, unifying voice control across
+                        Telekom products from smart home to TV and telephone. I designed and
+                        implemented methods for the German-language NLU model.
+                    </p>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">BIGGR</h3>
+                        <span class="project__when">2017 — 2019</span>
+                    </div>
+                    <p class="project__body">
+                        A collaboration between KNIME and ScaDS Leipzig on a system for building
+                        graph analysis workflows graphically. I implemented GradoopVis and
+                        extended the KNIME Analytics Platform with new tools.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="https://www.urz.uni-leipzig.de/wir-ueber-uns/projekte/biggr/">Project page</a></li>
+                        <li><a href="http://csc.inf-ra.uni-jena.de/server/gradoop.html">GradoopVis</a></li>
+                        <li><a href="https://github.com/dbs-leipzig/gradoop">GRADOOP</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">SIMG-VIZ</h3>
+                        <span class="project__when">2017 — 2018</span>
+                    </div>
+                    <p class="project__body">
+                        A visualization system for entity resolution and clustering. Analyses
+                        precomputed similarity graphs and supports entity-resolution match tasks
+                        with FAMER, including parallel layout computation and sampling for large
+                        graphs.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="https://github.com/rostam/SIMG-VIZ">Source</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">PreCol</h3>
+                        <span class="project__when">2013 — 2017</span>
+                    </div>
+                    <p class="project__body">
+                        Computes graph coloring and preconditioning using automatic
+                        differentiation, implemented in C++ for efficiency and parallelism, with
+                        graphical interfaces for Java and MATLAB.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="precol/index.html">Documentation</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">ChemTea</h3>
+                        <span class="project__when">2014 — now</span>
+                    </div>
+                    <p class="project__body">
+                        Tools for computing parameters in chemical graph theory using big data
+                        approaches. Originally a GraphTea extension, now a separate project with
+                        a C++ core and a Python interface.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="http://csc.inf-ra.uni-jena.de/server/ChemTea-Design.pdf">Design document (PDF)</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">MeProRisk II</h3>
+                        <span class="project__when">2012 — 2016</span>
+                    </div>
+                    <p class="project__body">
+                        A multi-disciplinary effort to reduce risk in geothermal reservoir
+                        exploration. I integrated parallel computing into the SHEMAT-Suite
+                        simulation code.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="http://c3e.de/research/project/meprorisk">Project page</a></li>
+                        <li><a href="https://git.rwth-aachen.de/SHEMAT-Suite/SHEMAT-Suite-open">SHEMAT-Suite</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">EXPLAIN</h3>
+                        <span class="project__when">2013 — 2016</span>
+                    </div>
+                    <p class="project__body">
+                        Interactive, browser-based learning modules for teaching scientific
+                        computing. Students write and test algorithms in the page and watch them
+                        run against real matrices and graphs.
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="explain/index.html">Open EXPLAIN</a></li>
+                    </ul>
+                </li>
+
+                <li class="project">
+                    <div class="project__head">
+                        <h3 class="project__name">Earlier work</h3>
+                        <span class="project__when">2011 — 2012</span>
+                    </div>
+                    <p class="project__body">
+                        <strong>Redmine Client</strong> — mobile client for Redmine project
+                        management (Humance AG).
+                        <strong>Castle Crisis</strong> — Android location-based game
+                        (Fraunhofer Bonn summer school).
+                        <strong>AggGen</strong> — 3D model extraction of black carbon in
+                        MATLAB/C++ (RWTH Aachen).
+                        <strong>OpenFlipper</strong> — hexagonal mesh algorithm for a C++ 3D
+                        graphics library (RWTH Aachen).
+                    </p>
+                    <ul class="project__links">
+                        <li><a href="http://www.totem-games.org/?q=node/156">Castle Crisis</a></li>
+                        <li><a href="https://www.openflipper.org/">OpenFlipper</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- =========================== Demos ============================ -->
+        <section class="section" id="demos">
+            <h2>Interactive demos</h2>
+            <p class="section__lead">
+                Small, self-contained things you can play with in the browser — no install,
+                no sign-up.
+            </p>
+
+            <ul class="card-grid">
+                <li>
+                    <a class="card" href="pubgraph/index.html">
+                        <h3 class="card__title">Publication Knowledge Graph</h3>
+                        <p class="card__desc">My publications as a navigable graph of co-authors, venues and topics.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="coloring-game/index.html">
+                        <h3 class="card__title">Graph Coloring Puzzle</h3>
+                        <p class="card__desc">Color every node so no two neighbours match — using as few colors as you can.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="parallel-race/index.html">
+                        <h3 class="card__title">Parallel Algorithm Race</h3>
+                        <p class="card__desc">Sequential versus parallel execution, competing side by side in real time.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="steiner-explorer/index.html">
+                        <h3 class="card__title">Steiner Tree Explorer</h3>
+                        <p class="card__desc">Build a graph, assign prizes and costs, then find the optimal subtree.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="polyglot-bench/index.html">
+                        <h3 class="card__title">Polyglot Benchmark</h3>
+                        <p class="card__desc">One algorithm implemented across seven languages, compared on speed.</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="graph-lecture/index.html">
+                        <h3 class="card__title">Graph Theory Lecture Tool</h3>
+                        <p class="card__desc">Teaching aid for stepping through classic graph algorithms in front of a class.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ======================== Publications ======================== -->
+        <section class="section" id="publications">
+            <h2>Publications</h2>
+            <p class="section__lead" id="pub-lead">Peer-reviewed papers, most recent first.</p>
+
+            <div class="pub-toolbar">
+                <label class="sr-only" for="pub-search">Search publications</label>
+                <input class="pub-search" id="pub-search" type="search"
+                    placeholder="Search title, author or venue…" autocomplete="off">
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="icons8-pandas-96.png" alt="Pandas">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
+
+            <div class="pub-filters" id="pub-filters" role="group" aria-label="Filter publications by topic">
+                <!-- Chips are rendered by index.js so the counts stay in sync with papers.js -->
             </div>
-            <div class="  col-md-2 my-2">
-                <img src="icons8-rust-96.png" alt="Rust">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
-                        aria-valuemin="0" aria-valuemax="100"> Proficiency </div>
-                </div>
-            </div>
+
+            <p class="pub-status" id="pub-status" role="status" aria-live="polite"></p>
+
+            <ul class="pub-list" id="publications-list"></ul>
+        </section>
+
+    </main>
+
+    <!-- =========================== Footer =========================== -->
+    <footer class="site-footer">
+        <div class="page">
+            <h2 id="contact">Get in touch</h2>
+            <p class="contact-line">
+                <a href="mailto:rostamiev@gmail.com">rostamiev@gmail.com</a>
+            </p>
+
+            <h3 class="sr-only">Profiles elsewhere</h3>
+            <ul class="profiles">
+                <li><a class="profile-link" href="https://github.com/rostam/">
+                    <img src="icons8-github-90.png" alt="" width="22" height="22">GitHub</a></li>
+                <li><a class="profile-link" href="https://www.linkedin.com/in/malirostami/">
+                    <img src="icons8-linkedin-96.png" alt="" width="22" height="22">LinkedIn</a></li>
+                <li><a class="profile-link" href="https://scholar.google.de/citations?hl=en&amp;user=0UH9S5QAAAAJ">
+                    <img src="icons8-google-scholar-96.png" alt="" width="22" height="22">Google Scholar</a></li>
+                <li><a class="profile-link" href="https://orcid.org/0000-0001-6154-4464">
+                    <img src="orcidIcon.png" alt="" width="22" height="22">ORCID</a></li>
+                <li><a class="profile-link" href="https://www.researchgate.net/profile/M_Ali_Rostami">
+                    <img src="ResearchGateIcon.png" alt="" width="22" height="22">ResearchGate</a></li>
+                <li><a class="profile-link" href="https://dbs.uni-leipzig.de/person/mohammad_ali_rostami">
+                    <img src="UniLeipzig.svg" alt="" width="22" height="22">Leipzig University</a></li>
+                <li><a class="profile-link" href="http://c3e.de/team/arostami">
+                    <img src="Uni-Jena-logo.png" alt="" width="22" height="22">University of Jena</a></li>
+                <li><a class="profile-link" href="https://www.youtube.com/watch?v=4ecqVsnti9E&amp;t=151s">
+                    <img src="icons8-youtube-96.png" alt="" width="22" height="22">Talk on YouTube</a></li>
+            </ul>
+
+            <p class="credit">
+                Profile icons by <a href="https://icons8.com">Icons8</a>.
+            </p>
         </div>
-    </div>
-    <hr>
-    <h3 id="languages">Languages</h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 my-3">
-                <h4>English</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                        aria-valuemin="0" aria-valuemax="100">Fluent</div>
-                </div>
-            </div>
-            <div class="col-md-3 my-3">
-                <h4>German</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
-                        aria-valuemin="0" aria-valuemax="100">Fluent</div>
-                </div>
-            </div>
-            <div class="col-md-3 my-3">
-                <h4>Spanish</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100">Intermediate</div>
-                </div>
-            </div>
-            <div class="col-md-3 my-3">
-                <h4>Persian</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100"
-                        aria-valuemin="0" aria-valuemax="100">Native</div>
-                </div>
-            </div>
-            <!-- Add more languages as needed -->
-        </div>
-    </div><br />
-    <hr>
-    <h3 id="profiles">My other profiles:</h3>
-    <a href="https://www.researchgate.net/profile/M_Ali_Rostami"><img src="ResearchGateIcon.png" alt="ResearchGate"
-            width="69px"></a>
-    <a href="https://github.com/rostam/"><img src="icons8-github-90.png" alt="GitHub"></a>
-    <a href="https://www.linkedin.com/in/malirostami/"><img src="icons8-linkedin-96.png" alt="Linkedin"></a>
-    <a href="https://www.youtube.com/watch?v=4ecqVsnti9E&amp;t=151s"><img src="icons8-youtube-96.png" alt="YouTube"></a>
-    <a href="https://dbs.uni-leipzig.de/person/mohammad_ali_rostami"><img src="UniLeipzig.svg" alt="Leipzig University"
-            width="69px"></a>
-    <a href="https://scholar.google.de/citations?hl=en&user=0UH9S5QAAAAJ"><img src="icons8-google-scholar-96.png"
-            alt="Google Scholar"></a>
-    <a href="https://orcid.org/0000-0001-6154-4464"><img src="orcidIcon.png" alt="ORCID" width="69px"></a>
-    <a href="http://c3e.de/team/arostami"><img src="Uni-Jena-logo.png" alt="University of Jena" width="69px"></a>
-    <a href="mailto:rostamiev@gmail.com" target="_top"><img src="icons8-gmail-96.png" alt="GMail"></a><br />
-    (The icons by <a target="_blank" href="https://icons8.com">Icons8</a>)
-    <!-- You can write me to <a href="mailto:rostamiev@gmail.com" target="_top">GMail</a> -->
-    <br /><br />
-    <!-- In the followings, I will first summarize my projects and then present some of <a href="#pubs">my publications</a>. -->
+    </footer>
 
-    <hr>
-
-    <h3 id="projects">Projects:</h3>
-<ul>
-    <li>
-        <strong>Magenta</strong> is a voicification project developed at <b>Deutsche Telekom</b> to unify voice control of all Telekom products from smart home to TV and telephone. I designed and implemented methods for an NLU model for the German language, 2019 - 2022.
-    </li>
-    <li>
-        <a href="https://www.urz.uni-leipzig.de/wir-ueber-uns/projekte/biggr/">BIGGR</a> is a collaborative project between <a href="https://www.knime.com/">KNIME</a> and <a href="https://www.scads.de/en/">ScaDS</a> in Leipzig. We developed a software system for building graph analysis workflows graphically. I implemented <a href="http://csc.inf-ra.uni-jena.de/server/gradoop.html">GradoopVis</a> and extended the KNIME Analytics platform with new tools. <a href="https://github.com/dbs-leipzig/gradoop">GRADOOP</a> is an open-source system for graph analytics, 2017 - 2019.
-    </li>
-    <li>
-        <a href="https://github.com/rostam/SIMG-VIZ">SIMG-VIZ</a> is a visualization system for entity resolution and clustering. It allows users to analyze precomputed similarity graphs and clustering, and supports ER match tasks with FAMER. It includes features like parallel or serial computation for layouts and sampling for large graphs, 2017 - 2018.
-    </li>
-    <li>
-        <a href="https://rostam.github.io/precol/index.html">PreCol</a> computes graph coloring and preconditioning using Automatic Differentiation, implemented in C++ for efficiency and parallelism. We developed graphical interfaces for Java and MATLAB, 2013 - 2017.
-    </li>
-    <li>
-        <a href="http://c3e.de/research/project/meprorisk">MeProRisk II</a> aims to reduce risks in geothermal reservoir exploration by combining skills from different disciplines. I integrated parallel computing into <a href="https://git.rwth-aachen.de/SHEMAT-Suite/SHEMAT-Suite-open">SHEMAT-Suite</a> (<a href="http://www.gge.eonerc.rwth-aachen.de/cms/E-ON-ERC-GGE/Forschung/Ausstattung/~fqun/Shemat-Software/?lidx=1">SHEMAT</a>), 2012 - 2016.
-    </li>
-    <li>
-        <a href="http://www.graphtheorysoftware.com/">GraphTea</a> is an <a href="https://github.com/graphtheorysoftware/GraphTea">open-source</a> mathematical platform for graph algorithms and visualizations. I am a developer, designer, and maintainer of GraphTea, which supports both local and <a href="http://csc.inf-ra.uni-jena.de/server/index.html">online</a> use, 2012 - Now.
-    </li>
-    <li>
-        <a href="http://csc.inf-ra.uni-jena.de/server/ChemTea-Design.pdf">ChemTea</a> is a set of tools for computing parameters in chemical graph theory using big data approaches. Initially an extension of GraphTea, it evolved into a separate project with C++ code and a Python interface, 2014 - Now.
-    </li>
-    <li>
-        <a href="https://rostam.github.io/explain">EXPLAIN</a> is a set of interactive learning modules for teaching scientific computing concepts. They are web-based applications written in Python and JavaScript, allowing users to develop and test algorithms online, 2013 - 2016.
-    </li>
-    <li>
-        Selected smaller projects during my master's:
-        <ul>
-            <li><b>Redmine Client</b>: Mobile client for Redmine project management, Humance AG, May 2012 - Nov 2012.</li>
-            <li><b>Castle Crisis</b>: Android location-based game, <a href="http://www.totem-games.org/?q=node/156">Bonn Fraunhofer summer school</a>, July 2012.</li>
-            <li><b>AggGen</b>: Extracted 3D model of black Carbon using MATLAB/C++, RWTH Aachen, Dec 2011 - Aug 2012.</li>
-            <li><a href="https://www.openflipper.org/">OpenFlipper</a>: C++ library for 3D graphics, developed algorithm for hexagonal mesh, RWTH Aachen, May 2011 - Oct 2011.</li>
-        </ul>
-    </li>
-</ul>
-
-    
-    <hr>
-    <h3 id="pubs">Publications:</h3>
-    <table style="font-size: 16px;">
-        <tr>
-            <td>
-                <div class="mysquare GTA" onclick="clickCategory('GTA')">GTA</div>
-            </td>
-            <td onclick="clickCategory('GTA')" style="font-weight: normal;" id="GTA-cat">Graph Theory and its
-                Applications</td>
-            <td>
-                <div class="mysquare DAV" onclick="clickCategory('DAV')">DAV</div>
-            </td>
-            <td onclick="clickCategory('DAV')" style="font-weight: normal;" id="DAV-cat">Data Analysis and Visualization
-            </td>
-            <td>
-                <div class="mysquare CSC" onclick="clickCategory('CSC')">CSC</div>
-            </td>
-            <td onclick="clickCategory('CSC')" style="font-weight: normal;" id="CSC-cat">Combinatorial Scientific
-                Computing</td>
-            <td>
-                <div class="mysquare EDU" onclick="clickCategory('EDU')">EDU</div>
-            </td>
-            <td onclick="clickCategory('EDU')" style="font-weight: normal;" id="EDU-cat">Educational Themes</td>
-            <td>
-                <div class="mysquare PAC" onclick="clickCategory('PAC')">PAC</div>
-            </td>
-            <td onclick="clickCategory('PAC')" style="font-weight: normal;" id="PAC-cat">Parallel Computing</td>
-        </tr>
-    </table>
-    <br>
-    <ol reversed id="publications"></ol>
     <script src="papers.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
 </body>
 

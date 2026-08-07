@@ -1,86 +1,845 @@
-body {
-    background: white;
-    margin-left: 10em;
-    margin-right: 10em;
-    margin-top: 1em;
-    /*color: white;*/
-    font-style: normal;
-    font-family: Baskerville, "Book Antiqua", Georgia, serif;
-/*, "Lato", "Helvetica Neue", sans-serif;*/
-    font-size: 16px;
-    line-height: 1.5;
+/* ==========================================================================
+   me.css — Ali Rostami
+   Self-contained stylesheet. No Bootstrap, no jQuery, no build step.
+   Sections: 1 tokens · 2 base · 3 nav · 4 hero · 5 sections · 6 skills
+             7 profiles · 8 projects · 9 demos · 10 publications
+             11 tables · 12 footer · 13 utilities
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+    /* Serif stack that degrades well everywhere: Charter (macOS/iOS),
+       Sitka/Cambria (Windows), Georgia (universal fallback). */
+    --font-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    /* Comfortable reading measure — roughly 68 characters. */
+    --measure: 68ch;
+    --page-max: 62rem;
+    --nav-h: 3.5rem;
+
+    --radius: 10px;
+    --radius-sm: 6px;
+
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --surface-2: #f4f1ec;
+    --text: #1b1917;
+    --text-muted: #5f5952;
+    --border: #e5e0d8;
+    --border-strong: #d3cbbf;
+    --accent: #0e5f6e;
+    --accent-hover: #0a4753;
+    --accent-soft: #e2f0f2;
+    /* Foreground for anything sitting on --accent. Light mode's accent is
+       dark so white works; dark mode flips the accent to a pale cyan, where
+       white would drop to roughly 2:1. */
+    --on-accent: #ffffff;
+    --shadow: 0 1px 2px rgba(27, 25, 23, .05), 0 4px 14px rgba(27, 25, 23, .05);
+
+    /* Publication categories. Each pair is a pale tint + a saturated
+       same-hue foreground, which keeps every chip well above the WCAG AA
+       4.5:1 threshold (the old solid green failed at ~4.1:1). */
+    --cat-gta-bg: #d9f0dd;  --cat-gta-fg: #10521f;
+    --cat-dav-bg: #fce7cd;  --cat-dav-fg: #7a4405;
+    --cat-csc-bg: #d8e9f8;  --cat-csc-fg: #0d4a72;
+    --cat-edu-bg: #fbdadf;  --cat-edu-fg: #8a233a;
+    --cat-pac-bg: #eadff8;  --cat-pac-fg: #57297e;
 }
 
-/*a {*/
-    /*color: rgba(187, 242, 50, 0.98);*/
-/*}*/
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #15161a;
+        --surface: #1c1e23;
+        --surface-2: #24272d;
+        --text: #e9e6e1;
+        --text-muted: #a49e96;
+        --border: #32363d;
+        --border-strong: #454a53;
+        --accent: #5cc2d4;
+        --accent-hover: #8ad8e6;
+        --accent-soft: #133238;
+        --on-accent: #08181c;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 14px rgba(0, 0, 0, .3);
 
-#publications {
-    font-size: 18px;
-    margin-bottom: 0.5em;
-}
-
-.authors {
-    margin: 5px;
-}
-
-.title {
-    /*font-weight: bold;*/
-}
-
-.link {
-    font-weight: bold;
-}
-
-.proceedings {
-    margin: 5px;
-}
-
-li {
-    margin-bottom: 0.6em;
-}
-
-.mysquare {
-    height: 32px;
-    width: 64px;
-    font-size: 13px;
-    text-align:center;
-    font-weight: bold;
-    margin: 5px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 5px;
-    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
-}
-
-.CSC {
-    background-color: lightblue;
-}
-
-.GTA {
-    background-color: green;
-}
-
-.EDU {
-    background-color: indianred;
-}
-
-.DAV {
-    background-color: orange;
-}
-
-.PAC {
-    background-color: chocolate;
-}
-
-h3 {
-    padding-top: 70px;
-    margin-top: -70px;
-}
-
-@media (max-width: 768px) {
-    body {
-        margin-left: 1em;
-        margin-right: 1em;
+        --cat-gta-bg: #16351d;  --cat-gta-fg: #8fd9a0;
+        --cat-dav-bg: #3a2a10;  --cat-dav-fg: #eab766;
+        --cat-csc-bg: #12303f;  --cat-csc-fg: #86c5e8;
+        --cat-edu-bg: #3b1720;  --cat-edu-fg: #eda0af;
+        --cat-pac-bg: #2a1c3c;  --cat-pac-fg: #c3a2e6;
     }
 }
+
+/* --------------------------------------------------------------------------
+   2. Base
+   -------------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+}
+
+/* The page shell replaces the old fixed `margin: 0 10em`, which threw away
+   320px of viewport at every width and snapped at a single 768px breakpoint. */
+.page {
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 5vw, 2.5rem);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 .5em;
+    letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 2.9rem); }
+h2 { font-size: clamp(1.5rem, 3.2vw, 1.95rem); margin-top: 0; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.05rem; }
+
+/* Offset for the fixed navbar. Replaces the old
+   `h3 { padding-top:70px; margin-top:-70px }` hack, which laid a 70px
+   transparent band across the page that swallowed clicks underneath it. */
+[id] { scroll-margin-top: calc(var(--nav-h) + 1rem); }
+
+p, li { max-width: var(--measure); }
+
+p { margin: 0 0 1em; }
+
+a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+a:hover { color: var(--accent-hover); }
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+img { max-width: 100%; height: auto; }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+}
+
+ul, ol { padding-left: 1.35em; }
+li { margin-bottom: .5em; }
+
+code, kbd { font-family: var(--font-mono); font-size: .9em; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. Navigation
+   -------------------------------------------------------------------------- */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 200;
+    background: var(--accent);
+    color: var(--on-accent);
+    padding: .6rem 1rem;
+    border-radius: 0 0 var(--radius-sm) 0;
+}
+.skip-link:focus {
+    left: 0;
+    color: var(--on-accent);
+}
+
+.site-nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    min-height: var(--nav-h);
+    /* Opaque rather than a translucent blur: this page is text-dense, and a
+       solid bar keeps the nav labels legible over every section it passes. */
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.site-nav__inner {
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding: 0 clamp(1rem, 5vw, 2.5rem);
+    min-height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.site-nav__brand {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.site-nav__brand:hover { color: var(--accent); }
+
+.site-nav__list {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.site-nav__list li { margin: 0; max-width: none; }
+
+.site-nav__link {
+    display: block;
+    padding: .4rem .6rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: .875rem;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+.site-nav__link:hover {
+    color: var(--text);
+    background: var(--surface-2);
+}
+.site-nav__link[aria-current="page"] {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Résumé is the primary action, so it reads as a button rather than a link. */
+.site-nav__cta {
+    display: inline-block;
+    padding: .4rem .8rem;
+    margin-left: .4rem;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: var(--on-accent);
+    font-family: var(--font-sans);
+    font-size: .875rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.site-nav__cta:hover { background: var(--accent-hover); color: var(--on-accent); }
+
+.site-nav__toggle {
+    display: none;
+    margin-left: auto;
+    padding: .45rem .6rem;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+@media (max-width: 860px) {
+    .site-nav__inner { flex-wrap: wrap; padding-block: .5rem; }
+    .site-nav__toggle { display: block; }
+    .site-nav__list {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        margin: 0;
+        padding-bottom: .5rem;
+        gap: 0;
+    }
+    .site-nav__list.is-open { display: flex; }
+    .site-nav__link { padding: .6rem .5rem; font-size: 1rem; }
+    .site-nav__cta { margin: .5rem .5rem 0; text-align: center; }
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+    padding-top: calc(var(--nav-h) + clamp(2rem, 6vw, 4rem));
+    padding-bottom: 2.5rem;
+}
+
+.hero__eyebrow {
+    font-family: var(--font-sans);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .6rem;
+}
+
+.hero h1 { margin-bottom: .3rem; }
+
+.hero__role {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* The one-sentence positioning statement the site previously had nowhere. */
+.hero__pitch {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    max-width: 46ch;
+    margin-bottom: 1.5rem;
+}
+
+.hero__photo {
+    width: 168px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .55rem 1.05rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    font-family: var(--font-sans);
+    font-size: .9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn--primary { background: var(--accent); color: var(--on-accent); }
+.btn--primary:hover { background: var(--accent-hover); color: var(--on-accent); }
+.btn--ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border-strong);
+}
+.btn--ghost:hover { background: var(--surface-2); color: var(--text); }
+
+@media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero__photo { width: 120px; }
+}
+
+/* --------------------------------------------------------------------------
+   5. Sections
+   -------------------------------------------------------------------------- */
+
+.section { padding-block: clamp(2.5rem, 6vw, 4rem); }
+.section + .section { border-top: 1px solid var(--border); }
+
+.section__lead {
+    color: var(--text-muted);
+    margin-top: -.4rem;
+    margin-bottom: 1.75rem;
+}
+
+/* Timeline-style entries: role and dates are separated so both can be
+   scanned down a column instead of buried mid-sentence. */
+.entries { list-style: none; margin: 0; padding: 0; }
+
+.entry {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: .4rem 1.75rem;
+    max-width: none;
+    padding-block: 1.1rem;
+}
+.entry + .entry { border-top: 1px solid var(--border); }
+
+.entry__when {
+    font-family: var(--font-sans);
+    font-size: .82rem;
+    color: var(--text-muted);
+    padding-top: .3rem;
+    font-variant-numeric: tabular-nums;
+}
+.entry__title { font-size: 1.05rem; font-weight: 600; margin: 0 0 .15rem; }
+.entry__org { color: var(--text-muted); font-size: .95rem; margin-bottom: .4rem; }
+.entry__body { margin: 0; }
+
+@media (max-width: 700px) {
+    .entry { grid-template-columns: 1fr; gap: .25rem; }
+    .entry__when { padding-top: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   6. Skills & languages
+   -------------------------------------------------------------------------- */
+
+/* Replaces the self-assigned percentage bars. Percentages of skill are
+   unfalsifiable and read as filler; grouped tags with real context do not. */
+.skill-group { margin-bottom: 1.75rem; }
+
+.skill-group__label {
+    font-family: var(--font-sans);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: .6rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tags li { margin: 0; max-width: none; }
+
+.tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: .45rem;
+    padding: .35rem .7rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    background: var(--surface);
+    font-family: var(--font-sans);
+    font-size: .875rem;
+}
+.tag__note {
+    color: var(--text-muted);
+    font-size: .8em;
+}
+.tag--lead {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.lang-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lang-list li { margin: 0; max-width: none; }
+.lang-list__level {
+    font-family: var(--font-sans);
+    font-size: .82rem;
+    color: var(--text-muted);
+    margin-left: .35rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Profile links
+   -------------------------------------------------------------------------- */
+
+/* Previously nine unlabelled logos; every link now carries a visible name. */
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.profiles li { margin: 0; max-width: none; }
+
+.profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .8rem .45rem .5rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: .875rem;
+    text-decoration: none;
+}
+.profile-link:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--text);
+}
+.profile-link img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex: none;
+}
+
+.credit {
+    font-size: .82rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Projects
+   -------------------------------------------------------------------------- */
+
+.projects { list-style: none; margin: 0; padding: 0; }
+
+.project {
+    max-width: none;
+    padding-block: 1.25rem;
+}
+.project + .project { border-top: 1px solid var(--border); }
+
+.project__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .5rem .75rem;
+    margin-bottom: .35rem;
+}
+.project__name { font-size: 1.1rem; font-weight: 600; margin: 0; }
+.project__when {
+    font-family: var(--font-sans);
+    font-size: .8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+.project__body { margin: 0 0 .5rem; }
+
+.project__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem .9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: .85rem;
+}
+.project__links li { margin: 0; max-width: none; }
+
+/* --------------------------------------------------------------------------
+   9. Demos
+   -------------------------------------------------------------------------- */
+
+/* These six were hidden behind a nav dropdown labelled "Some Possible
+   Ideas". They are the most distinctive thing on the site, so they get
+   cards on the page instead. */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.card-grid li { margin: 0; max-width: none; }
+
+.card {
+    display: block;
+    height: 100%;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color .15s ease, transform .15s ease;
+}
+.card:hover {
+    border-color: var(--accent);
+    color: var(--text);
+    transform: translateY(-2px);
+}
+.card__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 .35rem;
+}
+.card__desc {
+    font-size: .9rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+    max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   10. Publications
+   -------------------------------------------------------------------------- */
+
+.pub-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.pub-search {
+    flex: 1 1 16rem;
+    min-width: 12rem;
+    padding: .5rem .8rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: .9rem;
+}
+.pub-search::placeholder { color: var(--text-muted); }
+
+.pub-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-bottom: .75rem;
+}
+
+/* Real <button>s: the old chips were click-handled <div>s and <td>s, so
+   they were unreachable by keyboard and announced as plain text. */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .35rem .75rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: .82rem;
+    cursor: pointer;
+    line-height: 1.4;
+}
+.chip:hover { border-color: var(--accent); color: var(--text); }
+
+.chip__key {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    padding: .1rem .35rem;
+    border-radius: 4px;
+}
+.chip__count {
+    font-variant-numeric: tabular-nums;
+    font-size: .78rem;
+    opacity: .7;
+}
+
+/* Active state is a filled chip, not a font-weight change on a label. */
+.chip[aria-pressed="true"] {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.cat-GTA { background: var(--cat-gta-bg); color: var(--cat-gta-fg); }
+.cat-DAV { background: var(--cat-dav-bg); color: var(--cat-dav-fg); }
+.cat-CSC { background: var(--cat-csc-bg); color: var(--cat-csc-fg); }
+.cat-EDU { background: var(--cat-edu-bg); color: var(--cat-edu-fg); }
+.cat-PAC { background: var(--cat-pac-bg); color: var(--cat-pac-fg); }
+.cat-ALL { background: var(--surface-2); color: var(--text-muted); }
+
+.pub-status {
+    font-family: var(--font-sans);
+    font-size: .85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.pub-list { list-style: none; margin: 0; padding: 0; }
+
+.pub {
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: .2rem 1rem;
+    max-width: none;
+    padding-block: 1rem;
+}
+.pub + .pub { border-top: 1px solid var(--border); }
+
+/* A stable year column instead of <ol reversed> numbering, which
+   renumbered every entry as soon as a filter was applied. */
+.pub__year {
+    font-family: var(--font-sans);
+    font-size: .85rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    padding-top: .15rem;
+}
+.pub__title { font-weight: 600; margin: 0 0 .15rem; max-width: var(--measure); }
+.pub__authors { font-size: .95rem; margin: 0 0 .1rem; max-width: var(--measure); }
+.pub__venue {
+    font-size: .92rem;
+    color: var(--text-muted);
+    margin: 0 0 .5rem;
+    max-width: var(--measure);
+}
+.pub__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .4rem;
+}
+.pub__doi {
+    font-family: var(--font-sans);
+    font-size: .8rem;
+    margin-left: .25rem;
+}
+
+/* Categories are also spelled out in the tag's title/aria-label, so colour
+   is never the only channel carrying the information. */
+.cat-tag {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    padding: .18rem .45rem;
+    border-radius: 4px;
+}
+
+.pub[hidden] { display: none; }
+
+@media (max-width: 560px) {
+    .pub { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   11. Tables (repositories page)
+   -------------------------------------------------------------------------- */
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1.5rem;
+}
+
+.repo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .92rem;
+}
+.repo-table th,
+.repo-table td {
+    border: 1px solid var(--border);
+    padding: .45rem .7rem;
+    text-align: left;
+    vertical-align: top;
+}
+.repo-table th {
+    background: var(--surface-2);
+    font-family: var(--font-sans);
+    font-size: .82rem;
+    letter-spacing: .02em;
+}
+.repo-table tbody tr:hover { background: var(--surface-2); }
+
+.badge-lang {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: .75rem;
+    padding: .12rem .45rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+/* Language colours follow GitHub's, with foregrounds chosen for contrast
+   rather than a blanket white. */
+.lang-java   { background: #f3e2c7; color: #6b4409; }
+.lang-cpp    { background: #fbd9e4; color: #8a1f43; }
+.lang-python { background: #d8e6f5; color: #14456e; }
+.lang-js     { background: #f6efc4; color: #6b5a09; }
+.lang-rust   { background: #f4e0d1; color: #7a4526; }
+.lang-tex    { background: #dbe8cd; color: #34500f; }
+.lang-html   { background: #fbdfd3; color: #8a3316; }
+.lang-other  { background: var(--surface-2); color: var(--text-muted); }
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lang-java   { background: #3b2c0f; color: #e5c184; }
+    :root:not([data-theme="light"]) .lang-cpp    { background: #3d1524; color: #f0a0bd; }
+    :root:not([data-theme="light"]) .lang-python { background: #11304c; color: #90c2ea; }
+    :root:not([data-theme="light"]) .lang-js     { background: #3a3210; color: #e0cf7c; }
+    :root:not([data-theme="light"]) .lang-rust   { background: #3a2618; color: #e0b394; }
+    :root:not([data-theme="light"]) .lang-tex    { background: #22320f; color: #b5d18e; }
+    :root:not([data-theme="light"]) .lang-html   { background: #3c1d10; color: #eda98c; }
+}
+
+.section-heading {
+    border-left: 4px solid var(--accent);
+    padding-left: .75rem;
+    margin-top: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding-block: 2.5rem 3.5rem;
+    font-size: .92rem;
+    color: var(--text-muted);
+}
+.site-footer h2 { font-size: 1.3rem; color: var(--text); }
+.site-footer a { color: var(--accent); }
+
+.contact-line {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. Utilities
+   -------------------------------------------------------------------------- */
+
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.lead { font-size: 1.1rem; color: var(--text-muted); }
+.text-muted { color: var(--text-muted); }
+.container { max-width: var(--page-max); margin-inline: auto; padding-inline: clamp(1rem, 5vw, 2.5rem); }
+.stack-top { padding-top: calc(var(--nav-h) + 2rem); }
