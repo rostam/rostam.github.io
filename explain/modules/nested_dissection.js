@@ -44,8 +44,12 @@ var nested_dissection = function() {
     if (gArchive == undefined) gArchive = jQuery.extend(true, {}, g);
     if (stop) return;
     var n = numOfVertices(g);
-    if (selected.indexOf(i) == -1) {
-        selected.push(i);
+    // `current` is what mouse_event.js assigns for the clicked vertex. This
+    // used to read a bare `i`, which resolved only because the module body is
+    // eval'd inside `function clicked(g, i)` -- renaming that parameter broke
+    // the module with a ReferenceError.
+    if (selected.indexOf(current) == -1) {
+        selected.push(current);
     } else return;
 
     if (subMatrix == true) {

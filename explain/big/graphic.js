@@ -496,11 +496,28 @@ function neighbors(i) {
     return currentg.vertices[i].edges;
 }
 
+/** Index of the first column vertex of the current bipartite graph. */
+function first_column_vertex() {
+    return currentg.numRows === undefined
+        ? currentg.vertices.length / 2
+        : currentg.numRows;
+}
+
+/** How many distinct colours the current graph actually uses. */
+function number_of_colors_used() {
+    var seen = [];
+    for (var v = 0; v < currentg.vertices.length; v++) {
+        var c = currentg.vertices[v].color;
+        if (c !== -1 && c !== undefined && seen.indexOf(c) === -1) seen.push(c);
+    }
+    return seen.length;
+}
+
 function d2_neighbors(i) {
     var ret = [];
     currentg.vertices[i].edges.forEach(function (n1) {
         currentg.vertices[n1].edges.forEach(function (n2) {
-            if(n2 != i) ret.push(n2);
+            if(n2 != i && ret.indexOf(n2) === -1) ret.push(n2);
         });
     });
     return ret;
@@ -565,6 +582,9 @@ function make_clique(vers) {
     var ret = [];
     vers.forEach(function (v) {
         vers.forEach(function (u) {
+            // Without this guard the v === u pass pushes a self-loop and
+            // draws a degenerate red edge, counted later as fill-in.
+            if (u === v) return;
             if (currentg.vertices[v].edges.indexOf(u) == -1) {
                 currentg.vertices[v].edges.push(u);
                 draw_edge_color(v, u, "red");

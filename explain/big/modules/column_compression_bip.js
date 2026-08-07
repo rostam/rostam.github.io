@@ -15,15 +15,19 @@ var global_ccb = function () {
 };
 
 var column_compression_bip = function() {
-    if (current >= currentg.vertices.length / 2) {
+    var numRows = first_column_vertex();
+    if (current >= numRows) {
         var ns = d2_neighbors(current);
         var col_ns = get_colors(ns);
         var new_col = min(diff(colors, col_ns));
-        color_column(current - currentg.vertices.length / 2, new_col);
+        color_column(current - numRows, new_col);
         color_vertex(current, new_col);
-        var test_end = get_colored_vertices().length == currentg.vertices.length/2;
-        if (test_end) gather_round_data(min(diff(colors, get_colors(get_colored_vertices()))), 0, 0, 0, 0);
-        if (test_end) round_completed();
+        var numCols = currentg.vertices.length - numRows;
+        var test_end = get_colored_vertices().length == numCols;
+        if (test_end) {
+            gather_round_data(number_of_colors_used(), 0, 0, 0, 0);
+            round_completed();
+        }
     }
 };
 

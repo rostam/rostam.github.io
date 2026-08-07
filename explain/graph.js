@@ -5,49 +5,73 @@
  * @param m number of edges
  * @returns the simple graph: {{vertices: Array}}
  */
+/**
+ * Diagonal entries of a matrix would otherwise become self-loops, which make
+ * a vertex its own neighbour. Every algorithm here works on simple graphs
+ * (elimination graphs, intersection graphs), so the diagonal is dropped from
+ * the adjacency. init_edges keeps the full pattern for drawing the matrix.
+ */
 function graph(edges,n,m) {
     var G = {vertices : []};
     var i;
     for(i=0;i<n;i++)  G.vertices.push({edges:[], color:-1});
 
     for (i = 0; i < edges.length; i++) {
+        if(edges[i].src === edges[i].tgt) continue;
+
         if(G.vertices[edges[i].src].edges.indexOf(edges[i].tgt) === -1)
             G.vertices[edges[i].src].edges.push(edges[i].tgt);
-        
+
         if(G.vertices[edges[i].tgt].edges.indexOf(edges[i].src) === -1)
             G.vertices[edges[i].tgt].edges.push(edges[i].src);
     }
     G.init_edges = edges;
+    G.numRows = n;
+    G.numCols = n;
     return G;
 }
 
+/**
+ * Column intersection graph: one vertex per COLUMN, with two columns adjacent
+ * when some row has a nonzero in both. Edges carry src = row, tgt = column
+ * (see file_handle.js), so the grouping key is tgt.
+ *
+ * This used to group by src, which builds the ROW intersection graph. The two
+ * coincide for a structurally symmetric matrix — which every shipped matrix
+ * is — but not otherwise, and the module colours columns.
+ *
+ * @param n number of columns
+ */
 function cigraph(edges,n,m) {
     var G = {vertices : []};
-    var i,j,k;
-    var x = new Array(n);
-    for (var i = 0; i < n; i++) {
-        x[i] = new Array(n);
-    }
-    for (i = 0; i < edges.length; i++) {
-        x[edges[i].src][edges[i].tgt]=1;
-    }
+    var i,j;
 
     for(i=0;i<n;i++)  G.vertices.push({edges:[], color:-1});
-    for(i=0;i<n;i++) {
-        for(j=i+1;j<n;j++) {
-            for(k=0;k<n;k++) {
-                if(x[i][k] == 1) {
-                    if(x[j][k] == 1) {
-                        if(G.vertices[i].edges.indexOf(j) == -1)
-                            G.vertices[i].edges.push(j);
-                        if(G.vertices[j].edges.indexOf(i) == -1)
-                            G.vertices[j].edges.push(i);
-                    }
-                }
+
+    // Bucket the columns touched by each row, then clique each bucket.
+    var columnsOfRow = {};
+    for (i = 0; i < edges.length; i++) {
+        var row = edges[i].src, col = edges[i].tgt;
+        if (col < 0 || col >= n) continue;
+        if (columnsOfRow[row] === undefined) columnsOfRow[row] = [];
+        if (columnsOfRow[row].indexOf(col) === -1) columnsOfRow[row].push(col);
+    }
+
+    Object.keys(columnsOfRow).forEach(function (row) {
+        var cols = columnsOfRow[row];
+        for (i = 0; i < cols.length; i++) {
+            for (j = i + 1; j < cols.length; j++) {
+                if(G.vertices[cols[i]].edges.indexOf(cols[j]) == -1)
+                    G.vertices[cols[i]].edges.push(cols[j]);
+                if(G.vertices[cols[j]].edges.indexOf(cols[i]) == -1)
+                    G.vertices[cols[j]].edges.push(cols[i]);
             }
         }
-    }
+    });
+
     G.init_edges = edges;
+    G.numRows = n;
+    G.numCols = n;
     return G;
 }
 
@@ -119,11 +143,14 @@ function allVSeen(G,selected) {
 }
 
 function numOfVertices(g) {
-    return currentg.vertices.length;
+    return (g || currentg).vertices.length;
 }
 
 function isClique(G) {
-    var tmp = Object.keys(G.vertices);
+    // Object.keys yields strings; the edge lists hold numbers, and indexOf is
+    // strict, so without the conversion no edge is ever found and every graph
+    // reports false.
+    var tmp = Object.keys(G.vertices).map(Number);
     for(var u=0;u<tmp.length;u++) {
         for(var v=0;v<tmp.length;v++) {
             if(u!=v) {
@@ -142,14 +169,19 @@ function isEdge(G, u, v) {
 }
 
 // G should be colored.
+// The tally used to be a fixed [0,0,0,0]; a fifth part incremented a hole
+// (undefined++ === NaN) and max() propagated the NaN through the result.
 function deviationBound(G) {
-        arr = [0,0,0,0];
+        var counts = {};
+        var i;
         for (i = 0; i < G.vertices.length; i += 1) {
-                arr[G.vertices[i].color]++;
+                var c = G.vertices[i].color;
+                if (c === -1 || c === undefined) continue;
+                counts[c] = (counts[c] || 0) + 1;
         }
-        num_of_used_colors = 0;
-        arr.forEach(function(a){if(a != 0) num_of_used_colors++;});
-        return (num_of_used_colors*max(arr)/G.vertices.length) - 1;
+        var sizes = Object.keys(counts).map(function (c) { return counts[c]; });
+        if (sizes.length === 0) return 0;
+        return (sizes.length * max(sizes) / G.vertices.length) - 1;
 }
 
 function communicationVolume(G) {

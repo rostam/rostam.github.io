@@ -28,7 +28,8 @@ function drawVertex(g, x, y, id) {
     });
 }
 
-function drawVertexBip(g, x, y, id,n) {
+// numRows = index of the first column vertex; ids below it are rows.
+function drawVertexBip(g, x, y, id, numRows) {
     d3.select("#back" + id).remove();
     d3.select("#ver" + id).remove();
     d3.select("#txt" + id).remove();
@@ -47,12 +48,12 @@ function drawVertexBip(g, x, y, id,n) {
         clicked(g, id);
     });
 
-    var orig_id = id < n/2 ? id : id - (n/2);
+    var orig_id = id < numRows ? id : id - numRows;
     d3.select("#vertices").append("text")
         .attr("x", (orig_id + 1) < 10 ? x - 14 : x - 12).attr("y", y + 6).attr("font-family", "sans-serif")
         .attr("font-size", "22px").style("cursor", "pointer").attr("id", "txt" + id)
         .style("z-index", "99").style("fill", "black")
-        .text(id < n/2 ? "r"+(orig_id+1) : "c"+(orig_id+1)).on("click", function () {
+        .text(id < numRows ? "r"+(orig_id+1) : "c"+(orig_id+1)).on("click", function () {
         clicked(g, id);
     });
 }
@@ -66,12 +67,13 @@ function drawNVertices(g, n) {
     }
 }
 
-function drawNVerticesBip(g, n) {
+function drawNVerticesBip(g, n, numRows) {
     d3.selectAll("circle").remove();
+    if (numRows === undefined) numRows = firstColumnVertex(g);
     var retX = g.vertexPositions.x;
     var retY = g.vertexPositions.y;
     for (var i = 0; i < n; i++) {
-        drawVertexBip(g, retX[i], retY[i], i,n);
+        drawVertexBip(g, retX[i], retY[i], i, numRows);
     }
 }
 
@@ -128,16 +130,17 @@ function drawBipGraph(g, ord, norepaint) {
         d3.select("#edges").selectAll("*").remove();
     }
     var n = g.vertices.length;
+    var numRows = firstColumnVertex(g);
     var w = 500, h = 500;
-    g.vertexPositions = horiz_line(w/4, 30, h, g.vertices.length/2);
-    var pos2 = horiz_line((w/4)*3, 30, h, g.vertices.length/2);
+    g.vertexPositions = horiz_line(w/4, 30, h, numRows);
+    var pos2 = horiz_line((w/4)*3, 30, h, n - numRows);
     pos2.x.forEach(function (xx) {
         g.vertexPositions.x.push(xx);
     });
     pos2.y.forEach(function (yy) {
         g.vertexPositions.y.push(yy);
     });
-    drawNVerticesBip(g, n);
+    drawNVerticesBip(g, n, numRows);
     for (var i = 0; i < g.vertices.length; i += 1) {
         for (var j = 0; j < g.vertices[i].edges.length; j++) {
             draw_edge(i, g.vertices[i].edges[j]);
@@ -413,11 +416,32 @@ function neighbors(i) {
     return currentg.vertices[i].edges;
 }
 
+/**
+ * Index of the first column vertex of the current bipartite graph. Modules
+ * used to hard-code `currentg.vertices.length / 2`, which is only correct for
+ * a square matrix.
+ */
+function first_column_vertex() {
+    return currentg.numRows === undefined
+        ? currentg.vertices.length / 2
+        : currentg.numRows;
+}
+
+/** How many distinct colours the current graph actually uses. */
+function number_of_colors_used() {
+    var seen = [];
+    for (var v = 0; v < currentg.vertices.length; v++) {
+        var c = currentg.vertices[v].color;
+        if (c !== -1 && c !== undefined && seen.indexOf(c) === -1) seen.push(c);
+    }
+    return seen.length;
+}
+
 function d2_neighbors(i) {
     var ret = [];
     currentg.vertices[i].edges.forEach(function (n1) {
         currentg.vertices[n1].edges.forEach(function (n2) {
-            if(n2 != i) ret.push(n2);
+            if(n2 != i && ret.indexOf(n2) === -1) ret.push(n2);
         });
     });
     return ret;
@@ -482,6 +506,10 @@ function make_clique(vers) {
     var ret = [];
     vers.forEach(function (v) {
         vers.forEach(function (u) {
+            // Without this guard the v === u pass pushes a self-loop and draws
+            // a degenerate red edge, which specify_fillins() then counts as
+            // fill-in.
+            if (u === v) return;
             if (currentg.vertices[v].edges.indexOf(u) == -1) {
                 currentg.vertices[v].edges.push(u);
                 draw_edge_color(v, u, "red");

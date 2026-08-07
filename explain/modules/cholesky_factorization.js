@@ -8,8 +8,11 @@ var reference_cf = function () {
 var global_cf = function () {
     graph_format="simple";
     all_fillins = [];
-    chart_yaxis1_text = "Number of fill-in";
-    chart_group5_text = 'Number of fill-in';
+    // Both (i,j) and (j,i) are drawn, so this counts matrix ENTRIES -- twice
+    // the number of fill edges. The label says so, because it used to read
+    // "Number of fill-in" and silently disagreed with the textbook count.
+    chart_yaxis1_text = "Fill-in entries";
+    chart_group5_text = 'Fill-in entries';
     start_matrix = "cholesky.mtx";
     animation = true;
     post_processing_name = "Show fill-ins";

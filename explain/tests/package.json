@@ -1,0 +1,9 @@
+{
+  "name": "explain-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tests for the EXPLAIN scientific-computing modules. No dependencies — uses the Node built-in test runner.",
+  "scripts": {
+    "test": "node --test '*.test.js'"
+  }
+}

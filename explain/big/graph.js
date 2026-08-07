@@ -11,43 +11,59 @@ function graph(edges,n,m) {
     for(i=0;i<n;i++)  G.vertices.push({edges:[], color:-1});
 
     for (i = 0; i < edges.length; i++) {
+        // Diagonal entries would become self-loops; these algorithms work on
+        // simple graphs. init_edges keeps the full pattern for drawing.
+        if(edges[i].src === edges[i].tgt) continue;
+
         if(G.vertices[edges[i].src].edges.indexOf(edges[i].tgt) === -1)
             G.vertices[edges[i].src].edges.push(edges[i].tgt);
-        
+
         if(G.vertices[edges[i].tgt].edges.indexOf(edges[i].src) === -1)
             G.vertices[edges[i].tgt].edges.push(edges[i].src);
     }
     G.init_edges = edges;
+    G.numRows = n;
+    G.numCols = n;
     return G;
 }
 
+/**
+ * Column intersection graph: one vertex per COLUMN, two columns adjacent when
+ * some row has a nonzero in both. Edges carry src = row, tgt = column, so the
+ * grouping key is tgt. This used to group by src, which builds the ROW
+ * intersection graph -- the same thing only for a symmetric pattern.
+ *
+ * @param n number of columns
+ */
 function cigraph(edges,n,m) {
     var G = {vertices : []};
-    var i,j,k;
-    var x = new Array(n);
-    for (var i = 0; i < n; i++) {
-        x[i] = new Array(n);
-    }
-    for (i = 0; i < edges.length; i++) {
-        x[edges[i].src][edges[i].tgt]=1;
-    }
+    var i,j;
 
     for(i=0;i<n;i++)  G.vertices.push({edges:[], color:-1});
-    for(i=0;i<n;i++) {
-        for(j=i+1;j<n;j++) {
-            for(k=0;k<n;k++) {
-                if(x[i][k] == 1) {
-                    if(x[j][k] == 1) {
-                        if(G.vertices[i].edges.indexOf(j) == -1)
-                            G.vertices[i].edges.push(j);
-                        if(G.vertices[j].edges.indexOf(i) == -1)
-                            G.vertices[j].edges.push(i);
-                    }
-                }
+
+    var columnsOfRow = {};
+    for (i = 0; i < edges.length; i++) {
+        var row = edges[i].src, col = edges[i].tgt;
+        if (col < 0 || col >= n) continue;
+        if (columnsOfRow[row] === undefined) columnsOfRow[row] = [];
+        if (columnsOfRow[row].indexOf(col) === -1) columnsOfRow[row].push(col);
+    }
+
+    Object.keys(columnsOfRow).forEach(function (row) {
+        var cols = columnsOfRow[row];
+        for (i = 0; i < cols.length; i++) {
+            for (j = i + 1; j < cols.length; j++) {
+                if(G.vertices[cols[i]].edges.indexOf(cols[j]) == -1)
+                    G.vertices[cols[i]].edges.push(cols[j]);
+                if(G.vertices[cols[j]].edges.indexOf(cols[i]) == -1)
+                    G.vertices[cols[j]].edges.push(cols[i]);
             }
         }
-    }
+    });
+
     G.init_edges = edges;
+    G.numRows = n;
+    G.numCols = n;
     return G;
 }
 
@@ -129,7 +145,9 @@ function numOfVertices() {
 }
 
 function isClique(G) {
-    var tmp = Object.keys(G.vertices);
+    // Object.keys yields strings and the edge lists hold numbers; without the
+    // conversion indexOf never matches and every graph reports false.
+    var tmp = Object.keys(G.vertices).map(Number);
     for(var u=0;u<tmp.length;u++) {
         for(var v=0;v<tmp.length;v++) {
             if(u!=v) {
