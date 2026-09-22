@@ -146,6 +146,117 @@ function numOfVertices(g) {
     return (g || currentg).vertices.length;
 }
 
+/* --------------------------------------------------------------------------
+   Vertex orderings.
+
+   These are the standard greedy-colouring orderings. They exist so a student
+   can score a known heuristic and then try to beat it by hand — the "Change
+   Order" menu offered them but only ever computed one, and appended to the
+   existing order instead of replacing it.
+
+   Each takes a graph and an optional `domain` (the subset of vertex ids that
+   may be ordered — for a bipartite graph only one side is clickable) and
+   returns a permutation of that domain.
+   -------------------------------------------------------------------------- */
+
+function orderDomainOf(G, domain) {
+    if (domain && domain.length) return domain.slice();
+    var all = [];
+    for (var v = 0; v < G.vertices.length; v++) all.push(v);
+    return all;
+}
+
+/** Degree of v counting only neighbours inside `domain`. */
+function degreeWithin(G, v, inDomain) {
+    var d = 0;
+    G.vertices[v].edges.forEach(function (u) { if (inDomain[u]) d++; });
+    return d;
+}
+
+/** Natural ordering: 0, 1, 2, ... */
+function naturalOrder(G, domain) {
+    return orderDomainOf(G, domain).sort(function (a, b) { return a - b; });
+}
+
+/** Largest-First: highest degree first. */
+function largestFirstOrder(G, domain) {
+    var dom = orderDomainOf(G, domain);
+    var inDomain = {};
+    dom.forEach(function (v) { inDomain[v] = true; });
+
+    return dom.sort(function (a, b) {
+        var da = degreeWithin(G, a, inDomain), db = degreeWithin(G, b, inDomain);
+        return db - da || a - b;
+    });
+}
+
+/**
+ * Smallest-Last: repeatedly strip the currently lowest-degree vertex, then
+ * reverse the removal sequence. Gives a good bound on the number of colours.
+ */
+function smallestLastOrder(G, domain) {
+    var dom = orderDomainOf(G, domain);
+    var inDomain = {}, live = {}, deg = {};
+    dom.forEach(function (v) { inDomain[v] = true; live[v] = true; });
+    dom.forEach(function (v) { deg[v] = degreeWithin(G, v, inDomain); });
+
+    var removalOrder = [];
+    for (var step = 0; step < dom.length; step++) {
+        var pick = -1;
+        dom.forEach(function (v) {
+            if (!live[v]) return;
+            if (pick === -1 || deg[v] < deg[pick] || (deg[v] === deg[pick] && v < pick)) pick = v;
+        });
+        live[pick] = false;
+        removalOrder.push(pick);
+        G.vertices[pick].edges.forEach(function (u) {
+            if (live[u] && inDomain[u]) deg[u]--;
+        });
+    }
+    return removalOrder.reverse();
+}
+
+/**
+ * Incidence-Degree: repeatedly take the vertex with the most already-ordered
+ * neighbours, breaking ties on total degree.
+ */
+function incidenceDegreeOrder(G, domain) {
+    var dom = orderDomainOf(G, domain);
+    var inDomain = {}, pending = {}, incidence = {};
+    dom.forEach(function (v) { inDomain[v] = true; pending[v] = true; incidence[v] = 0; });
+
+    var out = [];
+    for (var step = 0; step < dom.length; step++) {
+        var pick = -1;
+        dom.forEach(function (v) {
+            if (!pending[v]) return;
+            if (pick === -1) { pick = v; return; }
+            if (incidence[v] > incidence[pick]) { pick = v; return; }
+            if (incidence[v] === incidence[pick]) {
+                var dv = degreeWithin(G, v, inDomain), dp = degreeWithin(G, pick, inDomain);
+                if (dv > dp || (dv === dp && v < pick)) pick = v;
+            }
+        });
+        pending[pick] = false;
+        out.push(pick);
+        G.vertices[pick].edges.forEach(function (u) {
+            if (pending[u] && inDomain[u]) incidence[u]++;
+        });
+    }
+    return out;
+}
+
+/** Look up an ordering by the key used in the "Change Order" menu. */
+function orderingByName(name, G, domain) {
+    switch (name) {
+        case 'lfo': return largestFirstOrder(G, domain);
+        case 'slo': return smallestLastOrder(G, domain);
+        case 'ido': return incidenceDegreeOrder(G, domain);
+        case 'nat':
+        default:    return naturalOrder(G, domain);
+    }
+}
+
 function isClique(G) {
     // Object.keys yields strings; the edge lists hold numbers, and indexOf is
     // strict, so without the conversion no edge is ever found and every graph

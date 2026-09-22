@@ -151,6 +151,9 @@ function createEnvironment(options = {}) {
         var chart_group1_text, chart_group2_text, chart_group3_text,
             chart_group4_text, chart_group5_text;
         var start_matrix = '', all_fillins = [];
+        var order_domain = [], clickable_side = 'rows';
+        var score_label = 'score', score_direction = 'lower', live_score = null;
+        var best_score = null, best_round = null, last_round_score = null;
         function chartFromRounds() {}
     `, context);
 
@@ -205,7 +208,16 @@ function createEnvironment(options = {}) {
             __events.fillEdges.push({ src: String(src), tgt: String(tgt) });
         };
 
-        function gather_round_data(a, b, c, d, e) { __events.rounds.push([a, b, c, d, e]); }
+        function gather_round_data(a, b, c, d, e) {
+            __events.rounds.push([a, b, c, d, e]);
+            last_round_score = (typeof a === 'number' && isFinite(a)) ? a : null;
+            if (last_round_score !== null) {
+                var better = score_direction === 'higher'
+                    ? (best_score === null || last_round_score > best_score)
+                    : (best_score === null || last_round_score < best_score);
+                if (better) { best_score = last_round_score; best_round = __events.rounds.length; }
+            }
+        }
         function round_completed() { __events.roundsCompleted++; __roundClosed = true; }
         var __roundClosed = false;
 
@@ -235,12 +247,18 @@ function installGraph(context, edges, n, format, n2) {
             else if (format === 'cig')    currentg = cigraph(edges, __n2, edges.length);
             else                          currentg = graph(edges, n, edges.length);
             order = [];
-            var limit = (format === 'bipartite') ? currentg.numRows : currentg.vertices.length;
-            for (var v = 0; v < limit; v++) order.push(v);
+            var first = 0, last = currentg.vertices.length;
+            if (format === 'bipartite') {
+                if (clickable_side === 'rows')         { first = 0; last = currentg.numRows; }
+                else if (clickable_side === 'columns') { first = currentg.numRows; }
+            }
+            for (var v = first; v < last; v++) order.push(v);
             __eliminated = {};
             __fillinCursor = 0;
             clickedSoFar = [];
             __roundClosed = false;
+            best_score = null; best_round = null; last_round_score = null;
+            order_domain = order.slice();
         })(__edges, __n, __format);
     `, Object.assign(context, { __edges: edges, __n: n, __format: format }));
     return context.currentg;

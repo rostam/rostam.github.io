@@ -54,6 +54,13 @@
 <div style="background: rgb(0,103,166); width: 1000px">
     <span style="font-family:Arial,sans-serif; font-weight:bold; font-size:20pt"></span>
 </div>
+<div class="scoreboard">
+    <div class="sb__item"><span class="sb__label">Round</span><span class="sb__value" id="sb-round">1</span></div>
+    <div class="sb__item"><span class="sb__label">Selected</span><span class="sb__value" id="sb-selected">0</span></div>
+    <div class="sb__item"><span class="sb__label" id="sb-score-label">score</span><span class="sb__value" id="sb-score">&mdash;</span></div>
+    <div class="sb__item"><span class="sb__label">Best</span><span class="sb__value" id="sb-best">&mdash;</span></div>
+    <div class="sb__message" id="sb-message"></div>
+</div>
 <table border="0">
     <tr>
         <td id="graph" style="width: 500px;">
@@ -67,15 +74,9 @@
             <span>Name of Module: </span><input id="newname" value=""><br/>
             <span style="line-height: 1.5;font-size:18;">Click on the vertex <b>current</b>
                 of the graph <b>currentg</b>.</span><br/>
-            Order (custom order can be added to Globals by order=[...]):
-            <select name="Preordering" id="myselect">
-                <option value="nat">Natural</option>
-                <option value="lfo">LFO</option>
-                <option value="slo">SLO</option>
-                <option value="ido">IDO</option>
-                <option value="metis">Metis</option>
-            </select>
-            <input type="button" onclick="selectOrder();"  value="Change Order"><br/>
+            <!-- The ordering picker now lives beside the round controls,
+                 where it is visible without opening the code editor. -->
+
             <span style="font-size:15;">Globals:</span>
             <div style="border:1px solid black;" id="global"></div>
             <span style="font-size:15;">Code:</span>
@@ -109,6 +110,10 @@
             showEdges();"  value="Postprocssing" disabled>
             <input id="edit_code" type="button" onclick="toggle_column_code_vis();" value="Edit Algorithm!">
             <br/><br/>
+            <!-- No ordering panel here. The big-graph variant has no `currentg`
+                 graph model (see the commented-out assignments in file_handle.js
+                 and mouse_event.js), so the ordering heuristics have nothing to
+                 order. The panel lives in the standard load_module.html only. -->
             Order of selections:
             <div id="orderSelect">&nbsp;</div>
             <br/>

@@ -12,6 +12,10 @@ chart_group5_text = 'Number of colors';
 start_matrix = "arrow-shaped2.mtx";
 animation = false;
 post_processing_name = "";
+clickable_side = "rows";
+score_label = "colours";
+score_direction = "lower";
+live_score = function () { return number_of_colors_used(); };
 };
 
 var row_compression_bip = function() {

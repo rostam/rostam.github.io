@@ -34,6 +34,9 @@ var global_nd = function () {
     start_matrix = 'nestedDissection4.mtx';
     animation = false;
     post_processing_name = "Show edges";
+    score_label = "separator vertices";
+    score_direction = "lower";
+    live_score = function () { return selected.length; };
 };
 var nested_dissection = function() {
     if(currentg.vertices.length< 10) {

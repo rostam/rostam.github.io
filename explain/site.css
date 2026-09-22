@@ -185,3 +185,65 @@ body {
     z-index: 200;
 }
 .skip-link:focus { left: 0; }
+
+/* --------------------------------------------------- scoreboard & orderings */
+
+/* The round counter used to be the only feedback, and it counted rounds
+   rather than reporting how any of them went. */
+.scoreboard {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+    width: 1010px;
+    max-width: 100%;
+    margin: .75rem 0 1rem;
+    padding: .7rem 1rem;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--explain-blue);
+    border-radius: 8px;
+    background: #fff;
+    font-family: var(--font-sans);
+}
+
+.sb__item { display: flex; flex-direction: column; line-height: 1.2; }
+
+.sb__label {
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.sb__value {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+}
+
+.sb__value--best { color: #14804a; }
+
+.sb__message {
+    flex: 1 1 16rem;
+    min-width: 12rem;
+    font-size: .9rem;
+    color: var(--text-muted);
+}
+.sb__message strong { color: var(--text); }
+
+.order-panel {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .4rem;
+    padding: .5rem .7rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    font-family: var(--font-sans);
+    font-size: .875rem;
+}
+
+.order-panel__label { color: var(--text-muted); margin-right: .2rem; }

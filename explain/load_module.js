@@ -118,22 +118,46 @@ function color_vertices(i,color,func) {
     currentg.vertices[i].color = color;
 }
 
+/**
+ * Apply the ordering picked in the "Change Order" menu.
+ *
+ * This previously had a branch for "nat" only; that branch computed largest-
+ * first rather than natural, and it PUSHED onto `order` instead of replacing
+ * it, so pressing the button twice left duplicates behind. LFO, SLO and IDO
+ * did nothing at all.
+ */
 function selectOrder() {
     var sel = document.getElementById('myselect');
     var selected = sel.options[sel.selectedIndex].value;
-    var vec = [];
-    if (selected == "nat") {
-        for (var i = 0; i < currentg.vertices.length; i++) {
-            vec.push({
-                'key': i,
-                'value': currentg.vertices[i].edges.length
-            });
-        }
-        vec.sort(function(a, b) {
-            return b.value - a.value;
-        });
-        vec.forEach(function (v) {order.push(v['key']);});
+    order = orderingByName(selected, currentg, order_domain);
+    announce_ordering(sel.options[sel.selectedIndex].text);
+    return order;
+}
+
+function announce_ordering(name) {
+    var msg = document.getElementById("sb-message");
+    if (msg) {
+        msg.innerHTML = name + " ordering loaded — press "
+            + "<strong>Run ordering</strong> to score it.";
     }
+}
+
+/**
+ * Play the current ordering straight through, scoring it as one round.
+ *
+ * Without this, a heuristic ordering could only be watched via "Animate",
+ * which the bipartite modules hide. Being able to score LFO/SLO/IDO in one
+ * click is what turns the chart into a target to beat rather than a log.
+ */
+function runOrdering() {
+    // Snapshot first: init() rebuilds `order` as the natural one, which would
+    // otherwise discard the heuristic the user just loaded.
+    var seq = order.slice();
+    if (document.getElementById("round").innerHTML.indexOf("completed") !== -1) {
+        init(loadedMatrix);
+    }
+    order = seq.slice();
+    seq.forEach(function (v) { clicked(currentg, v); });
 }
 
 if(localStorage.getItem("name") == "Matrix Vector Product") {

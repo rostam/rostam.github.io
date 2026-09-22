@@ -11,7 +11,7 @@ cd explain/tests
 node --test '*.test.js'      # or: npm test
 ```
 
-79 tests, all passing.
+92 tests, all passing.
 
 ## How the shipped code is tested
 
@@ -53,6 +53,7 @@ definitions, so that "the module agrees with the reference" means something.
 | `nested-dissection.test.js` | vertex separators, orderings, scoping |
 | `matrix-market.test.js` | the `.mtx` reader in `file_handle.js` |
 | `duplication.test.js` | `modules/` vs `big/modules/` drift |
+| `orderings.test.js` | the LFO/SLO/IDO vertex orderings and per-module scoring |
 
 ## Verified behaviour
 

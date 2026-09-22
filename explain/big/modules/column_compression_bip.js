@@ -12,6 +12,10 @@ var global_ccb = function () {
     start_matrix = "arrow-shaped2.mtx";
     animation = false;
     post_processing_name = "";
+    clickable_side = "columns";
+    score_label = "colours";
+    score_direction = "lower";
+    live_score = function () { return number_of_colors_used(); };
 };
 
 var column_compression_bip = function() {

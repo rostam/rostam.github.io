@@ -17,6 +17,9 @@ var global_mvp = function () {
     post_processing_name = "";
     selected_color = 0;
     $('input:radio').click(function() {selected_color = this.value;});
+    score_label = "deviation bound";
+    score_direction = "lower";
+    live_score = function () { return deviationBound(currentg); };
 };
 
 var matrix_vector_product = function() {

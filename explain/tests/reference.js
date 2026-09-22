@@ -83,6 +83,28 @@ function symbolicCholeskyFill(adj, order) {
     return fill;
 }
 
+/**
+ * Degeneracy: the largest k such that every subgraph has a vertex of degree
+ * <= k. Smallest-last ordering exists precisely to realise this bound, and
+ * greedy colouring in that order never needs more than degeneracy+1 colours.
+ */
+function degeneracy(adj) {
+    const deg = adj.map(a => a.length);
+    const live = adj.map(() => true);
+    let worst = 0;
+
+    for (let step = 0; step < adj.length; step++) {
+        let pick = -1;
+        for (let v = 0; v < adj.length; v++) {
+            if (live[v] && (pick === -1 || deg[v] < deg[pick])) pick = v;
+        }
+        worst = Math.max(worst, deg[pick]);
+        live[pick] = false;
+        for (const u of adj[pick]) if (live[u]) deg[u]--;
+    }
+    return worst;
+}
+
 /** Distance-2 neighbours of `v`, deduplicated and excluding `v` itself. */
 function distance2Neighbors(adj, v) {
     const out = new Set();
@@ -136,6 +158,7 @@ function isVertexSeparator(adj, separator, partA, partB) {
 
 module.exports = {
     columnIntersectionGraph,
+    degeneracy,
     greedyColoring,
     isProperColoring,
     countColors,

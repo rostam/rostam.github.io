@@ -12,6 +12,9 @@ var global_cc = function () {
     start_matrix = "nestedDissection3.mtx";
     animation = true;
     post_processing_name = "";
+    score_label = "colours";
+    score_direction = "lower";
+    live_score = function () { return number_of_colors_used(); };
 };
 
 var column_compression = function() {

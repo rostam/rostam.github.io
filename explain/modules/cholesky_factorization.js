@@ -16,6 +16,9 @@ var global_cf = function () {
     start_matrix = "cholesky.mtx";
     animation = true;
     post_processing_name = "Show fill-ins";
+    score_label = "fill-in entries";
+    score_direction = "lower";
+    live_score = function () { return all_fillins.length; };
 };
 
 var cholesky_factorization = function() {

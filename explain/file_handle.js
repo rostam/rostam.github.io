@@ -86,10 +86,20 @@ function init(matrix) {
         drawGraph(g);
     }
     // The bipartite branch used to `break` without ever pushing, leaving the
-    // order empty; the row vertices are the ones a user steps through.
+    // order empty. Which side is clickable depends on the module, so it says
+    // so via `clickable_side`; everything else steps through every vertex.
     order = [];
-    var limit = (eval("graph_format") == "bipartite") ? g.numRows : g.vertices.length;
-    for(var i = 0;i < limit;i++) order.push(i);
+    var first = 0, last = g.vertices.length;
+    if (eval("graph_format") == "bipartite") {
+        var side = (typeof clickable_side === "undefined") ? "rows" : clickable_side;
+        if (side === "rows")         { first = 0;          last = g.numRows; }
+        else if (side === "columns") { first = g.numRows;  last = g.vertices.length; }
+        // "both" keeps the full range.
+    }
+    for(var i = first;i < last;i++) order.push(i);
+    // Kept separately: `order` is mutated as the user clicks, but the set of
+    // orderable vertices is fixed for the round.
+    order_domain = order.slice();
     //addClickEvent(g);
     var arr = [];
     for(i=0;i<n;i++) arr.push(i);
